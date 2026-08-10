@@ -10,6 +10,9 @@
   --color-white: #efefef;
   --color-cream: #efe6d9;
   --color-black: #1e1e1e;
+  --color-dark-brown: #30231d;
+  --color-blue-overlay: #191f35;
+  --color-cream-second: #feeece;
 }
 
 * {
@@ -19,4 +22,16 @@
 
 body {
   color: var(--color-white);
+}
+
+.divider {
+  width: 145px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #fff 15%,
+    #fff 85%,
+    transparent
+  );
 }
