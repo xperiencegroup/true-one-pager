@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "@fontsource/abhaya-libre";
+
+@theme {
+  --font-abhaya: "Abhaya Libre";
+
+  --color-blue: #212a4b;
+  --color-brown: #5b3127;
+  --color-orange: #a45d3b;
+  --color-white: #efefef;
+  --color-cream: #efe6d9;
+  --color-black: #1e1e1e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  color: var(--color-white);
+}
