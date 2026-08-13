@@ -2,6 +2,7 @@ import Eligenos from "./components/eligenos";
 import Especificaciones from "./components/especificaciones";
 import Hero from "./components/hero";
 import Modelos from "./components/modelos";
+import Naves from "./components/naves";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Especificaciones />
       <Eligenos />
       <Modelos />
+      <Naves />
     </div>
   );
 }

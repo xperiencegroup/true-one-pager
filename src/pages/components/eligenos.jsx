@@ -6,19 +6,15 @@ import soporteIcon from "../../assets/icons/soporte.svg";
 
 const RAZONES = [
   {
-    label: "Diseñado para crecer",
-    description:
-      "Infraestructura de primer nivel pensada para operaciones que exigen más.",
+    label: "Tamaños flexibles de naves y macrolotes",
     icon: edificioIcon,
   },
   {
-    label: "Listo para operar",
-    description: "Energía, agua y vialidades listas desde el primer día.",
+    label: "A la medida de tus necesidades",
     icon: aguaIcon,
   },
   {
-    label: "Respaldo que responde",
-    description: "Un administrador que está cuando lo necesitas.",
+    label: "Opción de comprar o rentar",
     icon: soporteIcon,
   },
 ];
@@ -26,7 +22,7 @@ const RAZONES = [
 export default function Eligenos() {
   return (
     <>
-      <div className="relative flex justify-center w-full h-[600px]">
+      <div className="relative flex justify-center w-full">
         {/* Image */}
         <div className="absolute -z-10 w-full h-full">
           <div className="relative w-full h-full">
@@ -42,8 +38,9 @@ export default function Eligenos() {
         <div className="absolute z-0 w-full h-full bg-blue-overlay/89" />
 
         {/*  Content */}
-        <div className="relative flex w-full max-w-[1280px] h-full py-[60px] px-[90px]">
-          <div className="flex-1 flex flex-col justify-between gap-[50px]">
+        <div className="relative flex w-full justify-between max-w-[1280px] h-full py-[60px] px-[70px] gap-[48px]">
+          {/* Left panel */}
+          <div className="w-full max-w-[610px] flex flex-col justify-start gap-[20px]">
             <h3 className="text-[48px] font-abhaya leading-[90%] uppercase">
               No estás eligiendo
               <br />
@@ -56,40 +53,62 @@ export default function Eligenos() {
               Elige una vez. <br /> Opera tranquilo por décadas.
             </h4>
 
-            <p className="text-[17px] font-light leading-[140%]">
+            {/* Linea decorativa */}
+            <div>
+              <div className="divider-orange" />
+            </div>
+
+            <p className="text-[25px] font-light leading-[120%]">
               Elegir espacio industrial no es comprar metros cuadrados. Es
-              decidir dónde va a operar tu empresa los próximos veinte años, con
-              energía, agua y vialidades garantizadas desde el día uno. True
-              Ciénega se diseñó alrededor de tu operación: cómo entran tus
-              camiones, cómo trabaja tu gente, cómo creces cuando llegue el
-              momento.
+              decidir dónde va a operar tu empresa los próximos diez o veinte
+              años.
+              <br />
+              <br />
+              Esa decisión merece certeza: energía disponible desde el primer
+              día, agua garantizada, accesos que funcionan, vialidades pensadas
+              para tráileres, y un administrador que responde cuando lo
+              necesitas. True Ciénega se diseña alrededor de tu operación - cómo
+              entran tus camiones, cómo trabaja tu gente, cómo creces que será
+              cuando llega el momento
             </p>
           </div>
-          <div className="flex-1 flex flex-col justify-between items-end">
+
+          {/* Right panel */}
+          <div className="w-[453px] flex flex-col gap-[20px]">
+            {/* Title */}
+            <h3 className="text-[32px] font-abhaya leading-none uppercase">
+              Aquí no vienes a adaptarte al parque industrial. El parque
+              industrial se adapta a ti.
+            </h3>
+
             {RAZONES.map((razon, index) => {
               return (
                 <>
                   <div
                     key={index}
-                    className="flex w-[426px] h-[128px] justify-center items-center gap-[35px] border-2 rounded-[17px] border-orange bg-blue-overlay"
+                    className="flex w-[453px] h-[104px] justify-start items-center p-[20px] gap-[15px] border-2 rounded-[17px] border-orange bg-blue-overlay"
                   >
                     <img
                       src={razon.icon}
                       alt="Ícono correspondiente"
                       className="h-[46px]"
                     />
-                    <div className="flex flex-col gap-[7px]">
-                      <h4 className="text-[24px] font-bold leading-none">
-                        {razon.label}
-                      </h4>
-                      <h4 className="w-full max-w-[250.73px] text-[13px]">
-                        {razon.description}
-                      </h4>
-                    </div>
+                    <h4 className="max-w-[318px] text-[24px] font-bold leading-[120%]">
+                      {razon.label}
+                    </h4>
                   </div>
                 </>
               );
             })}
+
+            {/* Botones */}
+            <button className="w-full text-[16px] font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-orange">
+              Quiero comprar o rentar una Nave Industrial a la medida
+            </button>
+
+            <button className="w-full text-[16px] font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-cream">
+              Compra tu Terreno y construye a tu ritmo
+            </button>
           </div>
         </div>
       </div>

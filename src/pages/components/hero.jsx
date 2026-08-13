@@ -1,33 +1,6 @@
 import backgroundImage from "../../assets/images/hero-background.jpg";
 import trueLogoCream from "../../assets/logos/true-developments-cream.svg";
-import trueCream from "../../assets/logos/true-cream.svg";
-
-const buttons = [
-  {
-    id: "propuesta-de-valor",
-    label: "Propuesta de Valor",
-  },
-  {
-    id: "naves-macrolotes",
-    label: "Naves y Macrolotes",
-  },
-  {
-    id: "ubicacion",
-    label: "Ubicación",
-  },
-  {
-    id: "pi-true-cf",
-    label: "¿Por qué PI True CF?",
-  },
-  {
-    id: "true-developments",
-    label: "True Developments",
-  },
-  {
-    id: "contacto",
-    label: "Contacto",
-  },
-];
+import Navbar from "./navbar";
 
 export default function Hero() {
   return (
@@ -52,28 +25,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center w-full max-w-[1164px] h-full border-x-1 border-cream">
         {/* Navbar */}
-        <div className="relative flex w-full justify-center bg-blue">
-          {/* Botón Logo True */}
-          <img
-            src={trueCream}
-            alt="Logo de True Developments"
-            className="absolute w-[21px] h-[30px] -left-[40px] top-1/2 -translate-y-1/2"
-          />
-
-          <div className="flex w-full h-[83px] justify-around items-center">
-            {buttons.map((button, index) => {
-              return (
-                <a
-                  key={index}
-                  href="#"
-                  className="flex justify-center items-center h-[43px] px-[16px] pt-[11px] pb-[12px] text-[16px] font-medium text-cream"
-                >
-                  {button.label}
-                </a>
-              );
-            })}
-          </div>
-        </div>
+        <Navbar />
 
         {/* Texto */}
         <div className="flex flex-col w-full gap-[36px] px-[30px] pt-[22vh]">
@@ -86,31 +38,35 @@ export default function Hero() {
             />
           </div>
 
-          <div className="flex flex-col gap-[10px]">
+          <div className="flex flex-col gap-[30px]">
             {/* Titulo */}
             <h1 className="text-[48px] font-abhaya leading-none uppercase">
-              Diseñado para <br /> operar con certeza.
+              True Ciénega <br /> Industrial Park
             </h1>
 
+            {/* Subtitulo */}
+            <h2 className="max-w-[780px] text-[32px] font-abhaya leading-none uppercase">
+              Naves industriales a la medida y macrolotes industriales en venta
+              y renta.
+            </h2>
+
             {/* Description */}
-            <p className="w-[431px] text-[20px] leading-[125%]">
-              Naves industriales a la medida y macrolotes industriales en renta
-              y venta.
-              <br /> <br />
+            <p className="w-[900px] text-[20px] leading-[125%]">
               <b>Parque Industrial Clase A</b> de 15 hectáreas sobre la
-              Autopista Monterrey Nuevo Laredo (Carretera Federal 85), en{" "}
-              <b>Ciénega de Flores,</b> NL.
+              <br />
+              Autopista Monterrey-Nuevo Laredo (Carretera Federal 85), en
+              <b> Ciénega de Flores, NL.</b>
             </p>
           </div>
 
           {/* Buttons */}
           <div className="flex gap-[44px]">
             <button className="text-[16px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-orange hover:cursor-pointer">
-              Quiero rentar o comprar una Nave Industrial a la medida
+              Quiero comprar o rentar una Nave Industrial a la medida
             </button>
 
             <button className="text-[16px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-cream text-blue hover:cursor-pointer">
-              Quiero comprar un Macrolote Industrial
+              Ver disponibilidad de Macrolotes en venta
             </button>
           </div>
         </div>

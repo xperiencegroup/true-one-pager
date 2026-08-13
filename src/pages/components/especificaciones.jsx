@@ -9,8 +9,8 @@ import bgImage from "../../assets/images/especificaciones-background.jpg";
 const ESPECIFICACIONES = [
   {
     id: "hectareas",
-    title: "15 hectáreas",
-    subtitle: "de Parque Industrial Clase A",
+    title: "de Parque Industrial Clase A",
+    subtitle: "15 hectáreas",
     paragraph:
       "Infraestructura de Primer Nivel para operaciones que exigen más.",
     icon: cuadroIcon,
@@ -18,17 +18,17 @@ const ESPECIFICACIONES = [
   },
   {
     id: "naves",
-    title: "6,970-69,680 m²",
-    subtitle: "rango de Naves BTS",
+    title: "Naves BTS",
+    subtitle: "de 75,000 - 750,000 ft²",
     paragraph:
-      "Espacios construídos a la medida de tu operación, listos para crecer contigo.",
+      "Espacios construídos a la medida de tu operación, listos para crecer contiigo.",
     icon: almacenIcon,
     alt: "almacen",
   },
   {
     id: "macrolotes",
-    title: "10,000 - 150,000 m2",
-    subtitle: "rango de Macrolotes",
+    title: "Macrolotes",
+    subtitle: "de 10,000 - 150,000 m²",
     paragraph:
       "Terrenos Industriales listos para desarrollar proyectos de gran escala.",
     icon: medidaIcon,
@@ -36,10 +36,9 @@ const ESPECIFICACIONES = [
   },
   {
     id: "carretera",
-    title: "Carretera 85",
-    subtitle: "frente directo, Corredor Monterrey -Laredo",
-    paragraph:
-      "Infraestructura de Primer Nivel para operaciones que exigen más.",
+    title: "Frente\n directo a la",
+    subtitle: "Autopista Monterrey-Nuevo Laredo\n (Carretera 85)",
+    paragraph: "La arteria logística más importante del norte del país.",
     icon: carreteraIcon,
     alt: "carretera",
   },
@@ -47,7 +46,7 @@ const ESPECIFICACIONES = [
 
 export default function Especificaciones() {
   return (
-    <div className="relative flex flex-col justify-center items-center w-full h-[524px] py-[44px] gap-[40px] bg-brown/80">
+    <div className="relative flex flex-col justify-center items-center w-full h-fit py-[44px] gap-[40px] bg-brown/80">
       {/* Imagen de fondo */}
       <div className="absolute -z-10 inset-0 w-full h-full">
         <div className="relative w-full h-full">
@@ -59,8 +58,8 @@ export default function Especificaciones() {
         </div>
       </div>
 
-      <h2 className="text-[30px] font-abhaya">
-        Todo lo que tu operación necesita, en un solo lugar.
+      <h2 className="text-[48px] font-abhaya leading-none uppercase">
+        Todo lo que tu operación <br /> necesita, en un solo lugar.
       </h2>
 
       <div className="flex justify-between gap-[23px]">
@@ -68,9 +67,9 @@ export default function Especificaciones() {
           return (
             <div
               key={index}
-              className="flex flex-col w-[273px] pt-[30px] gap-[27px] bg-dark-brown border-2 border-orange rounded-[20px]"
+              className="flex flex-col w-[273px] h-[466px] py-[30px] px-[20px] bg-dark-brown border-2 border-orange rounded-[20px]"
             >
-              <div className="flex-1 flex flex-col justify-center items-center gap-[16px]">
+              <div className="flex flex-col justify-center items-center gap-[10px]">
                 {/* Icon */}
                 <div className="flex size-[92px] justify-center items-center bg-orange rounded-full">
                   <img
@@ -81,18 +80,18 @@ export default function Especificaciones() {
                 </div>
 
                 {/* Text */}
-                <div className="flex flex-col w-full text-center gap-[7px]">
-                  <h3 className="text-[26px] font-bold tracking-tighter leading-[110%]">
+                <div className="flex flex-col w-full text-center gap-[10px]">
+                  <h3 className="text-[32px] font-abhaya tracking-tighter leading-[110%] uppercase whitespace-pre-line">
                     {especificacion.title}
                   </h3>
-                  <p className="text-[21px] px-[34px] leading-none font-abhaya">
+                  <h4 className="text-[25px] font-bold leading-[120%] whitespace-pre-line">
                     {especificacion.subtitle}
+                  </h4>
+                  <p className="text-[25px] font-light leading-[120%]">
+                    {especificacion.paragraph}
                   </p>
                 </div>
               </div>
-              <p className="shrink-0 h-[90px] text-[15px] text-center px-[16px]">
-                {especificacion.paragraph}
-              </p>
             </div>
           );
         })}
