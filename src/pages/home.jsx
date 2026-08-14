@@ -3,6 +3,7 @@ import DesignedForCertainty from "./components/designed-certainty";
 import Documentamos from "./components/documentamos";
 import Eligenos from "./components/eligenos";
 import Especificaciones from "./components/especificaciones";
+import HablemosDeTuProyecto from "./components/hablemos";
 import Hero from "./components/hero";
 import Infraestructura from "./components/infraestructura";
 import Macrolotes from "./components/macrolotes";
@@ -24,6 +25,7 @@ export default function Home() {
       <Preguntas />
       <DesignedForCertainty />
       <Clientes />
+      <HablemosDeTuProyecto />
     </div>
   );
 }

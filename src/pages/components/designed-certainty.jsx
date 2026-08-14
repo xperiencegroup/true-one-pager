@@ -2,7 +2,7 @@ import trueLogo from "../../assets/logos/true-developments-cream-v2.svg";
 
 export default function DesignedForCertainty() {
   return (
-    <div className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] bg-blue">
+    <div className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] bg-blue-overlay">
       <div className="flex w-full justify-center max-w-[1280px] gap-[35px]">
         {/* Columna izquierda */}
         <div className="flex flex-col w-[453px] shrink-0 gap-[21px]">
