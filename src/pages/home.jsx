@@ -1,6 +1,7 @@
 import Eligenos from "./components/eligenos";
 import Especificaciones from "./components/especificaciones";
 import Hero from "./components/hero";
+import Infraestructura from "./components/infraestructura";
 import Macrolotes from "./components/macrolotes";
 import Modelos from "./components/modelos";
 import Naves from "./components/naves";
@@ -14,6 +15,7 @@ export default function Home() {
       <Modelos />
       <Naves />
       <Macrolotes />
+      <Infraestructura />
     </div>
   );
 }

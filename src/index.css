@@ -36,6 +36,18 @@ body {
   );
 }
 
+.divider-orange-full {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-orange) 15%,
+    var(--color-orange) 85%,
+    transparent
+  );
+}
+
 .divider-orange {
   width: 145px;
   height: 2px;
