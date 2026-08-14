@@ -3,6 +3,7 @@ import DesignedForCertainty from "./components/designed-certainty";
 import Documentamos from "./components/documentamos";
 import Eligenos from "./components/eligenos";
 import Especificaciones from "./components/especificaciones";
+import Footer from "./components/footer";
 import HablemosDeTuProyecto from "./components/hablemos";
 import Hero from "./components/hero";
 import Infraestructura from "./components/infraestructura";
@@ -26,6 +27,7 @@ export default function Home() {
       <DesignedForCertainty />
       <Clientes />
       <HablemosDeTuProyecto />
+      <Footer />
     </div>
   );
 }
