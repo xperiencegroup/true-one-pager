@@ -1,3 +1,4 @@
+import Documentamos from "./components/documentamos";
 import Eligenos from "./components/eligenos";
 import Especificaciones from "./components/especificaciones";
 import Hero from "./components/hero";
@@ -16,6 +17,7 @@ export default function Home() {
       <Naves />
       <Macrolotes />
       <Infraestructura />
+      <Documentamos />
     </div>
   );
 }
