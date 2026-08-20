@@ -52,7 +52,7 @@ export default function Clientes() {
           </h3>
         </div>
 
-        <div className="divider-white" />
+        <div className="divider-white max-w-[1100px]" />
 
         <div className="grid grid-cols-4 gap-x-[18px] gap-y-[18px] items-center justify-items-center">
           {clientesPropios.map((cliente) => (
@@ -74,7 +74,7 @@ export default function Clientes() {
           </h3>
         </div>
 
-        <div className="divider-white" />
+        <div className="divider-white max-w-[1100px]" />
 
         <div className="grid grid-cols-4 gap-x-[80px] gap-y-[18px] items-center justify-items-center">
           {clientesTerceros.map((cliente) => (

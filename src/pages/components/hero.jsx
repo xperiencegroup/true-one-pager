@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="absolute z-10 top-0 w-full h-[83px] bg-blue" />
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center w-full max-w-[1164px] h-full border-x-1 border-cream">
+      <div className="relative z-20 flex flex-col items-center w-full max-w-[1164px] h-full">
         {/* Navbar */}
         <Navbar />
 

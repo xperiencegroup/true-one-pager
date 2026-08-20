@@ -45,7 +45,7 @@ export default function Modelos() {
             Diseñado para operar con certeza.
           </h2>
 
-          <p className="text-[25px] font-light text-center leading-[120%]">
+          <p className="max-w-[1110px] text-[25px] font-light text-center leading-[120%]">
             Explora cada configuración en nuestra{" "}
             <b className="font-bold">plataforma interactiva:</b>
             <br />

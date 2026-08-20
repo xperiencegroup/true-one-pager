@@ -67,7 +67,7 @@ export default function HablemosDeTuProyecto() {
 
   return (
     <div className="flex flex-col w-full justify-center items-center p-[60px] bg-blue-overlay">
-      <div className="flex flex-col w-full max-w-[1280px] gap-[30px]">
+      <div className="flex flex-col w-full max-w-[1150px] gap-[30px]">
         {/* Header */}
         <div className="flex justify-between items-center gap-[40px]">
           <div className="flex flex-col w-full gap-[20px]">
