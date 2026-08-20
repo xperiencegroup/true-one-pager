@@ -54,7 +54,10 @@ export default function Infraestructura() {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] gap-[30px] bg-blue-overlay">
+      <div
+        id="ubicacion"
+        className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] gap-[30px] bg-blue-overlay"
+      >
         <div className="flex w-full max-w-[1280px] justify-center gap-[30px]">
           {/* Columnda izquierda */}
           <div className="w-full max-w-[660px] flex flex-col gap-[20px]">

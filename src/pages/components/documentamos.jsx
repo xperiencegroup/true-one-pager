@@ -36,7 +36,10 @@ export default function Documentamos() {
   return (
     <>
       {/* Medio banner */}
-      <div className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] gap-[30px] bg-black">
+      <div
+        id="true-cienega"
+        className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] gap-[30px] bg-black"
+      >
         {/* Header */}
         <div className="flex flex-col w-full max-w-[1120px] gap-[30px]">
           <h2 className="font-bangla text-[38px] font-abhaya leading-none text-white uppercase">

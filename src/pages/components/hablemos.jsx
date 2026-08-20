@@ -66,7 +66,10 @@ export default function HablemosDeTuProyecto() {
     "w-full min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue text-[25px] text-white placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
 
   return (
-    <div className="flex flex-col w-full justify-center items-center p-[60px] bg-blue-overlay">
+    <div
+      id="contacto"
+      className="flex flex-col w-full justify-center items-center p-[60px] bg-blue-overlay"
+    >
       <div className="flex flex-col w-full max-w-[1150px] gap-[30px]">
         {/* Header */}
         <div className="flex justify-between items-center gap-[40px]">

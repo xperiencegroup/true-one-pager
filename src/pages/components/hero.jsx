@@ -28,7 +28,10 @@ export default function Hero() {
         <Navbar />
 
         {/* Texto */}
-        <div className="flex flex-col w-full gap-[36px] px-[30px] pt-[22vh]">
+        <div
+          id="hero"
+          className="flex flex-col w-full gap-[36px] px-[30px] pt-[22vh]"
+        >
           {/* Logo */}
           <div className="relative w-[335px] h-[60px]">
             <img

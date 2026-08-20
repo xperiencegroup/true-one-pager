@@ -46,7 +46,10 @@ const ESPECIFICACIONES = [
 
 export default function Especificaciones() {
   return (
-    <div className="relative flex flex-col justify-center items-center w-full h-fit py-[44px] gap-[40px] bg-brown/80">
+    <div
+      id="propuesta-de-valor"
+      className="relative flex flex-col justify-center items-center w-full h-fit py-[44px] gap-[40px] bg-brown/80"
+    >
       {/* Imagen de fondo */}
       <div className="absolute -z-10 inset-0 w-full h-full">
         <div className="relative w-full h-full">

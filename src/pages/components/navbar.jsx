@@ -30,19 +30,21 @@ const buttons = [
 export default function Navbar() {
   return (
     <div className="relative flex w-full justify-center bg-blue">
-      {/* Botón Logo True */}
-      <img
-        src={trueCream}
-        alt="Logo de True Developments"
-        className="absolute w-[21px] h-[30px] -left-[40px] top-1/2 -translate-y-1/2"
-      />
-
       <div className="flex w-full h-[83px] justify-around items-center">
+        {/* Botón Logo True */}
+        <a href="#hero">
+          <img
+            src={trueCream}
+            alt="Logo de True Developments"
+            className="w-[21px] h-[30px] "
+          />
+        </a>
+
         {buttons.map((button, index) => {
           return (
             <a
               key={index}
-              href="#"
+              href={`#${button.id}`}
               className="flex justify-center items-center h-[43px] px-[16px] pt-[11px] pb-[12px] text-[16px] font-medium text-cream"
             >
               {button.label}

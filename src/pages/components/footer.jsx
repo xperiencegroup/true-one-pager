@@ -7,9 +7,9 @@ import xperienceDesarrollo from "../../assets/xperience/desarrollado-por-experie
 
 const navLinks = [
   { id: "propuesta", label: "Propuesta de Valor", href: "#propuesta-de-valor" },
-  { id: "naves", label: "Naves y Macrolotes", href: "#naves-y-macrolotes" },
+  { id: "naves", label: "Naves y Macrolotes", href: "#naves-macrolotes" },
   { id: "ubicacion", label: "Ubicación", href: "#ubicacion" },
-  { id: "por-que", label: "¿Por qué PI True CF?", href: "#por-que-true-cf" },
+  { id: "por-que", label: "¿Por qué PI True CF?", href: "#true-cienega" },
   { id: "true-dev", label: "True Developments", href: "#true-developments" },
   { id: "contacto", label: "Contacto", href: "#contacto" },
 ];

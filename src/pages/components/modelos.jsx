@@ -61,7 +61,10 @@ export default function Modelos() {
       </div>
 
       {/* Elige como quieres crecer */}
-      <div className="flex flex-col justify-center items-center w-full py-[60px] px-[78px] gap-[33px] bg-brown">
+      <div
+        id="naves-macrolotes"
+        className="flex flex-col justify-center items-center w-full py-[60px] px-[78px] gap-[33px] bg-brown"
+      >
         <div className="flex w-full max-w-[1100px] h-full gap-[56px]">
           {/* Primera columna */}
           <div className="flex flex-col w-full h-full max-w-[330px] gap-[20px]">

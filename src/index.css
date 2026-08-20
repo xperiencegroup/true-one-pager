@@ -24,6 +24,10 @@ body {
   color: var(--color-white);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .divider-white {
   width: 100%;
   height: 1.5px;
