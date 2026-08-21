@@ -58,10 +58,10 @@ export default function Infraestructura() {
         id="ubicacion"
         className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] gap-[30px] bg-blue-overlay"
       >
-        <div className="flex w-full max-w-[1280px] justify-center gap-[30px]">
+        <div className="flex flex-col xl:flex-row w-full max-w-[1280px] justify-center gap-[30px]">
           {/* Columnda izquierda */}
           <div className="w-full max-w-[660px] flex flex-col gap-[20px]">
-            <h2 className="text-[48px] font-abhaya leading-none uppercase">
+            <h2 className="title font-abhaya leading-none uppercase">
               CERTEZA OPERATIVA; <br />{" "}
               <span className="text-orange">
                 Infraestructura <br /> preparada para operar
@@ -73,7 +73,7 @@ export default function Infraestructura() {
               <div className="divider-orange-full" />
             </div>
 
-            <p className="text-[25px] font-light leading-[120%]">
+            <p className="paragraph font-light leading-[120%]">
               TRUE CIÉNEGA tiene su proyecto eléctrico tramitado directamente
               ante CFE —6,000 KVA para el parque, primera etapa en proceso—,
               agua garantizada con cisternas, fibra óptica con redundancia y
@@ -103,10 +103,10 @@ export default function Infraestructura() {
                     />
                   </div>
                   <div className="flex flex-col gap-[10px]">
-                    <h4 className="text-naranja font-bold uppercase text-[25px] leading-[120%] text-orange">
+                    <h4 className="text-naranja font-bold uppercase paragraph leading-[120%] text-orange">
                       {item.title}
                     </h4>
-                    <p className="text-white text-[25px] font-light leading-[120%]">
+                    <p className="text-white paragraph font-light leading-[120%]">
                       {item.description}
                     </p>
                   </div>
@@ -115,7 +115,7 @@ export default function Infraestructura() {
             </div>
           </div>
           {/* Columnda derecha */}
-          <div className="self-center flex w-[410px] h-[715px] justify-center items-center rounded-[31px] bg-cream/15 border-solid border-[1px] p-[13px] border-cream/50">
+          <div className="self-center flex shrink-0 w-full xl:w-[410px] h-[430px] xl:h-[715px] justify-center items-center rounded-[31px] bg-cream/15 border-solid border-[1px] p-[13px] border-cream/50">
             <div className="relative w-full h-full bg-blue rounded-[18px] overflow-hidden">
               <img
                 src={mapa}
@@ -127,9 +127,9 @@ export default function Infraestructura() {
         </div>
 
         {/* Flexibilidad y calidad */}
-        <div className="flex w-full max-w-[1280px] justify-center gap-[22px]">
+        <div className="flex flex-col lg:flex-row w-full max-w-[1280px] justify-center items-center gap-[22px]">
           {/* cuadro izquierdo */}
-          <div className="flex flex-col w-[539px] h-[610px] p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
+          <div className="flex flex-col w-full lg:w-[539px] lg:min-h-[700px] xl:h-[610px] p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
             <div className="flex items-center gap-[20px]">
               <img src={cuadroNaranjaIcon} alt="" className="size-[38px]" />
               <h3 className="text-[32px] font-abhaya text-orange uppercase">
@@ -141,11 +141,11 @@ export default function Infraestructura() {
               <div className="divider-orange-full" />
             </div>
 
-            <h4 className="text-[25px] font-bold leading-[120%] text-cream">
+            <h4 className="paragraph font-bold leading-[120%] text-cream">
               El rango más flexible del mercado.
             </h4>
 
-            <p className="text-[25px] font-light leading-[110%]">
+            <p className="paragraph font-light leading-[110%]">
               Pocas veces un mismo parque puede recibir a una empresa que
               necesita 200,000 pies cuadrados en renta ó a otra que quiere
               comprar 15 hectáreas para construir su campus. True Ciénega puede.
@@ -164,7 +164,7 @@ export default function Infraestructura() {
           </div>
 
           {/* cuadro derecho */}
-          <div className="flex flex-col w-[539px] h-[610px] p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
+          <div className="flex flex-col lg:w-[539px] lg:min-h-[700px] xl:h-[610px] p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
             <div className="flex items-center gap-[20px]">
               <img src={almacenNaranjaIcon} alt="" className="size-[38px]" />
               <h3 className="text-[32px] font-abhaya text-orange uppercase">
@@ -176,14 +176,14 @@ export default function Infraestructura() {
               <div className="divider-orange-full" />
             </div>
 
-            <h4 className="text-[25px] font-bold leading-[120%] text-cream">
+            <h4 className="paragraph font-bold leading-[120%] text-cream">
               Construido para durar, diseñado para funcionar.
             </h4>
 
-            <p className="text-[25px] font-light leading-[110%]">
+            <p className="paragraph font-light leading-[110%]">
               Especificaciones Clase A en cada nave: <br />
             </p>
-            <ul className="pl-8 text-[25px] font-light leading-[110%] list-disc">
+            <ul className="pl-8 paragraph font-light leading-[110%] list-disc">
               <li>Alturas libres generosas</li>
               <li>Andenes y rampas suficientes</li>
               <li>Pisos de alta capacidad de carga</li>
@@ -193,7 +193,7 @@ export default function Infraestructura() {
               </li>
             </ul>
 
-            <p className="text-[25px] font-light leading-[110%]">
+            <p className="paragraph font-light leading-[110%]">
               La calidad no se nota en los renders se nota a los diez años,
               cuando el edificio sigue funcionando como el primer día.
               Construimos con esa vara.

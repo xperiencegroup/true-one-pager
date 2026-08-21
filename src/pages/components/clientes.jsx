@@ -45,7 +45,7 @@ export default function Clientes() {
       {/* Sección 1: Desarrollos propios */}
       <div className="flex flex-col items-center w-full px-[90px] py-[60px] gap-[20px] bg-brown">
         <div className="flex flex-col items-center gap-[20px] w-full max-w-[1100px]">
-          <h3 className="font-abhaya text-[48px] leading-none text-white uppercase text-center">
+          <h3 className="font-abhaya title text-white uppercase text-center">
             Clientes en desarrollos
             <br />
             industriales propios
@@ -69,14 +69,14 @@ export default function Clientes() {
       {/* Sección 2: Construcción para terceros */}
       <div className="flex flex-col items-center w-full px-[90px] py-[60px] gap-[20px] bg-orange">
         <div className="flex flex-col items-center gap-[20px] w-full max-w-[1100px]">
-          <h3 className="font-abhaya text-[48px] leading-none text-white uppercase text-center">
+          <h3 className="font-abhaya title text-white uppercase text-center">
             CLIENTES DE CONSTRUCCIÓN <br /> INDUSTRIAL PARA TERCEROS
           </h3>
         </div>
 
         <div className="divider-white max-w-[1100px]" />
 
-        <div className="grid grid-cols-4 gap-x-[80px] gap-y-[18px] items-center justify-items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[80px] gap-y-[18px] items-center justify-items-center">
           {clientesTerceros.map((cliente) => (
             <img
               key={cliente.id}

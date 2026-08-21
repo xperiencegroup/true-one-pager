@@ -9,7 +9,7 @@ import bgImage from "../../assets/images/especificaciones-background.jpg";
 const ESPECIFICACIONES = [
   {
     id: "hectareas",
-    title: "de Parque Industrial Clase A",
+    title: "de Parque\n Industrial\n Clase A",
     subtitle: "15 hectáreas",
     paragraph:
       "Infraestructura de Primer Nivel para operaciones que exigen más.",
@@ -19,7 +19,7 @@ const ESPECIFICACIONES = [
   {
     id: "naves",
     title: "Naves BTS",
-    subtitle: "de 75,000 - 750,000 ft²",
+    subtitle: "de 75,000\n - 750,000 ft²",
     paragraph:
       "Espacios construídos a la medida de tu operación, listos para crecer contiigo.",
     icon: almacenIcon,
@@ -28,7 +28,7 @@ const ESPECIFICACIONES = [
   {
     id: "macrolotes",
     title: "Macrolotes",
-    subtitle: "de 10,000 - 150,000 m²",
+    subtitle: "de 10,000\n - 150,000 m²",
     paragraph:
       "Terrenos Industriales listos para desarrollar proyectos de gran escala.",
     icon: medidaIcon,
@@ -36,7 +36,7 @@ const ESPECIFICACIONES = [
   },
   {
     id: "carretera",
-    title: "Frente\n directo a la",
+    title: "Frente directo a la",
     subtitle: "Autopista Monterrey-Nuevo Laredo\n (Carretera 85)",
     paragraph: "La arteria logística más importante del norte del país.",
     icon: carreteraIcon,
@@ -61,16 +61,16 @@ export default function Especificaciones() {
         </div>
       </div>
 
-      <h2 className="text-[48px] font-abhaya leading-none uppercase">
+      <h2 className="title font-abhaya uppercase">
         Todo lo que tu operación <br /> necesita, en un solo lugar.
       </h2>
 
-      <div className="flex justify-between gap-[23px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[40px] xl:gap-[23px]">
         {ESPECIFICACIONES.map((especificacion, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col w-[273px] h-[466px] py-[30px] px-[20px] bg-dark-brown border-2 border-orange rounded-[20px]"
+              className="flex flex-col w-[266px] h-[400px] lg:w-[273px] lg:h-[466px] py-[30px] px-[20px] bg-dark-brown border-2 border-orange rounded-[20px]"
             >
               <div className="flex flex-col justify-center items-center gap-[10px]">
                 {/* Icon */}
@@ -84,13 +84,13 @@ export default function Especificaciones() {
 
                 {/* Text */}
                 <div className="flex flex-col w-full text-center gap-[10px]">
-                  <h3 className="text-[32px] font-abhaya tracking-tighter leading-[110%] uppercase whitespace-pre-line">
+                  <h3 className="subtitle font-abhaya tracking-wide uppercase whitespace-pre-line">
                     {especificacion.title}
                   </h3>
-                  <h4 className="text-[25px] font-bold leading-[120%] whitespace-pre-line">
+                  <h4 className="paragraph font-bold tracking-wide whitespace-pre-line">
                     {especificacion.subtitle}
                   </h4>
-                  <p className="text-[25px] font-light leading-[120%]">
+                  <p className="paragraph font-light">
                     {especificacion.paragraph}
                   </p>
                 </div>

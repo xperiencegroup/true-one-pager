@@ -1,8 +1,10 @@
 @import "tailwindcss";
 @import "@fontsource/abhaya-libre";
+@import "./styles/fonts.css";
 
 @theme {
   --font-abhaya: "Abhaya Libre";
+  --font-akzidenz: "Akzidenz Grotesk Pro";
 
   --color-blue: #212a4b;
   --color-brown: #5b3127;
@@ -22,6 +24,7 @@
 
 body {
   color: var(--color-white);
+  font-family: var(--font-akzidenz);
 }
 
 html {
@@ -62,4 +65,20 @@ html {
     var(--color-orange) 85%,
     transparent
   );
+}
+
+.title {
+  @apply text-[32px] md:text-[36px] lg:text-[48px] leading-[90%];
+}
+.subtitle {
+  @apply text-[24px] md:text-[28px] lg:text-[32px] leading-[120%];
+}
+.paragraph {
+  @apply text-[18px] md:text-[20px] lg:text-[25px] leading-[120%];
+}
+.boton {
+  @apply text-[12px] lg:text-[17px];
+}
+.data {
+  @apply text-[16px] lg:text-[18px];
 }

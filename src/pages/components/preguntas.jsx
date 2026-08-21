@@ -41,9 +41,7 @@ const preguntasData = [
 ];
 
 export default function Preguntas() {
-  const [openItems, setOpenItems] = useState(
-    () => new Set(preguntasData.map((p) => p.id)),
-  );
+  const [openItems, setOpenItems] = useState(() => new Set());
 
   const toggleItem = (id) => {
     setOpenItems((prev) => {
@@ -58,7 +56,7 @@ export default function Preguntas() {
       <div className="flex flex-col w-full max-w-[1110px] gap-[30px]">
         {/* Header */}
         <div className="flex justify-between items-center">
-          <h2 className="font-abhaya text-[48px] leading-none text-white uppercase">
+          <h2 className="font-abhaya title leading-none text-white uppercase">
             Las preguntas
             <br />
             que deberías hacernos
@@ -79,7 +77,7 @@ export default function Preguntas() {
                   onClick={() => toggleItem(item.id)}
                   className="flex justify-between items-center w-full text-left cursor-pointer"
                 >
-                  <span className="font-semibold text-[25px] text-white pr-[20px]">
+                  <span className="font-semibold paragraph text-white pr-[20px]">
                     {item.question}
                   </span>
 
@@ -107,7 +105,7 @@ export default function Preguntas() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-[25px] leading-[120%] font-extralight whitespace-pre-line text-white">
+                    <p className="paragraph leading-[120%] font-extralight whitespace-pre-line text-white">
                       {item.answer}
                     </p>
                   </div>

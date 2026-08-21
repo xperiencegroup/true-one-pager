@@ -5,6 +5,12 @@ import mail from "../../assets/icons/mail.svg";
 
 import xperienceDesarrollo from "../../assets/xperience/desarrollado-por-experience.svg";
 
+// socials
+import facebookIcon from "../../assets/icons/social/facebook.svg";
+import linkedinIcon from "../../assets/icons/social/linkedin.svg";
+import instagramIcon from "../../assets/icons/social/instagram.svg";
+import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
+
 const navLinks = [
   { id: "propuesta", label: "Propuesta de Valor", href: "#propuesta-de-valor" },
   { id: "naves", label: "Naves y Macrolotes", href: "#naves-macrolotes" },
@@ -35,9 +41,27 @@ const contactInfo = [
   },
 ];
 
+const socials = [
+  {
+    id: "face",
+    icon: facebookIcon,
+    href: "",
+  },
+  {
+    id: "linkedin",
+    icon: linkedinIcon,
+    href: "",
+  },
+  {
+    id: "instagram",
+    icon: instagramIcon,
+    href: "",
+  },
+];
+
 export default function Footer() {
   return (
-    <div className="flex justify-center items-center w-full bg-black">
+    <div className="relative flex justify-center items-center w-full bg-black">
       <div className="flex flex-col w-full max-w-[1280px] justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full max-w-[1164px] gap-[20px] py-[90px] border-x border-orange">
           {/* Logo */}
@@ -53,7 +77,7 @@ export default function Footer() {
               <a
                 key={item.id}
                 href={item.href}
-                className="px-[16px] pt-[11px] pb-[12px] text-[16px] text-cream hover:text-naranja transition-colors"
+                className="px-[16px] pt-[11px] pb-[12px] boton text-cream hover:text-naranja transition-colors"
               >
                 {item.label}
               </a>
@@ -61,7 +85,7 @@ export default function Footer() {
           </nav>
 
           {/* Sitio web CTA */}
-          <p className="text-[16px] text-white font-semibold text-center">
+          <p className="boton text-white font-semibold text-center">
             Visita nuestro sitio web para conocer más:
           </p>
 
@@ -73,7 +97,7 @@ export default function Footer() {
                 href={item.href}
                 target={item.id === "web" ? "_blank" : undefined}
                 rel={item.id === "web" ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-[10px] font-inter text-[18px] text-white"
+                className="flex items-center gap-[10px] font-inter data text-white"
               >
                 <img src={item.icon} alt="" className="h-[15px]" />
                 {item.label}
@@ -88,6 +112,35 @@ export default function Footer() {
             className="w-[118px] pt-[30px]"
           />
         </div>
+      </div>
+
+      {/* Redes sociales */}
+      <div className="absolute flex justify-between items-end w-[316px] h-[52px] bottom-0">
+        {socials.map((social) => {
+          return (
+            <a
+              key={social.id}
+              className="flex size-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
+            >
+              <img
+                src={social.icon}
+                alt={`Ícono de ${social.id}`}
+                className="size-[25.5px]"
+              />
+            </a>
+          );
+        })}
+      </div>
+
+      {/* botón whatsapp */}
+      <div className="absolute left-0 bottom-[52px]">
+        <a className="flex size-[52px] justify-center items-center rounded-r-[32.5px] bg-orange">
+          <img
+            src={whatsappIcon}
+            alt={`Ícono de Whatsapp`}
+            className="size-[25.5px]"
+          />
+        </a>
       </div>
     </div>
   );

@@ -60,10 +60,10 @@ export default function HablemosDeTuProyecto() {
   };
 
   const inputClass =
-    "w-full h-[80px] pl-[20px] pr-[15px] rounded-[15px] border border-white/80 bg-blue text-[25px] text-white placeholder:text-white outline-none focus:border-naranja transition-colors";
+    "w-full h-[80px] pl-[20px] pr-[15px] rounded-[15px] border border-white/80 bg-blue paragraph text-white placeholder:text-white outline-none focus:border-naranja transition-colors";
 
   const textareaClass =
-    "w-full min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue text-[25px] text-white placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
+    "w-full min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue paragraph text-white placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
 
   return (
     <div
@@ -72,14 +72,14 @@ export default function HablemosDeTuProyecto() {
     >
       <div className="flex flex-col w-full max-w-[1150px] gap-[30px]">
         {/* Header */}
-        <div className="flex justify-between items-center gap-[40px]">
+        <div className="flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[20px] lg:gap-[40px]">
           <div className="flex flex-col w-full gap-[20px]">
-            <h2 className="font-abhaya text-[48px] leading-none text-white uppercase">
+            <h2 className="font-abhaya title max-lg:text-center text-white uppercase">
               Hablemos de
-              <br />
+              <br className="max-lg:hidden" />
               tu proyecto.
             </h2>
-            <p className="text-[25px] leading-[120%] font-light text-white">
+            <p className="paragraph max-lg:text-center font-light text-white">
               <span className="font-semibold text-white">
                 Cuéntanos qué necesita tu operación:
               </span>{" "}
@@ -95,50 +95,47 @@ export default function HablemosDeTuProyecto() {
 
         {/* Card de contacto */}
         <div className="flex flex-col gap-[20px] p-[30px] rounded-[20px] bg-white/10">
-          <h3 className="font-abhaya text-[32px] text-white leading-none uppercase">
+          <h3 className="font-abhaya subtitle text-white uppercase">
             Ricardo Villarreal
           </h3>
-          <p className="font-semibold text-[25px] leading-[120%] text-white">
+          <p className="font-semibold paragraph text-white">
             Socio, True Developments
           </p>
 
           {/* Datos de contacto */}
-          <div className="grid grid-cols-4 gap-[14px]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-[30px] gap-x-[80px] lg:gap-[14px]">
             {contactInfo.map((item) => (
-              <div
-                key={item.id}
-                className="flex items-center justify-center h-[60px] gap-[10px] px-[16px] py-[12px] rounded-[10px] border border-white bg-blue"
-              >
-                <img src={item.icon} alt="" className="h-[20px]" />
-                <span className="font-inter text-[14px] text-white/90 truncate">
-                  {item.label}
-                </span>
-              </div>
-            ))}
-          </div>
+              <div key={item.id} className="flex flex-col gap-[20px]">
+                <div className="flex items-center justify-center h-[60px] gap-[10px] px-[16px] py-[12px] rounded-[10px] border border-white bg-blue">
+                  <img src={item.icon} alt="" className="h-[20px]" />
+                  <span className="font-inter text-[14px] text-white/90 truncate">
+                    {item.label}
+                  </span>
+                </div>
 
-          {/* Botones de acción */}
-          <div className="grid grid-cols-4 gap-[14px] place-items-center">
-            {contactInfo.map((item) => (
-              <a
-                key={item.id}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex w-fit items-center justify-center px-[16px] py-[11px] rounded-full text-[16px] font-semibold bg-cream text-blue"
-              >
-                {item.buttonText}
-              </a>
+                {/* botón */}
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="self-center flex w-fit items-center justify-center px-[16px] py-[11px] rounded-full text-[16px] font-semibold bg-cream text-blue"
+                >
+                  {item.buttonText}
+                </a>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Formulario */}
-        <form onSubmit={handleSubmit} className="flex flex-col gap-[50px]">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-[30px] lg:gap-[50px]"
+        >
           {/* Nombre completo / Empresa */}
-          <div className="grid grid-cols-2 gap-[17px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[17px]">
             <div className="flex flex-col gap-[10px]">
-              <label className="font-inter font-bold text-[25px] text-white">
+              <label className="font-inter font-bold paragraph text-white">
                 Nombre completo
               </label>
               <input
@@ -151,7 +148,7 @@ export default function HablemosDeTuProyecto() {
             </div>
 
             <div className="flex flex-col gap-[10px]">
-              <label className="font-inter font-bold text-[25px] text-white">
+              <label className="font-inter font-bold paragraph text-white">
                 Empresa
               </label>
               <input
@@ -165,9 +162,9 @@ export default function HablemosDeTuProyecto() {
           </div>
 
           {/* Correo / Teléfono */}
-          <div className="grid grid-cols-2 gap-[17px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[17px]">
             <div className="flex flex-col gap-[10px]">
-              <label className="font-inter font-bold text-[25px] text-white">
+              <label className="font-inter font-bold paragraph text-white">
                 Correo electrónico
               </label>
               <input
@@ -180,7 +177,7 @@ export default function HablemosDeTuProyecto() {
             </div>
 
             <div className="flex flex-col gap-[10px]">
-              <label className="font-inter font-bold text-[25px] text-white">
+              <label className="font-inter font-bold paragraph text-white">
                 Teléfono
               </label>
               <input
@@ -195,7 +192,7 @@ export default function HablemosDeTuProyecto() {
 
           {/* Qué estás buscando */}
           <div className="flex flex-col gap-[10px]">
-            <label className="font-inter font-bold text-[25px] text-white">
+            <label className="font-inter font-bold paragraph text-white">
               ¿Qué estás buscando?
             </label>
             <input
@@ -209,7 +206,7 @@ export default function HablemosDeTuProyecto() {
 
           {/* Superficie aproximada */}
           <div className="flex flex-col gap-[10px]">
-            <label className="font-inter font-bold text-[25px] text-white">
+            <label className="font-inter font-bold paragraph text-white">
               Superficie aproximada
             </label>
             <input
@@ -223,7 +220,7 @@ export default function HablemosDeTuProyecto() {
 
           {/* Mensaje */}
           <div className="flex flex-col gap-[10px]">
-            <label className="font-inter font-bold text-[25px] text-white">
+            <label className="font-inter font-bold paragraph text-white">
               Mensaje (opcional)
             </label>
             <textarea
@@ -234,6 +231,11 @@ export default function HablemosDeTuProyecto() {
               className={textareaClass}
             />
           </div>
+
+          {/* Botón de enviar */}
+          <button className="self-end lg:self-center lg:w-full lg:max-w-[565px] boton px-[20px] pt-[12px] pb-[11px] rounded-[30px] text-cream bg-orange">
+            Enviar mensaje
+          </button>
         </form>
       </div>
     </div>

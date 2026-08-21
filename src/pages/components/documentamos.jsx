@@ -42,13 +42,13 @@ export default function Documentamos() {
       >
         {/* Header */}
         <div className="flex flex-col w-full max-w-[1120px] gap-[30px]">
-          <h2 className="font-bangla text-[38px] font-abhaya leading-none text-white uppercase">
+          <h2 className="font-bangla title max-lg:text-center font-abhaya text-white uppercase">
             La certeza se construye.
             <br />
             <span className="text-orange">Aquí la estamos construyendo.</span>
           </h2>
 
-          <p className="text-[25px] leading-[120%] text-white/80 max-w-[1100px]">
+          <p className="paragraph max-lg:text-center text-white/80 max-w-[1100px]">
             Documentamos el avance del parque etapa por etapa. <br /> Consulta
             las actualizaciones de obra, fotografías del sitio y los hitos del
             desarrollo, con la transparencia que una decisión de esta escala
@@ -57,7 +57,7 @@ export default function Documentamos() {
         </div>
 
         {/* Grid de etapas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] w-full max-w-[1120px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px] w-full max-w-[1120px]">
           {etapasData.map((etapa) => {
             return (
               <div
@@ -68,11 +68,11 @@ export default function Documentamos() {
                   <img src={etapa.icon} alt="Ícono de la etapa" />
                 </div>
 
-                <h4 className="font-abhaya text-[32px] leading-none text-white uppercase max-w-[280px]">
+                <h4 className="font-abhaya subtitle text-white uppercase lg:max-w-[280px]">
                   {etapa.title}
                 </h4>
 
-                <p className="text-[25px] leading-[120%] font-light text-white">
+                <p className="paragraph max-lg:text-center font-light text-white">
                   {etapa.description}
                 </p>
               </div>
@@ -90,7 +90,7 @@ export default function Documentamos() {
         />
 
         {/* overlay */}
-        <div className="absolute w-full h-full bg-linear-to-b from-black/0 to-black" />
+        <div className="absolute w-full h-full bg-linear-to-b from-black/0 via-75% via-black/0 to-brown" />
       </div>
     </>
   );

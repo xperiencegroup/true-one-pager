@@ -43,18 +43,18 @@ export default function Hero() {
 
           <div className="flex flex-col gap-[30px]">
             {/* Titulo */}
-            <h1 className="text-[48px] font-abhaya leading-none uppercase">
+            <h1 className="title font-abhaya uppercase">
               True Ciénega <br /> Industrial Park
             </h1>
 
             {/* Subtitulo */}
-            <h2 className="max-w-[780px] text-[32px] font-abhaya leading-none uppercase">
+            <h2 className="max-w-[780px] subtitle font-abhaya uppercase">
               Naves industriales a la medida y macrolotes industriales en venta
               y renta.
             </h2>
 
             {/* Description */}
-            <p className="w-[900px] text-[20px] leading-[125%]">
+            <p className="max-w-[680px] lg:max-w-[900px] text-[20px] leading-[125%]">
               <b>Parque Industrial Clase A</b> de 15 hectáreas sobre la
               <br />
               Autopista Monterrey-Nuevo Laredo (Carretera Federal 85), en
@@ -64,11 +64,11 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex gap-[44px]">
-            <button className="text-[16px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-orange hover:cursor-pointer">
+            <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-orange hover:cursor-pointer">
               Quiero comprar o rentar una Nave Industrial a la medida
             </button>
 
-            <button className="text-[16px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-cream text-blue hover:cursor-pointer">
+            <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-cream text-blue hover:cursor-pointer">
               Ver disponibilidad de Macrolotes en venta
             </button>
           </div>

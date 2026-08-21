@@ -1,4 +1,5 @@
 import naveImage from "../../assets/images/renta-naves.jpg";
+import decoration from "../../assets/icons/decoration/linea-razones.svg";
 
 const beneficios = [
   {
@@ -61,13 +62,13 @@ export default function Naves() {
         <div className="flex flex-col gap-[30px]">
           {/* Texto Naves Built to suit */}
           <div className="relative flex flex-col gap-[20px]">
-            <h2 className="text-[48px] font-abhaya leading-none uppercase">
+            <h2 className="title max-lg:text-center font-abhaya uppercase">
               Naves build-to-suit
             </h2>
-            <h3 className="text-[32px] font-abhaya leading-none uppercase">
+            <h3 className="subtitle max-lg:text-center font-abhaya uppercase">
               En venta o renta
             </h3>
-            <p className="text-[25px] font-light leading-[120%]">
+            <p className="paragraph max-lg:text-center font-light">
               Para quien quiere una nave lista para operar, hecha a su medida —
               con la flexibilidad de comprarla ó rentarla.
               <br />
@@ -76,7 +77,7 @@ export default function Naves() {
               750,000 pies cuadrados — con la infraestructura, los andenes y el
               layout definidos alrededor de tu proceso.
             </p>
-            <p className="text-[32px] font-abhaya leading-[120%] uppercase">
+            <p className="subtitle max-lg:text-center font-abhaya uppercase">
               Una nave hecha para tu operación. Cómprala ó réntala.
             </p>
           </div>
@@ -87,79 +88,124 @@ export default function Naves() {
               return (
                 <div
                   key={beneficio.id}
-                  className="relative flex flex-col pl-[30px] gap-[15px] before:absolute before:left-0 before:top-0 before:h-[82.5px] before:w-[1.5px] before:bg-gradient-to-b before:from-orange before:via-orange before:to-transparent"
+                  className="flex flex-col lg:flex-row gap-[20px]"
                 >
-                  <h3 className="text-[25px] leading-none text-orange font-bold">
-                    {beneficio.title}
-                  </h3>
+                  <img src={decoration} alt="" className="lg:hidden h-[41px]" />
+                  <div
+                    key={beneficio.id}
+                    className="relative flex flex-col pl-[30px] gap-[15px] max-lg:before:hidden before:absolute before:left-0 before:top-0 before:h-[82.5px] before:w-[1.5px] before:bg-gradient-to-b before:from-orange before:via-orange before:to-transparent"
+                  >
+                    <h3 className="paragraph max-lg:text-center text-orange font-bold">
+                      {beneficio.title}
+                    </h3>
 
-                  <p className="text-[25px] font-light leading-[120%] text-cream">
-                    {beneficio.description}
-                  </p>
+                    <p className="self-center max-w-[590px] lg:max-w-none paragraph max-lg:text-center font-light text-cream">
+                      {beneficio.description}
+                    </p>
+                  </div>
                 </div>
               );
             })}
           </div>
 
           {/* button */}
-          <button className="w-fit self-center text-[20px] px-[20px] pt-[11px] pb-[12px] font-semibold leading-none rounded-[30px] text-cream bg-orange">
+          <button className="w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-semibold rounded-[30px] text-cream bg-orange">
             Cotiza tu Nave Industrial a la medida
           </button>
         </div>
 
-        {/* Parte inferior */}
-        <div className="self-center flex flex-col w-[1110px] h-fit px-[20px] py-[30px] gap-[20px] rounded-[20px] border border-cream bg-cream/10">
-          <h3 className="text-[32px] text-center font-abhaya uppercase">
+        {/* Tabla parte inferior desktop */}
+        <div className="max-lg:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] py-[30px] gap-[20px] rounded-[20px] border border-cream bg-cream/10">
+          <h3 className="subtitle text-center font-abhaya uppercase">
             Tamaños disponibles
           </h3>
           <div className="grid grid-cols-3">
-            <div className="flex justify-center items-center border-r border-b py-[10px] border-white/50 text-[25px] text-center font-bold leading-[120%]">
+            <div className="flex justify-center items-center border-r border-b py-[10px] border-white/50 paragraph text-center font-bold">
               Nave BTS <br /> Terreno Completo
             </div>
 
-            <div className="flex justify-center items-center py-[10px] border-r border-b border-white/50 text-[25px]">
+            <div className="flex justify-center items-center py-[10px] border-r border-b border-white/50 paragraph">
               779,162 ft²
             </div>
 
-            <div className="flex justify-center items-center py-[10px] border-b border-white/50 text-[25px]">
+            <div className="flex justify-center items-center py-[10px] border-b border-white/50 paragraph">
               72,386.57 m²
             </div>
 
-            <div className="h-[81px] flex justify-center items-center border-r border-b py-[10px] border-white/50 text-[25px] text-center font-bold leading-[120%]">
+            <div className="h-[81px] flex justify-center items-center border-r border-b py-[10px] border-white/50 paragraph text-center font-bold">
               Nave BTS Grande
             </div>
 
-            <div className="flex justify-center items-center py-[10px] border-r border-b border-white/50 text-[25px]">
+            <div className="flex justify-center items-center py-[10px] border-r border-b border-white/50 paragraph">
               528,678 ft²
             </div>
 
-            <div className="flex justify-center items-center py-[10px] border-b border-white/50 text-[25px]">
+            <div className="flex justify-center items-center py-[10px] border-b border-white/50 paragraph">
               49,116 m²
             </div>
 
-            <div className="h-[81px] flex justify-center items-center border-r border-b py-[10px] border-white/50 text-[25px] text-center font-bold leading-[120%]">
+            <div className="h-[81px] flex justify-center items-center border-r border-b py-[10px] border-white/50 paragraph text-center font-bold">
               Nave BTS Mediana
             </div>
 
-            <div className="flex justify-center items-center py-[10px] border-r border-b border-white/50 text-[25px]">
+            <div className="flex justify-center items-center py-[10px] border-r border-b border-white/50 paragraph">
               329,770 ft²
             </div>
 
-            <div className="flex justify-center items-center py-[10px] border-b border-white/50 text-[25px]">
+            <div className="flex justify-center items-center py-[10px] border-b border-white/50 paragraph">
               30,636.64 m²
             </div>
 
-            <div className="h-[81px] flex justify-center items-center border-r py-[10px] border-white/50 text-[25px] text-center font-bold leading-[120%]">
+            <div className="h-[81px] flex justify-center items-center border-r py-[10px] border-white/50 paragraph text-center font-bold">
               Nave BTS Chicas
             </div>
 
-            <div className="flex justify-center items-center py-[10px] border-r border-white/50 text-[25px]">
+            <div className="flex justify-center items-center py-[10px] border-r border-white/50 paragraph">
               196,068 - 213,657 ft²
             </div>
 
-            <div className="flex justify-center items-center text-[25px]">
+            <div className="flex justify-center items-center paragraph">
               18,215.34 - 19,849.43 m²
             </div>
+          </div>
+        </div>
+
+        {/* Tabla mobile y tablet */}
+        <div className="lg:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] border border-cream bg-cream/10">
+          <h3 className="subtitle text-center font-abhaya uppercase">
+            Tamaños disponibles
+          </h3>
+
+          {/* Terreno completo */}
+          <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[60px] py-[12px] border-cream">
+            <h4 className="paragraph text-center font-bold">
+              Nave BTS <br /> Terreno Completo
+            </h4>
+            <p className="paragraph text-center">779,162 ft²</p>
+            <p className="paragraph text-center">72,386.57 m²</p>
+          </div>
+
+          {/* Terreno grande */}
+          <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[60px] py-[12px] border-cream">
+            <h4 className="paragraph text-center font-bold">Nave BTS Grande</h4>
+            <p className="paragraph text-center">528,678 ft²</p>
+            <p className="paragraph text-center">49,116 m²</p>
+          </div>
+
+          {/* Terreno mediana */}
+          <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[60px] py-[12px] border-cream">
+            <h4 className="paragraph text-center font-bold">
+              Nave BTS Mediana
+            </h4>
+            <p className="paragraph text-center">329,770 ft²</p>
+            <p className="paragraph text-center">30,636.64 m²</p>
+          </div>
+
+          {/* Terreno chicas */}
+          <div className="flex flex-col w-full gap-[20px] px-[60px] py-[12px]">
+            <h4 className="paragraph text-center font-bold">Nave BTS Chicas</h4>
+            <p className="paragraph text-center">196,068 - 213,657 ft²</p>
+            <p className="paragraph text-center">18,215.34 - 19,849.43 m²</p>
           </div>
         </div>
       </div>

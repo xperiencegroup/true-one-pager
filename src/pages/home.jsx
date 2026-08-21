@@ -15,7 +15,7 @@ import Preguntas from "./components/preguntas";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col">
+    <main className="relative flex flex-col w-full">
       {/* Línea de decoración */}
       <Decoration />
 
@@ -32,6 +32,6 @@ export default function Home() {
       <Clientes />
       <HablemosDeTuProyecto />
       <Footer />
-    </div>
+    </main>
   );
 }
