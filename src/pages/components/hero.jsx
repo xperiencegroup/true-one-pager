@@ -30,7 +30,7 @@ export default function Hero() {
         {/* Texto */}
         <div className="flex flex-col w-full gap-[30px] sm:gap-[36px] px-[30px] pt-[90px] min-[660px]:pt-[22vh]">
           {/* Logo */}
-          <div className="relative w-full max-w-[298px] sm:w-[335px] h-[60px]">
+          <div className="relative w-full max-w-[298px] sm:w-[335px] h-[60px] animate-hero-1">
             <img
               src={trueLogoCream}
               alt="Logo de True Developments"
@@ -38,9 +38,9 @@ export default function Hero() {
             />
           </div>
 
-          <div className="flex flex-col gap-[30px]">
+          <div className="flex flex-col gap-[30px] animate-hero-2">
             {/* Titulo */}
-            <h1 className="title font-abhaya uppercase">
+            <h1 className=" title font-abhaya uppercase">
               True Ciénega <br /> Industrial Park
             </h1>
 
@@ -61,7 +61,7 @@ export default function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-[40px] sm:gap-[44px]">
+          <div className="flex flex-col sm:flex-row gap-[40px] sm:gap-[44px] animate-hero-3">
             <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-orange hover:cursor-pointer">
               Quiero comprar o rentar <br className="sm:hidden" /> una Nave
               Industrial a la medida

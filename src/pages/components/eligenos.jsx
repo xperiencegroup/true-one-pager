@@ -3,6 +3,7 @@ import bgImage from "../../assets/images/eligenos-background.jpg";
 import edificioIcon from "../../assets/icons/edificio.svg";
 import aguaIcon from "../../assets/icons/agua.svg";
 import soporteIcon from "../../assets/icons/soporte.svg";
+import { useInView } from "../../hooks/useInView";
 
 const RAZONES = [
   {
@@ -20,6 +21,8 @@ const RAZONES = [
 ];
 
 export default function Eligenos() {
+  const [leftPanel, leftPanelIsVisible] = useInView();
+  const [rightPanel, rightPanelIsVisible] = useInView();
   return (
     <>
       <div className="relative flex justify-center w-full">
@@ -40,7 +43,10 @@ export default function Eligenos() {
         {/*  Content */}
         <div className="relative flex flex-col lg:flex-row w-full items-center lg:items-start lg:justify-between max-w-[1280px] h-full py-[50px] sm:py-[60px] px-[44px] sm:px-[70px] gap-[40px] lg:gap-[20px] xl:gap-[48px]">
           {/* Left panel */}
-          <div className="w-full max-w-[610px] flex flex-col justify-start max-lg:items-center gap-[20px]">
+          <div
+            ref={leftPanel}
+            className={`w-full max-w-[610px] flex flex-col justify-start max-lg:items-center gap-[20px] reveal-left ${leftPanelIsVisible ? "is-visible" : ""}`}
+          >
             <h3 className="title max-lg:text-center font-abhaya uppercase">
               No estás eligiendo <br className="max-lg:hidden" />
               un espacio industrial. Estás eligiendo
@@ -76,7 +82,10 @@ export default function Eligenos() {
           </div>
 
           {/* Right panel */}
-          <div className="w-full max-w-[680px] lg:w-[480px] flex flex-col items-center lg:items-start gap-[20px]">
+          <div
+            ref={rightPanel}
+            className={`w-full max-w-[680px] lg:w-[480px] flex flex-col items-center lg:items-start gap-[20px] reveal-right ${rightPanelIsVisible ? "is-visible" : ""}`}
+          >
             {/* Title */}
             <h3 className="w-full max-w-[450px] subtitle max-lg:text-center font-abhaya uppercase">
               Aquí no vienes a adaptarte al parque industrial. El parque

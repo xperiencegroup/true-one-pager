@@ -3,6 +3,7 @@ import rentaMacrolote from "../../assets/icons/renta-macrolote.svg";
 import backgroundImage from "../../assets/images/operar-certeza-background.jpg";
 
 import checkIcon from "../../assets/icons/check.svg";
+import { useInView } from "../../hooks/useInView";
 
 const modelos = [
   {
@@ -24,10 +25,17 @@ const modelos = [
 ];
 
 export default function Modelos() {
+  const [ref, isVisible] = useInView();
+  const [buttonsDesktopRef, isButtonsDesktopVisible] = useInView({
+    threshold: 0.3,
+  });
   return (
     <>
       {/* Diseñado para operar con certeza */}
-      <div className="relative w-full px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]">
+      <div
+        ref={ref}
+        className="relative w-full px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]"
+      >
         {/* image y overlay */}
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="relative w-full h-full">
@@ -45,11 +53,15 @@ export default function Modelos() {
 
         {/* Content */}
         <div className="relative flex flex-col w-full h-full justify-center items-center gap-[20px]">
-          <h2 className="max-w-[380px] lg:max-w-[500px] title text-center font-abhaya uppercase">
+          <h2
+            className={`max-w-[380px] lg:max-w-[500px] title text-center font-abhaya uppercase reveal ${isVisible ? "is-visible" : ""}`}
+          >
             Diseñado para operar con certeza.
           </h2>
 
-          <p className="max-w-[1110px] paragraph font-light text-center">
+          <p
+            className={`max-w-[1110px] paragraph font-light text-center reveal ${isVisible ? "is-visible" : ""}`}
+          >
             Explora cada configuración en nuestra{" "}
             <b className="font-bold">plataforma interactiva:</b>
             <br />
@@ -58,7 +70,9 @@ export default function Modelos() {
             dispositivo.
           </p>
 
-          <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream">
+          <button
+            className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isVisible ? "is-visible" : ""}`}
+          >
             Ver Click and Xperience
           </button>
         </div>
@@ -152,7 +166,10 @@ export default function Modelos() {
         </div>
 
         {/* Botones inferiores */}
-        <div className="max-lg:hidden flex justify-center items-center gap-[30px] w-full">
+        <div
+          ref={buttonsDesktopRef}
+          className={`max-lg:hidden flex justify-center items-center gap-[30px] w-full reveal-fade ${isButtonsDesktopVisible ? "is-visible" : ""}`}
+        >
           {/* Naves */}
           <button className="w-fit px-[20px] pt-[11px] pb-[12px] rounded-full boton font-semibold bg-orange text-cream drop-shadow-md drop-shadow-black/25">
             Ver disponibilidad de Naves BTS en renta o venta
