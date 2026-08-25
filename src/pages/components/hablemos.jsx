@@ -63,12 +63,12 @@ export default function HablemosDeTuProyecto() {
     "w-full h-[80px] pl-[20px] pr-[15px] rounded-[15px] border border-white/80 bg-blue paragraph text-white placeholder:text-white outline-none focus:border-naranja transition-colors";
 
   const textareaClass =
-    "w-full min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue paragraph text-white placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
+    "w-full min-h-[170px] sm:min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue paragraph text-white placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
 
   return (
     <div
       id="contacto"
-      className="flex flex-col w-full justify-center items-center p-[60px] bg-blue-overlay"
+      className="flex flex-col w-full justify-center items-center px-[44px] py-[60px] sm:p-[60px] bg-blue-overlay"
     >
       <div className="flex flex-col w-full max-w-[1150px] gap-[30px]">
         {/* Header */}
@@ -89,12 +89,16 @@ export default function HablemosDeTuProyecto() {
           </div>
           {/* Logo */}
           <div className="shrink-0 h-full flex items-center justify-center">
-            <img src={trueLogo} alt="" className="w-[74px] h-[106px]" />
+            <img
+              src={trueLogo}
+              alt=""
+              className="w-[34px] sm:w-[74px] sm:h-[106px]"
+            />
           </div>
         </div>
 
         {/* Card de contacto */}
-        <div className="flex flex-col gap-[20px] p-[30px] rounded-[20px] bg-white/10">
+        <div className="flex flex-col gap-[30px] sm:gap-[20px] p-[30px] rounded-[20px] bg-white/10">
           <h3 className="font-abhaya subtitle text-white uppercase">
             Ricardo Villarreal
           </h3>
@@ -103,7 +107,7 @@ export default function HablemosDeTuProyecto() {
           </p>
 
           {/* Datos de contacto */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-[30px] gap-x-[80px] lg:gap-[14px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-[30px] gap-x-[80px] lg:gap-[14px]">
             {contactInfo.map((item) => (
               <div key={item.id} className="flex flex-col gap-[20px]">
                 <div className="flex items-center justify-center h-[60px] gap-[10px] px-[16px] py-[12px] rounded-[10px] border border-white bg-blue">
@@ -233,7 +237,7 @@ export default function HablemosDeTuProyecto() {
           </div>
 
           {/* Botón de enviar */}
-          <button className="self-end lg:self-center lg:w-full lg:max-w-[565px] boton px-[20px] pt-[12px] pb-[11px] rounded-[30px] text-cream bg-orange">
+          <button className="sm:self-end lg:self-center lg:w-full lg:max-w-[565px] boton px-[20px] pt-[12px] pb-[11px] rounded-[30px] text-cream bg-orange">
             Enviar mensaje
           </button>
         </form>

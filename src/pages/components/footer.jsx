@@ -68,11 +68,11 @@ export default function Footer() {
           <img
             src={trueLogo}
             alt="Parque Industrial Ciénega de Flores"
-            className="w-[360px]"
+            className="w-[240px] sm:max-w-[360px]"
           />
 
           {/* Navegación */}
-          <nav className="w-full max-w-[1164px] flex flex-wrap justify-around items-center">
+          <nav className="w-full max-sm:flex-col max-w-[1164px] flex flex-wrap justify-around items-center">
             {navLinks.map((item) => (
               <a
                 key={item.id}
@@ -90,14 +90,14 @@ export default function Footer() {
           </p>
 
           {/* Datos de contacto */}
-          <div className="flex flex-wrap w-full max-w-[1124px] justify-around items-center">
+          <div className="flex max-sm:flex-col flex-wrap w-full max-w-[1124px] justify-around items-cente gap-[10px]">
             {contactInfo.map((item) => (
               <a
                 key={item.id}
                 href={item.href}
                 target={item.id === "web" ? "_blank" : undefined}
                 rel={item.id === "web" ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-[10px] font-inter data text-white"
+                className="flex items-center self-center gap-[10px] font-inter data text-white"
               >
                 <img src={item.icon} alt="" className="h-[15px]" />
                 {item.label}
@@ -133,7 +133,7 @@ export default function Footer() {
       </div>
 
       {/* botón whatsapp */}
-      <div className="absolute left-0 bottom-[52px]">
+      <div className="absolute left-0 sm:bottom-[52px]">
         <a className="flex size-[52px] justify-center items-center rounded-r-[32.5px] bg-orange">
           <img
             src={whatsappIcon}

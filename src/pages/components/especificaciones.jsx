@@ -48,7 +48,7 @@ export default function Especificaciones() {
   return (
     <div
       id="propuesta-de-valor"
-      className="relative flex flex-col justify-center items-center w-full h-fit py-[44px] gap-[40px] bg-brown/80"
+      className="relative flex flex-col justify-center items-center w-full h-fit px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[40px] bg-brown/80"
     >
       {/* Imagen de fondo */}
       <div className="absolute -z-10 inset-0 w-full h-full">
@@ -61,11 +61,11 @@ export default function Especificaciones() {
         </div>
       </div>
 
-      <h2 className="title font-abhaya uppercase">
+      <h2 className="max-sm:max-w-[260px] title text-center font-abhaya uppercase">
         Todo lo que tu operación <br /> necesita, en un solo lugar.
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[40px] xl:gap-[23px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[20px] sm:gap-[40px] xl:gap-[23px]">
         {ESPECIFICACIONES.map((especificacion, index) => {
           return (
             <div

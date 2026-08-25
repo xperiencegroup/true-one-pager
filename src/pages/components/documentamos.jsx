@@ -38,7 +38,7 @@ export default function Documentamos() {
       {/* Medio banner */}
       <div
         id="true-cienega"
-        className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] gap-[30px] bg-black"
+        className="flex flex-col w-full justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-black"
       >
         {/* Header */}
         <div className="flex flex-col w-full max-w-[1120px] gap-[30px]">
@@ -62,7 +62,7 @@ export default function Documentamos() {
             return (
               <div
                 key={etapa.id}
-                className="flex flex-col justify-between items-center text-center gap-[15px] p-[30px] rounded-[40px] border border-cream/50 bg-cream/10"
+                className="flex flex-col min-h-[280px] justify-between items-center text-center gap-[15px] p-[30px] rounded-[40px] border border-cream/50 bg-cream/10"
               >
                 <div className="flex items-center justify-center size-[92px] rounded-full bg-black">
                   <img src={etapa.icon} alt="Ícono de la etapa" />

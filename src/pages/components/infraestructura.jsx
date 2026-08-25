@@ -41,7 +41,7 @@ export default function Infraestructura() {
   return (
     <>
       {/* image medio banner */}
-      <div className="relative w-full h-[486px]">
+      <div className="relative w-full h-[142px] sm:h-[303px] lg:h-[486px]">
         <img
           src={banner}
           alt="Banner de Nave"
@@ -56,7 +56,7 @@ export default function Infraestructura() {
       {/* Content */}
       <div
         id="ubicacion"
-        className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] gap-[30px] bg-blue-overlay"
+        className="flex flex-col w-full justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-blue-overlay"
       >
         <div className="flex flex-col xl:flex-row w-full max-w-[1280px] justify-center gap-[30px]">
           {/* Columnda izquierda */}
@@ -69,7 +69,7 @@ export default function Infraestructura() {
             </h2>
 
             {/* divider */}
-            <div className="w-[568px]">
+            <div className="w-full max-w-[568px]">
               <div className="divider-orange-full" />
             </div>
 
@@ -94,7 +94,10 @@ export default function Infraestructura() {
             {/* Datos relevantes */}
             <div className="flex flex-col gap-[20px]">
               {infraestructuraData.map((item) => (
-                <div key={item.id} className="flex items-center gap-[20px]">
+                <div
+                  key={item.id}
+                  className="flex flex-col sm:flex-row items-center gap-[20px]"
+                >
                   <div className="flex shrink-0 items-center justify-center size-[60px] rounded-full bg-blue">
                     <img
                       src={item.icon}
@@ -102,11 +105,11 @@ export default function Infraestructura() {
                       className="h-[35px]"
                     />
                   </div>
-                  <div className="flex flex-col gap-[10px]">
+                  <div className="flex flex-col items-center sm:items-start gap-[5px] sm:gap-[10px]">
                     <h4 className="text-naranja font-bold uppercase paragraph leading-[120%] text-orange">
                       {item.title}
                     </h4>
-                    <p className="text-white paragraph font-light leading-[120%]">
+                    <p className="text-white paragraph text-center sm:text-left font-light leading-[120%]">
                       {item.description}
                     </p>
                   </div>
@@ -115,7 +118,7 @@ export default function Infraestructura() {
             </div>
           </div>
           {/* Columnda derecha */}
-          <div className="self-center flex shrink-0 w-full xl:w-[410px] h-[430px] xl:h-[715px] justify-center items-center rounded-[31px] bg-cream/15 border-solid border-[1px] p-[13px] border-cream/50">
+          <div className="self-center flex shrink-0 w-full h-[240px] sm:h-[430px] xl:w-[410px] xl:h-[715px] justify-center items-center rounded-[31px] bg-cream/15 border-solid border-[1px] p-[13px] border-cream/50">
             <div className="relative w-full h-full bg-blue rounded-[18px] overflow-hidden">
               <img
                 src={mapa}
@@ -129,19 +132,19 @@ export default function Infraestructura() {
         {/* Flexibilidad y calidad */}
         <div className="flex flex-col lg:flex-row w-full max-w-[1280px] justify-center items-center gap-[22px]">
           {/* cuadro izquierdo */}
-          <div className="flex flex-col w-full lg:w-[539px] lg:min-h-[700px] xl:h-[610px] p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
-            <div className="flex items-center gap-[20px]">
+          <div className="flex flex-col w-full lg:w-[539px] lg:min-h-[700px] xl:h-[610px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
+            <div className="flex flex-col items-center gap-[20px]">
               <img src={cuadroNaranjaIcon} alt="" className="size-[38px]" />
-              <h3 className="text-[32px] font-abhaya text-orange uppercase">
+              <h3 className="subtitle max-sm:text-center font-abhaya text-orange uppercase">
                 Flexibilidad real
               </h3>
             </div>
             {/* Linea decoration */}
-            <div className="w-[332px]">
+            <div className="w-full max-w-[332px]">
               <div className="divider-orange-full" />
             </div>
 
-            <h4 className="paragraph font-bold leading-[120%] text-cream">
+            <h4 className="paragraph font-bold max-sm:text-center leading-[120%] text-cream">
               El rango más flexible del mercado.
             </h4>
 
@@ -164,19 +167,19 @@ export default function Infraestructura() {
           </div>
 
           {/* cuadro derecho */}
-          <div className="flex flex-col lg:w-[539px] lg:min-h-[700px] xl:h-[610px] p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
-            <div className="flex items-center gap-[20px]">
+          <div className="flex flex-col lg:w-[539px] lg:min-h-[700px] xl:h-[610px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
+            <div className="flex flex-col sm:flex-row items-center gap-[20px]">
               <img src={almacenNaranjaIcon} alt="" className="size-[38px]" />
-              <h3 className="text-[32px] font-abhaya text-orange uppercase">
+              <h3 className="subtitle font-abhaya text-orange uppercase">
                 Calidad clase A
               </h3>
             </div>
             {/* Linea decoration */}
-            <div className="w-[332px]">
+            <div className="w-full max-w-[332px]">
               <div className="divider-orange-full" />
             </div>
 
-            <h4 className="paragraph font-bold leading-[120%] text-cream">
+            <h4 className="paragraph max-sm:text-center font-bold leading-[120%] text-cream">
               Construido para durar, diseñado para funcionar.
             </h4>
 

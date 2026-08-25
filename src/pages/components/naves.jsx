@@ -42,7 +42,7 @@ export default function Naves() {
   return (
     <div className="flex flex-col justify-center items-center w-full bg-blue-overlay">
       {/* Renta o venta */}
-      <div className="relative flex flex-col w-full max-w-[1280px] px-[90px] py-[60px] gap-[51px]">
+      <div className="relative flex flex-col w-full max-w-[1280px] px-[44px] py-[50px] sm:px-[90px] sm:py-[60px] gap-[20px] sm:gap-[51px]">
         {/* Imagen con radial */}
         <div className="hidden absolute z-0 flex w-full h-full top-0 left-0">
           {/* Div vacio */}
@@ -90,16 +90,20 @@ export default function Naves() {
                   key={beneficio.id}
                   className="flex flex-col lg:flex-row gap-[20px]"
                 >
-                  <img src={decoration} alt="" className="lg:hidden h-[41px]" />
+                  <img
+                    src={decoration}
+                    alt=""
+                    className="hidden sm:block lg:hidden h-[41px]"
+                  />
                   <div
                     key={beneficio.id}
-                    className="relative flex flex-col pl-[30px] gap-[15px] max-lg:before:hidden before:absolute before:left-0 before:top-0 before:h-[82.5px] before:w-[1.5px] before:bg-gradient-to-b before:from-orange before:via-orange before:to-transparent"
+                    className="relative flex flex-col sm:pl-[30px] gap-[15px] sm:before:hidden lg:before:block before:absolute before:left-0 before:top-0 before:h-[30px] lg:before:h-[82.5px] before:w-[1.5px] before:bg-gradient-to-b before:from-orange before:via-orange before:to-transparent"
                   >
-                    <h3 className="paragraph max-lg:text-center text-orange font-bold">
+                    <h3 className="max-sm:pl-[20px] paragraph text-left sm:text-center lg:text-left text-orange font-bold">
                       {beneficio.title}
                     </h3>
 
-                    <p className="self-center max-w-[590px] lg:max-w-none paragraph max-lg:text-center font-light text-cream">
+                    <p className="sm:self-center lg:self-start max-w-[590px] lg:max-w-none paragraph text-left sm:text-center lg:text-left font-light text-cream">
                       {beneficio.description}
                     </p>
                   </div>
@@ -177,7 +181,7 @@ export default function Naves() {
           </h3>
 
           {/* Terreno completo */}
-          <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[60px] py-[12px] border-cream">
+          <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
             <h4 className="paragraph text-center font-bold">
               Nave BTS <br /> Terreno Completo
             </h4>
@@ -186,14 +190,14 @@ export default function Naves() {
           </div>
 
           {/* Terreno grande */}
-          <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[60px] py-[12px] border-cream">
+          <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
             <h4 className="paragraph text-center font-bold">Nave BTS Grande</h4>
             <p className="paragraph text-center">528,678 ft²</p>
             <p className="paragraph text-center">49,116 m²</p>
           </div>
 
           {/* Terreno mediana */}
-          <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[60px] py-[12px] border-cream">
+          <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
             <h4 className="paragraph text-center font-bold">
               Nave BTS Mediana
             </h4>
@@ -202,7 +206,7 @@ export default function Naves() {
           </div>
 
           {/* Terreno chicas */}
-          <div className="flex flex-col w-full gap-[20px] px-[60px] py-[12px]">
+          <div className="flex flex-col w-full gap-[20px] px-[29px] sm:px-[60px] py-[12px]">
             <h4 className="paragraph text-center font-bold">Nave BTS Chicas</h4>
             <p className="paragraph text-center">196,068 - 213,657 ft²</p>
             <p className="paragraph text-center">18,215.34 - 19,849.43 m²</p>

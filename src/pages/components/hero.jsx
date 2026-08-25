@@ -4,7 +4,7 @@ import Navbar from "./navbar";
 
 export default function Hero() {
   return (
-    <div className="relative flex justify-center w-full h-lvh">
+    <div id="hero" className="relative flex justify-center w-full min-h-lvh">
       {/* Overlay */}
       <div className="absolute z-10 inset-0 w-full h-full bg-[#191F35]/80" />
 
@@ -28,12 +28,9 @@ export default function Hero() {
         <Navbar />
 
         {/* Texto */}
-        <div
-          id="hero"
-          className="flex flex-col w-full gap-[36px] px-[30px] pt-[22vh]"
-        >
+        <div className="flex flex-col w-full gap-[30px] sm:gap-[36px] px-[30px] pt-[90px] min-[660px]:pt-[22vh]">
           {/* Logo */}
-          <div className="relative w-[335px] h-[60px]">
+          <div className="relative w-full max-w-[298px] sm:w-[335px] h-[60px]">
             <img
               src={trueLogoCream}
               alt="Logo de True Developments"
@@ -63,13 +60,15 @@ export default function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-[44px]">
+          <div className="flex flex-col sm:flex-row gap-[40px] sm:gap-[44px]">
             <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-orange hover:cursor-pointer">
-              Quiero comprar o rentar una Nave Industrial a la medida
+              Quiero comprar o rentar <br className="sm:hidden" /> una Nave
+              Industrial a la medida
             </button>
 
             <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-cream text-blue hover:cursor-pointer">
-              Ver disponibilidad de Macrolotes en venta
+              Ver disponibilidad <br className="sm:hidden" /> de Macrolotes en
+              venta
             </button>
           </div>
         </div>

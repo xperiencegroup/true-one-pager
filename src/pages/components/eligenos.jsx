@@ -38,12 +38,11 @@ export default function Eligenos() {
         <div className="absolute z-0 w-full h-full bg-blue-overlay/89" />
 
         {/*  Content */}
-        <div className="relative flex flex-col lg:flex-row w-full items-center lg:items-start lg:justify-between max-w-[1280px] h-full py-[60px] px-[70px] gap-[40px] lg:gap-[20px] xl:gap-[48px]">
+        <div className="relative flex flex-col lg:flex-row w-full items-center lg:items-start lg:justify-between max-w-[1280px] h-full py-[50px] sm:py-[60px] px-[44px] sm:px-[70px] gap-[40px] lg:gap-[20px] xl:gap-[48px]">
           {/* Left panel */}
           <div className="w-full max-w-[610px] flex flex-col justify-start max-lg:items-center gap-[20px]">
             <h3 className="title max-lg:text-center font-abhaya uppercase">
-              No estás eligiendo
-              <br className="max-lg:hidden" />
+              No estás eligiendo <br className="max-lg:hidden" />
               un espacio industrial. Estás eligiendo
               <br />
               cómo vas a operar.
@@ -88,14 +87,14 @@ export default function Eligenos() {
               return (
                 <div
                   key={index}
-                  className="flex w-full lg:w-[453px] h-[104px] justify-start items-center p-[20px] gap-[15px] border-2 rounded-[17px] border-orange bg-blue-overlay"
+                  className="flex flex-col sm:flex-row w-full lg:w-[453px] h-fit sm:h-[104px] justify-start items-center p-[20px] gap-[15px] border-2 rounded-[17px] border-orange bg-blue-overlay"
                 >
                   <img
                     src={razon.icon}
                     alt="Ícono correspondiente"
                     className="h-[46px]"
                   />
-                  <h4 className="max-w-[318px] paragraph font-bold">
+                  <h4 className="max-w-[318px] paragraph text-center sm:text-left font-bold">
                     {razon.label}
                   </h4>
                 </div>
@@ -104,17 +103,19 @@ export default function Eligenos() {
 
             {/* Botones */}
             <button className="w-full max-lg:max-w-[350px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-orange">
-              Quiero comprar o rentar una Nave Industrial a la medida
+              Quiero comprar o rentar una <br className="sm:hidden" /> Nave
+              Industrial a la medida
             </button>
 
             <button className="w-full max-lg:max-w-[350px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-cream">
-              Compra tu Terreno y construye a tu ritmo
+              Compra tu Terreno <br className="sm:hidden" /> y construye a tu
+              ritmo
             </button>
           </div>
         </div>
       </div>
 
-      <div className="relative flex w-full h-[486px] justify-center items-center bg-black">
+      <div className="relative flex w-full h-[143px] sm:h-[303px] lg:h-[486px] justify-center items-center bg-black">
         video
       </div>
     </>

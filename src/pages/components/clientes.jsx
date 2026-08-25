@@ -43,7 +43,7 @@ export default function Clientes() {
   return (
     <div className="flex flex-col w-full">
       {/* Sección 1: Desarrollos propios */}
-      <div className="flex flex-col items-center w-full px-[90px] py-[60px] gap-[20px] bg-brown">
+      <div className="flex flex-col items-center w-full px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-brown">
         <div className="flex flex-col items-center gap-[20px] w-full max-w-[1100px]">
           <h3 className="font-abhaya title text-white uppercase text-center">
             Clientes en desarrollos
@@ -54,10 +54,9 @@ export default function Clientes() {
 
         <div className="divider-white max-w-[1100px]" />
 
-        <div className="grid grid-cols-4 gap-x-[18px] gap-y-[18px] items-center justify-items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[24px] sm:gap-x-[80px] gap-y-[20px] items-center justify-items-center">
           {clientesPropios.map((cliente) => (
             <img
-              key={cliente.id}
               src={cliente.logo}
               alt={`Logo ${cliente.name}`}
               className="h-[26px] w-auto max-w-[130px] object-contain brightness-0 invert"
@@ -67,7 +66,7 @@ export default function Clientes() {
       </div>
 
       {/* Sección 2: Construcción para terceros */}
-      <div className="flex flex-col items-center w-full px-[90px] py-[60px] gap-[20px] bg-orange">
+      <div className="flex flex-col items-center w-full px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-orange">
         <div className="flex flex-col items-center gap-[20px] w-full max-w-[1100px]">
           <h3 className="font-abhaya title text-white uppercase text-center">
             CLIENTES DE CONSTRUCCIÓN <br /> INDUSTRIAL PARA TERCEROS
@@ -76,7 +75,7 @@ export default function Clientes() {
 
         <div className="divider-white max-w-[1100px]" />
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[80px] gap-y-[18px] items-center justify-items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[24px] sm:gap-x-[80px] gap-y-[18px] items-center justify-items-center">
           {clientesTerceros.map((cliente) => (
             <img
               key={cliente.id}

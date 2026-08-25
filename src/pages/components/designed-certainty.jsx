@@ -4,18 +4,18 @@ export default function DesignedForCertainty() {
   return (
     <div
       id="true-developments"
-      className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] bg-blue-overlay"
+      className="flex flex-col w-full justify-center items-center px-[44px] sm:px-[90px] py-[60px] bg-blue-overlay"
     >
       <div className="flex flex-col lg:flex-row w-full justify-center max-lg:items-center max-w-[1280px] gap-[40px] lg:gap-[35px]">
         {/* Columna izquierda */}
-        <div className="flex flex-col w-[453px] shrink-0 max-lg:items-center gap-[21px]">
+        <div className="flex flex-col w-full max-w-[453px] shrink-0 max-lg:items-center gap-[21px]">
           <div className="flex flex-col gap-[14px]">
             <div className="flex items-center max-lg:justify-center gap-[10px]">
               {/* Logo - reemplazar con tu asset SVG */}
               <img src={trueLogo} alt="" className="w-[358px] h-[63px]" />
             </div>
 
-            <div className="w-[387px]">
+            <div className="w-full max-w-[387px]">
               <div className="divider-orange-full" />
             </div>
           </div>

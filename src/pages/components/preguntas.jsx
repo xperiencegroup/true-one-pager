@@ -52,17 +52,21 @@ export default function Preguntas() {
   };
 
   return (
-    <div className="flex flex-col w-full justify-center items-center px-[90px] py-[60px] gap-[30px] bg-brown">
+    <div className="flex flex-col w-full justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-brown">
       <div className="flex flex-col w-full max-w-[1110px] gap-[30px]">
         {/* Header */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-[5px]">
           <h2 className="font-abhaya title leading-none text-white uppercase">
             Las preguntas
             <br />
             que deberías hacernos
           </h2>
           <div className="shrink-0">
-            <img src={logo} alt="" className="w-[58px] h-[83px]" />
+            <img
+              src={logo}
+              alt=""
+              className="w-[30px] sm:w-[58px] smh-[83px]"
+            />
           </div>
         </div>
 
@@ -81,7 +85,7 @@ export default function Preguntas() {
                     {item.question}
                   </span>
 
-                  <span className="flex shrink-0 items-center justify-center size-[43px] drop-shadow-xl shadow-black rounded-full bg-orange">
+                  <span className="flex shrink-0 items-center justify-center size-[35px] sm:size-[43px] drop-shadow-xl shadow-black rounded-full bg-orange">
                     {isOpen ? (
                       <div className="w-[14.45px] h-[5.65px] bg-cream" />
                     ) : (

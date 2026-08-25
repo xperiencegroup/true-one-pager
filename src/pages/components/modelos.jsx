@@ -27,7 +27,7 @@ export default function Modelos() {
   return (
     <>
       {/* Diseñado para operar con certeza */}
-      <div className="relative w-full px-[90px] py-[60px]">
+      <div className="relative w-full px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]">
         {/* image y overlay */}
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="relative w-full h-full">
@@ -67,7 +67,7 @@ export default function Modelos() {
       {/* Elige como quieres crecer */}
       <div
         id="naves-macrolotes"
-        className="flex flex-col justify-center items-center w-full py-[60px] px-[70px] lg:px-[20px] xl:px-[78px] gap-[33px] bg-brown"
+        className="flex flex-col justify-center items-center w-full px-[44px] py-[50px] sm:py-[60px] sm:px-[70px] lg:px-[20px] xl:px-[78px] gap-[33px] bg-brown"
       >
         <div className="flex flex-col lg:flex-row items-center w-full max-w-[1100px] h-full gap-[40px] lg:gap-[16px]">
           {/* Primera columna */}
@@ -111,7 +111,7 @@ export default function Modelos() {
                   className="flex flex-col w-full justify-center items-center max-lg:gap-[40px]"
                 >
                   {/* cuadro */}
-                  <div className="flex flex-col w-full max-lg:max-w-[680px] max-lg:h-[255px] lg:size-[341px] justify-start items-center p-[20px] gap-[15px] rounded-[20px] bg-cream/10 border border-cream">
+                  <div className="flex flex-col w-full max-w-[680px] h-fit sm:h-[255px] lg:size-[341px] justify-start items-center p-[20px] gap-[15px] rounded-[20px] bg-cream/10 border border-cream">
                     {/* Titulo y subtitulo */}
                     <div className="flex flex-col items-center gap-[7px]">
                       <h3 className="subtitle text-center font-abhaya uppercase text-cream-second">
@@ -126,7 +126,7 @@ export default function Modelos() {
                     <img src={modelo.icon} alt={`Ícono de ${modelo.title}`} />
 
                     {/* Ventaja */}
-                    <div className="w-full h-full justify-center lg:justify-start items-center flex gap-[12px]">
+                    <div className="w-full h-full flex-col min-[440px]:flex-row justify-center lg:justify-start items-center flex gap-[12px]">
                       <img
                         src={checkIcon}
                         alt="Ícono check"
