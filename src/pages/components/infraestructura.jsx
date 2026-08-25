@@ -133,7 +133,7 @@ export default function Infraestructura() {
         <div className="flex flex-col lg:flex-row w-full max-w-[1280px] justify-center items-center gap-[22px]">
           {/* cuadro izquierdo */}
           <div className="flex flex-col w-full lg:w-[539px] lg:min-h-[700px] xl:h-[610px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
-            <div className="flex flex-col items-center gap-[20px]">
+            <div className="flex flex-col sm:flex-row items-center gap-[20px]">
               <img src={cuadroNaranjaIcon} alt="" className="size-[38px]" />
               <h3 className="subtitle max-sm:text-center font-abhaya text-orange uppercase">
                 Flexibilidad real

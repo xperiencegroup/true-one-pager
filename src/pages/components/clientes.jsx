@@ -57,6 +57,7 @@ export default function Clientes() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[24px] sm:gap-x-[80px] gap-y-[20px] items-center justify-items-center">
           {clientesPropios.map((cliente) => (
             <img
+              key={cliente.id}
               src={cliente.logo}
               alt={`Logo ${cliente.name}`}
               className="h-[26px] w-auto max-w-[130px] object-contain brightness-0 invert"

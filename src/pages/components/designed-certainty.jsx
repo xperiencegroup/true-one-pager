@@ -28,7 +28,7 @@ export default function DesignedForCertainty() {
 
         {/* Columna derecha */}
         <div className="flex flex-col gap-[30px] max-w-[640px] lg:max-w-[589px]">
-          <p className="paragraph text-justify text-white">
+          <p className="paragraph font-light text-justify text-white">
             True Developments es una desarrolladora inmobiliaria de Monterrey
             con más de 18 años de experiencia desarrollando bodegas, naves y
             parques industriales en México.
@@ -38,7 +38,7 @@ export default function DesignedForCertainty() {
             prosperan.
           </p>
 
-          <p className="paragraph text-justify text-white">
+          <p className="paragraph font-light text-justify text-white">
             Nuestro portafolio supera los 100,000 m² de propiedades propias
             arrendadas a empresas como PepsiCo, Vitro, Nemak y Mission Foods,
             además de más de 200,000 m² construidos para clientes como HEINEKEN

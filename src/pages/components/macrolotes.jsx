@@ -98,7 +98,7 @@ export default function Macrolotes() {
           </div>
 
           {/* button */}
-          <button className="w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-semibold rounded-[30px] text-blue bg-cream">
+          <button className="w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-blue bg-cream">
             Conoce los Macrolotes Industriales disponibles
           </button>
         </div>

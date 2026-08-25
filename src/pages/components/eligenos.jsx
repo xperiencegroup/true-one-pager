@@ -57,7 +57,7 @@ export default function Eligenos() {
               <div className="divider-orange" />
             </div>
 
-            <p className="paragraph max-lg:text-center">
+            <p className="paragraph font-light max-lg:text-center">
               Elegir espacio industrial no es comprar metros cuadrados. Es
               decidir dónde va a operar tu empresa los próximos diez o veinte
               años.
@@ -76,9 +76,9 @@ export default function Eligenos() {
           </div>
 
           {/* Right panel */}
-          <div className="w-full max-w-[680px] lg:w-[453px] flex flex-col items-center lg:items-start gap-[20px]">
+          <div className="w-full max-w-[680px] lg:w-[480px] flex flex-col items-center lg:items-start gap-[20px]">
             {/* Title */}
-            <h3 className="subtitle max-lg:text-center font-abhaya uppercase">
+            <h3 className="w-full max-w-[450px] subtitle max-lg:text-center font-abhaya uppercase">
               Aquí no vienes a adaptarte al parque industrial. El parque
               industrial se adapta a ti.
             </h3>

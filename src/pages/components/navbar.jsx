@@ -35,7 +35,7 @@ const buttons = [
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   return (
-    <div className="relative flex w-full justify-center bg-blue">
+    <div className="navbar-enter relative flex w-full justify-center bg-blue">
       <div className="flex w-full h-[83px]  justify-between min-[660px]:justify-center lg:justify-around items-center max-[660px]:p-[20px]">
         {/* Botón Logo True */}
         <a href="#hero" className="hidden min-[660px]:block px-[10px]">

@@ -20,7 +20,7 @@ export default function Hero() {
       </div>
 
       {/* Fake Navbar */}
-      <div className="absolute z-10 top-0 w-full h-[83px] bg-blue" />
+      <div className="navbar-enter absolute z-10 top-0 w-full h-[83px] bg-blue" />
 
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center w-full max-w-[1164px] h-full">
@@ -51,11 +51,12 @@ export default function Hero() {
             </h2>
 
             {/* Description */}
-            <p className="max-w-[680px] lg:max-w-[900px] text-[20px] leading-[125%]">
-              <b>Parque Industrial Clase A</b> de 15 hectáreas sobre la
+            <p className="max-w-[680px] lg:max-w-[900px] text-[20px] font-light leading-[125%]">
+              <b className="font-bold">Parque Industrial Clase A</b> de 15
+              hectáreas sobre la
               <br />
               Autopista Monterrey-Nuevo Laredo (Carretera Federal 85), en
-              <b> Ciénega de Flores, NL.</b>
+              <b className="font-bold"> Ciénega de Flores, NL.</b>
             </p>
           </div>
 

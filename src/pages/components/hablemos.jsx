@@ -56,14 +56,13 @@ export default function HablemosDeTuProyecto() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    // TODO: conectar con endpoint / servicio de envío
   };
 
   const inputClass =
-    "w-full h-[80px] pl-[20px] pr-[15px] rounded-[15px] border border-white/80 bg-blue paragraph text-white placeholder:text-white outline-none focus:border-naranja transition-colors";
+    "w-full h-[80px] pl-[20px] pr-[15px] rounded-[15px] border border-white/80 bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors";
 
   const textareaClass =
-    "w-full min-h-[170px] sm:min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue paragraph text-white placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
+    "w-full min-h-[170px] sm:min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
 
   return (
     <div
@@ -237,7 +236,7 @@ export default function HablemosDeTuProyecto() {
           </div>
 
           {/* Botón de enviar */}
-          <button className="sm:self-end lg:self-center lg:w-full lg:max-w-[565px] boton px-[20px] pt-[12px] pb-[11px] rounded-[30px] text-cream bg-orange">
+          <button className="sm:self-end lg:self-center lg:w-full lg:max-w-[565px] boton font-medium px-[20px] pt-[12px] pb-[11px] rounded-[30px] text-cream bg-orange">
             Enviar mensaje
           </button>
         </form>

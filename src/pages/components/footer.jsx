@@ -11,6 +11,8 @@ import linkedinIcon from "../../assets/icons/social/linkedin.svg";
 import instagramIcon from "../../assets/icons/social/instagram.svg";
 import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
 
+import returnIcon from "../../assets/icons/return.svg";
+
 const navLinks = [
   { id: "propuesta", label: "Propuesta de Valor", href: "#propuesta-de-valor" },
   { id: "naves", label: "Naves y Macrolotes", href: "#naves-macrolotes" },
@@ -85,7 +87,7 @@ export default function Footer() {
           </nav>
 
           {/* Sitio web CTA */}
-          <p className="boton text-white font-semibold text-center">
+          <p className="boton text-white font-medium text-center">
             Visita nuestro sitio web para conocer más:
           </p>
 
@@ -97,7 +99,7 @@ export default function Footer() {
                 href={item.href}
                 target={item.id === "web" ? "_blank" : undefined}
                 rel={item.id === "web" ? "noopener noreferrer" : undefined}
-                className="flex items-center self-center gap-[10px] font-inter data text-white"
+                className="flex items-center self-center gap-[10px] font-light data text-white"
               >
                 <img src={item.icon} alt="" className="h-[15px]" />
                 {item.label}
@@ -133,10 +135,24 @@ export default function Footer() {
       </div>
 
       {/* botón whatsapp */}
-      <div className="absolute left-0 sm:bottom-[52px]">
+      <div className="absolute z-50 left-0 sm:bottom-[52px]">
         <a className="flex size-[52px] justify-center items-center rounded-r-[32.5px] bg-orange">
           <img
             src={whatsappIcon}
+            alt={`Ícono de Whatsapp`}
+            className="size-[25.5px]"
+          />
+        </a>
+      </div>
+
+      {/* botón regresar */}
+      <div className="absolute z-50 right-0 top-0">
+        <a
+          href="#hero"
+          className="flex size-[52px] justify-center items-center rounded-b-[32.5px] bg-orange"
+        >
+          <img
+            src={returnIcon}
             alt={`Ícono de Whatsapp`}
             className="size-[25.5px]"
           />
