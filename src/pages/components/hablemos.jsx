@@ -74,8 +74,7 @@ export default function HablemosDeTuProyecto() {
         <div className="flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[20px] lg:gap-[40px]">
           <div className="flex flex-col w-full gap-[20px]">
             <h2 className="font-abhaya title max-lg:text-center text-white uppercase">
-              Hablemos de
-              <br className="max-lg:hidden" />
+              Hablemos de <br className="max-lg:hidden" />
               tu proyecto.
             </h2>
             <p className="paragraph max-lg:text-center font-light text-white">

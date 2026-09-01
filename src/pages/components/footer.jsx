@@ -1,65 +1,13 @@
 import trueLogo from "../../assets/logos/true-cienega.svg";
-import link from "../../assets/icons/link.svg";
-import phone from "../../assets/icons/phone.svg";
-import mail from "../../assets/icons/mail.svg";
-
 import xperienceDesarrollo from "../../assets/xperience/desarrollado-por-experience.svg";
 
+// navigation
+import { navLinks } from "../../const/navigation";
+
 // socials
-import facebookIcon from "../../assets/icons/social/facebook.svg";
-import linkedinIcon from "../../assets/icons/social/linkedin.svg";
-import instagramIcon from "../../assets/icons/social/instagram.svg";
+import { socials, contactInfo } from "../../const/socials";
 import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
-
 import returnIcon from "../../assets/icons/return.svg";
-
-const navLinks = [
-  { id: "propuesta", label: "Propuesta de Valor", href: "#propuesta-de-valor" },
-  { id: "naves", label: "Naves y Macrolotes", href: "#naves-macrolotes" },
-  { id: "ubicacion", label: "Ubicación", href: "#ubicacion" },
-  { id: "por-que", label: "¿Por qué PI True CF?", href: "#true-cienega" },
-  { id: "true-dev", label: "True Developments", href: "#true-developments" },
-  { id: "contacto", label: "Contacto", href: "#contacto" },
-];
-
-const contactInfo = [
-  {
-    id: "web",
-    icon: link,
-    label: "www.truedevelopments.mx",
-    href: "https://www.truedevelopments.mx",
-  },
-  {
-    id: "tel",
-    icon: phone,
-    label: "Tel. Oficina: +52 (81) 1356 1142",
-    href: "tel:+528113561142",
-  },
-  {
-    id: "mail",
-    icon: mail,
-    label: "info@truedevelopments.mx",
-    href: "mailto:info@truedevelopments.mx",
-  },
-];
-
-const socials = [
-  {
-    id: "face",
-    icon: facebookIcon,
-    href: "",
-  },
-  {
-    id: "linkedin",
-    icon: linkedinIcon,
-    href: "",
-  },
-  {
-    id: "instagram",
-    icon: instagramIcon,
-    href: "",
-  },
-];
 
 export default function Footer() {
   return (

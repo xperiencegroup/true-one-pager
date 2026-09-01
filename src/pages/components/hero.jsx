@@ -28,7 +28,7 @@ export default function Hero() {
         <Navbar />
 
         {/* Texto */}
-        <div className="flex flex-col w-full gap-[30px] sm:gap-[36px] px-[30px] pt-[90px] min-[660px]:pt-[22vh]">
+        <div className="flex flex-col w-full gap-[30px] sm:gap-[36px] px-[30px] pt-[90px] pb-[20px] min-[660px]:pt-[22vh]">
           {/* Logo */}
           <div className="relative w-full max-w-[298px] sm:w-[335px] h-[60px] animate-hero-1">
             <img
@@ -61,7 +61,7 @@ export default function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-[40px] sm:gap-[44px] animate-hero-3">
+          <div className="flex flex-col sm:flex-row gap-[20px] min-[400px]:gap-[40px] sm:gap-[44px] animate-hero-3">
             <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-orange hover:cursor-pointer">
               Quiero comprar o rentar <br className="sm:hidden" /> una Nave
               Industrial a la medida
