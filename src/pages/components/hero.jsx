@@ -4,7 +4,7 @@ import Navbar from "./navbar";
 
 export default function Hero() {
   return (
-    <div id="hero" className="relative flex justify-center w-full min-h-lvh">
+    <div id="hero" className="relative flex justify-center w-full min-h-svh">
       {/* Overlay */}
       <div className="absolute z-10 inset-0 w-full h-full bg-[#191F35]/80" />
 

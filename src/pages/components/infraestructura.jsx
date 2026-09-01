@@ -1,5 +1,6 @@
 import banner from "../../assets/images/infraestrucutra-banner.jpg";
-import mapa from "../../assets/images/infra-ubicacion.jpg";
+import mapaXL from "../../assets/images/infra-ubicacion.jpg";
+import mapaMobile from "../../assets/images/infra-ubicacion-mapa-lg.jpg";
 import cuadroNaranjaIcon from "../../assets/icons/cuadro-naranja.svg";
 import almacenNaranjaIcon from "../../assets/icons/almacen-naranja.svg";
 
@@ -121,9 +122,14 @@ export default function Infraestructura() {
           <div className="self-center flex shrink-0 w-full h-[240px] sm:h-[430px] xl:w-[410px] xl:h-[715px] justify-center items-center rounded-[31px] bg-cream/15 border-solid border-[1px] p-[13px] border-cream/50">
             <div className="relative w-full h-full bg-blue rounded-[18px] overflow-hidden">
               <img
-                src={mapa}
+                src={mapaXL}
                 alt="Imagen ubicación"
-                className="absolute w-full h-full object-cover"
+                className="hidden xl:block absolute w-full h-full object-fill"
+              />
+              <img
+                src={mapaMobile}
+                alt="Imagen ubicación"
+                className="block xl:hidden absolute w-full h-full object-cover object-[80%_15%]"
               />
             </div>
           </div>
