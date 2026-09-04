@@ -25,6 +25,7 @@
 body {
   color: var(--color-white);
   font-family: var(--font-akzidenz);
+  text-wrap: pretty;
 }
 
 html {
@@ -80,16 +81,16 @@ html {
 }
 
 .title {
-  @apply text-[28px] md:text-[36px] lg:text-[48px] leading-[90%];
+  @apply text-[22px] md:text-[29px] lg:text-[34px] leading-[120%];
 }
 .subtitle {
-  @apply text-[22px] md:text-[28px] lg:text-[32px] leading-[120%];
+  @apply text-[18px] md:text-[24px] lg:text-[26px] leading-[120%];
 }
 .paragraph {
   @apply text-[18px] md:text-[20px] lg:text-[25px] leading-[120%];
 }
 .boton {
-  @apply text-[17px] sm:text-[12px] lg:text-[17px] leading-[140%];
+  @apply text-[14px] sm:text-[12px] lg:text-[14px] leading-[140%];
 }
 .data {
   @apply text-[16px] lg:text-[18px];

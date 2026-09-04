@@ -4,7 +4,10 @@ import Navbar from "./navbar";
 
 export default function Hero() {
   return (
-    <div id="hero" className="relative flex justify-center w-full min-h-svh">
+    <div
+      id="hero"
+      className="relative flex flex-col justify-start items-center w-full min-h-svh lg:h-svh"
+    >
       {/* Overlay */}
       <div className="absolute z-10 inset-0 w-full h-full bg-[#191F35]/80" />
 
@@ -19,18 +22,20 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Fake Navbar */}
-      <div className="navbar-enter absolute z-10 top-0 w-full h-[83px] bg-blue" />
+      {/* line decoration */}
+      <div className="hidden min-[660px]:flex pointer-events-none absolute justify-center z-100 top-0 w-full h-full px-[50px] lg:px-[60px]">
+        <div className="w-full h-full max-w-[1160px] border-cream/50 border-x-[0.5px] bg-red-500/30]" />
+      </div>
+
+      {/* Navbar */}
+      <Navbar />
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center w-full max-w-[1164px] h-full">
-        {/* Navbar */}
-        <Navbar />
-
+      <div className="relative z-20 flex flex-col items-center w-full max-w-[1160px] h-full min-[660px]:px-[50px] lg:px-[60px] xl:px-0">
         {/* Texto */}
-        <div className="flex flex-col w-full gap-[30px] sm:gap-[36px] px-[30px] pt-[90px] pb-[20px] min-[660px]:pt-[22vh]">
+        <div className="flex flex-col w-full h-full gap-[30px] sm:gap-[90px] px-[44px] min-[660px]:px-[30px] pt-[90px] pb-[20px] min-[660px]:pt-[17vh]">
           {/* Logo */}
-          <div className="relative w-full max-w-[298px] sm:w-[335px] h-[60px] animate-hero-1">
+          <div className="relative w-full max-w-[267px] sm:w-[335px] h-[60px] animate-hero-1">
             <img
               src={trueLogoCream}
               alt="Logo de True Developments"
@@ -51,25 +56,28 @@ export default function Hero() {
             </h2>
 
             {/* Description */}
-            <p className="max-w-[680px] lg:max-w-[900px] text-[20px] font-light leading-[125%]">
-              <b className="font-bold">Parque Industrial Clase A</b> de 15
-              hectáreas sobre la
-              <br />
-              Autopista Monterrey-Nuevo Laredo (Carretera Federal 85), en
-              <b className="font-bold"> Ciénega de Flores, NL.</b>
+            <p className="max-w-[680px] lg:max-w-[1100px] text-[20px] font-light leading-[125%]">
+              <strong className="font-bold">Parque Industrial Clase A </strong>
+              de 15 hectáreas sobre la Autopista{" "}
+              <span className="whitespace-nowrap">Monterrey-Nuevo Laredo</span>
+              (Carretera Federal 85),{" "}
+              <br className="max-[660px]:hidden lg:hidden min-[1130px]:block" />
+              en{" "}
+              <strong className="font-bold">
+                Ciénega de Flores, Nuevo León.
+              </strong>
             </p>
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-[20px] min-[400px]:gap-[40px] sm:gap-[44px] animate-hero-3">
+          <div className="flex flex-col sm:flex-row gap-[30px] min-[660px]:gap-[40px] sm:gap-[44px] animate-hero-3">
             <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-orange hover:cursor-pointer">
               Quiero comprar o rentar <br className="sm:hidden" /> una Nave
               Industrial a la medida
             </button>
 
             <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-cream text-blue hover:cursor-pointer">
-              Ver disponibilidad <br className="sm:hidden" /> de Macrolotes en
-              venta
+              Quiero comprar un Macrolote
             </button>
           </div>
         </div>

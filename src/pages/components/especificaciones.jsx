@@ -75,7 +75,11 @@ export default function Especificaciones() {
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[20px] sm:gap-[40px] xl:gap-[23px]">
         {ESPECIFICACIONES.map((especificacion, index) => {
           return (
-            <EspecificacionCard especificacion={especificacion} index={index} />
+            <EspecificacionCard
+              key={especificacion.id}
+              especificacion={especificacion}
+              index={index}
+            />
           );
         })}
       </div>

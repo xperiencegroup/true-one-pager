@@ -84,7 +84,12 @@ export default function Footer() {
 
       {/* botón whatsapp */}
       <div className="absolute z-50 left-0 sm:bottom-[52px]">
-        <a className="flex size-[52px] justify-center items-center rounded-r-[32.5px] bg-orange">
+        <a
+          href="https://wa.me/528184640002"
+          target="_blank"
+          rel="noopener noreferer"
+          className="flex size-[52px] justify-center items-center rounded-r-[32.5px] bg-orange"
+        >
           <img
             src={whatsappIcon}
             alt={`Ícono de Whatsapp`}

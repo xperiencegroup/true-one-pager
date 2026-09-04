@@ -1,5 +1,4 @@
 import Clientes from "./components/clientes";
-import Decoration from "./components/decoration";
 import DesignedForCertainty from "./components/designed-certainty";
 import Documentamos from "./components/documentamos";
 import Eligenos from "./components/eligenos";
@@ -16,9 +15,6 @@ import Preguntas from "./components/preguntas";
 export default function Home() {
   return (
     <main className="relative flex flex-col w-full">
-      {/* Línea de decoración */}
-      <Decoration />
-
       <Hero />
       <Especificaciones />
       <Eligenos />
