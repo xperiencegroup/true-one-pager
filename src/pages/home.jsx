@@ -11,10 +11,27 @@ import Macrolotes from "./components/macrolotes";
 import Modelos from "./components/modelos";
 import Naves from "./components/naves";
 import Preguntas from "./components/preguntas";
+import whatsappIcon from "../assets/icons/social/whatsapp.svg";
 
 export default function Home() {
   return (
     <main className="relative flex flex-col w-full">
+      {/* botón whatsapp */}
+      <div className="fixed z-50 right-0 bottom-0">
+        <a
+          href="https://wa.me/528184640002"
+          target="_blank"
+          rel="noopener noreferer"
+          className="flex size-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
+        >
+          <img
+            src={whatsappIcon}
+            alt={`Ícono de Whatsapp`}
+            className="size-[25.5px]"
+          />
+        </a>
+      </div>
+
       <Hero />
       <Especificaciones />
       <Eligenos />

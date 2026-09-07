@@ -1,3 +1,5 @@
+import { GalleryCarrousel } from "../../components/carousel/embla-carousel-autoplay";
+
 import cuadroIcon from "../../assets/icons/cuadro.svg";
 import almacenIcon from "../../assets/icons/almacen.svg";
 import medidaIcon from "../../assets/icons/medida.svg";
@@ -7,6 +9,14 @@ import carreteraIcon from "../../assets/icons/carretera.svg";
 import bgImage from "../../assets/images/especificaciones-background.jpg";
 import { useInView } from "../../hooks/useInView";
 import EspecificacionCard from "../../components/especificacion-card";
+
+// imagenes
+import foto1 from "../../assets/images/carousel/foto1.jpg";
+import foto6 from "../../assets/images/carousel/foto6.jpg";
+import foto7 from "../../assets/images/carousel/foto7.jpg";
+import foto8 from "../../assets/images/carousel/foto8.jpg";
+import foto9 from "../../assets/images/carousel/foto9.jpg";
+import foto10 from "../../assets/images/carousel/foto10.jpg";
 
 const ESPECIFICACIONES = [
   {
@@ -52,6 +62,8 @@ const ESPECIFICACIONES = [
   },
 ];
 
+const carouselImages = [foto1, foto6, foto7, foto8, foto9, foto10];
+
 export default function Especificaciones() {
   const [titleRef, titleVisible] = useInView();
 
@@ -92,8 +104,8 @@ export default function Especificaciones() {
         </div>
       </div>
 
-      <div className="relative h-svh md:h-[50svh] min-[1170px]:flex-1 shrink-0 w-full justify-center items-center bg-black">
-        video
+      <div className="relative h-svh md:h-[50svh] min-[1170px]:flex-1 shrink-0 w-full justify-center items-center bg-black overflow-hidden">
+        <GalleryCarrousel images={carouselImages} />
       </div>
     </section>
   );

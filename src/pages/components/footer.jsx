@@ -6,7 +6,6 @@ import { navLinks } from "../../const/navigation";
 
 // socials
 import { socials, contactInfo } from "../../const/socials";
-import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
 import returnIcon from "../../assets/icons/return.svg";
 
 export default function Footer() {
@@ -80,22 +79,6 @@ export default function Footer() {
             </a>
           );
         })}
-      </div>
-
-      {/* botón whatsapp */}
-      <div className="absolute z-50 left-0 sm:bottom-[52px]">
-        <a
-          href="https://wa.me/528184640002"
-          target="_blank"
-          rel="noopener noreferer"
-          className="flex size-[52px] justify-center items-center rounded-r-[32.5px] bg-orange"
-        >
-          <img
-            src={whatsappIcon}
-            alt={`Ícono de Whatsapp`}
-            className="size-[25.5px]"
-          />
-        </a>
       </div>
 
       {/* botón regresar */}
