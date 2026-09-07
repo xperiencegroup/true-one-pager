@@ -99,6 +99,10 @@ html {
   @apply text-[16px] lg:text-[18px];
 }
 
+button {
+  @apply hover:cursor-pointer;
+}
+
 /* ---------- Animaciones -------- */
 
 @keyframes slideDownFadeIn {

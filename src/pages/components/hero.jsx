@@ -23,7 +23,7 @@ export default function Hero() {
       </div>
 
       {/* line decoration */}
-      <div className="hidden min-[660px]:flex pointer-events-none absolute justify-center z-100 top-0 w-full h-full px-[50px] lg:px-[60px]">
+      <div className="hidden min-[660px]:flex pointer-events-none absolute justify-center z-80 top-0 w-full h-full px-[50px] lg:px-[60px]">
         <div className="w-full h-full max-w-[1160px] border-cream/50 border-x-[0.5px] bg-red-500/30]" />
       </div>
 
