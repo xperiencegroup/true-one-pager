@@ -71,7 +71,7 @@ export default function Especificaciones() {
       id="propuesta-de-valor"
       className="flex flex-col h-fit min-[1170px]:h-svh"
     >
-      <div className="relative flex h-svh min-[1170px]:flex-1 flex-col justify-center items-center w-full px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
+      <div className="relative flex min-h-svh min-[1170px]:flex-1 flex-col justify-center items-center w-full px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
         {/* Imagen de fondo */}
         <div className="absolute -z-10 inset-0 w-full h-full">
           <div className="relative w-full h-full">

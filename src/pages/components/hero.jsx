@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="relative flex flex-col justify-start items-center w-full min-h-svh lg:min-h-svh"
+      className="relative flex flex-col justify-start items-center w-full"
     >
       {/* Overlay */}
       <div className="absolute z-10 inset-0 w-full h-full bg-[#191F35]/80" />
@@ -31,9 +31,9 @@ export default function Hero() {
       <Navbar />
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center w-full max-w-[1160px] h-full min-[660px]:px-[50px] lg:px-[60px] xl:px-0">
+      <div className="relative z-20 flex flex-col items-center w-full max-w-[1160px] h-svh min-[660px]:px-[50px] lg:px-[60px] xl:px-0">
         {/* Texto */}
-        <div className="flex flex-col w-full h-full gap-[30px] sm:gap-[90px] px-[44px] min-[660px]:px-[30px] pt-[90px] pb-[20px] min-[660px]:pt-[17vh]">
+        <div className="flex flex-col w-full h-full gap-[15px] sm:gap-[90px] px-[44px] min-[660px]:px-[30px] pt-[10vh] pb-[20px] min-[660px]:pt-[17vh]">
           {/* Logo */}
           <div className="relative w-full max-w-[267px] sm:w-[335px] h-[60px] animate-hero-1">
             <img
@@ -43,7 +43,7 @@ export default function Hero() {
             />
           </div>
 
-          <div className="flex flex-col gap-[30px] animate-hero-2">
+          <div className="flex flex-col gap-[15px] animate-hero-2">
             {/* Titulo */}
             <h1 className=" title font-abhaya uppercase">
               True Ciénega <br /> Industrial Park
@@ -56,7 +56,7 @@ export default function Hero() {
             </h2>
 
             {/* Description */}
-            <p className="max-w-[680px] lg:max-w-[1100px] text-[20px] font-light leading-[125%]">
+            <p className="max-w-[680px] lg:max-w-[1100px] text-[17px] md:text-[20px] font-light leading-[125%]">
               <strong className="font-bold">Parque Industrial Clase A </strong>
               de 15 hectáreas sobre la Autopista{" "}
               <span className="whitespace-nowrap">Monterrey-Nuevo Laredo</span>
@@ -70,7 +70,7 @@ export default function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-[30px] min-[660px]:gap-[40px] sm:gap-[44px] animate-hero-3">
+          <div className="flex flex-col sm:flex-row gap-[15px] min-[660px]:gap-[40px] sm:gap-[44px] animate-hero-3">
             <button className="boton px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-orange hover:cursor-pointer">
               Quiero comprar o rentar <br className="sm:hidden" /> una Nave
               Industrial a la medida

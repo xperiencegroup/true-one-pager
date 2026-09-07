@@ -202,7 +202,7 @@ export default function Macrolotes() {
           </button>
         </div>
 
-        <div className="relative w-full h-[28svh] md:h-[50sv">
+        <div className="relative w-full h-[28svh] md:h-[50svh] overflow-hidden">
           {/* linear gradient */}
           <div className="absolute z-10 w-full h-full inset-0 bg-linear-to-t from-brown/60 to-brown" />
           <img

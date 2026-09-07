@@ -62,10 +62,10 @@ export default function HablemosDeTuProyecto() {
   };
 
   const inputClass =
-    "w-full h-[80px] pl-[20px] pr-[15px] rounded-[15px] border border-white/80 bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors";
+    "w-full h-[60px] md:h-[80px] pl-[20px] pr-[15px] rounded-[15px] border border-white/80 bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors";
 
   const textareaClass =
-    "w-full min-h-[170px] sm:min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
+    "w-full min-h-[150px] sm:min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
 
   // Animaciones
   const [contentRef, isContentVisible] = useInView();
@@ -78,7 +78,7 @@ export default function HablemosDeTuProyecto() {
       className="flex flex-col w-full justify-center items-center bg-blue-overlay"
     >
       {/* medio banner */}
-      <div className="relative w-full h-[50svh] px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]">
+      <div className="relative w-full h-svh md:h-[50svh] px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]">
         {/* image y overlay */}
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="relative w-full h-full">
@@ -90,7 +90,7 @@ export default function HablemosDeTuProyecto() {
             />
 
             {/* overlay */}
-            <div className="absolute w-full h-full bg-linear-to-bl from-blue-overlay/70 via-70% via-blue-overlay/95 to-blue-overlay" />
+            <div className="absolute w-full h-full bg-linear-30 from-blue-overlay via-blue-overlay via-50% via-blue-overlay/80 to-blue-overlay/20" />
           </div>
         </div>
 
@@ -126,17 +126,17 @@ export default function HablemosDeTuProyecto() {
         </div>
       </div>
 
-      <div className="flex flex-col w-full max-w-[1150px] gap-[20px] px-[44px] py-[60px] sm:p-[60px]">
+      <div className="flex flex-col w-full max-w-[1150px] gap-[15px] px-[44px] py-[60px] sm:p-[60px]">
         {/* Header */}
         <div
           ref={headerRef}
-          className={`flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[20px] lg:gap-[40px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
+          className={`flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[15px] md:gap-[20px] lg:gap-[40px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
         >
-          <div className="flex flex-col w-full gap-[20px]">
-            <h2 className="font-abhaya title max-lg:text-center text-white uppercase">
+          <div className="flex flex-col w-full gap-[15px] md:gap-[20px]">
+            <h2 className="font-abhaya title text-white uppercase">
               Hablemos de tu proyecto.
             </h2>
-            <p className="paragraph max-lg:text-center font-light text-white">
+            <p className="paragraph font-light text-white">
               <span className="font-semibold text-white">
                 Cuéntanos qué necesita tu operación:
               </span>{" "}
@@ -149,7 +149,7 @@ export default function HablemosDeTuProyecto() {
             <img
               src={trueLogo}
               alt=""
-              className="w-[34px] sm:w-[74px] sm:h-[106px]"
+              className="w-[26px] sm:w-[74px] sm:h-[106px]"
             />
           </div>
         </div>
@@ -157,22 +157,25 @@ export default function HablemosDeTuProyecto() {
         {/* Card de contacto */}
         <div
           ref={cardRef}
-          className={`flex flex-col gap-[30px] sm:gap-[10px] p-[20px] rounded-[20px] bg-white/10 reveal-scale ${isCardVisible ? "is-visible" : ""}`}
+          className={`flex flex-col gap-[10px] sm:gap-[10px] p-[15px] md:p-[20px] rounded-[20px] bg-white/10 reveal-scale ${isCardVisible ? "is-visible" : ""}`}
         >
-          <h3 className="font-abhaya subtitle text-white uppercase">
+          <h3 className="font-abhaya max-md:text-center subtitle text-white uppercase">
             Ricardo Villarreal
           </h3>
-          <p className="font-semibold paragraph text-white">
+          <p className="font-semibold max-md:text-center paragraph text-white">
             Socio, True Developments
           </p>
 
           {/* Datos de contacto */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-[30px] gap-x-[80px] lg:gap-[14px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-[20px] md:gap-y-[30px] gap-x-[80px] lg:gap-[14px]">
             {contactInfo.map((item) => (
-              <div key={item.id} className="flex flex-col gap-[20px]">
-                <div className="flex items-center justify-center h-[60px] gap-[10px] px-[16px] py-[12px] rounded-[10px] border border-white bg-blue">
+              <div
+                key={item.id}
+                className="flex flex-col gap-[12px] md:gap-[20px]"
+              >
+                <div className="flex items-center justify-center h-[60px] gap-[10px] px-[16px] py-[5px]  sm:py-[12px] rounded-[10px] border border-white bg-blue">
                   <img src={item.icon} alt="" className="h-[20px]" />
-                  <span className="font-inter text-[14px] text-white/90 truncate">
+                  <span className="font-inter boton text-white/90 truncate">
                     {item.label}
                   </span>
                 </div>
@@ -182,7 +185,7 @@ export default function HablemosDeTuProyecto() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="self-center flex w-fit items-center justify-center px-[16px] py-[11px] rounded-full text-[16px] font-semibold bg-cream text-blue"
+                  className="self-center flex w-fit items-center justify-center px-[16px] py-[11px] rounded-full boton font-semibold bg-cream text-blue"
                 >
                   {item.buttonText}
                 </a>
@@ -195,10 +198,10 @@ export default function HablemosDeTuProyecto() {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className={`flex flex-col gap-[30px] lg:gap-[50px] reveal ${isFormVisible ? "is-visible" : ""}`}
+          className={`flex flex-col gap-[10px] md:gap-[30px] lg:gap-[50px] reveal ${isFormVisible ? "is-visible" : ""}`}
         >
           {/* Nombre completo / Empresa */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[17px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] md:gap-[30px] lg:gap-[17px]">
             <div className="flex flex-col gap-[10px]">
               <label className="font-inter font-bold paragraph text-white">
                 Nombre completo
@@ -227,7 +230,7 @@ export default function HablemosDeTuProyecto() {
           </div>
 
           {/* Correo / Teléfono */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[17px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] md:gap-[30px] lg:gap-[17px]">
             <div className="flex flex-col gap-[10px]">
               <label className="font-inter font-bold paragraph text-white">
                 Correo electrónico

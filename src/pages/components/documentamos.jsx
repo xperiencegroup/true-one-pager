@@ -65,7 +65,7 @@ export default function Documentamos() {
         </div>
 
         {/* Grid de etapas */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] w-full max-w-[1120px]">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[15px] gap-y-[10px] sm:gap-[20px] w-full max-w-[1120px]">
           {etapasData.map((etapa, index) => (
             <EtapaCard key={etapa.id} etapa={etapa} delay={index * 100} />
           ))}
@@ -73,13 +73,13 @@ export default function Documentamos() {
       </div>
 
       {/* Imagen medio banner */}
-      <div className="relative w-full h-[40svh]">
+      <div className="relative w-full h-[40svh] overflow-hidden">
         {/* overlay */}
         <div className="absolute z-10 w-full h-full bg-linear-to-t from-black/30 to-black" />
 
         <img
           src={banner}
-          alt=""
+          alt="Imagen de instalaciones de True"
           className="absolute w-full h-full object-cover"
         />
       </div>

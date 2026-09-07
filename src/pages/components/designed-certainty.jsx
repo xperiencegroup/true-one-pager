@@ -8,7 +8,7 @@ export default function DesignedForCertainty() {
   return (
     <div
       id="true-developments"
-      className="flex flex-col w-full h-svh justify-center items-center  bg-blue-overlay"
+      className="flex flex-col w-full min-h-svh justify-center items-center  bg-blue-overlay"
     >
       <div className="flex flex-col lg:flex-row w-full min-h-[50svh] justify-center max-lg:items-center max-w-[1280px] gap-[40px] lg:gap-[35px] px-[44px] sm:px-[90px] py-[60px]">
         {/* Columna izquierda */}
