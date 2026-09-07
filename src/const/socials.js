@@ -11,17 +11,17 @@ export const socials = [
   {
     id: "face",
     icon: facebookIcon,
-    href: "",
+    href: "https://www.facebook.com/profile.php?id=61585251991992#",
   },
   {
     id: "linkedin",
     icon: linkedinIcon,
-    href: "",
+    href: "https://www.linkedin.com/company/true-developments/?viewAsMember=true",
   },
   {
     id: "instagram",
     icon: instagramIcon,
-    href: "",
+    href: "https://www.instagram.com/truedevelopments/?fbclid=IwY2xjawUL0_9wZG9mA2V4dG4DYWVtAjExAGJyaWQRMTdycDVjTWhZMUxjV1BHZzhzcnRjBmFwcF9pZAEwAAEeVHUhT-Kpi_l8XFkUbuVa0FDddOpNUxTROFZu8-Q8E34PzfQJQrLTTWidHeE_aem_ZA-dUZhnyTQZxg9rfAUEzA",
   },
 ];
 

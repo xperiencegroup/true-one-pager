@@ -69,6 +69,9 @@ export default function Footer() {
           return (
             <a
               key={social.id}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex size-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
             >
               <img
