@@ -1,5 +1,6 @@
-import decoration from "../../assets/icons/decoration/linea-razones.svg";
 import navesBanner from "../../assets/images/naves-banner.jpg";
+import BeneficioNaveItem from "../../components/beneficio-nave-item";
+import { useInView } from "../../hooks/useInView";
 
 const beneficios = [
   {
@@ -39,6 +40,11 @@ const beneficios = [
 ];
 
 export default function Naves() {
+  const [introRef, isIntroVisible] = useInView();
+  const [ctaTextRef, isCtaTextVisible] = useInView();
+  const [tableDesktopRef, isTableDesktopVisible] = useInView();
+  const [tableMobileRef, isTableMobileVisible] = useInView();
+  const [ctaMobileRef, isCtaMobileVisible] = useInView();
   return (
     <div className="flex flex-col justify-center items-center w-full bg-blue-overlay">
       {/* Renta o venta */}
@@ -46,7 +52,10 @@ export default function Naves() {
         {/* Parte superior */}
         <div className="flex flex-col min-h-svh gap-[30px]">
           {/* Texto Naves Built to suit */}
-          <div className="relative flex flex-col gap-[10px]">
+          <div
+            ref={introRef}
+            className={`relative flex flex-col gap-[10px] reveal ${isIntroVisible ? "is-visible" : ""}`}
+          >
             <h2 className="title font-abhaya uppercase">Naves build-to-suit</h2>
             <h3 className="subtitle font-abhaya uppercase">En venta o renta</h3>
             <p className="paragraph font-light">
@@ -65,26 +74,20 @@ export default function Naves() {
 
           {/* Razones */}
           <div className="flex flex-col gap-[20px]">
-            {beneficios.map((beneficio) => {
-              return (
-                <div key={beneficio.id} className="flex flex-row gap-[15px]">
-                  <img src={decoration} className="w-fit h-[41px]" />
-                  <div className="relative flex flex-col gap-[9px]">
-                    <h3 className="paragraph text-left text-orange font-bold">
-                      {beneficio.title}
-                    </h3>
-
-                    <p className="sm:self-center lg:self-start max-w-[590px] lg:max-w-none paragraph text-left lg:text-left font-light text-cream">
-                      {beneficio.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+            {beneficios.map((beneficio, index) => (
+              <BeneficioNaveItem
+                key={beneficio.id}
+                beneficio={beneficio}
+                delay={index * 120}
+              />
+            ))}
           </div>
 
           {/* button */}
-          <button className="hidden sm:flex w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-cream bg-orange">
+          <button
+            ref={ctaTextRef}
+            className={`hidden sm:flex w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-cream bg-orange reveal-fade ${isCtaTextVisible ? "is-visible" : ""}`}
+          >
             Cotiza tu Nave Industrial a la medida
           </button>
         </div>
@@ -93,7 +96,10 @@ export default function Naves() {
       <div className="h-svh w-full flex flex-col">
         <div className="flex-1 flex flex-col justify-center items-center px-[44px] gap-[20px]">
           {/* Tabla parte inferior desktop */}
-          <div className="max-lg:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] pt-[30px] gap-[9px] rounded-[20px] border border-cream bg-cream/10">
+          <div
+            ref={tableDesktopRef}
+            className={`max-lg:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] pt-[30px] gap-[9px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableDesktopVisible ? "is-visible" : ""}`}
+          >
             <h3 className="subtitle text-center font-abhaya uppercase">
               Tamaños disponibles
             </h3>
@@ -149,7 +155,10 @@ export default function Naves() {
           </div>
 
           {/* Tabla mobile y tablet */}
-          <div className="lg:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] border border-cream bg-cream/10">
+          <div
+            ref={tableMobileRef}
+            className={`lg:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableMobileVisible ? "is-visible" : ""}`}
+          >
             <h3 className="subtitle text-center font-abhaya uppercase">
               Tamaños disponibles
             </h3>
@@ -192,7 +201,10 @@ export default function Naves() {
           </div>
 
           {/* Botón cotiza tu nave mobile */}
-          <button className="block sm:hidden w-full self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-center text-cream bg-orange">
+          <button
+            ref={ctaMobileRef}
+            className={`block sm:hidden w-full self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-center text-cream bg-orange reveal-fade ${isCtaMobileVisible ? "is-visible" : ""}`}
+          >
             Cotiza tu Nave Industrial a la medida
           </button>
         </div>

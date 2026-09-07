@@ -9,6 +9,8 @@ import electricidad from "../../assets/icons/electricidad.svg";
 import agua from "../../assets/icons/agua.svg";
 import fibra from "../../assets/icons/fibra.svg";
 import drenaje from "../../assets/icons/drenaje.svg";
+import { useInView } from "../../hooks/useInView";
+import InfraestructuraItem from "../../components/infraestructura-item";
 
 const infraestructuraData = [
   {
@@ -39,6 +41,11 @@ const infraestructuraData = [
 ];
 
 export default function Infraestructura() {
+  const [leftColumnRef, isLeftColumnVisible] = useInView();
+  const [mapRef, isMapVisible] = useInView();
+
+  const [cuadroIzqRef, isCuadroIzqVisible] = useInView();
+  const [cuadroDerRef, isCuadroDerVisible] = useInView();
   return (
     <>
       {/* Content */}
@@ -48,7 +55,10 @@ export default function Infraestructura() {
       >
         <div className="flex flex-1 flex-col xl:flex-row w-full max-w-[1280px] justify-center gap-[30px]">
           {/* Columnda izquierda */}
-          <div className="w-full max-w-[660px] flex flex-col gap-[20px]">
+          <div
+            ref={leftColumnRef}
+            className={`w-full max-w-[660px] flex flex-col gap-[20px] reveal-left ${isLeftColumnVisible ? "is-visible" : ""}`}
+          >
             <h2 className="title font-abhaya leading-none uppercase">
               CERTEZA OPERATIVA; <br />{" "}
               <span className="text-orange">
@@ -81,32 +91,20 @@ export default function Infraestructura() {
 
             {/* Datos relevantes */}
             <div className="flex flex-col gap-[20px]">
-              {infraestructuraData.map((item) => (
-                <div
+              {infraestructuraData.map((item, index) => (
+                <InfraestructuraItem
                   key={item.id}
-                  className="flex flex-col sm:flex-row items-center gap-[20px]"
-                >
-                  <div className="flex shrink-0 items-center justify-center size-[60px] rounded-full bg-blue">
-                    <img
-                      src={item.icon}
-                      alt={`Ícono ${item.title}`}
-                      className="h-[35px]"
-                    />
-                  </div>
-                  <div className="flex flex-col items-center sm:items-start gap-[5px] sm:gap-[10px]">
-                    <h4 className="text-naranja font-bold uppercase paragraph leading-[120%] text-orange">
-                      {item.title}
-                    </h4>
-                    <p className="text-white paragraph text-center sm:text-left font-light leading-[120%]">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
+                  item={item}
+                  delay={index * 120}
+                />
               ))}
             </div>
           </div>
           {/* Columnda derecha */}
-          <div className="self-center flex shrink-0 w-full h-[240px] sm:h-[430px] xl:w-[410px] xl:h-[715px] justify-center items-center rounded-[31px] bg-cream/15 border-solid border-[1px] p-[13px] border-cream/50">
+          <div
+            ref={mapRef}
+            className={`self-center flex shrink-0 w-full h-[240px] sm:h-[430px] xl:w-[410px] xl:h-[715px] justify-center items-center rounded-[31px] bg-cream/15 border-solid border-[1px] p-[13px] border-cream/50 reveal-right ${isMapVisible ? "is-visible" : ""}`}
+          >
             <div className="relative w-full h-full bg-blue rounded-[18px] overflow-hidden">
               <img
                 src={mapaXL}
@@ -128,7 +126,10 @@ export default function Infraestructura() {
         <div className="flex flex-1 w-full max-w-[1280px] px-[44px] sm:px-[60px]">
           <div className="w-full flex flex-col lg:flex-row justify-center gap-[22px]">
             {/* cuadro izquierdo */}
-            <div className="flex flex-col w-full lg:w-[539px] lg:min-h-[442px] xl:h-[410px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
+            <div
+              ref={cuadroIzqRef}
+              className={`flex flex-col w-full lg:w-[539px] lg:min-h-[442px] xl:h-[410px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10 reveal-scale ${isCuadroIzqVisible ? "is-visible" : ""}`}
+            >
               <div className="flex flex-col sm:flex-row items-center gap-[20px]">
                 <img src={cuadroNaranjaIcon} alt="" className="size-[38px]" />
                 <h3 className="subtitle max-sm:text-center font-abhaya text-orange uppercase">
@@ -164,7 +165,11 @@ export default function Infraestructura() {
             </div>
 
             {/* cuadro derecho */}
-            <div className="flex flex-col lg:w-[539px] lg:min-h-[442px] xl:h-[410px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
+            <div
+              ref={cuadroDerRef}
+              style={{ transitionDelay: "150ms" }}
+              className={`flex flex-col lg:w-[539px] lg:min-h-[442px] xl:h-[410px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10 reveal-scale ${isCuadroDerVisible ? "is-visible" : ""}`}
+            >
               <div className="flex flex-col sm:flex-row items-center gap-[20px]">
                 <img src={almacenNaranjaIcon} alt="" className="size-[38px]" />
                 <h3 className="subtitle font-abhaya text-orange uppercase">

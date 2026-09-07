@@ -16,6 +16,8 @@ import polarisLogo from "../../assets/logos/clientes/polaris.svg";
 import metalsaLogo from "../../assets/logos/clientes/metalsa.svg";
 import hussmannLogo from "../../assets/logos/clientes/hussmann.svg";
 import ruhrpumpenLogo from "../../assets/logos/clientes/ruhrpumpen.svg";
+import { useInView } from "../../hooks/useInView";
+import ClienteLogo from "../../components/cliente-logo";
 
 const clientesPropios = [
   { id: "pepsico", logo: pepsicoLogo, name: "Pepsico" },
@@ -40,11 +42,16 @@ const clientesTerceros = [
 ];
 
 export default function Clientes() {
+  const [headerRef1, isHeaderVisible1] = useInView();
+  const [headerRef2, isHeaderVisible2] = useInView();
   return (
     <div className="flex flex-col w-full">
       {/* Sección 1: Desarrollos propios */}
       <div className="flex flex-col items-center justify-center w-full min-h-[50svh] px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-brown">
-        <div className="flex flex-col items-center gap-[20px] w-full max-w-[1100px]">
+        <div
+          ref={headerRef1}
+          className={`flex flex-col items-center gap-[20px] w-full max-w-[1100px] reveal ${isHeaderVisible1 ? "is-visible" : ""}`}
+        >
           <h3 className="font-abhaya title text-white uppercase text-center">
             Clientes en desarrollos
             <br />
@@ -55,12 +62,11 @@ export default function Clientes() {
         <div className="divider-white max-w-[1100px]" />
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[24px] sm:gap-x-[80px] gap-y-[20px] items-center justify-items-center">
-          {clientesPropios.map((cliente) => (
-            <img
+          {clientesPropios.map((cliente, index) => (
+            <ClienteLogo
               key={cliente.id}
-              src={cliente.logo}
-              alt={`Logo ${cliente.name}`}
-              className="h-[26px] w-auto max-w-[130px] object-contain brightness-0 invert"
+              cliente={cliente}
+              delay={index * 60}
             />
           ))}
         </div>
@@ -68,7 +74,10 @@ export default function Clientes() {
 
       {/* Sección 2: Construcción para terceros */}
       <div className="flex flex-col items-center justify-center w-full min-h-[50svh] px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-orange">
-        <div className="flex flex-col items-center gap-[20px] w-full max-w-[1100px]">
+        <div
+          ref={headerRef2}
+          className={`flex flex-col items-center gap-[20px] w-full max-w-[1100px] reveal ${isHeaderVisible2 ? "is-visible" : ""}`}
+        >
           <h3 className="font-abhaya title text-white uppercase text-center">
             CLIENTES DE CONSTRUCCIÓN <br /> INDUSTRIAL PARA TERCEROS
           </h3>
@@ -77,12 +86,11 @@ export default function Clientes() {
         <div className="divider-white max-w-[1100px]" />
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[24px] sm:gap-x-[80px] gap-y-[18px] items-center justify-items-center">
-          {clientesTerceros.map((cliente) => (
-            <img
+          {clientesTerceros.map((cliente, index) => (
+            <ClienteLogo
               key={cliente.id}
-              src={cliente.logo}
-              alt={`Logo ${cliente.name}`}
-              className="h-[26px] w-auto max-w-[130px] object-contain brightness-0 invert"
+              cliente={cliente}
+              delay={index * 60}
             />
           ))}
         </div>

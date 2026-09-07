@@ -6,6 +6,7 @@ import phone from "../../assets/icons/phone.svg";
 import link from "../../assets/icons/link.svg";
 
 import banner from "../../assets/images/banner-contacto.jpg";
+import { useInView } from "../../hooks/useInView";
 
 const contactInfo = [
   {
@@ -66,6 +67,11 @@ export default function HablemosDeTuProyecto() {
   const textareaClass =
     "w-full min-h-[170px] sm:min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
 
+  // Animaciones
+  const [contentRef, isContentVisible] = useInView();
+  const [headerRef, isHeaderVisible] = useInView();
+  const [cardRef, isCardVisible] = useInView();
+  const [formRef, isFormVisible] = useInView();
   return (
     <div
       id="contacto"
@@ -89,15 +95,19 @@ export default function HablemosDeTuProyecto() {
         </div>
 
         {/* Content */}
-        <div className="relative flex flex-col w-full h-full justify-center items-center gap-[20px]">
+        <div
+          ref={contentRef}
+          className="relative flex flex-col w-full h-full justify-center items-center gap-[20px]"
+        >
           <h2
-            className={`title text-center font-abhaya uppercase reveal ${"isVisible" ? "is-visible" : ""}`}
+            className={`title text-center font-abhaya uppercase reveal ${isContentVisible ? "is-visible" : ""}`}
           >
             Diseñado para operar con certeza.
           </h2>
 
           <p
-            className={`max-w-[1110px] paragraph font-light text-center reveal ${"isVisible" ? "is-visible" : ""}`}
+            style={{ transitionDelay: "100ms" }}
+            className={`max-w-[1110px] paragraph font-light text-center reveal ${isContentVisible ? "is-visible" : ""}`}
           >
             Explora cada configuración en nuestra{" "}
             <b className="font-bold">plataforma interactiva:</b>
@@ -108,7 +118,8 @@ export default function HablemosDeTuProyecto() {
           </p>
 
           <button
-            className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${"isVisible" ? "is-visible" : ""}`}
+            style={{ transitionDelay: "200ms" }}
+            className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isContentVisible ? "is-visible" : ""}`}
           >
             Ver Plataforma Interactiva
           </button>
@@ -117,7 +128,10 @@ export default function HablemosDeTuProyecto() {
 
       <div className="flex flex-col w-full max-w-[1150px] gap-[20px] px-[44px] py-[60px] sm:p-[60px]">
         {/* Header */}
-        <div className="flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[20px] lg:gap-[40px]">
+        <div
+          ref={headerRef}
+          className={`flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[20px] lg:gap-[40px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
+        >
           <div className="flex flex-col w-full gap-[20px]">
             <h2 className="font-abhaya title max-lg:text-center text-white uppercase">
               Hablemos de tu proyecto.
@@ -141,7 +155,10 @@ export default function HablemosDeTuProyecto() {
         </div>
 
         {/* Card de contacto */}
-        <div className="flex flex-col gap-[30px] sm:gap-[10px] p-[20px] rounded-[20px] bg-white/10">
+        <div
+          ref={cardRef}
+          className={`flex flex-col gap-[30px] sm:gap-[10px] p-[20px] rounded-[20px] bg-white/10 reveal-scale ${isCardVisible ? "is-visible" : ""}`}
+        >
           <h3 className="font-abhaya subtitle text-white uppercase">
             Ricardo Villarreal
           </h3>
@@ -176,8 +193,9 @@ export default function HablemosDeTuProyecto() {
 
         {/* Formulario */}
         <form
+          ref={formRef}
           onSubmit={handleSubmit}
-          className="flex flex-col gap-[30px] lg:gap-[50px]"
+          className={`flex flex-col gap-[30px] lg:gap-[50px] reveal ${isFormVisible ? "is-visible" : ""}`}
         >
           {/* Nombre completo / Empresa */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[17px]">

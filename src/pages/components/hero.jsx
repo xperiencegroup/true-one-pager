@@ -1,4 +1,4 @@
-import backgroundImage from "../../assets/images/hero-background.jpg";
+import backgroundImage from "../../assets/images/hero-background2.jpg";
 import trueLogoCream from "../../assets/logos/true-developments-cream.svg";
 import Navbar from "./navbar";
 

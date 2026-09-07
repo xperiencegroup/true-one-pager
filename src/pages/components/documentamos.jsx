@@ -4,6 +4,8 @@ import infraIcon from "../../assets/icons/industria.svg";
 import pinIcon from "../../assets/icons/pin.svg";
 import camionIcon from "../../assets/icons/camion.svg";
 import verificadoIcon from "../../assets/icons/verificado.svg";
+import { useInView } from "../../hooks/useInView";
+import EtapaCard from "../../components/etapa-card";
 
 const etapasData = [
   {
@@ -33,6 +35,7 @@ const etapasData = [
 ];
 
 export default function Documentamos() {
+  const [headerRef, isHeaderVisible] = useInView();
   return (
     <>
       {/* Medio banner */}
@@ -41,7 +44,10 @@ export default function Documentamos() {
         className="flex flex-col w-full min-h-[60svh] justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-black"
       >
         {/* Header */}
-        <div className="flex flex-col w-full max-w-[1120px] gap-[30px]">
+        <div
+          ref={headerRef}
+          className={`flex flex-col w-full max-w-[1120px] gap-[30px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
+        >
           <h2 className="font-bangla title text-center font-abhaya text-white uppercase">
             La certeza se construye.
             <br />
@@ -60,30 +66,9 @@ export default function Documentamos() {
 
         {/* Grid de etapas */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] w-full max-w-[1120px]">
-          {etapasData.map((etapa) => {
-            return (
-              <div
-                key={etapa.id}
-                className="flex flex-col min-h-[238px] justify-between items-center text-center gap-[15px] px-[15px] py-[20px] rounded-[40px] border border-cream/50 bg-cream/10"
-              >
-                <div className="flex flex-1 items-center justify-center size-[50px] rounded-full bg-black">
-                  <img
-                    src={etapa.icon}
-                    alt="Ícono de la etapa"
-                    className="size-[24px]"
-                  />
-                </div>
-
-                <h4 className="flex-1 paragraph-bold font-bold text-white uppercase lg:max-w-[280px]">
-                  {etapa.title}
-                </h4>
-
-                <p className="flex-1 paragraph max-lg:text-center font-light text-white">
-                  {etapa.description}
-                </p>
-              </div>
-            );
-          })}
+          {etapasData.map((etapa, index) => (
+            <EtapaCard key={etapa.id} etapa={etapa} delay={index * 100} />
+          ))}
         </div>
       </div>
 

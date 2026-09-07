@@ -1,5 +1,6 @@
-import decoration from "../../assets/icons/decoration/linea-razones.svg";
 import macroBanner from "../../assets/images/macro-banner.jpg";
+import BeneficioMacroloteItem from "../../components/beneficio-macrolote-item";
+import { useInView } from "../../hooks/useInView";
 
 const beneficios = [
   {
@@ -27,6 +28,11 @@ const beneficios = [
 ];
 
 export default function Macrolotes() {
+  const [introRef, isIntroVisible] = useInView();
+  const [ctaTextRef, isCtaTextVisible] = useInView();
+  const [tableDesktopRef, isTableDesktopVisible] = useInView();
+  const [tableMobileRef, isTableMobileVisible] = useInView();
+  const [ctaMobileRef, isCtaMobileVisible] = useInView();
   return (
     <div className="flex flex-col justify-center items-center w-full bg-brown overflow-hidden">
       {/* Renta o venta */}
@@ -34,7 +40,10 @@ export default function Macrolotes() {
         {/* Parte superior */}
         <div className="flex flex-col min-h-svh gap-[30px]">
           {/* Texto Naves Built to suit */}
-          <div className="relative flex flex-col gap-[10px]">
+          <div
+            ref={introRef}
+            className={`relative flex flex-col gap-[10px] reveal ${isIntroVisible ? "is-visible" : ""}`}
+          >
             <h2 className="title font-abhaya uppercase">
               MACROLOTES INDUSTRIALES
             </h2>
@@ -58,30 +67,20 @@ export default function Macrolotes() {
 
           {/* Razones */}
           <div className="flex flex-col gap-[50px]">
-            {beneficios.map((beneficio) => {
-              return (
-                <div key={beneficio.id} className="flex flex-row gap-[15px]">
-                  <img
-                    src={decoration}
-                    alt=""
-                    className="w-fit h-[41px] brightness-0 invert-100"
-                  />
-                  <div className="relative flex flex-col gap-[9px]">
-                    <h3 className="paragraph text-left text-white font-bold">
-                      {beneficio.title}
-                    </h3>
-
-                    <p className="sm:self-center lg:self-start max-w-[590px] lg:max-w-none paragraph text-left lg:text-left font-light text-white">
-                      {beneficio.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+            {beneficios.map((beneficio, index) => (
+              <BeneficioMacroloteItem
+                key={beneficio.id}
+                beneficio={beneficio}
+                delay={index * 120}
+              />
+            ))}
           </div>
 
           {/* button */}
-          <button className="hidden sm:flex w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-blue bg-cream">
+          <button
+            ref={ctaTextRef}
+            className={`hidden sm:flex w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-blue bg-cream reveal-fade ${isCtaTextVisible ? "is-visible" : ""}`}
+          >
             Conoce los Macrolotes Industriales disponibles
           </button>
         </div>
@@ -90,7 +89,10 @@ export default function Macrolotes() {
       <div className="h-svh w-full flex flex-col">
         <div className="flex-1 flex flex-col justify-center items-center px-[44px] gap-[20px]">
           {/* Tabla Parte inferior desktop */}
-          <div className="max-lg:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] pt-[20px] gap-[9px] rounded-[20px] border border-cream bg-cream/10">
+          <div
+            ref={tableDesktopRef}
+            className={`max-lg:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] pt-[20px] gap-[9px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableDesktopVisible ? "is-visible" : ""}`}
+          >
             <h3 className="subtitle text-center font-abhaya uppercase">
               Tamaños disponibles
             </h3>
@@ -146,7 +148,10 @@ export default function Macrolotes() {
           </div>
 
           {/* Tabla mobile y tablet */}
-          <div className="lg:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] border border-cream bg-cream/10">
+          <div
+            ref={tableMobileRef}
+            className={`lg:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableMobileVisible ? "is-visible" : ""}`}
+          >
             <h3 className="subtitle text-center font-abhaya uppercase">
               Tamaños disponibles
             </h3>
@@ -189,7 +194,10 @@ export default function Macrolotes() {
           </div>
 
           {/* button */}
-          <button className="block sm:hidden w-full self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-center text-blue bg-cream">
+          <button
+            ref={ctaMobileRef}
+            className={`block sm:hidden w-full self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-center text-blue bg-cream reveal-fade ${isCtaMobileVisible ? "is-visible" : ""}`}
+          >
             Conoce los Macrolotes Industriales disponibles
           </button>
         </div>

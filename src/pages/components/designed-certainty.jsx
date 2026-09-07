@@ -1,7 +1,10 @@
 import trueLogo from "../../assets/logos/true-developments-cream-v2.svg";
 import banner from "../../assets/images/banner-designed.jpg";
+import { useInView } from "../../hooks/useInView";
 
 export default function DesignedForCertainty() {
+  const [leftColumnRef, isLeftColumnVisible] = useInView();
+  const [rightColumnRef, isRightColumnVisible] = useInView();
   return (
     <div
       id="true-developments"
@@ -9,7 +12,10 @@ export default function DesignedForCertainty() {
     >
       <div className="flex flex-col lg:flex-row w-full min-h-[50svh] justify-center max-lg:items-center max-w-[1280px] gap-[40px] lg:gap-[35px] px-[44px] sm:px-[90px] py-[60px]">
         {/* Columna izquierda */}
-        <div className="flex flex-col w-full max-w-[453px] shrink-0 max-lg:items-center gap-[21px]">
+        <div
+          ref={leftColumnRef}
+          className={`flex flex-col w-full max-w-[453px] shrink-0 max-lg:items-center gap-[21px] reveal-left ${isLeftColumnVisible ? "is-visible" : ""}`}
+        >
           <div className="flex flex-col gap-[14px]">
             <div className="flex items-center max-lg:justify-center gap-[10px]">
               {/* Logo - reemplazar con tu asset SVG */}
@@ -28,7 +34,11 @@ export default function DesignedForCertainty() {
         </div>
 
         {/* Columna derecha */}
-        <div className="flex flex-col gap-[30px] max-w-[640px] lg:max-w-[589px]">
+        <div
+          ref={rightColumnRef}
+          style={{ transitionDelay: "150ms" }}
+          className={`flex flex-col gap-[30px] max-w-[640px] lg:max-w-[589px] reveal-right ${isRightColumnVisible ? "is-visible" : ""}`}
+        >
           <p className="paragraph font-light text-justify text-white">
             True Developments es una desarrolladora inmobiliaria de Monterrey
             con más de 18 años de experiencia desarrollando bodegas, naves y

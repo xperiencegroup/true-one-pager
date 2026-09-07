@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../../assets/logos/true-cream.svg";
+import { useInView } from "../../hooks/useInView";
 
 const preguntasData = [
   {
@@ -51,11 +52,16 @@ export default function Preguntas() {
     });
   };
 
+  const [headerRef, isHeaderVisible] = useInView();
+
   return (
     <div className="flex flex-col w-full min-h-svh justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-brown">
       <div className="flex flex-col w-full max-w-[1110px] gap-[30px]">
         {/* Header */}
-        <div className="flex justify-between items-center gap-[5px]">
+        <div
+          ref={headerRef}
+          className={`flex justify-between items-center gap-[5px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
+        >
           <h2 className="font-abhaya title leading-none text-white uppercase">
             Las preguntas
             <br />
