@@ -1,4 +1,4 @@
-import banner from "../../assets/images/infraestrucutra-banner.jpg";
+import infraBanner from "../../assets/images/infra-banner.jpg";
 import mapaXL from "../../assets/images/infra-ubicacion.jpg";
 import mapaMobile from "../../assets/images/infra-ubicacion-mapa-lg.jpg";
 import cuadroNaranjaIcon from "../../assets/icons/cuadro-naranja.svg";
@@ -41,25 +41,12 @@ const infraestructuraData = [
 export default function Infraestructura() {
   return (
     <>
-      {/* image medio banner */}
-      <div className="relative w-full h-[142px] sm:h-[303px] lg:h-[486px]">
-        <img
-          src={banner}
-          alt="Banner de Nave"
-          className="absolute w-full h-full object-cover"
-        />
-
-        {/* Overlays */}
-        <div className="absolute w-full h-full inset-0 bg-black/20" />
-        <div className="absolute w-full h-full inset-0 bg-linear-to-b from-blue-overlay/0 from-0% to-blue-overlay" />
-      </div>
-
       {/* Content */}
       <div
         id="ubicacion"
-        className="flex flex-col w-full justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-blue-overlay"
+        className="flex flex-col w-full min-h-svh justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-blue-overlay"
       >
-        <div className="flex flex-col xl:flex-row w-full max-w-[1280px] justify-center gap-[30px]">
+        <div className="flex flex-1 flex-col xl:flex-row w-full max-w-[1280px] justify-center gap-[30px]">
           {/* Columnda izquierda */}
           <div className="w-full max-w-[660px] flex flex-col gap-[20px]">
             <h2 className="title font-abhaya leading-none uppercase">
@@ -134,80 +121,94 @@ export default function Infraestructura() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Flexibilidad y calidad */}
-        <div className="flex flex-col lg:flex-row w-full max-w-[1280px] justify-center items-center gap-[22px]">
-          {/* cuadro izquierdo */}
-          <div className="flex flex-col w-full lg:w-[539px] lg:min-h-[700px] xl:h-[610px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
-            <div className="flex flex-col sm:flex-row items-center gap-[20px]">
-              <img src={cuadroNaranjaIcon} alt="" className="size-[38px]" />
-              <h3 className="subtitle max-sm:text-center font-abhaya text-orange uppercase">
-                Flexibilidad real
-              </h3>
+      {/* Flexibilidad y calidad */}
+      <div className="relative flex flex-col items-center w-full  min-h-svh bg-blue-overlay">
+        <div className="flex flex-1 w-full max-w-[1280px] px-[44px] sm:px-[60px]">
+          <div className="w-full flex flex-col lg:flex-row justify-center gap-[22px]">
+            {/* cuadro izquierdo */}
+            <div className="flex flex-col w-full lg:w-[539px] lg:min-h-[442px] xl:h-[410px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
+              <div className="flex flex-col sm:flex-row items-center gap-[20px]">
+                <img src={cuadroNaranjaIcon} alt="" className="size-[38px]" />
+                <h3 className="subtitle max-sm:text-center font-abhaya text-orange uppercase">
+                  Flexibilidad real
+                </h3>
+              </div>
+              {/* Linea decoration */}
+              <div className="w-full max-w-[332px]">
+                <div className="divider-orange-full" />
+              </div>
+
+              <h4 className="paragraph font-bold max-sm:text-center leading-[120%] text-cream">
+                El rango más flexible del mercado.
+              </h4>
+
+              <p className="paragraph font-light leading-[110%]">
+                Pocas veces un mismo parque puede recibir a una empresa que
+                necesita 200,000 pies cuadrados en renta ó a otra que quiere
+                comprar 15 hectáreas para construir su campus. True Ciénega
+                puede.
+                <br />
+                <br />
+                Esa flexibilidad no es un accidente: es la forma en que
+                diseñamos el parque para acompañar a las empresas en distintos
+                momentos de su crecimiento.
+                <br />
+                Empiezas rentando y luego compras. Compras tres hectáreas y
+                luego te expandes.
+                <br />
+                <br />
+                <span className="font-bold">El parque crece contigo.</span>
+              </p>
             </div>
-            {/* Linea decoration */}
-            <div className="w-full max-w-[332px]">
-              <div className="divider-orange-full" />
+
+            {/* cuadro derecho */}
+            <div className="flex flex-col lg:w-[539px] lg:min-h-[442px] xl:h-[410px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
+              <div className="flex flex-col sm:flex-row items-center gap-[20px]">
+                <img src={almacenNaranjaIcon} alt="" className="size-[38px]" />
+                <h3 className="subtitle font-abhaya text-orange uppercase">
+                  Calidad clase A
+                </h3>
+              </div>
+              {/* Linea decoration */}
+              <div className="w-full max-w-[332px]">
+                <div className="divider-orange-full" />
+              </div>
+
+              <h4 className="paragraph max-sm:text-center font-bold leading-[120%] text-cream">
+                Construido para durar, diseñado para funcionar.
+              </h4>
+
+              <p className="paragraph font-light leading-[110%]">
+                Especificaciones Clase A en cada nave: <br />
+              </p>
+              <ul className="pl-8 paragraph font-light leading-[110%] list-disc">
+                <li>Alturas libres generosas</li>
+                <li>Andenes y rampas suficientes</li>
+                <li>Pisos de alta capacidad de carga</li>
+                <li>
+                  Iluminación eficiente y layouts que privilegian el flujo sobre
+                  el adorno
+                </li>
+              </ul>
+
+              <p className="paragraph font-light leading-[110%]">
+                La calidad no se nota en los renders se nota a los diez años,
+                cuando el edificio sigue funcionando como el primer día.
+                Construimos con esa vara.
+              </p>
             </div>
-
-            <h4 className="paragraph font-bold max-sm:text-center leading-[120%] text-cream">
-              El rango más flexible del mercado.
-            </h4>
-
-            <p className="paragraph font-light leading-[110%]">
-              Pocas veces un mismo parque puede recibir a una empresa que
-              necesita 200,000 pies cuadrados en renta ó a otra que quiere
-              comprar 15 hectáreas para construir su campus. True Ciénega puede.
-              <br />
-              <br />
-              Esa flexibilidad no es un accidente: es la forma en que diseñamos
-              el parque para acompañar a las empresas en distintos momentos de
-              su crecimiento.
-              <br />
-              Empiezas rentando y luego compras. Compras tres hectáreas y luego
-              te expandes.
-              <br />
-              <br />
-              <span className="font-bold">El parque crece contigo.</span>
-            </p>
           </div>
-
-          {/* cuadro derecho */}
-          <div className="flex flex-col lg:w-[539px] lg:min-h-[700px] xl:h-[610px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10">
-            <div className="flex flex-col sm:flex-row items-center gap-[20px]">
-              <img src={almacenNaranjaIcon} alt="" className="size-[38px]" />
-              <h3 className="subtitle font-abhaya text-orange uppercase">
-                Calidad clase A
-              </h3>
-            </div>
-            {/* Linea decoration */}
-            <div className="w-full max-w-[332px]">
-              <div className="divider-orange-full" />
-            </div>
-
-            <h4 className="paragraph max-sm:text-center font-bold leading-[120%] text-cream">
-              Construido para durar, diseñado para funcionar.
-            </h4>
-
-            <p className="paragraph font-light leading-[110%]">
-              Especificaciones Clase A en cada nave: <br />
-            </p>
-            <ul className="pl-8 paragraph font-light leading-[110%] list-disc">
-              <li>Alturas libres generosas</li>
-              <li>Andenes y rampas suficientes</li>
-              <li>Pisos de alta capacidad de carga</li>
-              <li>
-                Iluminación eficiente y layouts que privilegian el flujo sobre
-                el adorno
-              </li>
-            </ul>
-
-            <p className="paragraph font-light leading-[110%]">
-              La calidad no se nota en los renders se nota a los diez años,
-              cuando el edificio sigue funcionando como el primer día.
-              Construimos con esa vara.
-            </p>
-          </div>
+        </div>
+        <div className="relative flex h-[50svh] w-full bg-red-500">
+          {/* linear gradient */}
+          <div className="absolute z-10 w-full h-full inset-0 bg-linear-to-t from-blue-overlay/0 to-blue-overlay" />
+          <img
+            src={infraBanner}
+            alt="Banner"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         </div>
       </div>
     </>

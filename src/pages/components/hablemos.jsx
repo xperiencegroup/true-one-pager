@@ -5,6 +5,8 @@ import whatsapp from "../../assets/icons/whatsapp.svg";
 import phone from "../../assets/icons/phone.svg";
 import link from "../../assets/icons/link.svg";
 
+import banner from "../../assets/images/banner-contacto.jpg";
+
 const contactInfo = [
   {
     id: "whatsapp",
@@ -67,15 +69,58 @@ export default function HablemosDeTuProyecto() {
   return (
     <div
       id="contacto"
-      className="flex flex-col w-full justify-center items-center px-[44px] py-[60px] sm:p-[60px] bg-blue-overlay"
+      className="flex flex-col w-full justify-center items-center bg-blue-overlay"
     >
-      <div className="flex flex-col w-full max-w-[1150px] gap-[30px]">
+      {/* medio banner */}
+      <div className="relative w-full h-[50svh] px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]">
+        {/* image y overlay */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="relative w-full h-full">
+            {/* image */}
+            <img
+              src={banner}
+              alt="Imagen de fondo"
+              className="absolute w-full h-full object-cover"
+            />
+
+            {/* overlay */}
+            <div className="absolute w-full h-full bg-linear-to-bl from-blue-overlay/70 via-70% via-blue-overlay/95 to-blue-overlay" />
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="relative flex flex-col w-full h-full justify-center items-center gap-[20px]">
+          <h2
+            className={`title text-center font-abhaya uppercase reveal ${"isVisible" ? "is-visible" : ""}`}
+          >
+            Diseñado para operar con certeza.
+          </h2>
+
+          <p
+            className={`max-w-[1110px] paragraph font-light text-center reveal ${"isVisible" ? "is-visible" : ""}`}
+          >
+            Explora cada configuración en nuestra{" "}
+            <b className="font-bold">plataforma interactiva:</b>
+            <br />
+            visualiza los macrolotes, recorre las naves, compara superficies y
+            encuentra el espacio ideal para tu operación desde cualquier
+            dispositivo.
+          </p>
+
+          <button
+            className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${"isVisible" ? "is-visible" : ""}`}
+          >
+            Ver Plataforma Interactiva
+          </button>
+        </div>
+      </div>
+
+      <div className="flex flex-col w-full max-w-[1150px] gap-[20px] px-[44px] py-[60px] sm:p-[60px]">
         {/* Header */}
         <div className="flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[20px] lg:gap-[40px]">
           <div className="flex flex-col w-full gap-[20px]">
             <h2 className="font-abhaya title max-lg:text-center text-white uppercase">
-              Hablemos de <br className="max-lg:hidden" />
-              tu proyecto.
+              Hablemos de tu proyecto.
             </h2>
             <p className="paragraph max-lg:text-center font-light text-white">
               <span className="font-semibold text-white">
@@ -96,7 +141,7 @@ export default function HablemosDeTuProyecto() {
         </div>
 
         {/* Card de contacto */}
-        <div className="flex flex-col gap-[30px] sm:gap-[20px] p-[30px] rounded-[20px] bg-white/10">
+        <div className="flex flex-col gap-[30px] sm:gap-[10px] p-[20px] rounded-[20px] bg-white/10">
           <h3 className="font-abhaya subtitle text-white uppercase">
             Ricardo Villarreal
           </h3>

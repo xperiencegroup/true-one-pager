@@ -1,12 +1,13 @@
 import trueLogo from "../../assets/logos/true-developments-cream-v2.svg";
+import banner from "../../assets/images/banner-designed.jpg";
 
 export default function DesignedForCertainty() {
   return (
     <div
       id="true-developments"
-      className="flex flex-col w-full justify-center items-center px-[44px] sm:px-[90px] py-[60px] bg-blue-overlay"
+      className="flex flex-col w-full h-svh justify-center items-center  bg-blue-overlay"
     >
-      <div className="flex flex-col lg:flex-row w-full justify-center max-lg:items-center max-w-[1280px] gap-[40px] lg:gap-[35px]">
+      <div className="flex flex-col lg:flex-row w-full min-h-[50svh] justify-center max-lg:items-center max-w-[1280px] gap-[40px] lg:gap-[35px] px-[44px] sm:px-[90px] py-[60px]">
         {/* Columna izquierda */}
         <div className="flex flex-col w-full max-w-[453px] shrink-0 max-lg:items-center gap-[21px]">
           <div className="flex flex-col gap-[14px]">
@@ -47,6 +48,18 @@ export default function DesignedForCertainty() {
             Construimos pensando en décadas, porque nuestros clientes también.
           </p>
         </div>
+      </div>
+
+      {/* Imagen medio banner */}
+      <div className="relative flex w-full h-[50svh]">
+        {/* overlay */}
+        <div className="absolute z-10 w-full h-full bg-linear-to-t from-blue-overlay/30 to-blue-overlay" />
+
+        <img
+          src={banner}
+          alt=""
+          className="absolute w-full h-full object-cover"
+        />
       </div>
     </div>
   );

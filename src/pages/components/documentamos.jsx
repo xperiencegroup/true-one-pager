@@ -1,4 +1,4 @@
-import banner from "../../assets/images/documentamos-banner.jpg";
+import banner from "../../assets/images/banner-certeza.jpg";
 
 import infraIcon from "../../assets/icons/industria.svg";
 import pinIcon from "../../assets/icons/pin.svg";
@@ -38,41 +38,47 @@ export default function Documentamos() {
       {/* Medio banner */}
       <div
         id="true-cienega"
-        className="flex flex-col w-full justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-black"
+        className="flex flex-col w-full min-h-[60svh] justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-black"
       >
         {/* Header */}
         <div className="flex flex-col w-full max-w-[1120px] gap-[30px]">
-          <h2 className="font-bangla title max-lg:text-center font-abhaya text-white uppercase">
+          <h2 className="font-bangla title text-center font-abhaya text-white uppercase">
             La certeza se construye.
             <br />
-            <span className="text-orange">Aquí la estamos construyendo.</span>
+            <span className="text-center text-orange">
+              Aquí la estamos construyendo.
+            </span>
           </h2>
 
-          <p className="paragraph max-lg:text-center text-white/80 max-w-[1100px]">
-            Documentamos el avance del parque etapa por etapa. <br /> Consulta
-            las actualizaciones de obra, fotografías del sitio y los hitos del
+          <p className="paragraph text-center text-white/80 max-w-[1100px]">
+            Documentamos el avance del parque etapa por etapa. Consulta las
+            actualizaciones de obra, fotografías del sitio y los hitos del
             desarrollo, con la transparencia que una decisión de esta escala
             merece.
           </p>
         </div>
 
         {/* Grid de etapas */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px] w-full max-w-[1120px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] w-full max-w-[1120px]">
           {etapasData.map((etapa) => {
             return (
               <div
                 key={etapa.id}
-                className="flex flex-col min-h-[280px] justify-between items-center text-center gap-[15px] p-[30px] rounded-[40px] border border-cream/50 bg-cream/10"
+                className="flex flex-col min-h-[238px] justify-between items-center text-center gap-[15px] px-[15px] py-[20px] rounded-[40px] border border-cream/50 bg-cream/10"
               >
-                <div className="flex items-center justify-center size-[92px] rounded-full bg-black">
-                  <img src={etapa.icon} alt="Ícono de la etapa" />
+                <div className="flex flex-1 items-center justify-center size-[50px] rounded-full bg-black">
+                  <img
+                    src={etapa.icon}
+                    alt="Ícono de la etapa"
+                    className="size-[24px]"
+                  />
                 </div>
 
-                <h4 className="font-abhaya subtitle text-white uppercase lg:max-w-[280px]">
+                <h4 className="flex-1 paragraph-bold font-bold text-white uppercase lg:max-w-[280px]">
                   {etapa.title}
                 </h4>
 
-                <p className="paragraph max-lg:text-center font-light text-white">
+                <p className="flex-1 paragraph max-lg:text-center font-light text-white">
                   {etapa.description}
                 </p>
               </div>
@@ -82,15 +88,15 @@ export default function Documentamos() {
       </div>
 
       {/* Imagen medio banner */}
-      <div className="relative w-full h-[456px]">
+      <div className="relative w-full h-[40svh]">
+        {/* overlay */}
+        <div className="absolute z-10 w-full h-full bg-linear-to-t from-black/30 to-black" />
+
         <img
           src={banner}
           alt=""
           className="absolute w-full h-full object-cover"
         />
-
-        {/* overlay */}
-        <div className="absolute w-full h-full bg-linear-to-b from-black/0 via-75% via-black/0 to-brown" />
       </div>
     </>
   );

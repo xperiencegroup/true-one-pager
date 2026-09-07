@@ -52,7 +52,7 @@ export default function Preguntas() {
   };
 
   return (
-    <div className="flex flex-col w-full justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-brown">
+    <div className="flex flex-col w-full min-h-svh justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-brown">
       <div className="flex flex-col w-full max-w-[1110px] gap-[30px]">
         {/* Header */}
         <div className="flex justify-between items-center gap-[5px]">

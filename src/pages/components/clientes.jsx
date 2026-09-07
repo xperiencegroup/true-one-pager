@@ -43,7 +43,7 @@ export default function Clientes() {
   return (
     <div className="flex flex-col w-full">
       {/* Sección 1: Desarrollos propios */}
-      <div className="flex flex-col items-center w-full px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-brown">
+      <div className="flex flex-col items-center justify-center w-full min-h-[50svh] px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-brown">
         <div className="flex flex-col items-center gap-[20px] w-full max-w-[1100px]">
           <h3 className="font-abhaya title text-white uppercase text-center">
             Clientes en desarrollos
@@ -67,7 +67,7 @@ export default function Clientes() {
       </div>
 
       {/* Sección 2: Construcción para terceros */}
-      <div className="flex flex-col items-center w-full px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-orange">
+      <div className="flex flex-col items-center justify-center w-full min-h-[50svh] px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-orange">
         <div className="flex flex-col items-center gap-[20px] w-full max-w-[1100px]">
           <h3 className="font-abhaya title text-white uppercase text-center">
             CLIENTES DE CONSTRUCCIÓN <br /> INDUSTRIAL PARA TERCEROS
