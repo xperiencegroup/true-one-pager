@@ -148,7 +148,7 @@ export default function HablemosDeTuProyecto() {
           <div className="shrink-0 h-full flex items-center justify-center">
             <img
               src={trueLogo}
-              alt=""
+              alt="Logo de True"
               className="w-[26px] sm:w-[74px] sm:h-[106px]"
             />
           </div>

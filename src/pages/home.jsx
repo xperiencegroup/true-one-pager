@@ -16,7 +16,7 @@ import PopupRegistro from "../components/popup-registro/pop-up-registro";
 import { useState } from "react";
 
 export default function Home() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(true);
   return (
     <main className="relative flex flex-col w-full">
       {/* botón whatsapp */}
