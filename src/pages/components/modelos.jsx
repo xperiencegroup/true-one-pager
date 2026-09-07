@@ -83,7 +83,7 @@ export default function Modelos() {
       {/* Elige como quieres crecer */}
       <div
         id="naves-macrolotes"
-        className="flex flex-col justify-center items-center w-full h-svh xl:h-[50svh] px-[44px] py-[50px] sm:py-[60px] sm:px-[70px] lg:px-[20px] xl:px-[78px] gap-[33px] bg-brown"
+        className="flex flex-col justify-center items-center w-full min-h-svh xl:h-[50svh] px-[44px] py-[50px] sm:py-[60px] sm:px-[70px] lg:px-[20px] xl:px-[78px] gap-[33px] bg-brown"
       >
         <div className="flex flex-col lg:flex-row items-center w-full max-w-[1100px] h-fit gap-[20px] lg:gap-[40px] lg:gap-[16px]">
           {/* Primera columna */}

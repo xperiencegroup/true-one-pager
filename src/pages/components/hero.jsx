@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="relative flex flex-col justify-start items-center w-full min-h-svh lg:h-svh"
+      className="relative flex flex-col justify-start items-center w-full min-h-svh lg:min-h-svh"
     >
       {/* Overlay */}
       <div className="absolute z-10 inset-0 w-full h-full bg-[#191F35]/80" />

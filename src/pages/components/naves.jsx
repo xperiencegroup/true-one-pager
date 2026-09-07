@@ -93,12 +93,12 @@ export default function Naves() {
         </div>
       </div>
 
-      <div className="h-svh w-full flex flex-col">
-        <div className="flex-1 flex flex-col justify-center items-center px-[44px] gap-[20px]">
+      <div className="w-full flex flex-col">
+        <div className="flex-1 flex flex-col min-h-[50svh] justify-center items-center px-[44px] gap-[20px]">
           {/* Tabla parte inferior desktop */}
           <div
             ref={tableDesktopRef}
-            className={`max-lg:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] pt-[30px] gap-[9px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableDesktopVisible ? "is-visible" : ""}`}
+            className={`max-md:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] pt-[30px] gap-[9px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableDesktopVisible ? "is-visible" : ""}`}
           >
             <h3 className="subtitle text-center font-abhaya uppercase">
               Tamaños disponibles
@@ -157,14 +157,14 @@ export default function Naves() {
           {/* Tabla mobile y tablet */}
           <div
             ref={tableMobileRef}
-            className={`lg:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableMobileVisible ? "is-visible" : ""}`}
+            className={`md:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableMobileVisible ? "is-visible" : ""}`}
           >
             <h3 className="subtitle text-center font-abhaya uppercase">
               Tamaños disponibles
             </h3>
 
             {/* Terreno completo */}
-            <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
+            <div className="flex flex-col w-full gap-[10px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
               <h4 className="paragraph text-center font-bold">
                 Nave BTS <br /> Terreno Completo
               </h4>
@@ -173,7 +173,7 @@ export default function Naves() {
             </div>
 
             {/* Terreno grande */}
-            <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
+            <div className="flex flex-col w-full gap-[10px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
               <h4 className="paragraph text-center font-bold">
                 Nave BTS Grande
               </h4>
@@ -182,7 +182,7 @@ export default function Naves() {
             </div>
 
             {/* Terreno mediana */}
-            <div className="flex flex-col w-full gap-[20px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
+            <div className="flex flex-col w-full gap-[10px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
               <h4 className="paragraph text-center font-bold">
                 Nave BTS Mediana
               </h4>
@@ -191,7 +191,7 @@ export default function Naves() {
             </div>
 
             {/* Terreno chicas */}
-            <div className="flex flex-col w-full gap-[20px] px-[29px] sm:px-[60px] py-[12px]">
+            <div className="flex flex-col w-full gap-[10px] px-[29px] sm:px-[60px] py-[12px]">
               <h4 className="paragraph text-center font-bold">
                 Nave BTS Chicas
               </h4>
@@ -209,7 +209,7 @@ export default function Naves() {
           </button>
         </div>
 
-        <div className="relative w-full h-full max-h-[50svh]">
+        <div className="relative w-full h-[28svh] md:h-[50svh]">
           {/* linear gradient */}
           <div className="absolute z-10 w-full h-full inset-0 bg-linear-to-t from-blue-overlay/60 to-blue-overlay" />
           <img
