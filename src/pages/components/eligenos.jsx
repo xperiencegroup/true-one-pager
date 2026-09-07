@@ -25,7 +25,7 @@ export default function Eligenos() {
   const [rightPanel, rightPanelIsVisible] = useInView();
   return (
     <>
-      <div className="relative flex justify-center w-full">
+      <div className="relative flex justify-center w-full min-h-svh">
         {/* Image */}
         <div className="absolute -z-10 w-full h-full">
           <div className="relative w-full h-full">
@@ -41,20 +41,18 @@ export default function Eligenos() {
         <div className="absolute z-0 w-full h-full bg-blue-overlay/89" />
 
         {/*  Content */}
-        <div className="relative flex flex-col lg:flex-row w-full items-center lg:items-start lg:justify-between max-w-[1280px] h-full py-[50px] sm:py-[60px] px-[44px] sm:px-[70px] gap-[40px] lg:gap-[20px] xl:gap-[48px]">
+        <div className="relative flex flex-col w-full items-center justify-center max-w-[1240px] h-full py-[50px] sm:py-[60px] px-[44px] sm:px-[70px] gap-[8px] sm:gap-[20px] lg:gap-[20px] xl:gap-[20px]">
           {/* Left panel */}
           <div
             ref={leftPanel}
-            className={`w-full max-w-[610px] flex flex-col justify-start max-lg:items-center gap-[20px] reveal-left ${leftPanelIsVisible ? "is-visible" : ""}`}
+            className={`w-full flex flex-col justify-start gap-[8px] sm:gap-[20px] reveal-left ${leftPanelIsVisible ? "is-visible" : ""}`}
           >
-            <h3 className="title max-lg:text-center font-abhaya uppercase">
-              No estás eligiendo <br className="max-lg:hidden" />
-              un espacio industrial. Estás eligiendo
-              <br />
-              cómo vas a operar.
+            <h3 className="title font-abhaya uppercase">
+              No estás eligiendo un espacio industrial. <br />
+              Estás eligiendo cómo vas a operar.
             </h3>
 
-            <h4 className="subtitle max-lg:text-center text-orange font-abhaya uppercase">
+            <h4 className="subtitle text-orange font-abhaya uppercase">
               Elige una vez. <br /> Opera tranquilo por décadas.
             </h4>
 
@@ -63,7 +61,7 @@ export default function Eligenos() {
               <div className="divider-orange" />
             </div>
 
-            <p className="paragraph font-light max-lg:text-center">
+            <p className="paragraph">
               Elegir espacio industrial no es comprar metros cuadrados. Es
               decidir dónde va a operar tu empresa los próximos diez o veinte
               años.
@@ -84,48 +82,48 @@ export default function Eligenos() {
           {/* Right panel */}
           <div
             ref={rightPanel}
-            className={`w-full max-w-[680px] lg:w-[480px] flex flex-col items-center lg:items-start gap-[20px] reveal-right ${rightPanelIsVisible ? "is-visible" : ""}`}
+            className={`w-full flex flex-col gap-[8px] sm:gap-[20px] reveal-right ${rightPanelIsVisible ? "is-visible" : ""}`}
           >
             {/* Title */}
-            <h3 className="w-full max-w-[450px] subtitle max-lg:text-center font-abhaya uppercase">
-              Aquí no vienes a adaptarte al parque industrial. El parque
-              industrial se adapta a ti.
+            <h3 className="w-full subtitle font-abhaya uppercase">
+              Aquí no vienes a adaptarte al parque industrial. <br />
+              El parque industrial se adapta a ti.
             </h3>
 
-            {RAZONES.map((razon, index) => {
-              return (
-                <div
-                  key={index}
-                  className="flex flex-col sm:flex-row w-full lg:w-[453px] h-fit sm:h-[104px] justify-start items-center p-[20px] gap-[15px] border-2 rounded-[17px] border-orange bg-blue-overlay"
-                >
-                  <img
-                    src={razon.icon}
-                    alt="Ícono correspondiente"
-                    className="h-[46px]"
-                  />
-                  <h4 className="max-w-[318px] paragraph text-center sm:text-left font-bold">
-                    {razon.label}
-                  </h4>
-                </div>
-              );
-            })}
+            <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-[10px] sm:gap-[30px]">
+              {RAZONES.map((razon, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-row sm:flex-col w-full max-w-[346px] h-fit sm:h-[152px] sm:justify-center items-center p-[20px] gap-[15px] border-2 rounded-[17px] border-orange bg-blue-overlay"
+                  >
+                    <img
+                      src={razon.icon}
+                      alt="Ícono correspondiente"
+                      className="h-[25px] sm:h-[46px]"
+                    />
+                    <h4 className="max-w-[318px] paragraph-bold sm:text-center font-bold">
+                      {razon.label}
+                    </h4>
+                  </div>
+                );
+              })}
+            </div>
 
-            {/* Botones */}
-            <button className="w-full max-lg:max-w-[350px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-orange">
-              Quiero comprar o rentar una <br className="sm:hidden" /> Nave
-              Industrial a la medida
-            </button>
+            <div className="flex w-full flex-col lg:flex-row justify-between items-center pt-[5px] gap-[20px]">
+              {/* Botones */}
+              <button className="w-full max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-orange">
+                Quiero comprar o rentar una <br className="sm:hidden" /> Nave
+                Industrial a la medida
+              </button>
 
-            <button className="w-full max-lg:max-w-[350px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-cream">
-              Compra tu Terreno <br className="sm:hidden" /> y construye a tu
-              ritmo
-            </button>
+              <button className="w-full max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-cream">
+                Compra tu Terreno <br className="sm:hidden" /> y construye a tu
+                ritmo
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="relative flex w-full h-[143px] sm:h-[303px] lg:h-[486px] justify-center items-center bg-black">
-        video
       </div>
     </>
   );

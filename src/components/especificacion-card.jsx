@@ -7,27 +7,29 @@ export default function EspecificacionCard({ especificacion, index }) {
     <div
       ref={ref}
       key={index}
-      className={`flex flex-col w-[266px] h-[400px] lg:w-[273px] lg:h-[466px] py-[30px] px-[20px] bg-dark-brown border-2 border-orange rounded-[20px] reveal-scale ${isVisible ? "is-visible" : ""}`}
+      className={`flex flex-col w-full max-w-[315px] h-[270px] lg:w-[275px] lg:h-[284px] py-[20px] px-[6px] sm:px-[15px] bg-dark-brown border-2 border-orange rounded-[20px] reveal-scale ${isVisible ? "is-visible" : ""}`}
     >
-      <div className="flex flex-col justify-center items-center gap-[10px]">
+      <div className="flex flex-col w-full h-full justify-center items-center gap-[8px]">
         {/* Icon */}
-        <div className="flex size-[92px] justify-center items-center bg-orange rounded-full">
+        <div className="flex shrink-0 size-[50px] justify-center items-center bg-orange rounded-full">
           <img
             src={especificacion.icon}
             alt={`Ícono de ${especificacion.alt}`}
-            className="size-[52px]"
+            className="size-[28px]"
           />
         </div>
 
         {/* Text */}
-        <div className="flex flex-col w-full text-center gap-[10px]">
-          <h3 className="subtitle font-abhaya tracking-wide uppercase whitespace-pre-line">
+        <div className="flex flex-col w-full grow justify-between text-center gap-[8px]">
+          <h3 className="flex-1 h-full subtitle font-abhaya uppercase whitespace-pre-line">
             {especificacion.title}
           </h3>
-          <h4 className="paragraph font-bold tracking-wide whitespace-pre-line">
+          <h4 className="shrink-0 min-h-[38px] paragraph-bold font-bold whitespace-pre-line">
             {especificacion.subtitle}
           </h4>
-          <p className="paragraph font-light">{especificacion.paragraph}</p>
+          <p className="flex-1 paragraph font-light">
+            {especificacion.paragraph}
+          </p>
         </div>
       </div>
     </div>

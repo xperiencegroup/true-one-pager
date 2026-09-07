@@ -17,7 +17,7 @@ const modelos = [
   {
     id: "macrolote",
     title: "Compra macrolote",
-    subtitle: "TERRENO INDUSTRIAL \n PARA DESARROLLAR",
+    subtitle: "TERRENO INDUSTRIAL PARA DESARROLLAR",
     icon: rentaMacrolote,
     pro: "Compra tu terreno y construye a tu ritmo",
     button: "Ver disponibilidad de Macrolotes en venta",
@@ -34,7 +34,7 @@ export default function Modelos() {
       {/* Diseñado para operar con certeza */}
       <div
         ref={ref}
-        className="relative w-full px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]"
+        className="relative w-full h-svh sm:h-[50svh] px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]"
       >
         {/* image y overlay */}
         <div className="absolute top-0 left-0 w-full h-full">
@@ -54,7 +54,7 @@ export default function Modelos() {
         {/* Content */}
         <div className="relative flex flex-col w-full h-full justify-center items-center gap-[20px]">
           <h2
-            className={`max-w-[380px] lg:max-w-[500px] title text-center font-abhaya uppercase reveal ${isVisible ? "is-visible" : ""}`}
+            className={`title text-center font-abhaya uppercase reveal ${isVisible ? "is-visible" : ""}`}
           >
             Diseñado para operar con certeza.
           </h2>
@@ -73,7 +73,7 @@ export default function Modelos() {
           <button
             className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isVisible ? "is-visible" : ""}`}
           >
-            Ver Click and Xperience
+            Ver Plataforma Interactiva
           </button>
         </div>
       </div>
@@ -81,17 +81,17 @@ export default function Modelos() {
       {/* Elige como quieres crecer */}
       <div
         id="naves-macrolotes"
-        className="flex flex-col justify-center items-center w-full px-[44px] py-[50px] sm:py-[60px] sm:px-[70px] lg:px-[20px] xl:px-[78px] gap-[33px] bg-brown"
+        className="flex flex-col justify-center items-center w-full h-svh xl:h-[50svh] px-[44px] py-[50px] sm:py-[60px] sm:px-[70px] lg:px-[20px] xl:px-[78px] gap-[33px] bg-brown"
       >
-        <div className="flex flex-col lg:flex-row items-center w-full max-w-[1100px] h-full gap-[40px] lg:gap-[16px]">
+        <div className="flex flex-col lg:flex-row items-center w-full max-w-[1100px] h-fit gap-[20px] lg:gap-[40px] lg:gap-[16px]">
           {/* Primera columna */}
-          <div className="flex flex-col w-full h-full max-w-[380px] gap-[20px]">
+          <div className="flex flex-col w-full lg:max-w-[265px] h-full gap-[10px] lg:gap-[20px]">
             {/* title */}
-            <h2 className="title max-lg:text-center font-abhaya uppercase">
-              Elige cómo <br /> quieres crecer.
+            <h2 className="title lg:max-w-[265px] max-lg:text-center font-abhaya uppercase">
+              Elige cómo <br className="max-lg:hidden" /> quieres crecer.
             </h2>
 
-            <div className="w-full">
+            <div className="max-lg:self-center w-full max-w-[265px] lg:w-full">
               <div className="divider-white"></div>
             </div>
 
@@ -111,33 +111,37 @@ export default function Modelos() {
               </p>
             </div>
 
-            <p className="max-lg:self-center max-w-[254px] max-lg:text-center subtitle font-abhaya uppercase text-cream-second">
+            <p className="max-lg:self-center lg:max-w-[254px] max-lg:text-center subtitle font-abhaya uppercase text-cream-second">
               La decisión depende de tu operación.
             </p>
           </div>
 
           {/* Modelos */}
-          <div className="flex flex-col lg:flex-row w-full h-full items-center justify-center gap-[40px] lg:gap-[8px] xl:gap-[16px]">
+          <div className="flex flex-col md:flex-row w-full h-full items-center justify-center gap-[40px] lg:gap-[8px] xl:gap-[16px]">
             {modelos.map((modelo, index) => {
               return (
                 <div
                   key={index}
-                  className="flex flex-col w-full justify-center items-center max-lg:gap-[40px]"
+                  className="flex flex-col justify-center items-center w-full max-w-[391px] gap-[20px]"
                 >
                   {/* cuadro */}
-                  <div className="flex flex-col w-full max-w-[680px] h-fit sm:h-[255px] lg:size-[341px] justify-start items-center p-[20px] gap-[15px] rounded-[20px] bg-cream/10 border border-cream">
+                  <div className="flex flex-col w-full h-[226px] justify-start items-center p-[20px] gap-[4px] rounded-[20px] bg-cream/10 border border-cream">
                     {/* Titulo y subtitulo */}
-                    <div className="flex flex-col items-center gap-[7px]">
+                    <div className="flex flex-col items-center gap-[2px]">
                       <h3 className="subtitle text-center font-abhaya uppercase text-cream-second">
                         {modelo.title}
                       </h3>
-                      <h3 className="max-w-[250px] text-center data font-light whitespace-pre-line text-cream-second">
+                      <h3 className="text-center parrafo-bold font-bold tracking-tight  text-cream-second">
                         {modelo.subtitle}
                       </h3>
                     </div>
 
                     {/* Image */}
-                    <img src={modelo.icon} alt={`Ícono de ${modelo.title}`} />
+                    <img
+                      src={modelo.icon}
+                      alt={`Ícono de ${modelo.title}`}
+                      className="h-[66px]"
+                    />
 
                     {/* Ventaja */}
                     <div className="w-full h-full flex-col min-[440px]:flex-row justify-center lg:justify-start items-center flex gap-[12px]">
@@ -147,17 +151,18 @@ export default function Modelos() {
                         className="size-[20px]"
                       />
 
-                      <p className="lg:max-w-[245px] paragraph font-light text-cream">
+                      <p className="paragraph font-light text-cream">
                         {modelo.pro}
                       </p>
                     </div>
                   </div>
 
-                  {/* botón de disponibilidad*/}
                   <button
-                    className={`lg:hidden w-fit px-[20px] pt-[11px] pb-[12px] rounded-full boton font-semibold drop-shadow-md drop-shadow-black/25 ${modelo.id === "nave" ? "bg-orange text-cream" : "bg-cream text-blue"}`}
+                    className={`w-fit px-[20px] pt-[11px] pb-[12px] rounded-full boton font-semibold drop-shadow-md drop-shadow-black/25 ${modelo.id === "nave" ? "bg-orange text-cream" : "bg-cream text-blue"}`}
                   >
-                    {modelo.button}
+                    {modelo.id === "nave"
+                      ? "Ver disponibilidad de Naves BTS en renta o venta"
+                      : "Quiero comprar un Macrolote"}
                   </button>
                 </div>
               );
@@ -168,7 +173,7 @@ export default function Modelos() {
         {/* Botones inferiores */}
         <div
           ref={buttonsDesktopRef}
-          className={`max-lg:hidden flex justify-center items-center gap-[30px] w-full reveal-fade ${isButtonsDesktopVisible ? "is-visible" : ""}`}
+          className={`hidden flex justify-center items-center gap-[30px] w-full reveal-fade ${isButtonsDesktopVisible ? "is-visible" : ""}`}
         >
           {/* Naves */}
           <button className="w-fit px-[20px] pt-[11px] pb-[12px] rounded-full boton font-semibold bg-orange text-cream drop-shadow-md drop-shadow-black/25">

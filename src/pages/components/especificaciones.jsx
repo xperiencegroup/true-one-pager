@@ -11,7 +11,13 @@ import EspecificacionCard from "../../components/especificacion-card";
 const ESPECIFICACIONES = [
   {
     id: "hectareas",
-    title: "de Parque\n Industrial\n Clase A",
+    title: (
+      <>
+        de Parque <br />
+        Industrial <span className="whitespace-nowrap">Clase A</span>
+      </>
+    ),
+
     subtitle: "15 hectáreas",
     paragraph:
       "Infraestructura de Primer Nivel para operaciones que exigen más.",
@@ -21,7 +27,7 @@ const ESPECIFICACIONES = [
   {
     id: "naves",
     title: "Naves BTS",
-    subtitle: "de 75,000\n - 750,000 ft²",
+    subtitle: "de 75,000 - 750,000 ft²",
     paragraph:
       "Espacios construídos a la medida de tu operación, listos para crecer contiigo.",
     icon: almacenIcon,
@@ -30,7 +36,7 @@ const ESPECIFICACIONES = [
   {
     id: "macrolotes",
     title: "Macrolotes",
-    subtitle: "de 10,000\n - 150,000 m²",
+    subtitle: "de 10,000 - 150,000 m²",
     paragraph:
       "Terrenos Industriales listos para desarrollar proyectos de gran escala.",
     icon: medidaIcon,
@@ -39,7 +45,7 @@ const ESPECIFICACIONES = [
   {
     id: "carretera",
     title: "Frente directo a la",
-    subtitle: "Autopista Monterrey-Nuevo Laredo\n (Carretera 85)",
+    subtitle: "Autopista Mty-Nuevo Laredo\n (Carretera 85)",
     paragraph: "La arteria logística más importante del norte del país.",
     icon: carreteraIcon,
     alt: "carretera",
@@ -50,39 +56,45 @@ export default function Especificaciones() {
   const [titleRef, titleVisible] = useInView();
 
   return (
-    <div
+    <section
       id="propuesta-de-valor"
-      className="relative flex flex-col justify-center items-center w-full h-fit px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[40px] bg-brown/80"
+      className="flex flex-col h-fit min-[1170px]:h-svh"
     >
-      {/* Imagen de fondo */}
-      <div className="absolute -z-10 inset-0 w-full h-full">
-        <div className="relative w-full h-full">
-          <img
-            src={bgImage}
-            alt="Imagen de fondo"
-            className="absolute w-full h-full object-cover"
-          />
+      <div className="relative flex h-svh min-[1170px]:flex-1 flex-col justify-center items-center w-full px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
+        {/* Imagen de fondo */}
+        <div className="absolute -z-10 inset-0 w-full h-full">
+          <div className="relative w-full h-full">
+            <img
+              src={bgImage}
+              alt="Imagen de fondo"
+              className="absolute w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <h2
+          ref={titleRef}
+          className={`max-sm:max-w-[260px] title text-center font-abhaya uppercase reveal ${titleVisible ? "is-visible" : ""}`}
+        >
+          Todo lo que tu operación necesita, en un solo lugar.
+        </h2>
+
+        <div className="grid grid-cols-2 min-[1170px]:grid-cols-4 gap-[15px] min-[680px]:gap-[20px] xl:gap-[23px]">
+          {ESPECIFICACIONES.map((especificacion, index) => {
+            return (
+              <EspecificacionCard
+                key={especificacion.id}
+                especificacion={especificacion}
+                index={index}
+              />
+            );
+          })}
         </div>
       </div>
 
-      <h2
-        ref={titleRef}
-        className={`max-sm:max-w-[260px] title text-center font-abhaya uppercase reveal ${titleVisible ? "is-visible" : ""}`}
-      >
-        Todo lo que tu operación <br /> necesita, en un solo lugar.
-      </h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[20px] sm:gap-[40px] xl:gap-[23px]">
-        {ESPECIFICACIONES.map((especificacion, index) => {
-          return (
-            <EspecificacionCard
-              key={especificacion.id}
-              especificacion={especificacion}
-              index={index}
-            />
-          );
-        })}
+      <div className="relative h-svh md:h-[50svh] min-[1170px]:flex-1 shrink-0 w-full justify-center items-center bg-black">
+        video
       </div>
-    </div>
+    </section>
   );
 }
