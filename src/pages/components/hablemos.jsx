@@ -40,13 +40,13 @@ const contactInfo = [
 ];
 
 const initialFormState = {
-  nombre: "",
-  empresa: "",
+  name: "",
+  company: "",
   email: "",
-  telefono: "",
-  buscando: "",
-  superficie: "",
-  mensaje: "",
+  phone: "",
+  searching: "",
+  area: "",
+  message: "",
 };
 
 export default function HablemosDeTuProyecto() {
@@ -56,9 +56,25 @@ export default function HablemosDeTuProyecto() {
     setFormData((prev) => ({ ...prev, [field]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    try {
+      await fetch(
+        "https://true-one-pager-backend.vercel.app/api/v1/form/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            source: "True One Pager",
+            data: formData,
+          }),
+        },
+      );
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const inputClass =
@@ -210,7 +226,7 @@ export default function HablemosDeTuProyecto() {
                 type="text"
                 placeholder="Nombre"
                 value={formData.nombre}
-                onChange={handleChange("nombre")}
+                onChange={handleChange("name")}
                 className={inputClass}
               />
             </div>
@@ -223,7 +239,7 @@ export default function HablemosDeTuProyecto() {
                 type="text"
                 placeholder="Empresa"
                 value={formData.empresa}
-                onChange={handleChange("empresa")}
+                onChange={handleChange("company")}
                 className={inputClass}
               />
             </div>
@@ -252,7 +268,7 @@ export default function HablemosDeTuProyecto() {
                 type="tel"
                 placeholder="Número"
                 value={formData.telefono}
-                onChange={handleChange("telefono")}
+                onChange={handleChange("phone")}
                 className={inputClass}
               />
             </div>
@@ -267,7 +283,7 @@ export default function HablemosDeTuProyecto() {
               type="text"
               placeholder="Comprar o rentar una nave industrial a la medida / Comprar un macrolote industrial"
               value={formData.buscando}
-              onChange={handleChange("buscando")}
+              onChange={handleChange("searching")}
               className={inputClass}
             />
           </div>
@@ -281,7 +297,7 @@ export default function HablemosDeTuProyecto() {
               type="text"
               placeholder={`200,000 - 780,000 sq ft / 3 - 15 ha"`}
               value={formData.superficie}
-              onChange={handleChange("superficie")}
+              onChange={handleChange("area")}
               className={inputClass}
             />
           </div>
@@ -294,7 +310,7 @@ export default function HablemosDeTuProyecto() {
             <textarea
               placeholder="Cuéntanos sobre tu proyecto, las necesidades de tu operación y la fecha en que requieres el espacio"
               value={formData.mensaje}
-              onChange={handleChange("mensaje")}
+              onChange={handleChange("message")}
               rows={3}
               className={textareaClass}
             />
