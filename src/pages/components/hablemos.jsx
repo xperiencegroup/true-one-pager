@@ -1,6 +1,9 @@
-import { useState } from "react";
 import { useInView } from "../../hooks/useInView";
 import { usePopupStore } from "../../store/usePopupStore";
+import { useForm } from "react-hook-form";
+import { InputTooltipError } from "../../components/tooltip/InputTooltipError";
+import { showToast } from "../../components/toast/toast-custom";
+
 import mail from "../../assets/icons/mail.svg";
 import whatsapp from "../../assets/icons/whatsapp.svg";
 import phone from "../../assets/icons/phone.svg";
@@ -31,26 +34,16 @@ const contactInfo = [
   },
 ];
 
-const initialFormState = {
-  name: "",
-  company: "",
-  email: "",
-  phone: "",
-  searching: "",
-  area: "",
-  message: "",
-};
-
 export default function HablemosDeTuProyecto() {
-  const [formData, setFormData] = useState(initialFormState);
   const openPopup = usePopupStore((state) => state.openPopup);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm();
 
-  const handleChange = (field) => (e) => {
-    setFormData((prev) => ({ ...prev, [field]: e.target.value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
     try {
       await fetch(
         "https://true-one-pager-backend.vercel.app/api/v1/form/submit",
@@ -60,21 +53,25 @@ export default function HablemosDeTuProyecto() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            source: "True One Pager",
-            data: formData,
+            source: "True One Pager - Formulario Contacto",
+            data: data,
           }),
         },
       );
+
+      await showToast("Registro enviado correctamente", false);
+      reset();
     } catch (error) {
       console.log(error);
+      showToast("No se pudo enviar el formulario", true);
     }
   };
 
   const inputClass =
-    "w-full h-[60px] md:h-[80px] pl-[20px] pr-[15px] rounded-[15px] border border-white/80 bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors";
+    "w-full h-[60px] md:h-[80px] pl-[20px] pr-[15px] rounded-[15px] border bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors";
 
   const textareaClass =
-    "w-full min-h-[150px] sm:min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border border-white/80 bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
+    "w-full min-h-[150px] sm:min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
 
   // Animaciones
   const [contentRef, isContentVisible] = useInView();
@@ -201,112 +198,184 @@ export default function HablemosDeTuProyecto() {
         {/* Formulario */}
         <form
           ref={formRef}
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmit(onSubmit)}
           className={`flex flex-col gap-[10px] md:gap-[30px] lg:gap-[50px] reveal ${isFormVisible ? "is-visible" : ""}`}
         >
           {/* Nombre completo / Empresa */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] md:gap-[30px] lg:gap-[17px]">
-            <div className="flex flex-col gap-[10px]">
+            <div className="relative flex flex-col gap-[10px]">
               <label className="font-inter font-bold paragraph text-white">
                 Nombre completo
               </label>
-              <input
-                type="text"
-                placeholder="Nombre"
-                value={formData.nombre}
-                onChange={handleChange("name")}
-                className={inputClass}
-              />
+              <div className="relative">
+                <input
+                  {...register("name", {
+                    required: "El nombre es obligatorio",
+                    minLength: { value: 2, message: "El nombre es muy corto" },
+                    pattern: {
+                      value: /^[\p{L}\s]+$/u,
+                      message: "Solo se permiten letras",
+                    },
+                  })}
+                  type="text"
+                  placeholder="Nombre"
+                  className={`${inputClass} ${errors.name ? "border-orange" : "border-white"}`}
+                />
+                <InputTooltipError message={errors.name?.message} />
+              </div>
             </div>
 
-            <div className="flex flex-col gap-[10px]">
+            <div className="relative flex flex-col gap-[10px]">
               <label className="font-inter font-bold paragraph text-white">
                 Empresa
               </label>
-              <input
-                type="text"
-                placeholder="Empresa"
-                value={formData.empresa}
-                onChange={handleChange("company")}
-                className={inputClass}
-              />
+              <div className="relative">
+                <input
+                  {...register("company", {
+                    required: "La empresa es obligatoria",
+                    minLength: {
+                      value: 2,
+                      message: "El nombre de la empresa es muy corto",
+                    },
+                  })}
+                  type="text"
+                  placeholder="Empresa"
+                  className={`${inputClass} ${errors.company ? "border-orange" : "border-white"}`}
+                />
+                <InputTooltipError message={errors.company?.message} />
+              </div>
             </div>
           </div>
 
           {/* Correo / Teléfono */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px] md:gap-[30px] lg:gap-[17px]">
-            <div className="flex flex-col gap-[10px]">
+            <div className="relative flex flex-col gap-[10px]">
               <label className="font-inter font-bold paragraph text-white">
                 Correo electrónico
               </label>
-              <input
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange("email")}
-                className={inputClass}
-              />
+              <div className="relative">
+                <input
+                  {...register("email", {
+                    required: "El correo es obligatorio",
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Correo electrónico inválido",
+                    },
+                  })}
+                  type="email"
+                  placeholder="Email"
+                  className={`${inputClass} ${errors.email ? "border-orange" : "border-white"}`}
+                />
+                <InputTooltipError message={errors.email?.message} />
+              </div>
             </div>
 
-            <div className="flex flex-col gap-[10px]">
+            <div className="relative flex flex-col gap-[10px]">
               <label className="font-inter font-bold paragraph text-white">
                 Teléfono
               </label>
-              <input
-                type="tel"
-                placeholder="Número"
-                value={formData.telefono}
-                onChange={handleChange("phone")}
-                className={inputClass}
-              />
+              <div className="relative">
+                <input
+                  {...register("phone", {
+                    required: "El teléfono es obligatorio",
+                    pattern: {
+                      value: /^[0-9]{8,15}$/,
+                      message: "Debe tener entre 8 y 15 dígitos",
+                    },
+                    onChange: (e) => {
+                      e.target.value = e.target.value.replace(/[^0-9]/g, "");
+                    },
+                  })}
+                  type="tel"
+                  inputMode="numeric"
+                  placeholder="Número"
+                  className={`${inputClass} ${errors.phone ? "border-orange" : "border-white"}`}
+                />
+                <InputTooltipError message={errors.phone?.message} />
+              </div>
             </div>
           </div>
 
           {/* Qué estás buscando */}
-          <div className="flex flex-col gap-[10px]">
+          <div className="relative flex flex-col gap-[10px]">
             <label className="font-inter font-bold paragraph text-white">
               ¿Qué estás buscando?
             </label>
-            <input
-              type="text"
-              placeholder="Comprar o rentar una nave industrial a la medida / Comprar un macrolote industrial"
-              value={formData.buscando}
-              onChange={handleChange("searching")}
-              className={inputClass}
-            />
+            <div className="relative">
+              <input
+                {...register("searching", {
+                  required: "Cuéntanos qué estás buscando",
+                  maxLength: {
+                    value: 150,
+                    message: "Máximo 150 caracteres",
+                  },
+                  pattern: {
+                    value: /^[\p{L}\p{N}\s.,/()-]+$/u,
+                    message: "Contiene caracteres no permitidos",
+                  },
+                })}
+                type="text"
+                placeholder="Comprar o rentar una nave industrial a la medida / Comprar un macrolote industrial"
+                className={`${inputClass} ${errors.searching ? "border-orange" : "border-white"}`}
+              />
+              <InputTooltipError message={errors.searching?.message} />
+            </div>
           </div>
 
           {/* Superficie aproximada */}
-          <div className="flex flex-col gap-[10px]">
+          <div className="relative flex flex-col gap-[10px]">
             <label className="font-inter font-bold paragraph text-white">
               Superficie aproximada
             </label>
-            <input
-              type="text"
-              placeholder={`200,000 - 780,000 sq ft / 3 - 15 ha"`}
-              value={formData.superficie}
-              onChange={handleChange("area")}
-              className={inputClass}
-            />
+            <div className="relative">
+              <input
+                {...register("area", {
+                  maxLength: {
+                    value: 60,
+                    message: "Máximo 60 caracteres",
+                  },
+                  pattern: {
+                    value: /^[\p{L}\p{N}\s.,/()-]+$/u,
+                    message: "Contiene caracteres no permitidos",
+                  },
+                })}
+                type="text"
+                placeholder={`200,000 - 780,000 sq ft / 3 - 15 ha"`}
+                className={`${inputClass} ${errors.area ? "border-orange" : "border-white"}`}
+              />
+              <InputTooltipError message={errors.area?.message} />
+            </div>
           </div>
 
           {/* Mensaje */}
-          <div className="flex flex-col gap-[10px]">
+          <div className="relative flex flex-col gap-[10px]">
             <label className="font-inter font-bold paragraph text-white">
               Mensaje (opcional)
             </label>
             <textarea
+              {...register("message", {
+                maxLength: {
+                  value: 200,
+                  message: "Máximo 200 caracteres",
+                },
+                pattern: {
+                  value: /^[\p{L}\p{N}\s.,/()¿?¡!:-]+$/u,
+                  message: "Contiene caracteres no permitidos",
+                },
+              })}
               placeholder="Cuéntanos sobre tu proyecto, las necesidades de tu operación y la fecha en que requieres el espacio"
-              value={formData.mensaje}
-              onChange={handleChange("message")}
               rows={3}
-              className={textareaClass}
+              className={`${textareaClass} ${errors.message ? "border-orange" : "border-white"}`}
             />
+            <InputTooltipError message={errors.message?.message} />
           </div>
 
           {/* Botón de enviar */}
-          <button className="sm:self-end lg:self-center lg:w-full lg:max-w-[565px] boton font-medium px-[20px] pt-[12px] pb-[11px] rounded-[30px] text-cream bg-orange">
-            Enviar mensaje
+          <button
+            type="submit"
+            className="sm:self-end lg:self-center lg:w-full lg:max-w-[565px] boton font-medium px-[20px] pt-[12px] pb-[11px] rounded-[30px] text-cream bg-orange"
+          >
+            {isSubmitting ? "Enviando..." : "Enviar mensaje"}
           </button>
         </form>
       </div>
