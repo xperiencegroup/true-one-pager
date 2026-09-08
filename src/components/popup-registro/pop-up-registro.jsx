@@ -154,7 +154,7 @@ export default function PopupRegistro({ isOpen, onClose }) {
                 >
                   {/* Nombre */}
                   <div
-                    className={`${inputClass} relative ${errors.name ? "border-orange" : "border-white/40"}`}
+                    className={`${inputClass} relative ${errors.name ? "border-orange" : "border-white"}`}
                   >
                     <img
                       src={userIcon}
@@ -190,7 +190,7 @@ export default function PopupRegistro({ isOpen, onClose }) {
 
                   {/* email */}
                   <div
-                    className={`${inputClass} relative ${errors.email ? "border-orange" : "border-white/40"}`}
+                    className={`${inputClass} relative ${errors.email ? "border-orange" : "border-white"}`}
                   >
                     <img
                       src={mailIcon}
@@ -222,7 +222,7 @@ export default function PopupRegistro({ isOpen, onClose }) {
 
                   {/* teléfono */}
                   <div
-                    className={`${inputClass} relative ${errors.phone ? "border-orange" : "border-white/40"}`}
+                    className={`${inputClass} relative ${errors.phone ? "border-orange" : "border-white"}`}
                   >
                     <img
                       src={phoneIcon}
