@@ -40,7 +40,7 @@ export default function Hero() {
 
           <div className="flex flex-col gap-[30px] animate-hero-2">
             {/* Titulo */}
-            <h1 className="grid-cols-subgridtitle font-abhaya uppercase">
+            <h1 className="subtitle grid-cols-subgridtitle font-abhaya uppercase">
               True Ciénega Industrial Park
             </h1>
 
