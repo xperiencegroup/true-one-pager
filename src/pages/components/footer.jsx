@@ -1,4 +1,3 @@
-import trueLogo from "../../assets/logos/true-cienega.svg";
 import xperienceDesarrollo from "../../assets/xperience/desarrollado-por-experience.svg";
 
 // navigation
@@ -12,13 +11,11 @@ export default function Footer() {
   return (
     <div className="relative flex justify-center items-center w-full bg-black">
       <div className="flex flex-col w-full max-w-[1280px] justify-center items-center">
-        <div className="flex flex-col justify-center items-center w-full max-w-[1164px] gap-[20px] py-[90px] border-x border-orange">
+        <div className="flex flex-col justify-center items-center w-full max-w-[1164px] gap-[20px] pt-[40px] pb-[70px] border-x border-orange">
           {/* Logo */}
-          <img
-            src={trueLogo}
-            alt="Parque Industrial Ciénega de Flores"
-            className="w-[240px] sm:max-w-[360px]"
-          />
+          <h4 className="title font-abhaya text-white">
+            TRUE CIÉNEGA INDUSTRIAL PARK
+          </h4>
 
           {/* Navegación */}
           <nav className="w-full max-sm:flex-col max-w-[1164px] flex flex-wrap justify-around items-center">
@@ -32,11 +29,6 @@ export default function Footer() {
               </a>
             ))}
           </nav>
-
-          {/* Sitio web CTA */}
-          <p className="boton text-white font-medium text-center">
-            Visita nuestro sitio web para conocer más:
-          </p>
 
           {/* Datos de contacto */}
           <div className="flex max-sm:flex-col flex-wrap w-full max-w-[1124px] justify-around items-cente gap-[10px]">
@@ -58,7 +50,7 @@ export default function Footer() {
           <img
             src={xperienceDesarrollo}
             alt="Desarrollado por Xperience Group"
-            className="w-[118px] pt-[30px]"
+            className="w-[118px]"
           />
         </div>
       </div>
@@ -85,15 +77,15 @@ export default function Footer() {
       </div>
 
       {/* botón regresar */}
-      <div className="absolute z-50 right-0 top-0">
+      <div className="absolute z-50 left-0 bottom-0">
         <a
           href="#hero"
-          className="flex size-[52px] justify-center items-center rounded-b-[32.5px] bg-orange"
+          className="flex size-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
         >
           <img
             src={returnIcon}
             alt={`Ícono de Whatsapp`}
-            className="size-[25.5px]"
+            className="size-[25.5px] rotate-90"
           />
         </a>
       </div>

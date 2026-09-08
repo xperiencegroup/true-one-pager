@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "../../assets/logos/true-cream.svg";
 import { useInView } from "../../hooks/useInView";
 
 const preguntasData = [
@@ -67,13 +66,6 @@ export default function Preguntas() {
             <br />
             que deberías hacernos
           </h2>
-          <div className="shrink-0">
-            <img
-              src={logo}
-              alt=""
-              className="w-[30px] sm:w-[58px] smh-[83px]"
-            />
-          </div>
         </div>
 
         {/* Accordion */}
@@ -91,15 +83,17 @@ export default function Preguntas() {
                     {item.question}
                   </span>
 
-                  <span className="flex shrink-0 items-center justify-center size-[35px] sm:size-[43px] drop-shadow-xl shadow-black rounded-full bg-orange">
+                  <span
+                    className={`flex shrink-0 items-center justify-center size-[35px] sm:size-[43px] drop-shadow-xl shadow-black rounded-full ${isOpen ? "bg-orange" : "bg-cream"}`}
+                  >
                     {isOpen ? (
                       <div className="w-[14.45px] h-[5.65px] bg-cream" />
                     ) : (
                       <div className="relative w-[14.45px] h-[14.45px]">
                         {/* barra horizontal */}
-                        <div className="absolute top-1/2 left-0 w-[14.45px] h-[4px] -translate-y-1/2 bg-cream" />
+                        <div className="absolute top-1/2 left-0 w-[14.45px] h-[4px] -translate-y-1/2 bg-orange" />
                         {/* barra vertical */}
-                        <div className="absolute left-1/2 top-0 h-[14.45px] w-[4px] -translate-x-1/2 bg-cream" />
+                        <div className="absolute left-1/2 top-0 h-[14.45px] w-[4px] -translate-x-1/2 bg-orange" />
                       </div>
                     )}
                   </span>

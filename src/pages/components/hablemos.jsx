@@ -1,12 +1,11 @@
 import { useState } from "react";
-import trueLogo from "../../assets/logos/true-cream.svg";
+import { useInView } from "../../hooks/useInView";
+import { usePopupStore } from "../../store/usePopupStore";
 import mail from "../../assets/icons/mail.svg";
 import whatsapp from "../../assets/icons/whatsapp.svg";
 import phone from "../../assets/icons/phone.svg";
-import link from "../../assets/icons/link.svg";
 
 import banner from "../../assets/images/banner-contacto.jpg";
-import { useInView } from "../../hooks/useInView";
 
 const contactInfo = [
   {
@@ -30,13 +29,6 @@ const contactInfo = [
     buttonText: "Enviar Correo",
     href: "mailto:info@truedevelopments.mx",
   },
-  {
-    id: "web",
-    icon: link,
-    label: "www.truedevelopments.mx",
-    buttonText: "Visitar Sitio Web",
-    href: "https://www.truedevelopments.mx",
-  },
 ];
 
 const initialFormState = {
@@ -51,6 +43,7 @@ const initialFormState = {
 
 export default function HablemosDeTuProyecto() {
   const [formData, setFormData] = useState(initialFormState);
+  const openPopup = usePopupStore((state) => state.openPopup);
 
   const handleChange = (field) => (e) => {
     setFormData((prev) => ({ ...prev, [field]: e.target.value }));
@@ -134,6 +127,7 @@ export default function HablemosDeTuProyecto() {
           </p>
 
           <button
+            onClick={() => openPopup("click-and-xperience")}
             style={{ transitionDelay: "200ms" }}
             className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isContentVisible ? "is-visible" : ""}`}
           >
@@ -160,14 +154,6 @@ export default function HablemosDeTuProyecto() {
               opciones concretas: disponibilidad, planos y números.
             </p>
           </div>
-          {/* Logo */}
-          <div className="shrink-0 h-full flex items-center justify-center">
-            <img
-              src={trueLogo}
-              alt="Logo de True"
-              className="w-[26px] sm:w-[74px] sm:h-[106px]"
-            />
-          </div>
         </div>
 
         {/* Card de contacto */}
@@ -175,19 +161,21 @@ export default function HablemosDeTuProyecto() {
           ref={cardRef}
           className={`flex flex-col gap-[10px] sm:gap-[10px] p-[15px] md:p-[20px] rounded-[20px] bg-white/10 reveal-scale ${isCardVisible ? "is-visible" : ""}`}
         >
-          <h3 className="font-abhaya max-md:text-center subtitle text-white uppercase">
-            Ricardo Villarreal
-          </h3>
-          <p className="font-semibold max-md:text-center paragraph text-white">
-            Socio, True Developments
-          </p>
+          <div className="flex items-center gap-[5px]">
+            <h3 className="font-abhaya max-md:text-center subtitle text-white uppercase">
+              Ricardo Villarreal -
+            </h3>
+            <p className="font-semibold max-md:text-center paragraph-bold text-white">
+              Socio, True Developments
+            </p>
+          </div>
 
           {/* Datos de contacto */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-[20px] md:gap-y-[30px] gap-x-[80px] lg:gap-[14px]">
+          <div className="flex flex-wrap justify-center lg:justify-between items-center gap-y-[20px] md:gap-y-[30px] gap-x-[80px] lg:gap-[14px]">
             {contactInfo.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col gap-[12px] md:gap-[20px]"
+                className="flex flex-col w-full max-w-[240px] gap-[12px] md:gap-[20px]"
               >
                 <div className="flex items-center justify-center h-[60px] gap-[10px] px-[16px] py-[5px]  sm:py-[12px] rounded-[10px] border border-white bg-blue">
                   <img src={item.icon} alt="" className="h-[20px]" />

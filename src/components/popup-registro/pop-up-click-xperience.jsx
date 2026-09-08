@@ -6,7 +6,7 @@ import phoneIcon from "../../assets/icons/phone.svg";
 import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
 import linkedinIcon from "../../assets/icons/social/linkedin.svg";
 import instagramIcon from "../../assets/icons/social/instagram.svg";
-import popupImage from "../../assets/images/hero-background2.jpg";
+import popupImage from "../../assets/images/popup-click.jpg";
 import trueLogoCream from "../../assets/logos/true-developments-cream.svg";
 
 const socialButtons = [
@@ -16,9 +16,9 @@ const socialButtons = [
 ];
 
 const inputClass =
-  "flex items-center gap-[20px] w-full h-[60px] px-[16px] rounded-[14px] border border-white/40 bg-transparent text-white placeholder:text-white/60 font-inter text-[14px] outline-none focus:border-white transition-colors";
+  "flex items-center gap-[20px] w-full h-[60px] px-[16px] rounded-[14px] border-[1px] border-white bg-white/10 text-white placeholder:text-white/60 font-inter text-[14px] outline-none focus:border-white transition-colors";
 
-export default function PopupRegistro({ isOpen, onClose }) {
+export default function PopupClickAndXperience({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -56,7 +56,7 @@ export default function PopupRegistro({ isOpen, onClose }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative flex flex-col lg:flex-row w-full max-w-[1280px] max-h-[90svh] overflow-hidden bg-blue"
+        className="relative flex flex-col lg:flex-row w-full max-w-[1280px] max-h-[90svh] overflow-hidden bg-brown"
       >
         {/* Botón cerrar */}
         <button
@@ -73,7 +73,7 @@ export default function PopupRegistro({ isOpen, onClose }) {
             alt="Render True Ciénega Industrial Park"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-170 from-blue-overlay/60 to-blue-overlay" />
+          <div className="absolute inset-0 bg-linear-170 from-brown/60 to-brown" />
 
           <div className="relative flex flex-col justify-end w-full h-full p-[60px] gap-[20px]">
             <img
@@ -88,7 +88,7 @@ export default function PopupRegistro({ isOpen, onClose }) {
                 <br />
                 Industrial Park
               </h3>
-              <p className="subtitle font-abhaya text-orange uppercase">
+              <p className="subtitle font-abhaya text-white uppercase">
                 Naves industriales a la medida
                 <br />y macrolotes industriales
               </p>
@@ -100,9 +100,8 @@ export default function PopupRegistro({ isOpen, onClose }) {
         <div className="flex flex-col w-full lg:w-1/2 overflow-y-auto p-[30px] sm:p-[44px] gap-[20px]">
           <div className="flex flex-col gap-[10px]">
             <h2 className="title font-abhaya text-white uppercase leading-[115%]">
-              Descubre las opciones
-              <br />
-              disponibles para tu empresa
+              Ingresa a Nuestra <br />
+              Plataforma Interactiva
             </h2>
             <div className="w-full">
               <div className="divider-orange-full" />
@@ -111,17 +110,24 @@ export default function PopupRegistro({ isOpen, onClose }) {
 
           <div className="flex flex-col gap-[6px]">
             <h3 className="subtitle font-abhaya text-white uppercase">
-              Registra tus datos
+              Deja tus datos
             </h3>
             <p className="paragraph font-light text-white/80">
-              Déjanos tus datos y uno de nuestros asesores se pondrá en contacto
-              contigo.
+              Registra tus datos y explora{" "}
+              <span className="font-semibold">
+                TRUE CIÉNEGA INDUSTRIAL PARK
+              </span>{" "}
+              de manera inmersiva
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-[16px]">
             <div className={inputClass}>
-              <img src={userIcon} alt="" className="size-[18px] shrink-0" />
+              <img
+                src={userIcon}
+                alt=""
+                className="size-[18px] shrink-0 brightness-0 invert-100"
+              />
               <input
                 type="text"
                 placeholder="Nombre completo"
@@ -132,7 +138,11 @@ export default function PopupRegistro({ isOpen, onClose }) {
             </div>
 
             <div className={inputClass}>
-              <img src={mailIcon} alt="" className="size-[18px] shrink-0" />
+              <img
+                src={mailIcon}
+                alt=""
+                className="size-[18px] shrink-0 brightness-0 invert-100"
+              />
               <input
                 type="email"
                 placeholder="Correo electrónico"
@@ -143,7 +153,11 @@ export default function PopupRegistro({ isOpen, onClose }) {
             </div>
 
             <div className={inputClass}>
-              <img src={phoneIcon} alt="" className="size-[18px] shrink-0" />
+              <img
+                src={phoneIcon}
+                alt=""
+                className="size-[18px] shrink-0 brightness-0 invert-100"
+              />
               <input
                 type="tel"
                 placeholder="Teléfono"
@@ -155,9 +169,9 @@ export default function PopupRegistro({ isOpen, onClose }) {
 
             <button
               type="submit"
-              className="w-full boton font-medium px-[20px] pt-[12px] pb-[11px] rounded-full text-cream bg-orange hover:opacity-90"
+              className="w-full boton font-medium px-[20px] pt-[12px] pb-[11px] rounded-full text-blue bg-cream hover:opacity-90"
             >
-              Solicitar información
+              Ver Plataforma Interactiva
             </button>
           </form>
 

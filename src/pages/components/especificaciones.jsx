@@ -20,13 +20,7 @@ import foto9 from "../../assets/images/carousel/foto9.jpg";
 const ESPECIFICACIONES = [
   {
     id: "hectareas",
-    title: (
-      <>
-        de Parque <br />
-        Industrial <span className="whitespace-nowrap">Clase A</span>
-      </>
-    ),
-
+    title: "Parque Industrial Clase A",
     subtitle: "15 hectáreas",
     paragraph:
       "Infraestructura de Primer Nivel para operaciones que exigen más.",
@@ -53,7 +47,7 @@ const ESPECIFICACIONES = [
   },
   {
     id: "carretera",
-    title: "Frente directo a la",
+    title: "Frente directo a",
     subtitle: "Autopista Mty-Nuevo Laredo\n (Carretera 85)",
     paragraph: "La arteria logística más importante del norte del país.",
     icon: carreteraIcon,
@@ -67,11 +61,8 @@ export default function Especificaciones() {
   const [titleRef, titleVisible] = useInView();
 
   return (
-    <section
-      id="propuesta-de-valor"
-      className="flex flex-col h-fit min-[1170px]:h-svh"
-    >
-      <div className="relative flex min-h-svh min-[1170px]:flex-1 flex-col justify-center items-center w-full px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
+    <section id="propuesta-de-valor" className="flex flex-col h-fit">
+      <div className="relative flex min-h-[50svh] flex-col justify-center items-center w-full px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
         {/* Imagen de fondo */}
         <div className="absolute -z-10 inset-0 w-full h-full">
           <div className="relative w-full h-full">
@@ -103,7 +94,7 @@ export default function Especificaciones() {
         </div>
       </div>
 
-      <div className="relative h-svh md:h-[50svh] min-[1170px]:flex-1 shrink-0 w-full justify-center items-center overflow-hidden">
+      <div className="relative h-svh sm:h-[50svh] shrink-0 w-full justify-center items-center overflow-hidden">
         <GalleryCarrousel images={carouselImages} />
       </div>
     </section>

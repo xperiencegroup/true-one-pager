@@ -17,11 +17,11 @@ export default function BeneficioMacroloteItem({ beneficio, delay }) {
         className="w-fit h-[41px] brightness-0 invert-100"
       />
       <div className="relative flex flex-col gap-[9px]">
-        <h3 className="paragraph text-left text-white font-bold">
+        <h3 className="paragraph text-left text-cream font-bold">
           {beneficio.title}
         </h3>
 
-        <p className="sm:self-center lg:self-start max-w-[590px] lg:max-w-none paragraph text-left lg:text-left font-light text-white">
+        <p className="lg:self-start max-w-[590px] lg:max-w-none paragraph text-left lg:text-left font-light text-white">
           {beneficio.description}
         </p>
       </div>

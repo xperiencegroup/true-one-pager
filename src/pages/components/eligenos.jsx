@@ -62,7 +62,7 @@ export default function Eligenos() {
             </div>
 
             <p className="paragraph">
-              Elegir espacio industrial no es comprar metros cuadrados. Es
+              Elegir espacio industrial no es comprar metros cuadrados; es
               decidir dónde va a operar tu empresa los próximos diez o veinte
               años.
               <br />
@@ -73,7 +73,7 @@ export default function Eligenos() {
               necesitas.
               <br />
               <br />
-              True Ciénega se diseña alrededor de tu operación - cómo entran tus
+              True Ciénega se diseña alrededor de tu operación cómo entran tus
               camiones, cómo trabaja tu gente, cómo creces que será cuando llega
               el momento
             </p>
@@ -86,8 +86,7 @@ export default function Eligenos() {
           >
             {/* Title */}
             <h3 className="w-full subtitle font-abhaya uppercase">
-              Aquí no vienes a adaptarte al parque industrial. <br />
-              El parque industrial se adapta a ti.
+              FLEXIBILIDAD REAL
             </h3>
 
             <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-[10px] sm:gap-[30px]">
@@ -95,12 +94,12 @@ export default function Eligenos() {
                 return (
                   <div
                     key={index}
-                    className="flex flex-row sm:flex-col w-full max-w-[346px] h-fit sm:h-[152px] sm:justify-center items-center p-[20px] gap-[15px] border-2 rounded-[17px] border-orange bg-blue-overlay"
+                    className="flex flex-row sm:flex-col w-full max-w-[346px] h-fit sm:h-[152px] sm:justify-center items-center p-[20px] gap-[15px] border-2 rounded-[17px] border-orange bg-white/10 backdrop-blur-sm"
                   >
                     <img
                       src={razon.icon}
                       alt="Ícono correspondiente"
-                      className="h-[25px] sm:h-[46px]"
+                      className="h-[25px] sm:h-[40px]"
                     />
                     <h4 className="max-w-[318px] paragraph-bold sm:text-center font-bold">
                       {razon.label}
@@ -112,15 +111,20 @@ export default function Eligenos() {
 
             <div className="flex w-full flex-col lg:flex-row justify-between items-center pt-[5px] gap-[20px]">
               {/* Botones */}
-              <button className="w-full max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-orange">
+              <a
+                href="#naves"
+                className="w-full max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange"
+              >
                 Quiero comprar o rentar una <br className="sm:hidden" /> Nave
                 Industrial a la medida
-              </button>
+              </a>
 
-              <button className="w-full max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] bg-cream">
-                Compra tu Terreno <br className="sm:hidden" /> y construye a tu
-                ritmo
-              </button>
+              <a
+                href="#macrolotes"
+                className="w-full max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
+              >
+                Quiero comprar un Macrolote
+              </a>
             </div>
           </div>
         </div>

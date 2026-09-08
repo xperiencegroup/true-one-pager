@@ -72,21 +72,19 @@ export default function Infraestructura() {
             </div>
 
             <p className="paragraph font-light leading-[120%]">
-              TRUE CIÉNEGA tiene su proyecto eléctrico tramitado directamente
-              ante CFE —6,000 KVA para el parque, primera etapa en proceso—,
-              agua garantizada con cisternas, fibra óptica con redundancia y
-              drenaje pluvial diseñado con canales y pasos que protegen tu
-              operación en cualquier temporada.
+              TRUE CIÉNEGA INDUSTRIAL PARK tiene su proyecto eléctrico tramitado
+              directamente ante CFE —6,000 KVA para el parque, primera etapa en
+              proceso—, agua garantizada con cisternas, fibra óptica con
+              redundancia y drenaje pluvial diseñado con canales y pasos que
+              protegen tu operación en cualquier temporada.
               <br />
               <br />
               Los accesos, patios de maniobra y vialidades fueron trazados para
               tráfico pesado y circulación fluida de tráileres, con caseta de
-              vigilancia, CCTV, accesos controlados y cerca perimetral.
-              <br />
-              <br />
-              Detrás de todo, una administración profesional que mantiene,
-              monitorea y responde, porque un parque no se entrega una vez: se
-              opera todos los días.
+              vigilancia, CCTV, accesos controlados y cerca perimetral. <br />
+              <br /> Detrás de todo, una administración profesional que
+              mantiene, monitorea y responde, porque un parque no se entrega una
+              vez: se opera todos los días.
             </p>
 
             {/* Datos relevantes */}
@@ -101,8 +99,11 @@ export default function Infraestructura() {
             </div>
           </div>
           {/* Columnda derecha */}
-          <div
+          <a
             ref={mapRef}
+            href="https://www.google.com/maps/search/25.875744,+-100.226065?entry=tts&g_ep=EgoyMDI2MDcxMi4wIPu8ASoASAFQAw%3D%3D&skid=1999d13c-392c-4506-b789-b475f6c311d5"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`self-center flex shrink-0 w-full h-[240px] sm:h-[430px] xl:w-[410px] xl:h-[715px] justify-center items-center rounded-[31px] bg-cream/15 border-solid border-[1px] p-[13px] border-cream/50 reveal-right ${isMapVisible ? "is-visible" : ""}`}
           >
             <div className="relative w-full h-full bg-blue rounded-[18px] overflow-hidden">
@@ -117,7 +118,7 @@ export default function Infraestructura() {
                 className="block xl:hidden absolute w-full h-full object-cover object-[80%_15%]"
               />
             </div>
-          </div>
+          </a>
         </div>
       </div>
 

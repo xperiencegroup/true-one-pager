@@ -44,9 +44,11 @@ export default function Naves() {
   const [ctaTextRef, isCtaTextVisible] = useInView();
   const [tableDesktopRef, isTableDesktopVisible] = useInView();
   const [tableMobileRef, isTableMobileVisible] = useInView();
-  const [ctaMobileRef, isCtaMobileVisible] = useInView();
   return (
-    <div className="flex flex-col justify-center items-center w-full bg-blue-overlay">
+    <div
+      id="naves"
+      className="flex flex-col justify-center items-center w-full bg-blue-overlay"
+    >
       {/* Renta o venta */}
       <div className="relative flex flex-col w-full max-w-[1280px] px-[44px] pt-[50px] pb-[30px] sm:px-[90px] sm:pt-[60px] gap-[20px] sm:gap-[51px]">
         {/* Parte superior */}
@@ -54,7 +56,7 @@ export default function Naves() {
           {/* Texto Naves Built to suit */}
           <div
             ref={introRef}
-            className={`relative flex flex-col gap-[10px] reveal ${isIntroVisible ? "is-visible" : ""}`}
+            className={`relative flex flex-col gap-[20px] reveal ${isIntroVisible ? "is-visible" : ""}`}
           >
             <h2 className="title font-abhaya uppercase">Naves build-to-suit</h2>
             <h3 className="subtitle font-abhaya uppercase">En venta o renta</h3>
@@ -82,14 +84,6 @@ export default function Naves() {
               />
             ))}
           </div>
-
-          {/* button */}
-          <button
-            ref={ctaTextRef}
-            className={`hidden sm:flex w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-cream bg-orange reveal-fade ${isCtaTextVisible ? "is-visible" : ""}`}
-          >
-            Cotiza tu Nave Industrial a la medida
-          </button>
         </div>
       </div>
 
@@ -98,7 +92,7 @@ export default function Naves() {
           {/* Tabla parte inferior desktop */}
           <div
             ref={tableDesktopRef}
-            className={`max-md:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] pt-[30px] gap-[9px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableDesktopVisible ? "is-visible" : ""}`}
+            className={`max-md:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] pt-[30px] gap-[9px] rounded-[20px] text-cream border border-cream bg-cream/10 reveal-scale ${isTableDesktopVisible ? "is-visible" : ""}`}
           >
             <h3 className="subtitle text-center font-abhaya uppercase">
               Tamaños disponibles
@@ -157,7 +151,7 @@ export default function Naves() {
           {/* Tabla mobile y tablet */}
           <div
             ref={tableMobileRef}
-            className={`md:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] border border-cream bg-cream/10 reveal-scale ${isTableMobileVisible ? "is-visible" : ""}`}
+            className={`md:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] text-cream border border-cream bg-cream/10 reveal-scale ${isTableMobileVisible ? "is-visible" : ""}`}
           >
             <h3 className="subtitle text-center font-abhaya uppercase">
               Tamaños disponibles
@@ -199,17 +193,9 @@ export default function Naves() {
               <p className="paragraph text-center">18,215.34 - 19,849.43 m²</p>
             </div>
           </div>
-
-          {/* Botón cotiza tu nave mobile */}
-          <button
-            ref={ctaMobileRef}
-            className={`block sm:hidden w-full self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-center text-cream bg-orange reveal-fade ${isCtaMobileVisible ? "is-visible" : ""}`}
-          >
-            Cotiza tu Nave Industrial a la medida
-          </button>
         </div>
 
-        <div className="relative w-full h-[28svh] md:h-[50svh] overflow-hidden">
+        <div className="relative flex justify-center items-center w-full h-[28svh] md:h-[50svh] overflow-hidden">
           {/* linear gradient */}
           <div className="absolute z-10 w-full h-full inset-0 bg-linear-to-t from-blue-overlay/60 to-blue-overlay" />
           <img
@@ -217,6 +203,14 @@ export default function Naves() {
             alt="Render Entrada"
             className="absolute z-0 inset-0 w-full h-full object-cover overflow-hidden"
           />
+
+          {/* button */}
+          <button
+            ref={ctaTextRef}
+            className={`relative z-20 flex w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-cream bg-orange reveal-fade ${isCtaTextVisible ? "is-visible" : ""}`}
+          >
+            Cotiza tu Nave Industrial a la medida
+          </button>
         </div>
       </div>
     </div>

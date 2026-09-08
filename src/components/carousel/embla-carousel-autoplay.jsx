@@ -53,7 +53,7 @@ export function GalleryCarrousel({
                 decoding="async"
                 draggable={false}
                 fetchPriority={index === 0 ? "high" : "auto"}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[0%_20%]"
               />
             </div>
           ))}

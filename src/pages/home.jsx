@@ -13,10 +13,13 @@ import Naves from "./components/naves";
 import Preguntas from "./components/preguntas";
 import whatsappIcon from "../assets/icons/social/whatsapp.svg";
 import PopupRegistro from "../components/popup-registro/pop-up-registro";
-import { useState } from "react";
+import { usePopupStore } from "../store/usePopupStore";
+import PopupClickAndXperience from "../components/popup-registro/pop-up-click-xperience";
 
 export default function Home() {
-  const [isPopupOpen, setIsPopupOpen] = useState(true);
+  const activePopup = usePopupStore((state) => state.activePopup);
+  const closePopup = usePopupStore((state) => state.closePopup);
+
   return (
     <main className="relative flex flex-col w-full">
       {/* botón whatsapp */}
@@ -35,9 +38,10 @@ export default function Home() {
         </a>
       </div>
 
-      <PopupRegistro
-        isOpen={isPopupOpen}
-        onClose={() => setIsPopupOpen(false)}
+      <PopupRegistro isOpen={activePopup === "registro"} onClose={closePopup} />
+      <PopupClickAndXperience
+        isOpen={activePopup === "click-and-xperience"}
+        onClose={closePopup}
       />
 
       <Hero />

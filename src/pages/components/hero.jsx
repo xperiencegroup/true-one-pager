@@ -66,14 +66,20 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-[15px] min-[660px]:gap-[40px] sm:gap-[44px] animate-hero-3">
-            <button className="boton w-full max-w-[400px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-orange hover:cursor-pointer">
+            <a
+              href="#naves"
+              className="boton w-full max-w-[400px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-orange hover:cursor-pointer"
+            >
               Quiero comprar o rentar <br className="sm:hidden" /> una Nave
               Industrial a la medida
-            </button>
+            </a>
 
-            <button className="boton w-full max-w-[400px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium bg-cream text-blue hover:cursor-pointer">
+            <a
+              href="#macrolotes"
+              className="boton w-full max-w-[400px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-cream text-blue hover:cursor-pointer"
+            >
               Quiero comprar un Macrolote
-            </button>
+            </a>
           </div>
         </div>
       </div>
