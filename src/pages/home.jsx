@@ -15,6 +15,7 @@ import whatsappIcon from "../assets/icons/social/whatsapp.svg";
 import PopupRegistro from "../components/popup-registro/pop-up-registro";
 import { usePopupStore } from "../store/usePopupStore";
 import PopupClickAndXperience from "../components/popup-registro/pop-up-click-xperience";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   const activePopup = usePopupStore((state) => state.activePopup);
@@ -37,6 +38,7 @@ export default function Home() {
           />
         </a>
       </div>
+      <Toaster />
 
       <PopupRegistro isOpen={activePopup === "registro"} onClose={closePopup} />
       <PopupClickAndXperience
