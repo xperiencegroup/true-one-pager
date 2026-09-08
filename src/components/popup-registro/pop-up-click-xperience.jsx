@@ -175,7 +175,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
                           message: "El nombre es muy corto",
                         },
                         pattern: {
-                          value: /^[A-Za-zÀ-ÿ\s]+$/,
+                          value: /^[\p{L}\s]+$/u,
                           message: "Solo se permiten letras",
                         },
                       })}
