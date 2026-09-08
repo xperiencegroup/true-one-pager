@@ -75,7 +75,7 @@ export default function Naves() {
           </div>
 
           {/* Razones */}
-          <div className="flex flex-col gap-[20px]">
+          <div className="flex flex-col gap-[32px]">
             {beneficios.map((beneficio, index) => (
               <BeneficioNaveItem
                 key={beneficio.id}

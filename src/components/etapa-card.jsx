@@ -13,7 +13,7 @@ export default function EtapaCard({ etapa, delay }) {
         <img src={etapa.icon} alt="Ícono de la etapa" className="size-[24px]" />
       </div>
 
-      <h4 className="flex-1 paragraph-bold font-bold text-white uppercase lg:max-w-[280px]">
+      <h4 className="flex-1 paragraph-bold font-bold text-white whitespace-pre-wrap uppercase lg:max-w-[280px]">
         {etapa.title}
       </h4>
 

@@ -47,7 +47,7 @@ export default function Modelos() {
             <img
               src={backgroundImage}
               alt="Imagen de fondo"
-              className="absolute w-full h-full object-cover"
+              className="absolute w-full h-full object-cover object-[0%_28%]"
             />
 
             {/* overlay */}
@@ -125,7 +125,7 @@ export default function Modelos() {
           </div>
 
           {/* Modelos */}
-          <div className="flex flex-col md:flex-row w-full h-full items-center justify-center gap-[40px] lg:gap-[8px] xl:gap-[16px]">
+          <div className="flex flex-col md:flex-row w-full h-full items-center justify-center gap-[40px] lg:gap-[20px] xl:gap-[24px]">
             {modelos.map((modelo, index) => {
               return (
                 <ModeloCard

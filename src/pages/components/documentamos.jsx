@@ -23,7 +23,7 @@ const etapasData = [
   {
     id: "construccion",
     icon: camionIcon,
-    title: "Construcción de naves",
+    title: "Construcción\n de naves",
     description: "Del desplante a la terminación de cada edificio.",
   },
   {
