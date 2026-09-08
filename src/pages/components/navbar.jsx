@@ -1,4 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { useScrollDirection } from "../../hooks/useScrollDirection";
 import trueCream from "../../assets/logos/true-cream.svg";
 import mobileLogoCream from "../../assets/logos/true-developments-cream.svg";
 
@@ -8,7 +10,6 @@ import closeIcon from "../../assets/icons/close.svg";
 import { navLinks } from "../../const/navigation";
 import { socials, whatsappInfo } from "../../const/socials";
 import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
-import { AnimatePresence, motion } from "motion/react";
 
 const mobilebuttons = [
   ...navLinks.slice(0, 5),
@@ -48,6 +49,7 @@ const itemVariants = {
 
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const visible = useScrollDirection();
 
   // Bloquear/restaurar el scroll del body cuando el menú abre/cierra
   useEffect(() => {
@@ -92,59 +94,75 @@ export default function Navbar() {
     <>
       {/* Botón Logo True - fijo, fuera del navbar animado */}
       <div className="fixed z-60 top-0 left-0 w-full h-[83px] flex justify-center pointer-events-none">
-        <div className="relative w-full max-w-[1280px] h-full">
-          {/* Botón Logo True */}
-          <a
-            href="#hero"
-            className="navbar-enter hidden min-[660px]:flex absolute top-0 left-0 w-[50px] lg:w-[60px] h-full justify-center items-center px-[10px] pointer-events-auto"
-          >
-            <img
-              src={trueCream}
-              alt="Logo de True Developments"
-              className="w-[21px] h-[30px]"
-            />
-          </a>
+        <div className="relative flex flex-row w-full h-full">
+          {/* Botones laterales Logo True */}
+          <div className="grow flex justify-center items-center h-full">
+            <a
+              href="#hero"
+              className="navbar-enter hidden min-[660px]:flex w-[50px] lg:w-[60px] h-full justify-center items-center px-[10px] pointer-events-auto"
+            >
+              <img
+                src={trueCream}
+                alt="Logo de True Developments"
+                className="w-[21px] h-[30px]"
+              />
+            </a>
+          </div>
 
+          {/* Fake navlinks */}
+          <div className="w-full max-w-[1160px] h-full" />
           {/* Botón Toggle EN/ES */}
-          <button className="navbar-enter hidden min-[660px]:flex absolute top-0 right-0 w-[50px] lg:w-[60px] h-full justify-center items-center px-[10px] pointer-events-auto">
-            <p className="text-[24px] font-normal">EN</p>
-          </button>
+          <div className="opacity-0 pointer-events-none grow flex justify-center items-center h-full">
+            <button className="navbar-enter hidden min-[660px]:flex w-[50px] lg:w-[60px] h-full justify-center items-center px-[10px] pointer-events-auto">
+              <p className="boton font-medium">EN</p>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div className="navbar-enter relative z-50 flex w-full justify-center bg-blue-overlay">
-        <div className="relative flex w-full min-[660px]:max-w-[1280px] h-[83px] justify-between min-[660px]:justify-center items-center min-[660px]:justify-center max-[660px]:p-[20px]">
+      <div
+        className={`navbar-enter fixed top-0 z-50 flex w-full justify-center bg-blue-overlay transition-transform duration-300 ${
+          visible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="relative flex w-full h-[83px] justify-between min-[660px]:justify-center items-center min-[660px]:justify-center">
           {/* Fake Botón Logo True */}
-          <a
-            href="#hero"
-            className="hidden min-[660px]:flex w-[60px] justify-center px-[10px] pointer-events-none invisible"
-          >
-            <img
-              src={trueCream}
-              alt="Logo de True Developments"
-              className="w-[21px] h-[30px] "
-            />
-          </a>
-
-          {/* Navbar buttons */}
-          <div className="hidden min-[660px]:flex w-full max-w-[1160px] justify-around items-center">
-            {navLinks.map((button, index) => {
-              return (
-                <a
-                  key={index}
-                  href={button.href}
-                  className="flex text-center justify-center items-center h-[43px] px-[10px] py-[11px] lg:px-[16px] lg:pt-[11px] lg:pb-[12px] boton font-medium text-cream"
-                >
-                  {button.label}
-                </a>
-              );
-            })}
+          <div className="grow hidden min-[660px]:flex justify-center items-center h-full">
+            <a
+              href="#hero"
+              className="hidden min-[660px]:flex w-[60px] justify-center px-[10px] pointer-events-none invisible"
+            >
+              <img
+                src={trueCream}
+                alt="Logo de True Developments"
+                className="w-[21px] h-[30px] "
+              />
+            </a>
           </div>
 
-          {/* Botón Toggle EN/ES */}
-          <button className="max-[660px]:hidden w-[60px] px-[10px] pointer-events-none invisible">
-            <p className="text-[24px] font-normal">EN</p>
-          </button>
+          {/* Navbar buttons */}
+          <div className="hidden min-[660px]:flex w-full max-w-[1160px] h-full">
+            <div className="relative hidden min-[660px]:flex w-full h-full max-w-[1160px] justify-around items-center max-[660px]:p-[20px] border-x-[0.5px] border-cream/50">
+              {navLinks.map((button, index) => {
+                return (
+                  <a
+                    key={index}
+                    href={button.href}
+                    className="flex text-center justify-center items-center h-[43px] px-[10px] py-[11px] lg:px-[16px] lg:pt-[11px] lg:pb-[12px] boton font-medium text-cream"
+                  >
+                    {button.label}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="grow hidden min-[660px]:flex justify-center items-center h-full">
+            {/* Botón Toggle EN/ES */}
+            <button className="max-[660px]:hidden grow px-[10px]">
+              <p className="boton font-normal">EN</p>
+            </button>
+          </div>
 
           {/* Mobile Logo */}
           <a
