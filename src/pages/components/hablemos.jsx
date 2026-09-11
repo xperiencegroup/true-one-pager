@@ -28,9 +28,9 @@ const contactInfo = [
   {
     id: "correo",
     icon: mail,
-    label: "info@truedevelopments.mx",
+    label: "ricardo@truedevelopments.mx",
     buttonText: "Enviar Correo",
-    href: "mailto:info@truedevelopments.mx",
+    href: "mailto:ricardo@truedevelopments.mx",
   },
 ];
 
@@ -134,64 +134,70 @@ export default function HablemosDeTuProyecto() {
       </div>
 
       <div className="flex flex-col w-full max-w-[1150px] gap-[15px] px-[44px] py-[60px] sm:p-[60px]">
-        {/* Header */}
-        <div
-          ref={headerRef}
-          className={`flex flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[15px] md:gap-[20px] lg:gap-[40px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
-        >
-          <div className="flex flex-col w-full gap-[15px] md:gap-[20px]">
-            <h2 className="font-abhaya title text-white uppercase">
-              Hablemos de tu proyecto.
-            </h2>
-            <p className="paragraph font-light text-white">
-              <span className="font-semibold text-white">
-                Cuéntanos qué necesita tu operación:
-              </span>{" "}
-              superficie, especificaciones, tiempos y te respondemos con
-              opciones concretas: disponibilidad, planos y números.
-            </p>
-          </div>
-        </div>
-
-        {/* Card de contacto */}
-        <div
-          ref={cardRef}
-          className={`flex flex-col gap-[10px] sm:gap-[10px] p-[15px] md:p-[20px] rounded-[20px] bg-white/10 reveal-scale ${isCardVisible ? "is-visible" : ""}`}
-        >
-          <div className="flex items-center gap-[5px]">
-            <h3 className="font-abhaya max-md:text-center subtitle text-white uppercase">
-              Ricardo Villarreal -
-            </h3>
-            <p className="font-semibold max-md:text-center paragraph-bold text-white">
-              Socio, True Developments
-            </p>
+        <div className="flex flex-col xl:flex-row justify-between w-full h-full gap-[20px] py-[60px]">
+          {/* Header */}
+          <div
+            ref={headerRef}
+            className={`max-xl:self-center flex w-full max-w-[620px] xl:max-w-[247px] flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[15px] md:gap-[20px] lg:gap-[40px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
+          >
+            <div className="flex flex-col w-full gap-[15px] md:gap-[20px] max-xl:text-center">
+              <h2 className="font-abhaya title text-white uppercase">
+                Hablemos de tu proyecto.
+              </h2>
+              <p className="paragraph font-light text-white">
+                <span className="font-semibold text-white">
+                  Cuéntanos qué necesita tu operación:
+                </span>{" "}
+                superficie, especificaciones, tiempos y te respondemos con
+                opciones concretas: disponibilidad, planos y números.
+              </p>
+            </div>
           </div>
 
-          {/* Datos de contacto */}
-          <div className="flex flex-wrap justify-center lg:justify-between items-center gap-y-[20px] md:gap-y-[30px] gap-x-[80px] lg:gap-[14px]">
-            {contactInfo.map((item) => (
-              <div
-                key={item.id}
-                className="flex flex-col w-full max-w-[240px] gap-[12px] md:gap-[20px]"
-              >
-                <div className="flex items-center justify-center h-[60px] gap-[10px] px-[16px] py-[5px]  sm:py-[12px] rounded-[10px] border border-white bg-blue">
-                  <img src={item.icon} alt="" className="h-[20px]" />
-                  <span className="font-inter boton text-white/90 truncate">
-                    {item.label}
-                  </span>
-                </div>
-
-                {/* botón */}
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="self-center flex w-fit items-center justify-center px-[16px] py-[11px] rounded-full boton font-semibold bg-cream text-blue"
-                >
-                  {item.buttonText}
-                </a>
+          {/* Card de contacto */}
+          <div
+            ref={cardRef}
+            className={`max-xl:self-center flex flex-col xl:flex-row w-full max-xl:max-w-[611px] max-xl:text-center max-xl:items-center gap-[30px] xl:gap-[10px] py-[30px] px-[40px] xl:p-[20px] rounded-[20px] bg-white/10 reveal-scale ${isCardVisible ? "is-visible" : ""}`}
+          >
+            <div className="flex w-full max-w-[273px] flex-col justify-center gap-[8px] xl:gap-[25px]">
+              <h2 className="title font-abhaya uppercase">Contacto</h2>
+              <div className="max-xl:self-center w-full max-w-[238px] divider-orange-full" />
+              <div className="flex flex-col gap-[5px]">
+                <h3 className="font-abhaya max-md:text-center subtitle text-white uppercase">
+                  Ricardo Villarreal
+                </h3>
+                <p className="font-semibold max-md:text-center paragraph-bold text-white">
+                  Socio, True Developments
+                </p>
               </div>
-            ))}
+            </div>
+
+            {/* Datos de contacto */}
+            <div className="flex w-full flex-col justify-center gap-[15px]">
+              {contactInfo.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex flex-col min-[580px]:flex-row w-full min-[580px]:h-[41px] justify-between gap-[12px] md:gap-[20px]"
+                >
+                  <div className="flex flex-col min-[580px]:flex-row items-center justify-center gap-[10px]">
+                    <img src={item.icon} alt="" className="h-[20px]" />
+                    <span className="font-inter boton text-white/90 truncate">
+                      {item.label}
+                    </span>
+                  </div>
+
+                  {/* botón */}
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="self-center flex w-full max-w-[175px] items-center justify-center px-[16px] py-[11px] rounded-full boton font-semibold bg-cream text-blue"
+                  >
+                    {item.buttonText}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

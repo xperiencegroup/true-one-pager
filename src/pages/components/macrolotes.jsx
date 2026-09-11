@@ -137,7 +137,7 @@ export default function Macrolotes() {
               </div>
 
               <div className="flex justify-center items-center paragraph">
-                31,365 - 37,344.66 m²
+                31,365 - 37,344 m²
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ export default function DesignedForCertainty() {
           </div>
 
           <h2 className="font-abhaya title max-lg:text-center text-white uppercase">
-            Designed for certainty.
+            Built on trust <br /> Designed for certainty.
           </h2>
 
           <a

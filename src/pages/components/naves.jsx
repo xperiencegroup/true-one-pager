@@ -143,7 +143,7 @@ export default function Naves() {
               </div>
 
               <div className="flex justify-center items-center paragraph">
-                18,215.34 - 19,849.43 m²
+                18,215.34 - 19,849 m²
               </div>
             </div>
           </div>
