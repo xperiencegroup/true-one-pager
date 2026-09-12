@@ -1,14 +1,18 @@
 import { useState, useCallback, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useScrollDirection } from "../../hooks/useScrollDirection";
+import { useTranslation } from "react-i18next";
+import { useParams, useNavigate } from "react-router";
+
+import { navLinks } from "../../const/navigation";
+import { socials, whatsappInfo } from "../../const/socials";
+
 import trueCream from "../../assets/logos/true-cream.svg";
 import mobileLogoCream from "../../assets/logos/true-developments-cream.svg";
 
 import menuIcon from "../../assets/icons/menu.svg";
 import closeIcon from "../../assets/icons/close.svg";
 
-import { navLinks } from "../../const/navigation";
-import { socials, whatsappInfo } from "../../const/socials";
 import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
 
 const mobilebuttons = [
@@ -50,6 +54,15 @@ const itemVariants = {
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const visible = useScrollDirection();
+  const navigate = useNavigate();
+
+  const { i18n, t } = useTranslation("nav");
+  const { lang } = useParams();
+
+  const toggleLanguage = () => {
+    const newLang = lang === "es" ? "en" : "es";
+    navigate(`/${newLang}`);
+  };
 
   // Bloquear/restaurar el scroll del body cuando el menú abre/cierra
   useEffect(() => {
@@ -113,8 +126,13 @@ export default function Navbar() {
           <div className="w-full max-w-[1160px] h-full" />
           {/* Botón Toggle EN/ES */}
           <div className="opacity-0 pointer-events-none grow flex justify-center items-center h-full">
-            <button className="navbar-enter hidden min-[660px]:flex w-[50px] lg:w-[60px] h-full justify-center items-center px-[10px] pointer-events-auto">
-              <p className="boton font-medium">EN</p>
+            <button
+              onClick={toggleLanguage}
+              className="navbar-enter hidden min-[660px]:flex w-[50px] lg:w-[60px] h-full justify-center items-center px-[10px] pointer-events-auto"
+            >
+              <p className="boton font-normal">
+                {i18n.language === "es" ? "EN" : "ES"}
+              </p>
             </button>
           </div>
         </div>
@@ -150,7 +168,7 @@ export default function Navbar() {
                     href={button.href}
                     className="flex text-center justify-center items-center h-[43px] px-[10px] py-[11px] lg:px-[16px] lg:pt-[11px] lg:pb-[12px] boton font-medium text-cream"
                   >
-                    {button.label}
+                    {t(button.labelKey)}
                   </a>
                 );
               })}
@@ -159,8 +177,10 @@ export default function Navbar() {
 
           <div className="grow hidden min-[660px]:flex justify-center items-center h-full">
             {/* Botón Toggle EN/ES */}
-            <button className="max-[660px]:hidden grow px-[10px]">
-              <p className="boton font-normal">EN</p>
+            <button className="max-[660px]:hidden h-full px-[10px]">
+              <p className="boton font-normal">
+                {i18n.language === "es" ? "EN" : "ES"}
+              </p>
             </button>
           </div>
 

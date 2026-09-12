@@ -4,25 +4,20 @@ import edificioIcon from "../../assets/icons/edificio.svg";
 import aguaIcon from "../../assets/icons/agua.svg";
 import soporteIcon from "../../assets/icons/soporte.svg";
 import { useInView } from "../../hooks/useInView";
+import { Trans, useTranslation } from "react-i18next";
 
 const RAZONES = [
-  {
-    label: "Tamaños flexibles de naves y macrolotes",
-    icon: edificioIcon,
-  },
-  {
-    label: "A la medida de tus necesidades",
-    icon: aguaIcon,
-  },
-  {
-    label: "Opción de comprar o rentar",
-    icon: soporteIcon,
-  },
+  { key: "item1", icon: edificioIcon },
+  { key: "item2", icon: aguaIcon },
+  { key: "item3", icon: soporteIcon },
 ];
 
 export default function Eligenos() {
   const [leftPanel, leftPanelIsVisible] = useInView();
   const [rightPanel, rightPanelIsVisible] = useInView();
+  const { t } = useTranslation("eligenos");
+  const { t: tHero } = useTranslation("hero");
+
   return (
     <>
       <div className="relative flex justify-center w-full min-h-svh">
@@ -48,12 +43,13 @@ export default function Eligenos() {
             className={`w-full flex flex-col justify-start gap-[8px] sm:gap-[20px] reveal-left ${leftPanelIsVisible ? "is-visible" : ""}`}
           >
             <h3 className="title font-abhaya uppercase">
-              No estás eligiendo un espacio industrial. <br />
-              Estás eligiendo cómo vas a operar.
+              {t("headline1")}
+              <br />
+              {t("headline2")}
             </h3>
 
             <h4 className="subtitle text-orange font-abhaya uppercase">
-              Elige una vez. <br /> Opera tranquilo por décadas.
+              {t("subhead1")} <br /> {t("subhead2")}
             </h4>
 
             {/* Linea decorativa */}
@@ -62,20 +58,13 @@ export default function Eligenos() {
             </div>
 
             <p className="paragraph">
-              Elegir espacio industrial no es comprar metros cuadrados; es
-              decidir dónde va a operar tu empresa los próximos diez o veinte
-              años.
+              {t("p1")}
               <br />
               <br />
-              Esa decisión merece certeza: energía disponible desde el primer
-              día, agua garantizada, accesos que funcionan, vialidades pensadas
-              para tráileres, y un administrador que responde cuando lo
-              necesitas.
+              {t("p2")}
               <br />
               <br />
-              True Ciénega se diseña alrededor de tu operación cómo entran tus
-              camiones, cómo trabaja tu gente, cómo creces que será cuando llega
-              el momento
+              {t("p3")}
             </p>
           </div>
 
@@ -86,7 +75,7 @@ export default function Eligenos() {
           >
             {/* Title */}
             <h3 className="w-full subtitle font-abhaya uppercase">
-              FLEXIBILIDAD REAL
+              {t("flex.title")}
             </h3>
 
             <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-[10px] sm:gap-[30px]">
@@ -102,7 +91,7 @@ export default function Eligenos() {
                       className="h-[25px] sm:h-[40px]"
                     />
                     <h4 className="max-w-[318px] paragraph-bold sm:text-center font-bold">
-                      {razon.label}
+                      {t(`flex.${razon.key}`)}
                     </h4>
                   </div>
                 );
@@ -115,15 +104,20 @@ export default function Eligenos() {
                 href="#naves"
                 className="w-full max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange"
               >
-                Quiero comprar o rentar una <br className="sm:hidden" /> Nave
-                Industrial a la medida
+                <Trans
+                  i18nKey="cta.building"
+                  t={tHero}
+                  components={{
+                    br: <br className="sm:hidden" />,
+                  }}
+                />
               </a>
 
               <a
                 href="#macrolotes"
                 className="w-full max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
               >
-                Quiero comprar un Macrolote
+                {tHero("cta.land")}
               </a>
             </div>
           </div>

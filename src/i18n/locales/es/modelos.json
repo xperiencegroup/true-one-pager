@@ -1,0 +1,18 @@
+{
+  "title": "ELIGE CÓMO <br /> QUIERES CRECER.",
+  "line1": "La misma ubicación,",
+  "line2": "la misma infraestructura,",
+  "line3": "la misma certeza.",
+  "line4": "Dos modelos.",
+  "subtitle": "LA DECISIÓN DEPENDE DE TU OPERACIÓN.",
+  "optionA": {
+    "kicker": "COMPRA O RENTA",
+    "title": "NAVE INDUSTRIAL A LA MEDIDA",
+    "text": "Compra o Renta tu Nave BTS construida a la medida"
+  },
+  "optionB": {
+    "kicker": "COMPRA MACROLOTE",
+    "title": "TERRENO INDUSTRIAL PARA DESARROLLAR",
+    "text": "Compra tu terreno y construye a tu ritmo"
+  }
+}

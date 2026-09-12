@@ -1,8 +1,10 @@
 import { useInView } from "../hooks/useInView";
 import checkIcon from "../assets/icons/check.svg";
+import { useTranslation } from "react-i18next";
 
 export default function ModeloCard({ modelo, delay }) {
   const [ref, isVisible] = useInView();
+  const { t: tModel } = useTranslation("modelos");
 
   return (
     <div
@@ -15,17 +17,17 @@ export default function ModeloCard({ modelo, delay }) {
         {/* Titulo y subtitulo */}
         <div className="flex flex-col items-center gap-[2px]">
           <h3 className="subtitle text-center font-abhaya uppercase text-cream-second">
-            {modelo.title}
+            {tModel(`${modelo.key}.kicker`)}
           </h3>
           <h3 className="text-center parrafo-bold font-bold tracking-tight  text-cream-second">
-            {modelo.subtitle}
+            {tModel(`${modelo.key}.title`)}
           </h3>
         </div>
 
         {/* Image */}
         <img
           src={modelo.icon}
-          alt={`Ícono de ${modelo.title}`}
+          alt={tModel(`${modelo.key}.title`)}
           className="h-[66px]"
         />
 
@@ -33,7 +35,9 @@ export default function ModeloCard({ modelo, delay }) {
         <div className="w-full h-[44px] flex-col min-[440px]:flex-row justify-center lg:justify-start items-center flex gap-[12px]">
           <img src={checkIcon} alt="Ícono check" className="size-[20px]" />
 
-          <p className="paragraph font-light text-cream">{modelo.pro}</p>
+          <p className="paragraph font-light text-cream">
+            {tModel(`${modelo.key}.text`)}
+          </p>
         </div>
       </div>
     </div>

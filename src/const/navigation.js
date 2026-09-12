@@ -1,8 +1,8 @@
 export const navLinks = [
-  { id: "propuesta", label: "Propuesta de Valor", href: "#propuesta-de-valor" },
-  { id: "naves", label: "Naves y Macrolotes", href: "#naves-macrolotes" },
-  { id: "ubicacion", label: "Ubicación", href: "#ubicacion" },
-  { id: "por-que", label: "¿Por qué True Ciénega?", href: "#true-cienega" },
-  { id: "true-dev", label: "True Developments", href: "#true-developments" },
-  { id: "contacto", label: "Contacto", href: "#contacto" },
+  { id: "propuesta", labelKey: "value", href: "#propuesta-de-valor" },
+  { id: "naves", labelKey: "products", href: "#naves-macrolotes" },
+  { id: "ubicacion", labelKey: "location", href: "#ubicacion" },
+  { id: "por-que", labelKey: "why", href: "#true-cienega" },
+  { id: "true-dev", labelKey: "developer", href: "#true-developments" },
+  { id: "contacto", labelKey: "contact", href: "#contacto" },
 ];

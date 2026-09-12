@@ -1,0 +1,23 @@
+{
+  "title": "TODO LO QUE TU OPERACIÓN NECESITA, EN UN SOLO LUGAR.",
+  "card1": {
+    "title": "PARQUE INDUSTRIAL CLASE A",
+    "metric": "15 hectáreas",
+    "text": "Infraestructura de Primer Nivel para operaciones que exigen más."
+  },
+  "card2": {
+    "title": "NAVES BTS",
+    "metric": "de 75,000 - 750,000 ft²",
+    "text": "Espacios construidos a la medida de tu operación, listos para crecer contigo."
+  },
+  "card3": {
+    "title": "MACROLOTES",
+    "metric": "de 10,000 - 150,000 m²",
+    "text": "Terrenos Industriales listos para desarrollar proyectos de gran escala."
+  },
+  "card4": {
+    "title": "FRENTE DIRECTO A",
+    "metric": "Autopista Mty-Nuevo Laredo (Carretera 85)",
+    "text": "La arteria logística más importante del norte del país."
+  }
+}

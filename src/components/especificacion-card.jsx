@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { useInView } from "../hooks/useInView";
 
 export default function EspecificacionCard({ especificacion, index }) {
   const [ref, isVisible] = useInView();
+  const { t } = useTranslation("especificaciones");
+  const { key, icon } = especificacion;
 
   return (
     <div
@@ -14,7 +17,7 @@ export default function EspecificacionCard({ especificacion, index }) {
         {/* Icon */}
         <div className="flex shrink-0 size-[50px] justify-center items-center bg-orange rounded-full">
           <img
-            src={especificacion.icon}
+            src={icon}
             alt={`Ícono de ${especificacion.alt}`}
             className="size-[28px]"
           />
@@ -23,14 +26,12 @@ export default function EspecificacionCard({ especificacion, index }) {
         {/* Text */}
         <div className="flex flex-col w-full grow justify-between text-center gap-[8px]">
           <h3 className="flex-1 flex h-full justify-center items-center subtitle font-abhaya uppercase whitespace-pre-line">
-            {especificacion.title}
+            {t(`${key}.title`)}
           </h3>
           <h4 className="shrink-0 min-h-[38px] paragraph-bold font-bold whitespace-pre-line">
-            {especificacion.subtitle}
+            {t(`${key}.metric`)}
           </h4>
-          <p className="flex-1 paragraph font-light">
-            {especificacion.paragraph}
-          </p>
+          <p className="flex-1 paragraph font-light">{t(`${key}.text`)}</p>
         </div>
       </div>
     </div>

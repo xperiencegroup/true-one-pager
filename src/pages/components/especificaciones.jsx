@@ -16,42 +16,28 @@ import foto6 from "../../assets/images/carousel/foto6.jpg";
 import foto7 from "../../assets/images/carousel/foto7.jpg";
 import foto8 from "../../assets/images/carousel/foto8.jpg";
 import foto9 from "../../assets/images/carousel/foto9.jpg";
+import { useTranslation } from "react-i18next";
 
 const ESPECIFICACIONES = [
   {
     id: "hectareas",
-    title: "Parque Industrial Clase A",
-    subtitle: "15 hectáreas",
-    paragraph:
-      "Infraestructura de Primer Nivel para operaciones que exigen más.",
+    key: "card1",
     icon: cuadroIcon,
-    alt: "cuadro de hectáreas",
   },
   {
     id: "naves",
-    title: "Naves BTS",
-    subtitle: "de 75,000 - 750,000 ft²",
-    paragraph:
-      "Espacios construídos a la medida de tu operación, listos para crecer contiigo.",
+    key: "card2",
     icon: almacenIcon,
-    alt: "almacen",
   },
   {
     id: "macrolotes",
-    title: "Macrolotes",
-    subtitle: "de 10,000 - 150,000 m²",
-    paragraph:
-      "Terrenos Industriales listos para desarrollar proyectos de gran escala.",
+    key: "card3",
     icon: medidaIcon,
-    alt: "mediciones",
   },
   {
     id: "carretera",
-    title: "Frente directo a",
-    subtitle: "Autopista Mty-Nuevo Laredo\n (Carretera 85)",
-    paragraph: "La arteria logística más importante del norte del país.",
+    key: "card4",
     icon: carreteraIcon,
-    alt: "carretera",
   },
 ];
 
@@ -59,6 +45,7 @@ const carouselImages = [foto1, foto6, foto7, foto8, foto9];
 
 export default function Especificaciones() {
   const [titleRef, titleVisible] = useInView();
+  const { t } = useTranslation("especificaciones");
 
   return (
     <section id="propuesta-de-valor" className="flex flex-col h-fit">
@@ -78,7 +65,7 @@ export default function Especificaciones() {
           ref={titleRef}
           className={`max-sm:max-w-[260px] title text-center font-abhaya uppercase reveal ${titleVisible ? "is-visible" : ""}`}
         >
-          Todo lo que tu operación necesita, en un solo lugar.
+          {t("title")}
         </h2>
 
         <div className="grid grid-cols-2 min-[1170px]:grid-cols-4 gap-[15px] min-[680px]:gap-[20px] xl:gap-[23px]">

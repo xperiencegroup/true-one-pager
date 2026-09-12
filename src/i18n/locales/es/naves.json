@@ -1,0 +1,56 @@
+{
+  "title1": "NAVES BUILD-TO-SUIT",
+  "title2": "EN VENTA O RENTA",
+  "intro": "Para quien quiere una nave lista para operar, hecha a su medida — con la flexibilidad de comprarla o rentarla.",
+  "description": "Diseñamos y construimos tu nave a la medida — desde 200,000 hasta 750,000 pies cuadrados — con la infraestructura, los andenes y el layout definidos alrededor de tu proceso.",
+  "headline": "UNA NAVE HECHA PARA TU OPERACIÓN. CÓMPRALA O RÉNTALA.",
+  "buy": {
+    "title": "SI LA COMPRAS",
+    "text": "Conviertes el edificio en patrimonio, con control total sobre un activo que se aprecia en el mejor corredor del noreste."
+  },
+  "lease": {
+    "title": "SI LA RENTAS",
+    "text": "Ocupas el edificio sin inmovilizar capital y lo mantienes donde más rinde tu maquinaria, tu inventario, tu gente. Máxima flexibilidad y arranque rápido."
+  },
+  "feature1": {
+    "title": "A TU MEDIDA",
+    "text": "Altura libre, andenes, rampas, oficinas, energía y layout definidos alrededor de tu proceso."
+  },
+  "feature2": {
+    "title": "ENTREGA PROGRAMADA",
+    "text": "Fechas claras desde el contrato. Tu plan de arranque no depende de promesas."
+  },
+  "feature3": {
+    "title": "TÉRMINOS INSTITUCIONALES",
+    "text": "Contratos en USD, pensados para operaciones de largo plazo."
+  },
+  "feature4": {
+    "title": "CRECIMIENTO PREVISTO",
+    "text": "Naves preparadas para expansión dentro del mismo parque."
+  },
+  "inventory": {
+    "title": "TAMAÑOS DISPONIBLES",
+    "label": "Nave BTS",
+    "row1": {
+      "name": "Terreno Completo",
+      "sqft": "779,162 ft²",
+      "sqm": "72,386.57 m²"
+    },
+    "row2": {
+      "name": "Nave BTS Grande",
+      "sqft": "528,678 ft²",
+      "sqm": "49,116 m²"
+    },
+    "row3": {
+      "name": "Nave BTS Mediana",
+      "sqft": "329,770 ft²",
+      "sqm": "30,636.64 m²"
+    },
+    "row4": {
+      "name": "Naves BTS Chicas",
+      "sqft": "196,068 - 213,657 ft²",
+      "sqm": "18,215 - 19,849 m²"
+    }
+  },
+  "cta": "Cotiza tu Nave Industrial a la medida"
+}

@@ -1,0 +1,56 @@
+{
+  "title1": "BUILD-TO-SUIT BUILDINGS",
+  "title2": "FOR SALE OR LEASE",
+  "intro": "For companies that want a building ready to operate, built to their specifications — with the flexibility to buy it or lease it.",
+  "description": "We design and build your building to fit — from 200,000 to 750,000 square feet — with the infrastructure, dock doors and layout defined around your process.",
+  "headline": "A BUILDING MADE FOR YOUR OPERATION. BUY IT OR LEASE IT.",
+  "buy": {
+    "title": "IF YOU BUY",
+    "text": "You turn the building into long-term equity, with full control over an asset that appreciates in the Northeast's premier industrial corridor."
+  },
+  "lease": {
+    "title": "IF YOU LEASE",
+    "text": "You occupy the building without tying up capital, keeping it where it earns the most: your machinery, your inventory, your people. Maximum flexibility and a fast start-up."
+  },
+  "feature1": {
+    "title": "BUILT TO FIT",
+    "text": "Clear height, dock doors, ramps, offices, power and layout defined around your process."
+  },
+  "feature2": {
+    "title": "SCHEDULED DELIVERY",
+    "text": "Clear dates from contract signing. Your start-up plan doesn't depend on promises."
+  },
+  "feature3": {
+    "title": "INSTITUTIONAL TERMS",
+    "text": "USD contracts, structured for long-term operations."
+  },
+  "feature4": {
+    "title": "PLANNED GROWTH",
+    "text": "Buildings prepared for expansion within the same park."
+  },
+  "inventory": {
+    "title": "INVENTORY PORTFOLIO",
+    "label": "BTS Building",
+    "row1": {
+      "name": "Full Site",
+      "sqft": "779,162 sq ft",
+      "sqm": "72,386.57 m²"
+    },
+    "row2": {
+      "name": "Large BTS Building",
+      "sqft": "528,678 sq ft",
+      "sqm": "49,116 m²"
+    },
+    "row3": {
+      "name": "Medium BTS Building",
+      "sqft": "329,770 sq ft",
+      "sqm": "30,636.64 m²"
+    },
+    "row4": {
+      "name": "Small BTS Buildings",
+      "sqft": "196,068 - 213,657 sq ft",
+      "sqm": "18,215 - 19,849 m²"
+    }
+  },
+  "cta": "Get a quote for your build-to-suit Industrial Building"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "EVERYTHING YOUR OPERATION NEEDS, IN ONE PLACE.",
+  "card1": {
+    "title": "CLASS A INDUSTRIAL PARK",
+    "metric": "15 hectares (37 acres)",
+    "text": "First-class infrastructure for operations that demand more."
+  },
+  "card2": {
+    "title": "BTS BUILDINGS",
+    "metric": "from 75,000 - 750,000 sq ft",
+    "text": "Spaces built to fit your operation, ready to grow with you."
+  },
+  "card3": {
+    "title": "LAND PARCELS",
+    "metric": "from 10,000 - 150,000 m² (2.5 - 37 acres)",
+    "text": "Industrial land ready to develop large-scale projects."
+  },
+  "card4": {
+    "title": "DIRECT FRONTAGE ON",
+    "metric": "Monterrey-Nuevo Laredo Highway (Highway 85)",
+    "text": "The most important logistics artery in northern Mexico."
+  }
+}

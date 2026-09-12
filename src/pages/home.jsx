@@ -1,3 +1,9 @@
+import { useParams } from "react-router";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { usePopupStore } from "../store/usePopupStore";
+import { Toaster } from "react-hot-toast";
+
 import Clientes from "./components/clientes";
 import DesignedForCertainty from "./components/designed-certainty";
 import Documentamos from "./components/documentamos";
@@ -13,11 +19,18 @@ import Naves from "./components/naves";
 import Preguntas from "./components/preguntas";
 import whatsappIcon from "../assets/icons/social/whatsapp.svg";
 import PopupRegistro from "../components/popup-registro/pop-up-registro";
-import { usePopupStore } from "../store/usePopupStore";
 import PopupClickAndXperience from "../components/popup-registro/pop-up-click-xperience";
-import { Toaster } from "react-hot-toast";
 
 export default function Home() {
+  const { lang } = useParams();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (lang && ["es", "en"].includes(lang) && lang !== i18n.language) {
+      i18n.changeLanguage(lang);
+    }
+  }, [lang, i18n]);
+
   const activePopup = usePopupStore((state) => state.activePopup);
   const closePopup = usePopupStore((state) => state.closePopup);
 

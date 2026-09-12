@@ -1,0 +1,389 @@
+{
+  "modal": {
+    "eyebrow1": "DISCOVER THE OPTIONS",
+    "eyebrow2": "AVAILABLE FOR YOUR COMPANY",
+    "title": "SHARE YOUR DETAILS",
+    "subtitle": "Leave us your details and one of our advisors will get in touch with you.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "submit": "Request Information"
+    },
+    "close": "Close"
+  },
+  "nav": {
+    "value": "Value Proposition",
+    "products": "Buildings & Land Parcels",
+    "location": "Location",
+    "why": "Why True Cienega?",
+    "developer": "True Developments",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "hero": {
+    "title": "TRUE CIENEGA INDUSTRIAL PARK",
+    "subtitle": "BUILD-TO-SUIT INDUSTRIAL BUILDINGS AND INDUSTRIAL LAND PARCELS FOR SALE AND LEASE.",
+    "description": "A 15-hectare (37-acre) Class A industrial park on the Monterrey-Nuevo Laredo Highway (Federal Highway 85), in Ciénega de Flores, Nuevo León, Mexico.",
+    "cta": {
+      "building": "I want to buy or lease a build-to-suit Industrial Building",
+      "land": "I want to buy a Land Parcel"
+    }
+  },
+  "value": {
+    "title": "EVERYTHING YOUR OPERATION NEEDS, IN ONE PLACE.",
+    "card1": {
+      "title": "CLASS A INDUSTRIAL PARK",
+      "metric": "15 hectares (37 acres)",
+      "text": "First-class infrastructure for operations that demand more."
+    },
+    "card2": {
+      "title": "BTS BUILDINGS",
+      "metric": "from 75,000 – 750,000 sq ft",
+      "text": "Spaces built to fit your operation, ready to grow with you."
+    },
+    "card3": {
+      "title": "LAND PARCELS",
+      "metric": "from 10,000 – 150,000 m² (2.5 – 37 acres)",
+      "text": "Industrial land ready to develop large-scale projects."
+    },
+    "card4": {
+      "title": "DIRECT FRONTAGE ON",
+      "metric": "Monterrey–Nuevo Laredo Highway (Highway 85)",
+      "text": "The most important logistics artery in northern Mexico."
+    }
+  },
+  "manifesto": {
+    "headline1": "YOU'RE NOT CHOOSING AN INDUSTRIAL SPACE.",
+    "headline2": "YOU'RE CHOOSING HOW YOU'RE GOING TO OPERATE.",
+    "subhead1": "CHOOSE ONCE.",
+    "subhead2": "OPERATE WITH CONFIDENCE FOR DECADES.",
+    "p1": "Choosing industrial space isn't buying square footage; it's deciding where your company will operate for the next ten or twenty years.",
+    "p2": "That decision deserves certainty: power available from day one, guaranteed water, access that works, roadways designed for tractor-trailers, and a park manager who answers when you need them.",
+    "p3": "True Cienega is designed around your operation: how your trucks come in, how your people work, how you grow when the time comes.",
+    "flex": {
+      "title": "REAL FLEXIBILITY",
+      "item1": "Flexible building and land parcel sizes",
+      "item2": "Tailored to your requirements",
+      "item3": "Option to buy or lease"
+    }
+  },
+  "platform": {
+    "title": "DESIGNED TO OPERATE WITH CERTAINTY.",
+    "description": "Explore every configuration on our interactive platform: view the land parcels, walk through the buildings, compare areas and find the ideal space for your operation from any device.",
+    "cta": "View Interactive Platform"
+  },
+  "choose": {
+    "title": "CHOOSE HOW YOU WANT TO GROW.",
+    "line1": "The same location,",
+    "line2": "the same infrastructure,",
+    "line3": "the same certainty.",
+    "line4": "Two models.",
+    "subtitle": "THE DECISION DEPENDS ON YOUR OPERATION.",
+    "optionA": {
+      "kicker": "BUY OR LEASE",
+      "title": "BUILD-TO-SUIT INDUSTRIAL BUILDING",
+      "text": "Buy or lease your BTS Building, built to your specifications"
+    },
+    "optionB": {
+      "kicker": "BUY A LAND PARCEL",
+      "title": "INDUSTRIAL LAND TO DEVELOP",
+      "text": "Buy your land and build at your own pace"
+    }
+  },
+  "buildings": {
+    "title1": "BUILD-TO-SUIT BUILDINGS",
+    "title2": "FOR SALE OR LEASE",
+    "intro": "For companies that want a building ready to operate, built to their specifications — with the flexibility to buy it or lease it.",
+    "description": "We design and build your building to fit — from 200,000 to 750,000 square feet — with the infrastructure, dock doors and layout defined around your process.",
+    "headline": "A BUILDING MADE FOR YOUR OPERATION. BUY IT OR LEASE IT.",
+    "buy": {
+      "title": "IF YOU BUY",
+      "text": "You turn the building into long-term equity, with full control over an asset that appreciates in the Northeast's premier industrial corridor."
+    },
+    "lease": {
+      "title": "IF YOU LEASE",
+      "text": "You occupy the building without tying up capital, keeping it where it earns the most: your machinery, your inventory, your people. Maximum flexibility and a fast start-up."
+    },
+    "feature1": {
+      "title": "BUILT TO FIT",
+      "text": "Clear height, dock doors, ramps, offices, power and layout defined around your process."
+    },
+    "feature2": {
+      "title": "SCHEDULED DELIVERY",
+      "text": "Clear dates from contract signing. Your start-up plan doesn't depend on promises."
+    },
+    "feature3": {
+      "title": "INSTITUTIONAL TERMS",
+      "text": "USD contracts, structured for long-term operations."
+    },
+    "feature4": {
+      "title": "PLANNED GROWTH",
+      "text": "Buildings prepared for expansion within the same park."
+    },
+    "inventory": {
+      "title": "INVENTORY PORTFOLIO",
+      "label": "BTS Building",
+      "row1": {
+        "name": "Full Site",
+        "sqft": "779,162 sq ft",
+        "sqm": "72,386.57 m²"
+      },
+      "row2": {
+        "name": "Large BTS Building",
+        "sqft": "528,678 sq ft",
+        "sqm": "49,116 m²"
+      },
+      "row3": {
+        "name": "Medium BTS Building",
+        "sqft": "329,770 sq ft",
+        "sqm": "30,636.64 m²"
+      },
+      "row4": {
+        "name": "Small BTS Buildings",
+        "sqft": "196,068 – 213,657 sq ft",
+        "sqm": "18,215.34 – 19,849.43 m²"
+      }
+    },
+    "cta": "Get a quote for your build-to-suit Industrial Building"
+  },
+  "land": {
+    "title1": "INDUSTRIAL LAND PARCELS",
+    "title2": "FOR SALE OR LEASE",
+    "intro": "For companies that want their own land and want to build at their own pace.",
+    "description": "Fully serviced land parcels from 30,000 m² (3 hectares / 7.4 acres) up to 150,000 m² (15 hectares / 37 acres), with power, water, gas, telecommunications, storm drainage and industrial roadways already in place.",
+    "description2": "Buying here turns an operating expense into equity. Your operation stays where you decide, and your property appreciates along with the most dynamic corridor in northeastern Mexico.",
+    "headline": "BUY YOUR LAND. BUILD YOUR FUTURE.",
+    "feature1": {
+      "title": "CONTROL OF YOUR TIMELINE",
+      "text": "You build at your own pace."
+    },
+    "feature2": {
+      "title": "ASSET CERTAINTY",
+      "text": "Titled property inside a professionally managed park."
+    },
+    "feature3": {
+      "title": "VALUE PROTECTION",
+      "text": "An industrial asset in a corridor with sustained demand and institutional supply."
+    },
+    "feature4": {
+      "title": "REAL SCALABILITY",
+      "text": "From three hectares up to the entire park."
+    },
+    "inventory": {
+      "title": "INVENTORY PORTFOLIO",
+      "label": "Land Parcel",
+      "row1": {
+        "name": "Full Site",
+        "sqft": "1,620,378 sq ft",
+        "sqm": "150,538 m²"
+      },
+      "row2": {
+        "name": "Large Land Parcel",
+        "sqft": "1,057,636 sq ft",
+        "sqm": "98,257 m²"
+      },
+      "row3": {
+        "name": "Medium Land Parcels",
+        "sqft": "678,131 – 720,021 sq ft",
+        "sqm": "63,000 – 66,892 m²"
+      },
+      "row4": {
+        "name": "Small Land Parcels",
+        "sqft": "337,614 – 401,974 sq ft",
+        "sqm": "31,365 – 37,344.66 m²"
+      }
+    },
+    "cta": "Explore the available Industrial Land Parcels"
+  },
+  "infra": {
+    "title1": "OPERATIONAL CERTAINTY;",
+    "title2": "INFRASTRUCTURE",
+    "title3": "READY TO OPERATE",
+    "p1": "TRUE CIENEGA INDUSTRIAL PARK has its electrical project filed directly with CFE — 6,000 KVA for the park, first phase in process — guaranteed water supply through cisterns, redundant fiber optics, and storm drainage designed with channels and crossings that protect your operation in any season.",
+    "p2": "Access points, truck courts and roadways were laid out for heavy traffic and smooth tractor-trailer circulation, with a guard house, CCTV, controlled access and perimeter fencing.",
+    "p3": "Behind all of it, professional management that maintains, monitors and responds — because a park isn't delivered once: it's operated every day.",
+    "spec1": {
+      "title": "6,000 KVA",
+      "text": "Electrical project filed with CFE for the park."
+    },
+    "spec2": {
+      "title": "GUARANTEED WATER",
+      "text": "Supply through on-site cisterns."
+    },
+    "spec3": {
+      "title": "NATURAL GAS AND FIBER OPTICS",
+      "text": "Provisions for natural gas and fiber optics according to your operation."
+    },
+    "spec4": {
+      "title": "STORM DRAINAGE",
+      "text": "Designed with channels and crossings."
+    }
+  },
+  "why": {
+    "flex": {
+      "kicker": "REAL FLEXIBILITY",
+      "title": "The most flexible range on the market.",
+      "p1": "It's rare for a single park to accommodate a company that needs 200,000 square feet on a lease and another that wants to buy 15 hectares to build its campus. True Cienega can.",
+      "p2": "That flexibility isn't an accident: it's how we designed the park to support companies at different stages of their growth. You start by leasing and then you buy. You buy three hectares and then you expand.",
+      "p3": "The park grows with you."
+    },
+    "quality": {
+      "kicker": "CLASS A QUALITY",
+      "title": "Built to last, designed to work.",
+      "lead": "Class A specifications in every building:",
+      "item1": "Generous clear heights",
+      "item2": "Ample dock doors and ramps",
+      "item3": "High load-capacity floors",
+      "item4": "Efficient lighting and layouts that prioritize flow over ornament",
+      "p": "Quality doesn't show up in the renderings: it shows up ten years in, when the building still works the way it did on day one. That's the standard we build to."
+    },
+    "progress": {
+      "title1": "CERTAINTY IS BUILT.",
+      "title2": "HERE, WE'RE BUILDING IT.",
+      "description": "We document the park's progress phase by phase. Review construction updates, site photography and development milestones, with the transparency a decision of this scale deserves."
+    },
+    "phase1": {
+      "title": "INDUSTRIAL PARK INFRASTRUCTURE",
+      "text": "Roadways, utilities, storm drainage, lighting and access points."
+    },
+    "phase2": {
+      "title": "LAND PARCEL SITE WORK",
+      "text": "Preparation, grading and utility connection for each land parcel."
+    },
+    "phase3": {
+      "title": "BUILDING CONSTRUCTION",
+      "text": "From foundation to completion of each building."
+    },
+    "phase4": {
+      "title": "DELIVERY OF FINISHED SPACES",
+      "text": "Fit-outs and tenant improvements for each operation."
+    }
+  },
+  "faq": {
+    "title1": "THE QUESTIONS",
+    "title2": "YOU SHOULD BE ASKING US",
+    "q1": "Does the park already have power available, or is it just a promise?",
+    "a1": "The electrical project is filed directly with CFE, with the first phase in process. It isn't a future promise — it's a process already under way.",
+    "q2": "How long does a build-to-suit building take?",
+    "a2": "Delivery dates are defined from contract signing, based on the size and specifications of your building.",
+    "q3": "What if my operation grows faster than expected?",
+    "a3": "The industrial buildings are designed with expansion in mind, and you can acquire additional adjacent area while it remains available.",
+    "q4": "Is it better to lease or to buy?",
+    "a4": "It depends on your operation. Leasing frees up capital; buying builds equity. Tell us your case and we'll help you decide.",
+    "q5": "Who manages the park after the sale or the delivery?",
+    "a5": "True Developments designs, builds and operates every project, including managing the park once it's delivered.",
+    "q6": "Are contracts in pesos or in dollars?",
+    "a6": "Build-to-suit building contracts are in USD, structured for long-term operations."
+  },
+  "developer": {
+    "tagline": "DESIGNED FOR CERTAINTY.",
+    "cta": "Visit Website",
+    "p1": "True Developments is a Monterrey-based real estate developer with more than 18 years of experience developing distribution facilities, industrial buildings and industrial parks in Mexico.",
+    "p2": "We design, build and operate reliable industrial spaces, where companies operate with certainty and where people and communities thrive.",
+    "p3": "Our portfolio exceeds 100,000 m² of owned properties leased to companies such as PepsiCo, Vitro, Nemak and Mission Foods, plus more than 200,000 m² built for clients including HEINEKEN México, Caterpillar, Henkel, Polaris and other leading companies.",
+    "clients": {
+      "own": "CLIENTS IN OUR OWN INDUSTRIAL DEVELOPMENTS",
+      "thirdparty": "THIRD-PARTY INDUSTRIAL CONSTRUCTION CLIENTS"
+    }
+  },
+  "contact": {
+    "title": "LET'S TALK ABOUT YOUR PROJECT.",
+    "description": "Tell us what your operation needs — area, specifications and timing — and we'll come back with concrete options: availability, plans and numbers.",
+    "person": {
+      "name": "RICARDO VILLARREAL",
+      "role": "Partner, True Developments"
+    },
+    "whatsapp": "Send WhatsApp",
+    "call": "Call the Office",
+    "email": "Send Email",
+    "form": {
+      "name": {
+        "label": "Full name",
+        "placeholder": "Name"
+      },
+      "company": {
+        "label": "Company",
+        "placeholder": "Company"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Email"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Number"
+      },
+      "interest": {
+        "label": "What are you looking for?",
+        "placeholder": "Buy or lease a build-to-suit industrial building / Buy an industrial land parcel"
+      },
+      "area": {
+        "label": "Approximate area",
+        "placeholder": "200,000 – 780,000 sq ft / 3 – 15 ha"
+      },
+      "message": {
+        "label": "Message (optional)",
+        "placeholder": "Tell us about your project, your operation's requirements and when you need the space"
+      },
+      "submit": "Send message"
+    }
+  },
+  "footer": {
+    "title": "TRUE CIENEGA INDUSTRIAL PARK",
+    "website": "www.truedevelopments.mx",
+    "phone": {
+      "label": "Office Phone:",
+      "value": "+52 (81) 1356 1142"
+    },
+    "email": "info@truedevelopments.mx",
+    "credit": "Developed by Xperience Group"
+  },
+  "alt": {
+    "render": {
+      "park": "True Cienega Industrial Park rendering",
+      "cienega": "True Developments rendering — Ciénega de Flores",
+      "entrance": "Entrance rendering"
+    },
+    "logo": {
+      "true": "True Developments logo",
+      "client": "{client} logo"
+    },
+    "icon": {
+      "whatsapp": "WhatsApp icon",
+      "linkedin": "LinkedIn icon",
+      "instagram": "Instagram icon",
+      "facebook": "Facebook icon",
+      "menu": "Hamburger menu icon",
+      "hectares": "Hectares icon",
+      "building": "Industrial building icon",
+      "measurements": "Measurements icon",
+      "highway": "Highway icon",
+      "generic": "Section icon",
+      "buyorlease": "Buy or lease icon",
+      "buyland": "Land parcel purchase icon",
+      "check": "Check icon",
+      "kva": "6,000 KVA icon",
+      "water": "Guaranteed water icon",
+      "gasfiber": "Natural gas and fiber optics icon",
+      "drainage": "Storm drainage icon",
+      "phase": "Phase icon"
+    },
+    "image": {
+      "background": "Background image",
+      "location": "Location image",
+      "banner": "Banner",
+      "facilities": "True Developments facilities image"
+    }
+  },
+  "meta": {
+    "title": "True Cienega Industrial Park | Industrial Buildings & Land Parcels for Sale and Lease",
+    "description": "15-hectare Class A industrial park in Ciénega de Flores, Nuevo León, on the Monterrey–Nuevo Laredo Highway. Build-to-suit buildings from 200,000 to 750,000 sq ft and land parcels from 3 to 15 hectares, for sale and lease.",
+    "lang": {
+      "switch": {
+        "es": "ES",
+        "en": "EN"
+      }
+    }
+  }
+}

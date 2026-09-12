@@ -5,34 +5,20 @@ import backgroundImage from "../../assets/images/operar-certeza-background2.jpg"
 import { usePopupStore } from "../../store/usePopupStore";
 import { useInView } from "../../hooks/useInView";
 import ModeloCard from "../../components/modelo-card";
+import { Trans, useTranslation } from "react-i18next";
 
 const modelos = [
-  {
-    id: "nave",
-    title: "Compra o renta",
-    subtitle: "NAVE INDUSTRIAL A LA MEDIDA",
-    icon: rentaBTS,
-    pro: "Compra o Renta tu Nave BTS construida a la medida",
-    button: "Ver disponibilidad de Naves BTS en renta o venta",
-  },
-  {
-    id: "macrolote",
-    title: "Compra macrolote",
-    subtitle: "TERRENO INDUSTRIAL PARA DESARROLLAR",
-    icon: rentaMacrolote,
-    pro: "Compra tu terreno y construye a tu ritmo",
-    button: "Ver disponibilidad de Macrolotes en venta",
-  },
+  { id: "nave", key: "optionA", icon: rentaBTS },
+  { id: "macrolote", key: "optionB", icon: rentaMacrolote },
 ];
 
 export default function Modelos() {
   const openPopup = usePopupStore((state) => state.openPopup);
   const [ref, isVisible] = useInView();
-  const [buttonsDesktopRef, isButtonsDesktopVisible] = useInView({
-    threshold: 0.3,
-  });
-
   const [leftColumnRef, isLeftColumnVisible] = useInView();
+
+  const { t } = useTranslation("plataforma");
+  const { t: tModel } = useTranslation("modelos");
   return (
     <>
       {/* Diseñado para operar con certeza */}
@@ -60,25 +46,27 @@ export default function Modelos() {
           <h2
             className={`title text-center font-abhaya uppercase reveal ${isVisible ? "is-visible" : ""}`}
           >
-            Diseñado para operar con certeza.
+            {t("title")}
           </h2>
 
           <p
             className={`max-w-[1110px] paragraph font-light text-center reveal ${isVisible ? "is-visible" : ""}`}
           >
-            Explora cada configuración en nuestra{" "}
-            <b className="font-bold">plataforma interactiva:</b>
-            <br />
-            visualiza los macrolotes, recorre las naves, compara superficies y
-            encuentra el espacio ideal para tu operación desde cualquier
-            dispositivo.
+            <Trans
+              t={t}
+              i18nKey="description"
+              components={{
+                strong: <strong className="font-bold" />,
+                br: <br />,
+              }}
+            />
           </p>
 
           <button
             onClick={() => openPopup("click-and-xperience")}
             className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isVisible ? "is-visible" : ""}`}
           >
-            Ver Plataforma Interactiva
+            {t("cta")}
           </button>
         </div>
       </div>
@@ -96,7 +84,11 @@ export default function Modelos() {
           >
             {/* title */}
             <h2 className="title lg:max-w-[265px] max-lg:text-center font-abhaya uppercase">
-              Elige cómo <br className="max-lg:hidden" /> quieres crecer.
+              <Trans
+                t={tModel}
+                i18nKey="title"
+                components={{ br: <br className="max-lg:hidden" /> }}
+              />
             </h2>
 
             <div className="max-lg:self-center w-full max-w-[265px] lg:w-full">
@@ -106,21 +98,21 @@ export default function Modelos() {
             {/* Descripción */}
             <div className="flex flex-col">
               <p className="paragraph max-lg:text-center font-light text-white">
-                La misma ubicación,
+                {tModel("line1")}
               </p>
               <p className="paragraph max-lg:text-center font-light text-white">
-                la misma infraestructura,
+                {tModel("line2")}
               </p>
               <p className="paragraph max-lg:text-center font-light text-white">
-                la misma certeza.
+                {tModel("line3")}
               </p>
               <p className="paragraph max-lg:text-center font-light text-white">
-                Dos modelos.
+                {tModel("line4")}
               </p>
             </div>
 
             <p className="max-lg:self-center lg:max-w-[254px] max-lg:text-center subtitle font-abhaya uppercase text-cream-second">
-              La decisión depende de tu operación.
+              {tModel("subtitle")}
             </p>
           </div>
 
@@ -136,22 +128,6 @@ export default function Modelos() {
               );
             })}
           </div>
-        </div>
-
-        {/* Botones inferiores */}
-        <div
-          ref={buttonsDesktopRef}
-          className={`hidden flex justify-center items-center gap-[30px] w-full reveal-fade ${isButtonsDesktopVisible ? "is-visible" : ""}`}
-        >
-          {/* Naves */}
-          <button className="w-fit px-[20px] pt-[11px] pb-[12px] rounded-full boton font-semibold bg-orange text-cream drop-shadow-md drop-shadow-black/25">
-            Ver disponibilidad de Naves BTS en renta o venta
-          </button>
-
-          {/* Macrolotes */}
-          <button className="w-fit px-[20px] pt-[11px] pb-[12px] rounded-full boton font-semibold bg-cream text-blue drop-shadow-md drop-shadow-black/25">
-            Ver disponibilidad de Macrolotes en venta
-          </button>
         </div>
       </div>
     </>
