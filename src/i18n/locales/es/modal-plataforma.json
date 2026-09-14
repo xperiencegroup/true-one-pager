@@ -1,0 +1,38 @@
+{
+  "intro": {
+    "title": "Conoce True Ciénega",
+    "titleLine2": "Industrial Park",
+    "subtitle1": "Naves industriales a la medida",
+    "subtitle2": "y macrolotes industriales"
+  },
+  "heading1": "Ingresa a Nuestra",
+  "heading2": "Plataforma Interactiva",
+  "formTitle": "Deja tus datos",
+  "description": "Registra tus datos y explora <strong>TRUE CIÉNEGA INDUSTRIAL PARK</strong> de manera inmersiva",
+  "form": {
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "submit": "Ver Plataforma Interactiva",
+    "submitting": "Enviando...",
+    "errors": {
+      "nameRequired": "El nombre es obligatorio",
+      "nameTooShort": "El nombre es muy corto",
+      "nameInvalid": "Solo se permiten letras",
+      "emailRequired": "El correo es obligatorio",
+      "emailInvalid": "Correo electrónico inválido",
+      "phoneRequired": "El teléfono es obligatorio",
+      "phoneInvalid": "Debe tener entre 8 y 15 dígitos"
+    }
+  },
+  "close": "Cerrar",
+  "toast": {
+    "success": "Registro enviado correctamente",
+    "error": "No se pudo enviar el formulario"
+  },
+  "alt": {
+    "render": "Render True Ciénega Industrial Park",
+    "logo": "Logo True Developments",
+    "social": "Ícono de {{social}}"
+  }
+}
