@@ -26,6 +26,7 @@ body {
   color: var(--color-white);
   font-family: var(--font-akzidenz);
   text-wrap: pretty;
+  background-color: var(--color-blue-overlay);
 }
 
 html {

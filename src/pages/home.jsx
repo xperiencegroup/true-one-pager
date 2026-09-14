@@ -20,6 +20,7 @@ import Preguntas from "./components/preguntas";
 import whatsappIcon from "../assets/icons/social/whatsapp.svg";
 import PopupRegistro from "../components/popup-registro/pop-up-registro";
 import PopupClickAndXperience from "../components/popup-registro/pop-up-click-xperience";
+import Ubicacion from "./components/ubicacion";
 
 export default function Home() {
   const { lang } = useParams();
@@ -67,6 +68,7 @@ export default function Home() {
       <Macrolotes />
       <Infraestructura />
       <Documentamos />
+      <Ubicacion />
       <Preguntas />
       <DesignedForCertainty />
       <Clientes />

@@ -1,0 +1,29 @@
+{
+  "title1": "CONECTADOS CON",
+  "title2": "LO QUE IMPULSA TU NEGOCIO",
+  "description": "Una ubicación estratégica sobre uno de los principales corredores de carga del país, con conexión directa hacia Monterrey, Nuevo Laredo y Estados Unidos.",
+  "item1": {
+    "title": "Acceso a la autopista",
+    "text": "Frente a la Autopista Monterrey-Nuevo Laredo, con acceso por Av. Raúl Hinojosa Martínez."
+  },
+  "item2": {
+    "title": "Corredor logístico",
+    "text": "Monterrey-Nuevo Laredo, principal ruta de carga terrestre hacia Estados Unidos."
+  },
+  "item3": {
+    "title": "27.5 km del aeropuerto",
+    "text": "Aeropuerto Internacional de Monterrey."
+  },
+  "item4": {
+    "title": "30 km de la zona metropolitana",
+    "text": "Conexión con el centro de la Zona Metropolitana de Monterrey."
+  },
+  "item5": {
+    "title": "Vecinos inmediatos",
+    "text": "Hussmann · VYNMSA North · CPA ADN · Prosperity · Pocket Park · Joyas · Litos."
+  },
+  "alt": {
+    "map": "Mapa de ubicación True Ciénega Industrial Park",
+    "thumbnail": "Distribución de Naves industriales"
+  }
+}

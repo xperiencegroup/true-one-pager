@@ -1,0 +1,29 @@
+{
+  "title1": "CONNECTED TO",
+  "title2": "WHAT DRIVES YOUR BUSINESS",
+  "description": "A strategic location on one of the country's main freight corridors, with direct connections to Monterrey, Nuevo Laredo, and the United States.",
+  "item1": {
+    "title": "Highway access",
+    "text": "Fronting the Monterrey-Nuevo Laredo Highway, with access via Av. Raúl Hinojosa Martínez."
+  },
+  "item2": {
+    "title": "Logistics corridor",
+    "text": "Monterrey-Nuevo Laredo, the main overland freight route to the United States."
+  },
+  "item3": {
+    "title": "27.5 km from the airport",
+    "text": "Monterrey International Airport."
+  },
+  "item4": {
+    "title": "30 km from the metropolitan area",
+    "text": "Connection to the center of the Monterrey Metropolitan Area."
+  },
+  "item5": {
+    "title": "Immediate neighbors",
+    "text": "Hussmann · VYNMSA North · CPA ADN · Prosperity · Pocket Park · Joyas · Litos."
+  },
+  "alt": {
+    "map": "Location map of True Cienega Industrial Park",
+    "thumbnail": "Layout of industrial Buildings"
+  }
+}
