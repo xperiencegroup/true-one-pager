@@ -11,34 +11,16 @@ import fibra from "../../assets/icons/fibra.svg";
 import drenaje from "../../assets/icons/drenaje.svg";
 import { useInView } from "../../hooks/useInView";
 import InfraestructuraItem from "../../components/infraestructura-item";
+import { useTranslation } from "react-i18next";
 
 const infraestructuraData = [
-  {
-    id: "electrico",
-    title: "6,000 KVA",
-    description: "Proyecto eléctrico tramitado ante CFE para el parque.",
-    icon: electricidad,
-  },
-  {
-    id: "agua",
-    title: "Agua garantizada",
-    description: "Abastecimiento mediante cisternas.",
-    icon: agua,
-  },
-  {
-    id: "gas-fibra",
-    title: "Gas natural y fibra óptica",
-    description:
-      "Preparaciones para gas natural y fibra óptica según tu operación.",
-    icon: fibra,
-  },
-  {
-    id: "drenaje",
-    title: "Drenaje pluvial",
-    description: "Diseñado con canales y pasos.",
-    icon: drenaje,
-  },
+  { id: "electrico", key: "spec1", icon: electricidad },
+  { id: "agua", key: "spec2", icon: agua },
+  { id: "gas-fibra", key: "spec3", icon: fibra },
+  { id: "drenaje", key: "spec4", icon: drenaje },
 ];
+
+const qualityItems = ["item1", "item2", "item3", "item4"];
 
 export default function Infraestructura() {
   const [leftColumnRef, isLeftColumnVisible] = useInView();
@@ -46,6 +28,9 @@ export default function Infraestructura() {
 
   const [cuadroIzqRef, isCuadroIzqVisible] = useInView();
   const [cuadroDerRef, isCuadroDerVisible] = useInView();
+
+  const { t } = useTranslation("infra");
+
   return (
     <>
       {/* Content */}
@@ -60,9 +45,9 @@ export default function Infraestructura() {
             className={`w-full max-w-[660px] flex flex-col gap-[20px] reveal-left ${isLeftColumnVisible ? "is-visible" : ""}`}
           >
             <h2 className="title font-abhaya leading-none uppercase">
-              CERTEZA OPERATIVA; <br />{" "}
+              {t("title1")} <br />{" "}
               <span className="text-orange">
-                Infraestructura <br /> preparada para operar
+                {t("title2")} <br /> {t("title3")}
               </span>
             </h2>
 
@@ -72,19 +57,13 @@ export default function Infraestructura() {
             </div>
 
             <p className="paragraph font-light leading-[120%]">
-              TRUE CIÉNEGA INDUSTRIAL PARK tiene su proyecto eléctrico tramitado
-              directamente ante CFE —6,000 KVA para el parque, primera etapa en
-              proceso—, agua garantizada con cisternas, fibra óptica con
-              redundancia y drenaje pluvial diseñado con canales y pasos que
-              protegen tu operación en cualquier temporada.
+              {t("p1")}
               <br />
               <br />
-              Los accesos, patios de maniobra y vialidades fueron trazados para
-              tráfico pesado y circulación fluida de tráileres, con caseta de
-              vigilancia, CCTV, accesos controlados y cerca perimetral. <br />
-              <br /> Detrás de todo, una administración profesional que
-              mantiene, monitorea y responde, porque un parque no se entrega una
-              vez: se opera todos los días.
+              {t("p2")}
+              <br />
+              <br />
+              {t("p3")}
             </p>
 
             {/* Datos relevantes */}
@@ -134,7 +113,7 @@ export default function Infraestructura() {
               <div className="flex flex-col sm:flex-row items-center gap-[20px]">
                 <img src={cuadroNaranjaIcon} alt="" className="size-[38px]" />
                 <h3 className="subtitle max-sm:text-center font-abhaya text-orange uppercase">
-                  Flexibilidad real
+                  {t("flex.kicker")}
                 </h3>
               </div>
               {/* Linea decoration */}
@@ -143,25 +122,19 @@ export default function Infraestructura() {
               </div>
 
               <h4 className="paragraph font-bold max-sm:text-center leading-[120%] text-cream">
-                El rango más flexible del mercado.
+                {t("flex.title")}
               </h4>
 
               <p className="paragraph font-light leading-[110%]">
-                Pocas veces un mismo parque puede recibir a una empresa que
-                necesita 200,000 pies cuadrados en renta ó a otra que quiere
-                comprar 15 hectáreas para construir su campus. True Ciénega
-                puede.
+                {t("flex.p1")}
                 <br />
                 <br />
-                Esa flexibilidad no es un accidente: es la forma en que
-                diseñamos el parque para acompañar a las empresas en distintos
-                momentos de su crecimiento.
+                {t("flex.p2")}
                 <br />
-                Empiezas rentando y luego compras. Compras tres hectáreas y
-                luego te expandes.
+                {t("flex.p3")}
                 <br />
                 <br />
-                <span className="font-bold">El parque crece contigo.</span>
+                <span className="font-bold">{t("flex.p4")}</span>
               </p>
             </div>
 
@@ -174,7 +147,7 @@ export default function Infraestructura() {
               <div className="flex flex-col sm:flex-row items-center gap-[20px]">
                 <img src={almacenNaranjaIcon} alt="" className="size-[38px]" />
                 <h3 className="subtitle font-abhaya text-orange uppercase">
-                  Calidad clase A
+                  {t("quality.kicker")}
                 </h3>
               </div>
               {/* Linea decoration */}
@@ -183,26 +156,20 @@ export default function Infraestructura() {
               </div>
 
               <h4 className="paragraph max-sm:text-center font-bold leading-[120%] text-cream">
-                Construido para durar, diseñado para funcionar.
+                {t("quality.title")}
               </h4>
 
               <p className="paragraph font-light leading-[110%]">
-                Especificaciones Clase A en cada nave: <br />
+                {t("quality.lead")} <br />
               </p>
               <ul className="pl-8 paragraph font-light leading-[110%] list-disc">
-                <li>Alturas libres generosas</li>
-                <li>Andenes y rampas suficientes</li>
-                <li>Pisos de alta capacidad de carga</li>
-                <li>
-                  Iluminación eficiente y layouts que privilegian el flujo sobre
-                  el adorno
-                </li>
+                {qualityItems.map((item) => (
+                  <li key={item}>{t(`quality.${item}`)}</li>
+                ))}
               </ul>
 
               <p className="paragraph font-light leading-[110%]">
-                La calidad no se nota en los renders se nota a los diez años,
-                cuando el edificio sigue funcionando como el primer día.
-                Construimos con esa vara.
+                {t("quality.p")}
               </p>
             </div>
           </div>

@@ -1,0 +1,49 @@
+{
+  "title1": "MACROLOTES INDUSTRIALES",
+  "title2": "EN VENTA O RENTA",
+  "intro": "Para quien quiere su propio terreno y construir a su ritmo.",
+  "description": "Macrolotes urbanizados desde 30,000 m² (3 hectáreas) hasta 150,000 m² (15 hectáreas), con energía, agua, gas, telecomunicaciones, drenaje pluvial y vialidades industriales ya resueltas.",
+  "description2": "Comprar aquí es convertir un gasto operativo en patrimonio. Tu operación permanece donde tú decides y tu inmueble se aprecia con el corredor más dinámico del noreste.",
+  "headline": "COMPRA TU TERRENO. CONSTRUYE TU FUTURO.",
+  "feature1": {
+    "title": "CONTROL DE TUS TIEMPOS",
+    "text": "Construyes a tu ritmo."
+  },
+  "feature2": {
+    "title": "CERTIDUMBRE PATRIMONIAL",
+    "text": "Propiedad titulada dentro de un parque profesionalmente administrado."
+  },
+  "feature3": {
+    "title": "PROTECCIÓN DE VALOR",
+    "text": "Activo industrial en un corredor con demanda sostenida y oferta institucional."
+  },
+  "feature4": {
+    "title": "ESCALABILIDAD REAL",
+    "text": "Desde tres hectáreas hasta el parque completo."
+  },
+  "inventory": {
+    "title": "TAMAÑOS DISPONIBLES",
+    "label": "Macrolote",
+    "row1": {
+      "name": "Terreno Completo",
+      "sqft": "1,620,378 ft²",
+      "sqm": "150,538 m²"
+    },
+    "row2": {
+      "name": "Macrolote Grande",
+      "sqft": "1,057,636 ft²",
+      "sqm": "98,257 m²"
+    },
+    "row3": {
+      "name": "Macrolotes Medianos",
+      "sqft": "678,131 - 720,021 ft²",
+      "sqm": "63,000 - 66,892 m²"
+    },
+    "row4": {
+      "name": "Macrolotes Chicos",
+      "sqft": "337,614 - 401,974 ft²",
+      "sqm": "31,365 - 37,344.66 m²"
+    }
+  },
+  "cta": "Conoce los Macrolotes Industriales disponibles"
+}

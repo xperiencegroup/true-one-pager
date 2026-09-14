@@ -17,7 +17,7 @@ import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
 
 const mobilebuttons = [
   ...navLinks.slice(0, 5),
-  { id: "nosotros", label: "Nosotros", href: "#nosotros" },
+  { id: "nosotros", labelKey: "about", href: "#nosotros" },
   ...navLinks.slice(5, 6),
 ];
 
@@ -235,7 +235,7 @@ export default function Navbar() {
                           onClick={(e) => handleLinkClick(e, button.href)}
                           className={`text-[14px] min-[370px]:boton text-left font-medium px-[clamp(18px,6vw,30px)] py-[clamp(6px,1.4vh,14px)] ${button.id === "contacto" ? "rounded-full bg-orange" : ""}`}
                         >
-                          {button.label}
+                          {t(button.labelKey)}
                         </button>
                         <div
                           className={`w-full divider-white-mobile ${button.id === "contacto" ? "hidden" : ""}`}

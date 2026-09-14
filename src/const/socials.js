@@ -35,7 +35,8 @@ export const contactInfo = [
   {
     id: "tel",
     icon: phone,
-    label: "Tel. Oficina: +52 (81) 1356 1142",
+    labelKey: "phone.label",
+    value: "+52 (81) 1356 1142",
     href: "tel:+528113561142",
   },
   {

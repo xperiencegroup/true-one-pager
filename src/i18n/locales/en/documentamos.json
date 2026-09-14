@@ -1,0 +1,23 @@
+{
+  "progress": {
+    "title1": "CERTAINTY IS BUILT.",
+    "title2": "HERE, WE'RE BUILDING IT.",
+    "description": "We document the park's progress phase by phase. Review construction updates, site photography and development milestones, with the transparency a decision of this scale deserves."
+  },
+  "phase1": {
+    "title": "INDUSTRIAL PARK INFRASTRUCTURE",
+    "text": "Roadways, utilities, storm drainage, lighting and access points."
+  },
+  "phase2": {
+    "title": "LAND PARCEL SITE WORK",
+    "text": "Preparation, grading and utility connection for each land parcel."
+  },
+  "phase3": {
+    "title": "BUILDING CONSTRUCTION",
+    "text": "From foundation to completion of each building."
+  },
+  "phase4": {
+    "title": "DELIVERY OF FINISHED SPACES",
+    "text": "Fit-outs and tenant improvements for each operation."
+  }
+}

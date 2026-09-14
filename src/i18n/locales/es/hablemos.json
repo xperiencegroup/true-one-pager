@@ -1,0 +1,64 @@
+{
+  "title": "HABLEMOS DE TU PROYECTO.",
+  "description": "<strong>Cuéntanos qué necesita tu operación:</strong> superficie, especificaciones, tiempos y te respondemos con opciones concretas: disponibilidad, planos y números.",
+  "cardTitle": "Contacto",
+  "person": {
+    "name": "RICARDO VILLARREAL",
+    "role": "Socio, True Developments"
+  },
+  "whatsapp": "Enviar WhatsApp",
+  "call": "Llamar a Oficina",
+  "email": "Enviar Correo",
+  "form": {
+    "name": {
+      "label": "Nombre completo",
+      "placeholder": "Nombre"
+    },
+    "company": {
+      "label": "Empresa",
+      "placeholder": "Empresa"
+    },
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "Email"
+    },
+    "phone": {
+      "label": "Teléfono",
+      "placeholder": "Número"
+    },
+    "interest": {
+      "label": "¿Qué estás buscando?",
+      "placeholder": "Comprar o rentar una nave industrial a la medida / Comprar un macrolote industrial"
+    },
+    "area": {
+      "label": "Superficie aproximada",
+      "placeholder": "200,000 - 780,000 sq ft / 3 - 15 ha"
+    },
+    "message": {
+      "label": "Mensaje (opcional)",
+      "placeholder": "Cuéntanos sobre tu proyecto, las necesidades de tu operación y la fecha en que requieres el espacio"
+    },
+    "submit": "Enviar mensaje",
+    "submitting": "Enviando...",
+    "errors": {
+      "nameRequired": "El nombre es obligatorio",
+      "nameTooShort": "El nombre es muy corto",
+      "nameInvalid": "Solo se permiten letras",
+      "companyRequired": "La empresa es obligatoria",
+      "companyTooShort": "El nombre de la empresa es muy corto",
+      "emailRequired": "El correo es obligatorio",
+      "emailInvalid": "Correo electrónico inválido",
+      "phoneRequired": "El teléfono es obligatorio",
+      "phoneInvalid": "Debe tener entre 8 y 15 dígitos",
+      "interestRequired": "Cuéntanos qué estás buscando",
+      "maxLength150": "Máximo 150 caracteres",
+      "maxLength60": "Máximo 60 caracteres",
+      "maxLength200": "Máximo 200 caracteres",
+      "invalidChars": "Contiene caracteres no permitidos"
+    }
+  },
+  "toast": {
+    "success": "Registro enviado correctamente",
+    "error": "No se pudo enviar el formulario"
+  }
+}

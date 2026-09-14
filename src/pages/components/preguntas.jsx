@@ -1,43 +1,14 @@
 import { useState } from "react";
 import { useInView } from "../../hooks/useInView";
+import { useTranslation } from "react-i18next";
 
 const preguntasData = [
-  {
-    id: "energia",
-    question: "¿El parque ya tiene energía disponible, o es una promesa?",
-    answer:
-      "El proyecto eléctrico está tramitado directamente ante CFE, con la primera etapa en proceso.\n No es una promesa a futuro, es una gestión ya en marcha.",
-  },
-  {
-    id: "tiempo-nave",
-    question: "¿Cuánto tarda una nave build-to-suit?",
-    answer:
-      "Las fechas de entrega quedan definidas desde el contrato, según el tamaño y las especificaciones de tu nave.",
-  },
-  {
-    id: "crecimiento",
-    question: "¿Qué pasa si mi operación crece más rápido de lo previsto?",
-    answer:
-      "Las naves industriales se diseñan con expansión prevista y puedes adquirir superficie adicional contigua mientras exista disponibilidad.",
-  },
-  {
-    id: "rentar-comprar",
-    question: "¿Conviene más rentar o comprar?",
-    answer:
-      "Depende de tu operación. Rentar libera capital, comprar construye patrimonio. Cuéntanos tu caso y te ayudamos a decidir.",
-  },
-  {
-    id: "administracion",
-    question: "¿Quién administra el parque después de la venta o la entrega?",
-    answer:
-      "True Developments diseña, construye y opera cada proyecto, incluyendo la administración del parque una vez entregado.",
-  },
-  {
-    id: "moneda",
-    question: "¿Los contratos son en pesos o en dólares?",
-    answer:
-      "Los contratos de naves build-to-suit son en USD, pensados para operaciones de largo plazo.",
-  },
+  { id: "energia", n: 1 },
+  { id: "tiempo-nave", n: 2 },
+  { id: "crecimiento", n: 3 },
+  { id: "rentar-comprar", n: 4 },
+  { id: "administracion", n: 5 },
+  { id: "moneda", n: 6 },
 ];
 
 export default function Preguntas() {
@@ -52,6 +23,7 @@ export default function Preguntas() {
   };
 
   const [headerRef, isHeaderVisible] = useInView();
+  const { t } = useTranslation("faq");
 
   return (
     <div className="flex flex-col w-full min-h-svh justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-brown">
@@ -62,9 +34,9 @@ export default function Preguntas() {
           className={`flex justify-between items-center gap-[5px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
         >
           <h2 className="font-abhaya title leading-none text-white uppercase">
-            Las preguntas
+            {t("title1")}
             <br />
-            que deberías hacernos
+            {t("title2")}
           </h2>
         </div>
 
@@ -80,7 +52,7 @@ export default function Preguntas() {
                   className="flex justify-between items-center w-full text-left cursor-pointer"
                 >
                   <span className="font-semibold paragraph text-white pr-[20px]">
-                    {item.question}
+                    {t(`q${item.n}`)}
                   </span>
 
                   <span
@@ -110,7 +82,7 @@ export default function Preguntas() {
                 >
                   <div className="overflow-hidden">
                     <p className="paragraph leading-[120%] font-extralight whitespace-pre-line text-white">
-                      {item.answer}
+                      {t(`a${item.n}`)}
                     </p>
                   </div>
                 </div>

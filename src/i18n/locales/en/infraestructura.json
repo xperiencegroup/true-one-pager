@@ -1,0 +1,42 @@
+{
+  "title1": "OPERATIONAL CERTAINTY;",
+  "title2": "INFRASTRUCTURE",
+  "title3": "READY TO OPERATE",
+  "p1": "TRUE CIENEGA INDUSTRIAL PARK has its electrical project filed directly with CFE — 6,000 KVA for the park, first phase in process — guaranteed water supply through cisterns, redundant fiber optics, and storm drainage designed with channels and crossings that protect your operation in any season.",
+  "p2": "Access points, truck courts and roadways were laid out for heavy traffic and smooth tractor-trailer circulation, with a guard house, CCTV, controlled access and perimeter fencing.",
+  "p3": "Behind all of it, professional management that maintains, monitors and responds — because a park isn't delivered once: it's operated every day.",
+  "spec1": {
+    "title": "6,000 KVA",
+    "text": "Electrical project filed with CFE for the park."
+  },
+  "spec2": {
+    "title": "GUARANTEED WATER",
+    "text": "Supply through on-site cisterns."
+  },
+  "spec3": {
+    "title": "NATURAL GAS AND FIBER OPTICS",
+    "text": "Provisions for natural gas and fiber optics according to your operation."
+  },
+  "spec4": {
+    "title": "STORM DRAINAGE",
+    "text": "Designed with channels and crossings."
+  },
+  "flex": {
+    "kicker": "REAL FLEXIBILITY",
+    "title": "The most flexible range on the market.",
+    "p1": "It's rare for a single park to accommodate a company that needs 200,000 square feet on a lease and another that wants to buy 15 hectares to build its campus. True Cienega can.",
+    "p2": "That flexibility isn't an accident: it's how we designed the park to support companies at different stages of their growth. You start by leasing and then you buy.",
+    "p3": "You buy three hectares and then you expand.",
+    "p4": "The park grows with you."
+  },
+  "quality": {
+    "kicker": "CLASS A QUALITY",
+    "title": "Built to last, designed to work.",
+    "lead": "Class A specifications in every building:",
+    "item1": "Generous clear heights",
+    "item2": "Ample dock doors and ramps",
+    "item3": "High load-capacity floors",
+    "item4": "Efficient lighting and layouts that prioritize flow over ornament",
+    "p": "Quality doesn't show up in the renderings, it shows up ten years in, when the building still works the way it did on day one. That's the standard we build to."
+  }
+}

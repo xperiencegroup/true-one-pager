@@ -18,6 +18,7 @@ import hussmannLogo from "../../assets/logos/clientes/hussmann.svg";
 import ruhrpumpenLogo from "../../assets/logos/clientes/ruhrpumpen.svg";
 import { useInView } from "../../hooks/useInView";
 import ClienteLogo from "../../components/cliente-logo";
+import { useTranslation } from "react-i18next";
 
 const clientesPropios = [
   { id: "pepsico", logo: pepsicoLogo, name: "Pepsico" },
@@ -44,6 +45,7 @@ const clientesTerceros = [
 export default function Clientes() {
   const [headerRef1, isHeaderVisible1] = useInView();
   const [headerRef2, isHeaderVisible2] = useInView();
+  const { t } = useTranslation("clients");
   return (
     <div className="flex flex-col w-full">
       {/* Sección 1: Desarrollos propios */}
@@ -53,9 +55,7 @@ export default function Clientes() {
           className={`flex flex-col items-center gap-[20px] w-full max-w-[1100px] reveal ${isHeaderVisible1 ? "is-visible" : ""}`}
         >
           <h3 className="font-abhaya title text-white uppercase text-center">
-            Clientes en desarrollos
-            <br />
-            industriales propios
+            {t("own")}
           </h3>
         </div>
 
@@ -79,7 +79,7 @@ export default function Clientes() {
           className={`flex flex-col items-center gap-[20px] w-full max-w-[1100px] reveal ${isHeaderVisible2 ? "is-visible" : ""}`}
         >
           <h3 className="font-abhaya title text-white uppercase text-center">
-            CLIENTES DE CONSTRUCCIÓN <br /> INDUSTRIAL PARA TERCEROS
+            {t("thirdparty")}
           </h3>
         </div>
 

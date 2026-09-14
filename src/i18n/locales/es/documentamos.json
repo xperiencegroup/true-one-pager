@@ -1,0 +1,23 @@
+{
+  "progress": {
+    "title1": "LA CERTEZA SE CONSTRUYE.",
+    "title2": "AQUÍ LA ESTAMOS CONSTRUYENDO.",
+    "description": "Documentamos el avance del parque etapa por etapa. Consulta las actualizaciones de obra, fotografías del sitio y los hitos del desarrollo, con la transparencia que una decisión de esta escala merece."
+  },
+  "phase1": {
+    "title": "INFRAESTRUCTURA DEL PARQUE INDUSTRIAL",
+    "text": "Vialidades, servicios, drenaje pluvial, alumbrado y accesos."
+  },
+  "phase2": {
+    "title": "URBANIZACIÓN DE MACROLOTES",
+    "text": "Preparación, nivelación y conexión de cada macrolote."
+  },
+  "phase3": {
+    "title": "CONSTRUCCIÓN DE NAVES",
+    "text": "Del desplante a la terminación de cada edificio."
+  },
+  "phase4": {
+    "title": "ENTREGA DE ESPACIOS TERMINADOS",
+    "text": "Adecuaciones y Tenant Improvements para cada operación."
+  }
+}

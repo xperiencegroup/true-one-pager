@@ -1,0 +1,49 @@
+{
+  "title1": "INDUSTRIAL LAND PARCELS",
+  "title2": "FOR SALE OR LEASE",
+  "intro": "For companies that want their own land and want to build at their own pace.",
+  "description": "Fully serviced land parcels from 30,000 m² (3 hectares / 7.4 acres) up to 150,000 m² (15 hectares / 37 acres), with power, water, gas, telecommunications, storm drainage and industrial roadways already in place.",
+  "description2": "Buying here turns an operating expense into equity. Your operation stays where you decide, and your property appreciates along with the most dynamic corridor in northeastern Mexico.",
+  "headline": "BUY YOUR LAND. BUILD YOUR FUTURE.",
+  "feature1": {
+    "title": "CONTROL OF YOUR TIMELINE",
+    "text": "You build at your own pace."
+  },
+  "feature2": {
+    "title": "ASSET CERTAINTY",
+    "text": "Titled property inside a professionally managed park."
+  },
+  "feature3": {
+    "title": "VALUE PROTECTION",
+    "text": "An industrial asset in a corridor with sustained demand and institutional supply."
+  },
+  "feature4": {
+    "title": "REAL SCALABILITY",
+    "text": "From three hectares up to the entire park."
+  },
+  "inventory": {
+    "title": "INVENTORY PORTFOLIO",
+    "label": "Land Parcel",
+    "row1": {
+      "name": "Full Site",
+      "sqft": "1,620,378 sq ft",
+      "sqm": "150,538 m²"
+    },
+    "row2": {
+      "name": "Large Land Parcel",
+      "sqft": "1,057,636 sq ft",
+      "sqm": "98,257 m²"
+    },
+    "row3": {
+      "name": "Medium Land Parcels",
+      "sqft": "678,131 - 720,021 sq ft",
+      "sqm": "63,000 - 66,892 m²"
+    },
+    "row4": {
+      "name": "Small Land Parcels",
+      "sqft": "337,614 - 401,974 sq ft",
+      "sqm": "31,365 - 37,344 m²"
+    }
+  },
+  "cta": "Explore the available Industrial Land Parcels"
+}

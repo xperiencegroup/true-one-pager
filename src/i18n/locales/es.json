@@ -218,9 +218,7 @@
     "spec4": {
       "title": "DRENAJE PLUVIAL",
       "text": "Diseñado con canales y pasos."
-    }
-  },
-  "why": {
+    },
     "flex": {
       "kicker": "FLEXIBILIDAD REAL",
       "title": "El rango más flexible del mercado.",
@@ -237,7 +235,9 @@
       "item3": "Pisos de alta capacidad de carga",
       "item4": "Iluminación eficiente y layouts que privilegian el flujo sobre el adorno",
       "p": "La calidad no se nota en los renders: se nota a los diez años, cuando el edificio sigue funcionando como el primer día. Construimos con esa vara."
-    },
+    }
+  },
+  "why": {
     "progress": {
       "title1": "LA CERTEZA SE CONSTRUYE.",
       "title2": "AQUÍ LA ESTAMOS CONSTRUYENDO.",

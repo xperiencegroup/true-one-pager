@@ -1,0 +1,64 @@
+{
+  "title": "LET'S TALK ABOUT YOUR PROJECT.",
+  "description": "<strong>Tell us what your operation needs:</strong> area, specifications and timing — and we'll come back with concrete options: availability, plans and numbers.",
+  "cardTitle": "Contact",
+  "person": {
+    "name": "RICARDO VILLARREAL",
+    "role": "Partner, True Developments"
+  },
+  "whatsapp": "Send WhatsApp",
+  "call": "Call the Office",
+  "email": "Send Email",
+  "form": {
+    "name": {
+      "label": "Full name",
+      "placeholder": "Name"
+    },
+    "company": {
+      "label": "Company",
+      "placeholder": "Company"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Email"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "Number"
+    },
+    "interest": {
+      "label": "What are you looking for?",
+      "placeholder": "Buy or lease a build-to-suit industrial building / Buy an industrial land parcel"
+    },
+    "area": {
+      "label": "Approximate area",
+      "placeholder": "200,000 - 780,000 sq ft / 3 - 15 ha"
+    },
+    "message": {
+      "label": "Message (optional)",
+      "placeholder": "Tell us about your project, your operation's requirements and when you need the space"
+    },
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "errors": {
+      "nameRequired": "Name is required",
+      "nameTooShort": "Name is too short",
+      "nameInvalid": "Only letters are allowed",
+      "companyRequired": "Company is required",
+      "companyTooShort": "Company name is too short",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Must be between 8 and 15 digits",
+      "interestRequired": "Tell us what you're looking for",
+      "maxLength150": "Maximum 150 characters",
+      "maxLength60": "Maximum 60 characters",
+      "maxLength200": "Maximum 200 characters",
+      "invalidChars": "Contains invalid characters"
+    }
+  },
+  "toast": {
+    "success": "Submission sent successfully",
+    "error": "The form could not be sent"
+  }
+}

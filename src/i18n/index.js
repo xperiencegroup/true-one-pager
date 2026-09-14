@@ -10,6 +10,14 @@ import esEligenos from "./locales/es/eligenos.json";
 import esPlataforma from "./locales/es/plataforma.json";
 import esModelos from "./locales/es/modelos.json";
 import esNaves from "./locales/es/naves.json";
+import esMacrolotes from "./locales/es/macrolotes.json";
+import esInfra from "./locales/es/infraestructura.json";
+import esDocumentamos from "./locales/es/documentamos.json";
+import esFaq from "./locales/es/faq.json";
+import esDFC from "./locales/es/designedFC.json";
+import esClients from "./locales/es/clients.json";
+import esHablemos from "./locales/es/hablemos.json";
+import esFooter from "./locales/es/footer.json";
 
 // EN
 import enHero from "./locales/en/hero.json";
@@ -19,6 +27,14 @@ import enEligenos from "./locales/en/eligenos.json";
 import enPlataforma from "./locales/en/plataforma.json";
 import enModelos from "./locales/en/modelos.json";
 import enNaves from "./locales/en/naves.json";
+import enMacrolotes from "./locales/en/macrolotes.json";
+import enInfra from "./locales/en/infraestructura.json";
+import enDocumentamos from "./locales/en/documentamos.json";
+import enFaq from "./locales/en/faq.json";
+import enDFC from "./locales/en/designedFC.json";
+import enClients from "./locales/en/clients.json";
+import enHablemos from "./locales/en/hablemos.json";
+import enFooter from "./locales/en/footer.json";
 
 i18n
   .use(LanguageDetector)
@@ -33,6 +49,14 @@ i18n
         plataforma: esPlataforma,
         modelos: esModelos,
         naves: esNaves,
+        macrolotes: esMacrolotes,
+        infra: esInfra,
+        documentamos: esDocumentamos,
+        faq: esFaq,
+        dfc: esDFC,
+        clients: esClients,
+        hablemos: esHablemos,
+        footer: esFooter,
       },
       en: {
         hero: enHero,
@@ -42,6 +66,14 @@ i18n
         plataforma: enPlataforma,
         modelos: enModelos,
         naves: enNaves,
+        macrolotes: enMacrolotes,
+        infra: enInfra,
+        documentamos: enDocumentamos,
+        faq: enFaq,
+        dfc: enDFC,
+        clients: enClients,
+        hablemos: enHablemos,
+        footer: enFooter,
       },
     },
     fallbackLng: "es",

@@ -6,36 +6,17 @@ import camionIcon from "../../assets/icons/camion.svg";
 import verificadoIcon from "../../assets/icons/verificado.svg";
 import { useInView } from "../../hooks/useInView";
 import EtapaCard from "../../components/etapa-card";
+import { useTranslation } from "react-i18next";
 
 const etapasData = [
-  {
-    id: "infraestructura",
-    icon: infraIcon,
-    title: "Infraestructura del parque industrial",
-    description: "Vialidades, servicios, drenaje pluvial, alumbrado y accesos.",
-  },
-  {
-    id: "urbanizacion",
-    icon: pinIcon,
-    title: "Urbanización de macrolotes",
-    description: "Preparación, nivelación y conexión de cada macrolote.",
-  },
-  {
-    id: "construccion",
-    icon: camionIcon,
-    title: "Construcción\n de naves",
-    description: "Del desplante a la terminación de cada edificio.",
-  },
-  {
-    id: "entrega",
-    icon: verificadoIcon,
-    title: "Entrega de espacios terminados",
-    description: "Adecuaciones y Tenant Improvements para cada operación.",
-  },
+  { id: "infraestructura", key: "phase1", icon: infraIcon },
+  { id: "urbanizacion", key: "phase2", icon: pinIcon },
+  { id: "construccion", key: "phase3", icon: camionIcon },
+  { id: "entrega", key: "phase4", icon: verificadoIcon },
 ];
-
 export default function Documentamos() {
   const [headerRef, isHeaderVisible] = useInView();
+  const { t } = useTranslation("documentamos");
   return (
     <>
       {/* Medio banner */}
@@ -49,18 +30,15 @@ export default function Documentamos() {
           className={`flex flex-col w-full max-w-[1120px] gap-[30px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
         >
           <h2 className="font-bangla title text-center font-abhaya text-white uppercase">
-            La certeza se construye.
+            {t("progress.title1")}
             <br />
             <span className="text-center text-orange">
-              Aquí la estamos construyendo.
+              {t("progress.title2")}
             </span>
           </h2>
 
           <p className="paragraph text-center text-white/80 max-w-[1100px]">
-            Documentamos el avance del parque etapa por etapa. Consulta las
-            actualizaciones de obra, fotografías del sitio y los hitos del
-            desarrollo, con la transparencia que una decisión de esta escala
-            merece.
+            {t("progress.description")}
           </p>
         </div>
 

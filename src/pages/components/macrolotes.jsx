@@ -1,30 +1,13 @@
+import { useTranslation } from "react-i18next";
 import macroBanner from "../../assets/images/macro-banner.jpg";
 import BeneficioMacroloteItem from "../../components/beneficio-macrolote-item";
 import { useInView } from "../../hooks/useInView";
 
 const beneficios = [
-  {
-    id: "control-tiempos",
-    title: "CONTROL DE TUS TIEMPOS",
-    description: "Construyes a tu ritmo.",
-  },
-  {
-    id: "certidumbre",
-    title: "CERTIDUMBRE PATRIMONIAL",
-    description:
-      "Propiedad titulada dentro de un parque profesionalmente administrado.",
-  },
-  {
-    id: "valor",
-    title: "PROTECCIÓN DE VALOR",
-    description:
-      "Activo industrial en un corredor con demanda sostenida y oferta institucional.",
-  },
-  {
-    id: "escalabilidad",
-    title: "ESCALABILIDAD REAL",
-    description: "Desde tres hectáreas hasta el parque completo.",
-  },
+  { id: "control-tiempos", key: "feature1" },
+  { id: "certidumbre", key: "feature2" },
+  { id: "valor", key: "feature3" },
+  { id: "escalabilidad", key: "feature4" },
 ];
 
 export default function Macrolotes() {
@@ -32,6 +15,8 @@ export default function Macrolotes() {
   const [ctaTextRef, isCtaTextVisible] = useInView();
   const [tableDesktopRef, isTableDesktopVisible] = useInView();
   const [tableMobileRef, isTableMobileVisible] = useInView();
+
+  const { t } = useTranslation("macrolotes");
   return (
     <div
       id="macrolotes"
@@ -46,26 +31,17 @@ export default function Macrolotes() {
             ref={introRef}
             className={`relative flex flex-col gap-[20px] reveal ${isIntroVisible ? "is-visible" : ""}`}
           >
-            <h2 className="title font-abhaya uppercase">
-              MACROLOTES INDUSTRIALES
-            </h2>
-            <h3 className="subtitle font-abhaya uppercase">En venta o renta</h3>
+            <h2 className="title font-abhaya uppercase">{t("title1")}</h2>
+            <h3 className="subtitle font-abhaya uppercase">{t("title2")}</h3>
             <p className="paragraph font-light">
-              Para quien quiere su propio terreno y construir a su ritmo.
+              {t("intro")}
               <br /> <br />
-              Macrolotes urbanizados desde 30,000 m² (3 hectáreas) hasta 150,000
-              m² (15 hectáreas), con energía, agua, gas, telecomunicaciones,
-              drenaje pluvial y vialidades industriales ya resueltas.
+              {t("description")}
               <br />
               <br />
-              Comprar aquí es convertir un gasto operativo en patrimonio.
-              <br />
-              Tu operación permanece donde tú decides y tu inmueble se aprecia
-              con el corredor más dinámico del noreste.
+              {t("description2")}
             </p>
-            <p className="subtitle font-abhaya uppercase">
-              Compra tu terreno. Construye tu futuro.
-            </p>
+            <p className="subtitle font-abhaya uppercase">{t("headline")}</p>
           </div>
 
           {/* Razones */}
@@ -89,55 +65,55 @@ export default function Macrolotes() {
             className={`max-md:hidden self-center flex flex-col w-full max-w-[1110px] h-fit px-[20px] pt-[20px] gap-[9px] rounded-[20px] text-cream border border-cream bg-cream/10 reveal-scale ${isTableDesktopVisible ? "is-visible" : ""}`}
           >
             <h3 className="subtitle text-center font-abhaya uppercase">
-              Tamaños disponibles
+              {t("inventory.title")}
             </h3>
             <div className="grid grid-cols-3">
               <div className="flex justify-center items-center border-r border-b py-[10px] border-white/50 paragraph text-center font-bold">
-                Macrolote <br /> Terreno Completo
+                {t("inventory.label")} <br /> {t("inventory.row1.name")}
               </div>
 
               <div className="flex justify-center items-center py-[10px] border-r border-b border-white/50 paragraph">
-                1,620,378 ft²
+                {t("inventory.row1.sqft")}
               </div>
 
               <div className="flex justify-center items-center py-[10px] border-b border-white/50 paragraph">
-                150,538 m²
+                {t("inventory.row1.sqm")}
               </div>
 
               <div className="h-[81px] flex justify-center items-center border-r border-b py-[10px] border-white/50 paragraph text-center font-bold">
-                Macrolote Grande
+                {t("inventory.row2.name")}
               </div>
 
               <div className="flex justify-center items-center py-[10px] border-r border-b border-white/50 paragraph">
-                1,057,636 ft²
+                {t("inventory.row2.sqft")}
               </div>
 
               <div className="flex justify-center items-center py-[10px] border-b border-white/50 paragraph">
-                98,257 m²
+                {t("inventory.row2.sqm")}
               </div>
 
               <div className="h-[81px] flex justify-center items-center border-r border-b py-[10px] border-white/50 paragraph text-center font-bold">
-                Macrolotes Medianos
+                {t("inventory.row3.name")}
               </div>
 
               <div className="flex justify-center items-center py-[10px] border-r border-b border-white/50 paragraph">
-                678,131 - 720,021 ft²
+                {t("inventory.row3.sqft")}
               </div>
 
               <div className="flex justify-center items-center py-[10px] border-b border-white/50 paragraph">
-                63,000 - 66,892 m²
+                {t("inventory.row3.sqm")}
               </div>
 
               <div className="h-[81px] flex justify-center items-center border-r py-[10px] border-white/50 paragraph text-center font-bold">
-                Macrolotes Chicos
+                {t("inventory.row4.name")}
               </div>
 
               <div className="flex justify-center items-center py-[10px] border-r border-white/50 paragraph">
-                337,614 - 401,974 ft²
+                {t("inventory.row4.sqft")}
               </div>
 
               <div className="flex justify-center items-center paragraph">
-                31,365 - 37,344 m²
+                {t("inventory.row4.sqm")}
               </div>
             </div>
           </div>
@@ -148,43 +124,52 @@ export default function Macrolotes() {
             className={`md:hidden flex flex-col w-full px-[20px] py-[30px] gap-[10px] rounded-[20px] text-cream border border-cream bg-cream/10 reveal-scale ${isTableMobileVisible ? "is-visible" : ""}`}
           >
             <h3 className="subtitle text-center font-abhaya uppercase">
-              Tamaños disponibles
+              {t("inventory.title")}
             </h3>
 
             {/* Terreno completo */}
             <div className="flex flex-col w-full gap-[10px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
               <h4 className="paragraph text-center font-bold">
-                Macrolote <br /> Terreno Completo
+                {t("inventory.label")}
+                <br /> {t("inventory.row1.name")}
               </h4>
-              <p className="paragraph text-center">1,620,378 ft²</p>
-              <p className="paragraph text-center">150,538 m²</p>
+              <p className="paragraph text-center">
+                {t("inventory.row1.sqft")}
+              </p>
+              <p className="paragraph text-center">{t("inventory.row1.sqm")}</p>
             </div>
 
             {/* Terreno grande */}
             <div className="flex flex-col w-full gap-[10px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
               <h4 className="paragraph text-center font-bold">
-                Macrolote Grande
+                {t("inventory.row2.name")}
               </h4>
-              <p className="paragraph text-center">1,057,636 ft²</p>
-              <p className="paragraph text-center">98,257 m²</p>
+              <p className="paragraph text-center">
+                {t("inventory.row2.sqft")}
+              </p>
+              <p className="paragraph text-center">{t("inventory.row2.sqm")}</p>
             </div>
 
             {/* Terreno mediana */}
             <div className="flex flex-col w-full gap-[10px] border-b-[1px] px-[29px] sm:px-[60px] py-[12px] border-cream">
               <h4 className="paragraph text-center font-bold">
-                Macrolote Mediana
+                {t("inventory.row3.name")}
               </h4>
-              <p className="paragraph text-center">678,131 - 720,021 ft²</p>
-              <p className="paragraph text-center">63,000 - 66,892 m²</p>
+              <p className="paragraph text-center">
+                {t("inventory.row3.sqft")}
+              </p>
+              <p className="paragraph text-center">{t("inventory.row3.sqm")}</p>
             </div>
 
             {/* Terreno chicas */}
             <div className="flex flex-col w-full gap-[10px] px-[29px] sm:px-[60px] py-[12px]">
               <h4 className="paragraph text-center font-bold">
-                Macrolote Chicas
+                {t("inventory.row4.name")}
               </h4>
-              <p className="paragraph text-center">337,614 - 401,974 ft²</p>
-              <p className="paragraph text-center">31,365 - 37,344.66 m²</p>
+              <p className="paragraph text-center">
+                {t("inventory.row4.sqft")}
+              </p>
+              <p className="paragraph text-center">{t("inventory.row4.sqm")}</p>
             </div>
           </div>
         </div>
@@ -203,7 +188,7 @@ export default function Macrolotes() {
             ref={ctaTextRef}
             className={`relative z-20 flex w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-blue bg-cream reveal-fade ${isCtaTextVisible ? "is-visible" : ""}`}
           >
-            Conoce los Macrolotes Industriales disponibles
+            {t("cta")}
           </button>
         </div>
       </div>

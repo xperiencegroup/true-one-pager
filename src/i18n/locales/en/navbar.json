@@ -1,9 +1,10 @@
 {
-  "value": "Value Proposition",
-  "products": "Buildings & Land Parcels",
-  "location": "Location",
-  "why": "Why True Cienega?",
+  "value": "Propuesta de Valor",
+  "products": "Naves y Macrolotes",
+  "location": "Ubicación",
+  "why": "¿Por qué True Ciénega?",
   "developer": "True Developments",
-  "contact": "Contact",
-  "menu": "Menu"
+  "contact": "Contacto",
+  "menu": "Menú",
+  "about": "Nosotros"
 }

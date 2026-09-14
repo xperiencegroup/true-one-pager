@@ -1,0 +1,42 @@
+  {
+    "title1": "CERTEZA OPERATIVA;",
+    "title2": "INFRAESTRUCTURA",
+    "title3": "PREPARADA PARA OPERAR",
+    "p1": "TRUE CIÉNEGA INDUSTRIAL PARK tiene su proyecto eléctrico tramitado directamente ante CFE —6,000 KVA para el parque, primera etapa en proceso—, agua garantizada con cisternas, fibra óptica con redundancia y drenaje pluvial diseñado con canales y pasos que protegen tu operación en cualquier temporada.",
+    "p2": "Los accesos, patios de maniobra y vialidades fueron trazados para tráfico pesado y circulación fluida de tráileres, con caseta de vigilancia, CCTV, accesos controlados y cerca perimetral.",
+    "p3": "Detrás de todo, una administración profesional que mantiene, monitorea y responde, porque un parque no se entrega una vez: se opera todos los días.",
+    "spec1": {
+      "title": "6,000 KVA",
+      "text": "Proyecto eléctrico tramitado ante CFE para el parque."
+    },
+    "spec2": {
+      "title": "AGUA GARANTIZADA",
+      "text": "Abastecimiento mediante cisternas."
+    },
+    "spec3": {
+      "title": "GAS NATURAL Y FIBRA ÓPTICA",
+      "text": "Preparaciones para gas natural y fibra óptica según tu operación."
+    },
+    "spec4": {
+      "title": "DRENAJE PLUVIAL",
+      "text": "Diseñado con canales y pasos."
+    },
+    "flex": {
+      "kicker": "FLEXIBILIDAD REAL",
+      "title": "El rango más flexible del mercado.",
+      "p1": "Pocas veces un mismo parque puede recibir a una empresa que necesita 200,000 pies cuadrados en renta o a otra que quiere comprar 15 hectáreas para construir su campus. True Ciénega puede.",
+      "p2": "Esa flexibilidad no es un accidente: es la forma en que diseñamos el parque para acompañar a las empresas en distintos momentos de su crecimiento. Empiezas rentando y luego compras.",
+      "p3": "Compras tres hectáreas y luego te expandes.",
+      "p4": "El parque crece contigo."
+    },
+    "quality": {
+      "kicker": "CALIDAD CLASE A",
+      "title": "Construido para durar, diseñado para funcionar.",
+      "lead": "Especificaciones Clase A en cada nave:",
+      "item1": "Alturas libres generosas",
+      "item2": "Andenes y rampas suficientes",
+      "item3": "Pisos de alta capacidad de carga",
+      "item4": "Iluminación eficiente y layouts que privilegian el flujo sobre el adorno",
+      "p": "La calidad no se nota en los renders, se nota a los diez años, cuando el edificio sigue funcionando como el primer día. Construimos con esa vara."
+    }
+  }

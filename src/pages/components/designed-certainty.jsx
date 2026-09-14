@@ -1,10 +1,12 @@
 import trueLogo from "../../assets/logos/true-developments-cream-v2.svg";
 import banner from "../../assets/images/banner-designed.jpg";
 import { useInView } from "../../hooks/useInView";
+import { useTranslation } from "react-i18next";
 
 export default function DesignedForCertainty() {
   const [leftColumnRef, isLeftColumnVisible] = useInView();
   const [rightColumnRef, isRightColumnVisible] = useInView();
+  const { t } = useTranslation("dfc");
   return (
     <div
       id="true-developments"
@@ -28,14 +30,14 @@ export default function DesignedForCertainty() {
           </div>
 
           <h2 className="font-abhaya title max-lg:text-center text-white uppercase">
-            Built on trust <br /> Designed for certainty.
+            {t("trust")} <br /> {t("tagline")}
           </h2>
 
           <a
             href="#"
             className="w-fit px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-bold text-blue bg-cream"
           >
-            Visitar Sitio Web
+            {t("cta")}
           </a>
         </div>
 
@@ -46,20 +48,13 @@ export default function DesignedForCertainty() {
           className={`flex flex-col gap-[30px] max-w-[640px] lg:max-w-[589px] reveal-right ${isRightColumnVisible ? "is-visible" : ""}`}
         >
           <p className="paragraph font-light text-white">
-            True Developments es una desarrolladora inmobiliaria de Monterrey
-            con más de 18 años de experiencia desarrollando bodegas, naves y
-            parques industriales en México.
+            {t("p1")}
             <br /> <br />
-            Diseñamos, construimos y operamos espacios industriales confiables,
-            donde las empresas operan con certeza y las personas y comunidades
-            prosperan.
+            {t("p2")}
           </p>
 
           <p className="paragraph font-light text-white">
-            Nuestro portafolio supera los 100,000 m² de propiedades propias
-            arrendadas a empresas como PepsiCo, Vitro, Nemak y Mission Foods,
-            además de más de 200,000 m² construidos para clientes como HEINEKEN
-            México, Caterpillar, Henkel, Polaris y otras compañías líderes.
+            {t("p3")}
             <br />
           </p>
         </div>

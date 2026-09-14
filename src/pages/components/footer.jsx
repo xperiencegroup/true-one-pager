@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import xperienceDesarrollo from "../../assets/xperience/desarrollado-por-experience.svg";
 
 // navigation
@@ -8,14 +9,15 @@ import { socials, contactInfo } from "../../const/socials";
 import returnIcon from "../../assets/icons/return.svg";
 
 export default function Footer() {
+  const { t } = useTranslation("footer");
+  const { t: tNav } = useTranslation("nav");
+
   return (
     <div className="relative flex justify-center items-center w-full bg-black">
       <div className="flex flex-col w-full max-w-[1280px] justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full max-w-[1164px] gap-[20px] pt-[40px] pb-[70px] border-x border-orange">
           {/* Logo */}
-          <h4 className="title font-abhaya text-white">
-            TRUE CIÉNEGA INDUSTRIAL PARK
-          </h4>
+          <h4 className="title font-abhaya text-white">{t("title")}</h4>
 
           {/* Navegación */}
           <nav className="w-full max-sm:flex-col max-w-[1164px] flex flex-wrap justify-around items-center">
@@ -25,7 +27,7 @@ export default function Footer() {
                 href={item.href}
                 className="px-[16px] pt-[11px] pb-[12px] boton text-cream hover:text-naranja transition-colors"
               >
-                {item.label}
+                {tNav(item.labelKey)}
               </a>
             ))}
           </nav>
@@ -41,7 +43,9 @@ export default function Footer() {
                 className="flex items-center self-center gap-[10px] font-light data text-white"
               >
                 <img src={item.icon} alt="" className="h-[15px]" />
-                {item.label}
+                {item.labelKey
+                  ? `${t(item.labelKey)} ${item.value}`
+                  : item.label}
               </a>
             ))}
           </div>
@@ -49,7 +53,7 @@ export default function Footer() {
           {/* Desarrollado por */}
           <img
             src={xperienceDesarrollo}
-            alt="Desarrollado por Xperience Group"
+            alt={t("credit")}
             className="w-[118px]"
           />
         </div>

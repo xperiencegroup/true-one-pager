@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useInView } from "../hooks/useInView";
 
 export default function EtapaCard({ etapa, delay }) {
   const [ref, isVisible] = useInView();
+  const { t } = useTranslation("documentamos");
 
   return (
     <div
@@ -13,12 +15,12 @@ export default function EtapaCard({ etapa, delay }) {
         <img src={etapa.icon} alt="Ícono de la etapa" className="size-[24px]" />
       </div>
 
-      <h4 className="flex-1 paragraph-bold font-bold text-white whitespace-pre-wrap uppercase lg:max-w-[280px]">
-        {etapa.title}
+      <h4 className="flex-1 paragraph-bold font-bold text-white whitespace-pre-wrap uppercase lg:max-w-[220px]">
+        {t(`${etapa.key}.title`)}
       </h4>
 
-      <p className="flex-1 paragraph max-lg:text-center font-light text-white">
-        {etapa.description}
+      <p className="h-full max-h-[66px] paragraph max-lg:text-center font-light text-white">
+        {t(`${etapa.key}.text`)}
       </p>
     </div>
   );

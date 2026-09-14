@@ -218,9 +218,7 @@
     "spec4": {
       "title": "STORM DRAINAGE",
       "text": "Designed with channels and crossings."
-    }
-  },
-  "why": {
+    },
     "flex": {
       "kicker": "REAL FLEXIBILITY",
       "title": "The most flexible range on the market.",
@@ -237,7 +235,9 @@
       "item3": "High load-capacity floors",
       "item4": "Efficient lighting and layouts that prioritize flow over ornament",
       "p": "Quality doesn't show up in the renderings: it shows up ten years in, when the building still works the way it did on day one. That's the standard we build to."
-    },
+    }
+  },
+  "why": {
     "progress": {
       "title1": "CERTAINTY IS BUILT.",
       "title2": "HERE, WE'RE BUILDING IT.",
