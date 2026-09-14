@@ -1,0 +1,37 @@
+{
+  "eyebrow1": "DISCOVER THE OPTIONS",
+  "eyebrow2": "AVAILABLE FOR YOUR COMPANY",
+  "title": "SHARE YOUR DETAILS",
+  "subtitle": "Leave us your details and one of our advisors will get in touch with you.",
+  "intro": {
+    "title": "Discover True Cienega Industrial Park",
+    "subtitle1": "Build-to-suit Industrial Buildings",
+    "subtitle2": "and Industrial Land Parcels"
+  },
+  "form": {
+    "name": "Full name",
+    "email": "Email address",
+    "phone": "Phone",
+    "submit": "Request information",
+    "submitting": "Sending...",
+    "errors": {
+      "nameRequired": "Name is required",
+      "nameTooShort": "Name is too short",
+      "nameInvalid": "Only letters are allowed",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "phoneRequired": "Phone number is required",
+      "phoneInvalid": "Must be between 8 and 15 digits"
+    }
+  },
+  "close": "Close",
+  "toast": {
+    "success": "Submission sent successfully",
+    "error": "The form could not be sent"
+  },
+  "alt": {
+    "render": "Render of True Cienega Industrial Park",
+    "logo": "True Developments Logo",
+    "social": "{{social}} icon"
+  }
+}

@@ -18,6 +18,7 @@ import esDFC from "./locales/es/designedFC.json";
 import esClients from "./locales/es/clients.json";
 import esHablemos from "./locales/es/hablemos.json";
 import esFooter from "./locales/es/footer.json";
+import esModalRegistro from "./locales/es/modal-registro.json";
 
 // EN
 import enHero from "./locales/en/hero.json";
@@ -35,6 +36,7 @@ import enDFC from "./locales/en/designedFC.json";
 import enClients from "./locales/en/clients.json";
 import enHablemos from "./locales/en/hablemos.json";
 import enFooter from "./locales/en/footer.json";
+import enModalRegistro from "./locales/en/modal-registro.json";
 
 i18n
   .use(LanguageDetector)
@@ -57,6 +59,7 @@ i18n
         clients: esClients,
         hablemos: esHablemos,
         footer: esFooter,
+        registro: esModalRegistro,
       },
       en: {
         hero: enHero,
@@ -74,6 +77,7 @@ i18n
         clients: enClients,
         hablemos: enHablemos,
         footer: enFooter,
+        registro: enModalRegistro,
       },
     },
     fallbackLng: "es",

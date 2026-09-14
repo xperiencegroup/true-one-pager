@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { socials, whatsappInfo } from "../../const/socials";
 import { showToast } from "../toast/toast-custom";
 
@@ -24,6 +25,7 @@ const inputClass =
   "flex items-center gap-[20px] w-full h-[60px] px-[16px] rounded-[14px] border bg-transparent text-white placeholder:text-white/60 parrafos-bold font-medium outline-none focus:border-white transition-colors";
 
 export default function PopupRegistro({ isOpen, onClose }) {
+  const { t } = useTranslation("registro");
   const {
     register,
     handleSubmit,
@@ -59,11 +61,11 @@ export default function PopupRegistro({ isOpen, onClose }) {
         },
       );
       await onClose();
-      await showToast("Registro enviado correctamente", false);
+      await showToast(t("toast.success"), false);
       reset();
     } catch (error) {
       console.error(error);
-      showToast("No se pudo enviar el formulario", true);
+      showToast(t("toast.error"), true);
     }
   };
 
@@ -92,14 +94,14 @@ export default function PopupRegistro({ isOpen, onClose }) {
                 onClick={onClose}
                 className="absolute z-10 top-[23px] right-[24px] flex items-center justify-center size-[36px] rounded-full bg-cream hover:opacity-90 hover:cursor-pointer"
               >
-                <img src={closeIcon} alt="Cerrar" className="size-[18px]" />
+                <img src={closeIcon} alt={t("close")} className="size-[18px]" />
               </button>
 
               {/* Columna izquierda - imagen */}
               <div className="relative hidden lg:flex w-full lg:w-1/2 shrink-0">
                 <img
                   src={popupImage}
-                  alt="Render True Ciénega Industrial Park"
+                  alt={t("alt.render")}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-linear-170 from-blue-overlay/60 to-blue-overlay" />
@@ -107,31 +109,31 @@ export default function PopupRegistro({ isOpen, onClose }) {
                 <div className="relative flex flex-col justify-end w-full h-full p-[60px] gap-[20px]">
                   <img
                     src={trueLogoCream}
-                    alt="Logo True Developments"
+                    alt={t("alt.logo")}
                     className="w-[334px]"
                   />
 
                   <div className="flex flex-col gap-[6px]">
                     <h3 className="title font-abhaya text-white uppercase">
-                      Conoce True Ciénega
+                      {t("intro.title")}
                       <br />
-                      Industrial Park
                     </h3>
                     <p className="subtitle font-abhaya text-orange uppercase">
-                      Naves industriales a la medida
-                      <br />y macrolotes industriales
+                      {t("intro.subtitle1")}
+                      <br />
+                      {t("intro.subtitle2")}
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Columna derecha - formulario */}
-              <div className="flex flex-col w-full lg:w-1/2 overflow-y-auto p-[30px] sm:p-[44px] gap-[20px]">
+              <div className="relative flex flex-col w-full lg:w-1/2 overflow-y-auto p-[30px] pb-0 sm:p-[44px] sm:pb-0 gap-[20px] ">
                 <div className="flex flex-col gap-[10px]">
                   <h2 className="title font-abhaya text-white uppercase leading-[115%]">
-                    Descubre las opciones
+                    {t("eyebrow1")}
                     <br />
-                    disponibles para tu empresa
+                    {t("eyebrow2")}
                   </h2>
                   <div className="w-full">
                     <div className="divider-orange-full" />
@@ -140,17 +142,16 @@ export default function PopupRegistro({ isOpen, onClose }) {
 
                 <div className="flex flex-col gap-[6px]">
                   <h3 className="subtitle font-abhaya text-white uppercase">
-                    Registra tus datos
+                    {t("title")}
                   </h3>
                   <p className="paragraph font-light text-white/80">
-                    Déjanos tus datos y uno de nuestros asesores se pondrá en
-                    contacto contigo.
+                    {t("subtitle")}
                   </p>
                 </div>
 
                 <form
                   onSubmit={handleSubmit(onSubmit)}
-                  className="flex flex-col gap-[16px]"
+                  className="flex flex-col gap-[16px] pb-[30px]"
                 >
                   {/* Nombre */}
                   <div
@@ -163,18 +164,18 @@ export default function PopupRegistro({ isOpen, onClose }) {
                     />
                     <input
                       {...register("name", {
-                        required: "El nombre es obligatorio",
+                        required: t("form.errors.nameRequired"),
                         minLength: {
                           value: 2,
-                          message: "El nombre es muy corto",
+                          message: t("form.errors.nameTooShort"),
                         },
                         pattern: {
                           value: /^[\p{L}\s]+$/u,
-                          message: "Solo se permiten letras",
+                          message: t("form.errors.nameInvalid"),
                         },
                       })}
                       type="text"
-                      placeholder="Nombre completo"
+                      placeholder={t("form.name")}
                       className="w-full bg-transparent outline-none placeholder:font-bold placeholder:text-white"
                     />
                     {errors.name && (
@@ -199,14 +200,14 @@ export default function PopupRegistro({ isOpen, onClose }) {
                     />
                     <input
                       {...register("email", {
-                        required: "El correo es obligatorio",
+                        required: t("form.errors.emailRequired"),
                         pattern: {
                           value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                          message: "Correo electrónico inválido",
+                          message: t("form.errors.emailInvalid"),
                         },
                       })}
                       type="email"
-                      placeholder="Correo electrónico"
+                      placeholder={t("form.email")}
                       className="w-full bg-transparent outline-none placeholder:font-bold placeholder:text-white"
                     />
                     {errors.email && (
@@ -231,10 +232,10 @@ export default function PopupRegistro({ isOpen, onClose }) {
                     />
                     <input
                       {...register("phone", {
-                        required: "El teléfono es obligatorio",
+                        required: t("form.errors.phoneRequired"),
                         pattern: {
                           value: /^[0-9]{8,15}$/,
-                          message: "Debe tener entre 8 y 15 dígitos",
+                          message: t("form.errors.phoneInvalid"),
                         },
                         onChange: (e) => {
                           e.target.value = e.target.value.replace(
@@ -245,7 +246,7 @@ export default function PopupRegistro({ isOpen, onClose }) {
                       })}
                       type="tel"
                       inputMode="numeric"
-                      placeholder="Teléfono"
+                      placeholder={t("form.phone")}
                       className="w-full bg-transparent outline-none placeholder:font-bold placeholder:text-white"
                     />
                     {errors.phone && (
@@ -264,7 +265,7 @@ export default function PopupRegistro({ isOpen, onClose }) {
                     disabled={isSubmitting}
                     className="w-full boton font-medium px-[20px] pt-[12px] pb-[11px] rounded-full text-cream bg-orange hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? "Enviando..." : "Solicitar información"}
+                    {isSubmitting ? t("form.submitting") : t("form.submit")}
                   </button>
                 </form>
 
