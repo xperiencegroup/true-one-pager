@@ -1,7 +1,7 @@
 import bgImage from "../../assets/images/eligenos-background.jpg";
 
-import edificioIcon from "../../assets/icons/edificio.svg";
-import aguaIcon from "../../assets/icons/agua.svg";
+import edificioIcon from "../../assets/icons/almacen-naranja.svg";
+import aguaIcon from "../../assets/icons/cuadro-naranja.svg";
 import soporteIcon from "../../assets/icons/soporte.svg";
 import { useInView } from "../../hooks/useInView";
 import { Trans, useTranslation } from "react-i18next";
@@ -74,9 +74,17 @@ export default function Eligenos() {
             className={`w-full flex flex-col gap-[8px] sm:gap-[20px] reveal-right ${rightPanelIsVisible ? "is-visible" : ""}`}
           >
             {/* Title */}
-            <h3 className="w-full subtitle font-abhaya uppercase">
-              {t("flex.title")}
-            </h3>
+            <div className="flex flex-col gap-[14px]">
+              <h3 className="w-full subtitle font-abhaya uppercase">
+                {t("flex.title")}
+              </h3>
+
+              <p className="font-abhaya subtitle uppercase text-white">
+                {t("flex.description1")}
+                <br />
+                {t("flex.description2")}
+              </p>
+            </div>
 
             <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-[10px] sm:gap-[30px]">
               {RAZONES.map((razon, index) => {
