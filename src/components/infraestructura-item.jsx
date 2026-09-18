@@ -12,7 +12,7 @@ export default function InfraestructuraItem({ item, delay }) {
       style={{ transitionDelay: `${delay}ms` }}
       className={`flex flex-col sm:flex-row items-center gap-[20px] reveal-left ${isVisible ? "is-visible" : ""}`}
     >
-      <div className="flex shrink-0 items-center justify-center size-[60px] rounded-full bg-blue">
+      <div className="flex shrink-0 items-center justify-center size-[60px] rounded-full">
         <img
           src={item.icon}
           alt={t(`${item.key}.title`)}
