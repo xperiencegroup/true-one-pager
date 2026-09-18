@@ -55,7 +55,9 @@ export default function Clientes() {
           className={`flex flex-col items-center gap-[20px] w-full max-w-[1100px] reveal ${isHeaderVisible1 ? "is-visible" : ""}`}
         >
           <h3 className="font-abhaya title text-white uppercase text-center">
-            {t("own")}
+            {t("own1")}
+            <br />
+            {t("own2")}
           </h3>
         </div>
 
@@ -79,7 +81,9 @@ export default function Clientes() {
           className={`flex flex-col items-center gap-[20px] w-full max-w-[1100px] reveal ${isHeaderVisible2 ? "is-visible" : ""}`}
         >
           <h3 className="font-abhaya title text-white uppercase text-center">
-            {t("thirdparty")}
+            {t("thirdparty1")}
+            <br />
+            {t("thirdparty2")}
           </h3>
         </div>
 
