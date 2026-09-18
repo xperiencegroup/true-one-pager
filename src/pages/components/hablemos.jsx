@@ -72,10 +72,10 @@ export default function HablemosDeTuProyecto() {
   };
 
   const inputClass =
-    "w-full h-[60px] md:h-[80px] pl-[20px] pr-[15px] rounded-[15px] border bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors";
+    "w-full h-[60px] md:h-[60px] pl-[20px] pr-[15px] rounded-[15px] border bg-[#EFEFEF]/10 paragraph text-white font-light placeholder:text-[#EFEFEF]/30 outline-none focus:border-naranja transition-colors";
 
   const textareaClass =
-    "w-full min-h-[150px] sm:min-h-[80px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border bg-blue paragraph text-white font-light placeholder:text-white outline-none focus:border-naranja transition-colors resize-none";
+    "w-full min-h-[150px] pr-[20px] pl-[10px] py-[10px] rounded-[15px] border bg-[#EFEFEF]/10 paragraph text-white font-light placeholder:text-[#EFEFEF]/30 outline-none focus:border-naranja transition-colors resize-none";
 
   // Animaciones
   const [contentRef, isContentVisible] = useInView();
@@ -237,7 +237,6 @@ export default function HablemosDeTuProyecto() {
                     },
                   })}
                   type="text"
-                  placeholder={tContact("form.name.placeholder")}
                   className={`${inputClass} ${errors.name ? "border-orange" : "border-white"}`}
                 />
                 <InputTooltipError message={errors.name?.message} />
@@ -258,7 +257,6 @@ export default function HablemosDeTuProyecto() {
                     },
                   })}
                   type="text"
-                  placeholder={tContact("form.company.placeholder")}
                   className={`${inputClass} ${errors.company ? "border-orange" : "border-white"}`}
                 />
                 <InputTooltipError message={errors.company?.message} />
@@ -282,7 +280,6 @@ export default function HablemosDeTuProyecto() {
                     },
                   })}
                   type="email"
-                  placeholder={tContact("form.email.placeholder")}
                   className={`${inputClass} ${errors.email ? "border-orange" : "border-white"}`}
                 />
                 <InputTooltipError message={errors.email?.message} />
@@ -307,7 +304,6 @@ export default function HablemosDeTuProyecto() {
                   })}
                   type="tel"
                   inputMode="numeric"
-                  placeholder={tContact("form.phone.placeholder")}
                   className={`${inputClass} ${errors.phone ? "border-orange" : "border-white"}`}
                 />
                 <InputTooltipError message={errors.phone?.message} />
