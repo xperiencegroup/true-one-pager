@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import xperienceDesarrollo from "../../assets/xperience/desarrollado-por-experience.svg";
+import trueLogo from "../../assets/logos/true-developments-cream-v2.svg";
+import trueLogoVertical from "../../assets/logos/true-developments-vertical.svg";
 
 // navigation
 import { navLinks } from "../../const/navigation";
@@ -17,7 +19,18 @@ export default function Footer() {
       <div className="flex flex-col w-full max-w-[1280px] justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full max-w-[1164px] gap-[20px] pt-[40px] pb-[70px] border-x border-orange">
           {/* Logo */}
-          <h4 className="title font-abhaya text-white">{t("title")}</h4>
+          <img
+            src={trueLogo}
+            alt="Logo de True Developments"
+            className="hidden sm:block w-fit h-[45px]"
+          />
+
+          {/* Mobile Logo */}
+          <img
+            src={trueLogoVertical}
+            alt="Logo de True Developments"
+            className="block sm:hidden w-fit h-[183px] pt-[40px]"
+          />
 
           {/* Navegación */}
           <nav className="w-full max-sm:flex-col max-w-[1164px] flex flex-wrap justify-around items-center">
