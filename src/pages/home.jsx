@@ -63,12 +63,12 @@ export default function Home() {
       <Hero />
       <Especificaciones />
       <Eligenos />
+      <Ubicacion />
       <Modelos />
       <Naves />
       <Macrolotes />
       <Infraestructura />
       <Documentamos />
-      <Ubicacion />
       <Preguntas />
       <DesignedForCertainty />
       <Clientes />

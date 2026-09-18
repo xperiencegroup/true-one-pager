@@ -1,29 +1,16 @@
 {
-  "title1": "CONECTADOS CON",
-  "title2": "LO QUE IMPULSA TU NEGOCIO",
-  "description": "Una ubicación estratégica sobre uno de los principales corredores de carga del país, con conexión directa hacia Monterrey, Nuevo Laredo y Estados Unidos.",
+  "title1": "Ubicación de alto valor",
+  "subtitle1": "Sobre el corredor que conecta",
+  "subtitle2": "México con Norteamérica.",
+  "description1": "True Ciénega Industrial Park está frente a la Autopista Monterrey–Nuevo Laredo (Carretera 85), la arteria logística más importante del norte del país.",
+  "description2": "Desde aquí, tu operación conecta con el Aeropuerto Internacional de Monterrey, el Interpuerto, el Puente Colombia y la frontera de Laredo —la puerta comercial más activa entre México y Estados Unidos.",
+  "description3": "Y hay una ventaja que pocas ubicaciones ofrecen: todas las rutas hacia el norte —Interpuerto, Colombia, Laredo— arrancan sobre la misma autopista que pasa frente al parque. Tus tráileres no cruzan la ciudad; salen directo al corredor.",
   "item1": {
     "title": "Acceso a la autopista",
-    "text": "Frente a la Autopista Monterrey-Nuevo Laredo, con acceso por Av. Raúl Hinojosa Martínez."
+    "text": "Frente a la Autopista Monterrey-Nuevo Laredo, con acceso secundario por Av. Raúl Hinojosa Martínez."
   },
   "item2": {
     "title": "Corredor logístico",
     "text": "Monterrey-Nuevo Laredo, principal ruta de carga terrestre hacia Estados Unidos."
-  },
-  "item3": {
-    "title": "27.5 km del aeropuerto",
-    "text": "Aeropuerto Internacional de Monterrey."
-  },
-  "item4": {
-    "title": "30 km de la zona metropolitana",
-    "text": "Conexión con el centro de la Zona Metropolitana de Monterrey."
-  },
-  "item5": {
-    "title": "Vecinos inmediatos",
-    "text": "Hussmann · VYNMSA North · CPA ADN · Prosperity · Pocket Park · Joyas · Litos."
-  },
-  "alt": {
-    "map": "Mapa de ubicación True Ciénega Industrial Park",
-    "thumbnail": "Distribución de Naves industriales"
   }
 }

@@ -1,29 +1,16 @@
 {
-  "title1": "CONNECTED TO",
-  "title2": "WHAT DRIVES YOUR BUSINESS",
-  "description": "A strategic location on one of the country's main freight corridors, with direct connections to Monterrey, Nuevo Laredo, and the United States.",
+  "title1": "High-value location",
+  "subtitle1": "On the corridor that connects",
+  "subtitle2": "Mexico with North America.",
+  "description1": "True Cienega Industrial Park fronts the Monterrey-Nuevo Laredo Highway (Highway 85), the most important logistics artery in northern Mexico.",
+  "description2": "From here, your operation connects to Monterrey International Airport, the Interpuerto, the Colombia Bridge, and the Laredo border crossing — the busiest commercial gateway between Mexico and the United States.",
+  "description3": "And there's an advantage few locations offer: every route north — Interpuerto, Colombia, Laredo — starts on the same highway that fronts the park. Your trailers don't cross the city; they head straight to the corridor.",
   "item1": {
     "title": "Highway access",
-    "text": "Fronting the Monterrey-Nuevo Laredo Highway, with access via Av. Raúl Hinojosa Martínez."
+    "text": "Fronting the Monterrey-Nuevo Laredo Highway, with secondary access via Av. Raúl Hinojosa Martínez."
   },
   "item2": {
     "title": "Logistics corridor",
     "text": "Monterrey-Nuevo Laredo, the main overland freight route to the United States."
-  },
-  "item3": {
-    "title": "27.5 km from the airport",
-    "text": "Monterrey International Airport."
-  },
-  "item4": {
-    "title": "30 km from the metropolitan area",
-    "text": "Connection to the center of the Monterrey Metropolitan Area."
-  },
-  "item5": {
-    "title": "Immediate neighbors",
-    "text": "Hussmann · VYNMSA North · CPA ADN · Prosperity · Pocket Park · Joyas · Litos."
-  },
-  "alt": {
-    "map": "Location map of True Cienega Industrial Park",
-    "thumbnail": "Layout of industrial Buildings"
   }
 }
