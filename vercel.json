@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/", "destination": "/truecienegaindustrialpark", "permanent": false }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
