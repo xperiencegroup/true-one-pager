@@ -4,6 +4,10 @@
   ],
   "rewrites": [
     {
+      "source": "/truecienegaindustrialpark/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
       "source": "/((?!.*\\.[a-zA-Z0-9]+$).*)",
       "destination": "/"
     }
