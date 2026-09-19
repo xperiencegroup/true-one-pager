@@ -3,7 +3,7 @@ import Home from "./pages/home";
 
 export default function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/truecienegaindustrialpark">
       <Routes>
         <Route path="/" element={<Navigate to="/es" replace />} />
         <Route path="/:lang" element={<Home />} />
