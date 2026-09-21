@@ -47,7 +47,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
 
   const onSubmit = async (data) => {
     try {
-      await fetch(
+      const response = await fetch(
         "https://true-one-pager-backend.vercel.app/api/v1/form/submit",
         {
           method: "POST",
@@ -60,9 +60,15 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
           }),
         },
       );
+
+      if (!response.ok) throw new Error("Error al enviar el formulario");
+
+      reset();
       await onClose();
       await showToast(t("toast.success"), false);
-      reset();
+
+      window.location.href =
+        "https://dev.truedevelopments.mx/?utm_source=cienegaindustrialpark&utm_medium=referral";
     } catch (error) {
       console.error(error);
       showToast(t("toast.error"), true);
