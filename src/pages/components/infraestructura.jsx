@@ -174,7 +174,7 @@ export default function Infraestructura() {
             </div>
           </div>
         </div>
-        <div className="relative flex h-[50svh] w-full bg-red-500">
+        <div className="relative flex h-[50svh] w-full">
           {/* linear gradient */}
           <div className="absolute z-10 w-full h-full inset-0 bg-linear-to-t from-blue-overlay/0 to-blue-overlay" />
           <img
