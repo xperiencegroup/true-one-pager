@@ -44,7 +44,9 @@ export default function Hero() {
           <div className="flex flex-col gap-[30px] animate-hero-2">
             {/* Titulo */}
             <h1 className="subtitle grid-cols-subgridtitle font-abhaya uppercase">
-              {t("title")}
+              <span>{t("title1")}</span>
+              <br />
+              <span>{t("title2")}</span>
             </h1>
 
             {/* Subtitulo */}
