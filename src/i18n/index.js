@@ -3,6 +3,7 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 // ES
+import esMeta from "./locales/es/meta.json";
 import esHero from "./locales/es/hero.json";
 import esNav from "./locales/es/navbar.json";
 import esEspecificaciones from "./locales/es/especificaciones.json";
@@ -23,6 +24,7 @@ import esModalPlataforma from "./locales/es/modal-plataforma.json";
 import esUbicacion from "./locales/es/ubicacion.json";
 
 // EN
+import enMeta from "./locales/en/meta.json";
 import enHero from "./locales/en/hero.json";
 import enNav from "./locales/en/navbar.json";
 import enEspecificaciones from "./locales/en/especificaciones.json";
@@ -48,6 +50,7 @@ i18n
   .init({
     resources: {
       es: {
+        meta: esMeta,
         hero: esHero,
         nav: esNav,
         especificaciones: esEspecificaciones,
@@ -68,6 +71,7 @@ i18n
         ubicacion: esUbicacion,
       },
       en: {
+        meta: enMeta,
         hero: enHero,
         nav: enNav,
         especificaciones: enEspecificaciones,
