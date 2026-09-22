@@ -25,6 +25,11 @@ import Ubicacion from "./components/ubicacion";
 export default function Home() {
   const { lang } = useParams();
   const { i18n } = useTranslation();
+  const { t } = useTranslation("meta");
+
+  useEffect(() => {
+    document.title = t("meta.title");
+  }, [i18n.language, t]);
 
   useEffect(() => {
     if (lang && ["es", "en"].includes(lang) && lang !== i18n.language) {
