@@ -16,6 +16,22 @@
       "destination": "/favicon.svg"
     },
     {
+      "source": "/truecienegaindustrialpark/favicon.ico",
+      "destination": "/favicon.ico"
+    },
+    {
+      "source": "/truecienegaindustrialpark/favicon-96x96.png",
+      "destination": "/favicon-96x96.png"
+    },
+    {
+      "source": "/truecienegaindustrialpark/apple-touch-icon.png",
+      "destination": "/apple-touch-icon.png"
+    },
+    {
+      "source": "/truecienegaindustrialpark/site.webmanifest",
+      "destination": "/site.webmanifest"
+    },
+    {
       "source": "/((?!.*\\.[a-zA-Z0-9]+$).*)",
       "destination": "/"
     }
