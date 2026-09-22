@@ -1,11 +1,19 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/truecienegaindustrialpark", "permanent": false }
+    {
+      "source": "/",
+      "destination": "/truecienegaindustrialpark",
+      "permanent": false
+    }
   ],
   "rewrites": [
     {
       "source": "/truecienegaindustrialpark/assets/:path*",
       "destination": "/assets/:path*"
+    },
+    {
+      "source": "/truecienegaindustrialpark/favicon.svg",
+      "destination": "/favicon.svg"
     },
     {
       "source": "/((?!.*\\.[a-zA-Z0-9]+$).*)",
