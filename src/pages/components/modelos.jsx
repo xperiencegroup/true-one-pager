@@ -6,6 +6,8 @@ import { usePopupStore } from "../../store/usePopupStore";
 import { useInView } from "../../hooks/useInView";
 import ModeloCard from "../../components/modelo-card";
 import { Trans, useTranslation } from "react-i18next";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 
 const modelos = [
   { id: "nave", key: "optionA", icon: rentaBTS },
@@ -63,7 +65,12 @@ export default function Modelos() {
           </p>
 
           <button
-            onClick={() => openPopup("click-and-xperience")}
+            onClick={() => {
+              track(TRACK.home.popup.clickAndXperience.open, {
+                source: "designed-for-certainty",
+              });
+              openPopup("click-and-xperience");
+            }}
             className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isVisible ? "is-visible" : ""}`}
           >
             {t("cta")}

@@ -12,6 +12,8 @@ import drenaje from "../../assets/icons/drenaje.svg";
 import { useInView } from "../../hooks/useInView";
 import InfraestructuraItem from "../../components/infraestructura-item";
 import { useTranslation } from "react-i18next";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 
 const infraestructuraData = [
   { id: "electrico", key: "spec1", icon: electricidad },
@@ -83,6 +85,7 @@ export default function Infraestructura() {
             href="https://www.google.com/maps/search/25.875744,+-100.226065?entry=tts&g_ep=EgoyMDI2MDcxMi4wIPu8ASoASAFQAw%3D%3D&skid=1999d13c-392c-4506-b789-b475f6c311d5"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track(TRACK.home.infraestructura.mapClick)}
             className={`self-center flex shrink-0 w-full h-[240px] sm:h-[430px] xl:w-[410px] xl:h-[715px] justify-center items-center rounded-[31px] bg-cream/15 border-solid border-[1px] p-[13px] border-cream/50 reveal-right ${isMapVisible ? "is-visible" : ""}`}
           >
             <div className="relative w-full h-full bg-blue rounded-[18px] overflow-hidden">

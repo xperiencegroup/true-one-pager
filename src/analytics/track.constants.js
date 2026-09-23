@@ -40,5 +40,36 @@ export const TRACK = {
         redirect: `${PROJECT}:popup:click-xperience:redirect`,
       },
     },
+
+    hero: {
+      cta: `${PROJECT}:hero:cta:click`,
+    },
+
+    eligenos: {
+      cta: `${PROJECT}:eligenos:cta:click`,
+    },
+
+    infraestructura: {
+      mapClick: `${PROJECT}:infraestructura:map:click`,
+    },
+
+    faq: {
+      toggle: `${PROJECT}:faq:item:toggle`,
+    },
+
+    dfc: {
+      mainSiteClick: `${PROJECT}:designed-for-certainity:main-site:click`,
+    },
+
+    contacto: {
+      contactMethodClick: `${PROJECT}:contacto:metodo:click`,
+      formSubmit: `${PROJECT}:contacto:form:submit`,
+      formSubmitError: `${PROJECT}:contacto:form:submit-error`,
+    },
+
+    footer: {
+      backToTop: `${PROJECT}:footer:back-to-top:click`,
+      contactInfoClick: `${PROJECT}:footer:contact-info:click`,
+    },
   },
 };

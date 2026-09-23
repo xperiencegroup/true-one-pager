@@ -2,6 +2,8 @@ import trueLogo from "../../assets/logos/true-developments-cream-v2.svg";
 import banner from "../../assets/images/banner-designed.jpg";
 import { useInView } from "../../hooks/useInView";
 import { useTranslation } from "react-i18next";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 
 export default function DesignedForCertainty() {
   const [leftColumnRef, isLeftColumnVisible] = useInView();
@@ -35,6 +37,7 @@ export default function DesignedForCertainty() {
 
           <a
             href="#"
+            onClick={() => track(TRACK.home.dfc.mainSiteClick)}
             className="w-fit px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-bold text-blue bg-cream"
           >
             {t("cta")}

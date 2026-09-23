@@ -9,6 +9,8 @@ import { navLinks } from "../../const/navigation";
 // socials
 import { socials, contactInfo } from "../../const/socials";
 import returnIcon from "../../assets/icons/return.svg";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 
 export default function Footer() {
   const { t } = useTranslation("footer");
@@ -38,6 +40,12 @@ export default function Footer() {
               <a
                 key={item.id}
                 href={item.href}
+                onClick={() =>
+                  track(TRACK.home.menu.item, {
+                    item_id: item.id,
+                    source: "footer",
+                  })
+                }
                 className="px-[16px] pt-[11px] pb-[12px] boton text-cream hover:text-naranja transition-colors"
               >
                 {tNav(item.labelKey)}
@@ -53,6 +61,9 @@ export default function Footer() {
                 href={item.href}
                 target={item.id === "web" ? "_blank" : undefined}
                 rel={item.id === "web" ? "noopener noreferrer" : undefined}
+                onClick={() =>
+                  track(TRACK.home.footer.contactInfoClick, { method: item.id })
+                }
                 className="flex items-center self-center gap-[10px] font-light data text-white"
               >
                 <img src={item.icon} alt="" className="h-[15px]" />
@@ -81,6 +92,12 @@ export default function Footer() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                track(TRACK.home.social.click, {
+                  network: social.id,
+                  source: "footer",
+                })
+              }
               className="flex size-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
             >
               <img
@@ -97,6 +114,7 @@ export default function Footer() {
       <div className="absolute z-50 left-0 bottom-0">
         <a
           href="#hero"
+          onClick={() => track(TRACK.home.footer.backToTop)}
           className="flex size-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
         >
           <img

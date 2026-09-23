@@ -5,6 +5,8 @@ import aguaIcon from "../../assets/icons/cuadro-naranja.svg";
 import soporteIcon from "../../assets/icons/soporte.svg";
 import { useInView } from "../../hooks/useInView";
 import { Trans, useTranslation } from "react-i18next";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 
 const RAZONES = [
   { key: "item1", icon: edificioIcon },
@@ -110,6 +112,9 @@ export default function Eligenos() {
               {/* Botones */}
               <a
                 href="#naves"
+                onClick={() =>
+                  track(TRACK.home.eligenos.cta, { target: "naves" })
+                }
                 className="w-full max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange"
               >
                 <Trans
@@ -123,6 +128,9 @@ export default function Eligenos() {
 
               <a
                 href="#macrolotes"
+                onClick={() =>
+                  track(TRACK.home.eligenos.cta, { target: "macrolotes" })
+                }
                 className="w-full max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
               >
                 {tHero("cta.land")}

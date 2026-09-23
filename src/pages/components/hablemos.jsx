@@ -10,6 +10,8 @@ import whatsapp from "../../assets/icons/whatsapp.svg";
 import phone from "../../assets/icons/phone.svg";
 
 import banner from "../../assets/images/banner-contacto.jpg";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 
 const contactInfo = [
   {
@@ -20,7 +22,7 @@ const contactInfo = [
     href: "https://wa.me/528184640002",
   },
   {
-    id: "oficina",
+    id: "tel-oficina",
     icon: phone,
     key: "call",
     label: "+52 (81) 1356 1142",
@@ -63,10 +65,12 @@ export default function HablemosDeTuProyecto() {
         },
       );
 
+      track(TRACK.home.contacto.formSubmit);
       await showToast(tContact("toast.success"), false);
       reset();
     } catch (error) {
       console.log(error);
+      track(TRACK.home.contacto.formSubmitError);
       showToast(tContact("toast.error"), true);
     }
   };
@@ -130,7 +134,12 @@ export default function HablemosDeTuProyecto() {
           </p>
 
           <button
-            onClick={() => openPopup("click-and-xperience")}
+            onClick={() => {
+              track(TRACK.home.popup.clickAndXperience.open, {
+                source: "designed-for-certainty-second-banner",
+              });
+              openPopup("click-and-xperience");
+            }}
             style={{ transitionDelay: "200ms" }}
             className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isContentVisible ? "is-visible" : ""}`}
           >
@@ -201,6 +210,11 @@ export default function HablemosDeTuProyecto() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      track(TRACK.home.contacto.contactMethodClick, {
+                        method: item.id,
+                      })
+                    }
                     className="self-center flex w-full max-w-[175px] items-center justify-center px-[16px] py-[11px] rounded-full boton font-semibold bg-cream text-blue"
                   >
                     {tContact(item.key)}

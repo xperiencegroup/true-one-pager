@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useInView } from "../../hooks/useInView";
 import { useTranslation } from "react-i18next";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 
 const preguntasData = [
   { id: "energia", n: 1 },
@@ -17,7 +19,12 @@ export default function Preguntas() {
   const toggleItem = (id) => {
     setOpenItems((prev) => {
       const next = new Set(prev);
-      next.has(id) ? next.delete(id) : next.add(id);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+        track(TRACK.home.faq.toggle, { question_id: id });
+      }
       return next;
     });
   };

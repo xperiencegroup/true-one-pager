@@ -1,3 +1,5 @@
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 import backgroundImage from "../../assets/images/hero-background2.jpg";
 import trueLogoCream from "../../assets/logos/true-developments-cream.svg";
 import Navbar from "./navbar";
@@ -74,6 +76,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-[15px] min-[660px]:gap-[40px] sm:gap-[44px] animate-hero-3">
             <a
               href="#naves"
+              onClick={() => track(TRACK.home.hero.cta, { target: "naves" })}
               className="boton w-full max-w-[400px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-orange hover:cursor-pointer"
             >
               <Trans
@@ -87,6 +90,9 @@ export default function Hero() {
 
             <a
               href="#macrolotes"
+              onClick={() =>
+                track(TRACK.home.hero.cta, { target: "macrolotes" })
+              }
               className="boton w-full max-w-[400px] px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-cream text-blue hover:cursor-pointer"
             >
               {t("cta.land")}
