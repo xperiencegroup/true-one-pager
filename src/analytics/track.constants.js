@@ -4,7 +4,7 @@ export const TRACK = {
   home: {
     menu: {
       toggle: `${PROJECT}:menu:toggle:click`,
-      item: (id) => `${PROJECT}:menu:${id}:click`,
+      item: `${PROJECT}:menu:item:click`,
     },
 
     language: {
@@ -12,7 +12,11 @@ export const TRACK = {
     },
 
     logo: {
-      home: `${PROJECT}:logo:home:click`,
+      home: `${PROJECT}:logo:hero:click`,
+    },
+
+    social: {
+      click: `${PROJECT}:social:click`,
     },
   },
 };

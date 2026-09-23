@@ -14,6 +14,8 @@ import menuIcon from "../../assets/icons/menu.svg";
 import closeIcon from "../../assets/icons/close.svg";
 
 import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 
 const mobilebuttons = [
   ...navLinks.slice(0, 5),
@@ -61,6 +63,7 @@ export default function Navbar() {
 
   const toggleLanguage = () => {
     const newLang = lang === "es" ? "en" : "es";
+    track(TRACK.home.language.toggle, { language: newLang });
     navigate(`/${newLang}`);
   };
 
@@ -90,11 +93,11 @@ export default function Navbar() {
   }, [isNavbarOpen]);
 
   // Cierra el menú, restaura scroll y navega a la sección
-  const handleLinkClick = useCallback((e, href) => {
+  const handleLinkClick = useCallback((e, href, id) => {
     e.preventDefault();
+    track(TRACK.home.menu.item, { item_id: id });
     setIsNavbarOpen(false);
 
-    // Esperamos a que el body deje de estar "fixed" antes de scrollear
     requestAnimationFrame(() => {
       const target = document.querySelector(href);
       if (target) {
@@ -112,6 +115,9 @@ export default function Navbar() {
           <div className="grow flex justify-center items-center h-full">
             <a
               href="#hero"
+              onClick={() => {
+                track(TRACK.home.logo.home);
+              }}
               className="navbar-enter hidden min-[660px]:flex w-[50px] lg:w-[60px] h-full justify-center items-center px-[10px] pointer-events-auto"
             >
               <img
@@ -166,6 +172,9 @@ export default function Navbar() {
                   <a
                     key={index}
                     href={button.href}
+                    onClick={() =>
+                      track(TRACK.home.menu.item, { item_id: button.id })
+                    }
                     className="flex text-center justify-center items-center h-[43px] px-[10px] py-[11px] lg:px-[16px] lg:pt-[11px] lg:pb-[12px] boton font-medium text-cream"
                   >
                     {t(button.labelKey)}
@@ -198,7 +207,12 @@ export default function Navbar() {
 
           {/* Mobile */}
           <button
-            onClick={() => setIsNavbarOpen(!isNavbarOpen)}
+            onClick={() => {
+              track(TRACK.home.menu.toggle, {
+                state: isNavbarOpen ? "close" : "open",
+              });
+              setIsNavbarOpen(!isNavbarOpen);
+            }}
             className={`relative z-10 block min-[660px]:hidden flex size-[52px] justify-center items-center rounded-full hover:opacity-70 ${isNavbarOpen ? "bg-cream" : "bg-orange"}`}
           >
             <img
@@ -232,7 +246,9 @@ export default function Navbar() {
                       >
                         <button
                           key={button.id}
-                          onClick={(e) => handleLinkClick(e, button.href)}
+                          onClick={(e) =>
+                            handleLinkClick(e, button.href, button.id)
+                          }
                           className={`text-[14px] min-[370px]:boton text-left font-medium px-[clamp(18px,6vw,30px)] py-[clamp(6px,1.4vh,14px)] ${button.id === "contacto" ? "rounded-full bg-orange" : ""}`}
                         >
                           {t(button.labelKey)}
@@ -257,6 +273,9 @@ export default function Navbar() {
                         href={button.href}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() =>
+                          track(TRACK.home.social.click, { network: button.id })
+                        }
                         className="self-end flex size-[clamp(44px,13vw,52px)] justify-center items-center rounded-t-[32px] drop-shadow-xl bg-orange"
                       >
                         <img

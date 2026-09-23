@@ -9,7 +9,7 @@ import whatsapp from "../assets/icons/whatsapp.svg";
 
 export const socials = [
   {
-    id: "face",
+    id: "facebook",
     icon: facebookIcon,
     href: "https://www.facebook.com/profile.php?id=61585251991992#",
   },
