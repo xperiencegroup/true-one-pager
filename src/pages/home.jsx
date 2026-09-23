@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { usePopupStore } from "../store/usePopupStore";
 import { Toaster } from "react-hot-toast";
+import { track } from "../analytics/track";
+import { TRACK } from "../analytics/track.constants";
 
 import Clientes from "./components/clientes";
 import DesignedForCertainty from "./components/designed-certainty";
@@ -48,6 +50,7 @@ export default function Home() {
           href="https://wa.me/528184640002"
           target="_blank"
           rel="noopener noreferer"
+          onClick={() => track(TRACK.home.whatsapp.float)}
           className="flex size-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
         >
           <img

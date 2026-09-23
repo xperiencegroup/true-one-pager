@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { showToast } from "../toast/toast-custom";
 import { socials, whatsappInfo } from "../../const/socials";
+import { track } from "../../analytics/track";
+import { TRACK } from "../../analytics/track.constants";
 
 import closeIcon from "../../assets/icons/close.svg";
 import userIcon from "../../assets/icons/user.svg";
@@ -63,14 +65,18 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
 
       if (!response.ok) throw new Error("Error al enviar el formulario");
 
+      track(TRACK.home.popup.clickAndXperience.submit);
+
       reset();
       await onClose();
       await showToast(t("toast.success"), false);
 
+      track(TRACK.home.popup.clickAndXperience.redirect);
       window.location.href =
         "https://dev.truedevelopments.mx/?utm_source=cienegaindustrialpark&utm_medium=referral";
     } catch (error) {
       console.error(error);
+      track(TRACK.home.popup.clickAndXperience.submitError);
       showToast(t("toast.error"), true);
     }
   };
@@ -96,12 +102,22 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.05,
               }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={() => {
+                track(TRACK.home.popup.clickAndXperience.close, {
+                  method: "backdrop",
+                });
+                onClose();
+              }}
               className="relative flex flex-col lg:flex-row w-full max-w-[1280px] max-h-[90svh] overflow-hidden bg-brown"
             >
               {/* Botón cerrar */}
               <button
-                onClick={onClose}
+                onClick={() => {
+                  track(TRACK.home.popup.clickAndXperience.close, {
+                    method: "button",
+                  });
+                  onClose();
+                }}
                 className="absolute z-10 top-[23px] right-[24px] flex items-center justify-center size-[36px] rounded-full bg-cream hover:opacity-90 hover:cursor-pointer"
               >
                 <img src={closeIcon} alt={t("close")} className="size-[18px]" />
@@ -291,6 +307,11 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() =>
+                        track(TRACK.home.popup.clickAndXperience.social, {
+                          network: social.id,
+                        })
+                      }
                       className="flex items-center justify-center size-[49px] rounded-t-[32px] bg-orange hover:opacity-90"
                     >
                       <img
