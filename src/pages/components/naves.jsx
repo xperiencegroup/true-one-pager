@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import navesBanner from "../../assets/images/naves-banner.jpg";
 import BeneficioNaveItem from "../../components/beneficio-nave-item";
 import { useInView } from "../../hooks/useInView";
+import { usePopupStore } from "../../store/usePopupStore";
 
 const beneficios = [
   { id: "buy", key: "buy" },
@@ -17,6 +18,7 @@ export default function Naves() {
   const [ctaTextRef, isCtaTextVisible] = useInView();
   const [tableDesktopRef, isTableDesktopVisible] = useInView();
   const [tableMobileRef, isTableMobileVisible] = useInView();
+  const openPopup = usePopupStore((state) => state.openPopup);
   const { t } = useTranslation("naves");
   return (
     <div
@@ -190,6 +192,7 @@ export default function Naves() {
           {/* button */}
           <button
             ref={ctaTextRef}
+            onClick={() => openPopup("click-and-xperience")}
             className={`relative z-20 flex w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-cream bg-orange reveal-fade ${isCtaTextVisible ? "is-visible" : ""}`}
           >
             {t("cta")}
