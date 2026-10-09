@@ -12,6 +12,8 @@ import phone from "../../assets/icons/phone.svg";
 import banner from "../../assets/images/banner-contacto.jpg";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
+import { supabase } from "../../lib/supabase";
+import { TABLE_ID } from "../../const/supabase";
 
 const contactInfo = [
   {
@@ -51,19 +53,19 @@ export default function HablemosDeTuProyecto() {
 
   const onSubmit = async (data) => {
     try {
-      await fetch(
-        "https://true-one-pager-backend.vercel.app/api/v1/form/submit",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            source: "True One Pager - Formulario Contacto",
-            data: data,
-          }),
-        },
-      );
+      const payload = {
+        name: data.name,
+        company: data.company,
+        email: data.email,
+        phone: data.phone,
+        searching: data.searching,
+        area: data.area || null,
+        message: data.message || null,
+        source: "True One Pager - Formulario Contacto",
+      };
+
+      const { error } = await supabase.from(TABLE_ID).insert(payload);
+      if (error) throw error;
 
       track(TRACK.home.contacto.formSubmit);
       await showToast(tContact("toast.success"), false);

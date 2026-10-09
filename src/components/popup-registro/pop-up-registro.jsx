@@ -16,6 +16,8 @@ import linkedinIcon from "../../assets/icons/social/linkedin.svg";
 import instagramIcon from "../../assets/icons/social/instagram.svg";
 import popupImage from "../../assets/images/hero-background2.jpg";
 import trueLogoCream from "../../assets/logos/true-developments-cream.svg";
+import { supabase } from "../../lib/supabase";
+import { TABLE_ID } from "../../const/supabase";
 
 const socialButtons = [
   { id: "whatsapp", icon: whatsappIcon, href: whatsappInfo.href },
@@ -49,19 +51,16 @@ export default function PopupRegistro({ isOpen, onClose }) {
 
   const onSubmit = async (data) => {
     try {
-      await fetch(
-        "https://true-one-pager-backend.vercel.app/api/v1/form/submit",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            source: "True One Pager - Popup de Registro",
-            data: data,
-          }),
-        },
-      );
+      const payload = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        source: "True One Pager - Popup de Registro",
+      };
+
+      const { error } = await supabase.from(TABLE_ID).insert(payload);
+      if (error) throw error;
+
       track(TRACK.home.popup.registro.submit);
       await onClose();
       await showToast(t("toast.success"), false);

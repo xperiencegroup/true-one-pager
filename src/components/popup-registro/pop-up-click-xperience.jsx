@@ -16,6 +16,8 @@ import linkedinIcon from "../../assets/icons/social/linkedin.svg";
 import instagramIcon from "../../assets/icons/social/instagram.svg";
 import popupImage from "../../assets/images/popup-click.jpg";
 import trueLogoCream from "../../assets/logos/true-developments-cream.svg";
+import { supabase } from "../../lib/supabase";
+import { TABLE_ID } from "../../const/supabase";
 
 const socialButtons = [
   { id: "whatsapp", icon: whatsappIcon, href: whatsappInfo.href },
@@ -49,21 +51,15 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch(
-        "https://true-one-pager-backend.vercel.app/api/v1/form/submit",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            source: "True One Pager - Popup de Click & Xperience",
-            data: data,
-          }),
-        },
-      );
+      const payload = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        source: "True One Pager - Popup de Click & Xperience",
+      };
 
-      if (!response.ok) throw new Error("Error al enviar el formulario");
+      const { error } = await supabase.from(TABLE_ID).insert(payload);
+      if (error) throw error;
 
       track(TRACK.home.popup.clickAndXperience.submit);
 
