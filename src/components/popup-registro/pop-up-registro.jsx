@@ -83,10 +83,6 @@ export default function PopupRegistro({ isOpen, onClose }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-[100] flex justify-center items-center bg-black/60 px-[20px]"
-            onClick={() => {
-              track(TRACK.home.popup.registro.close, { method: "backdrop" });
-              onClose();
-            }}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.97, y: 12 }}

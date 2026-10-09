@@ -91,7 +91,6 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-[100] flex justify-center items-center bg-black/60 px-[20px]"
-            onClick={onClose}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.92, y: 20 }}
@@ -102,12 +101,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.05,
               }}
-              onClick={() => {
-                track(TRACK.home.popup.clickAndXperience.close, {
-                  method: "backdrop",
-                });
-                onClose();
-              }}
+              onClick={(e) => e.stopPropagation()}
               className="relative flex flex-col lg:flex-row w-full max-w-[1280px] max-h-[90svh] overflow-hidden bg-brown"
             >
               {/* Botón cerrar */}
