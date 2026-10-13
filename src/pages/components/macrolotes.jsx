@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 import macroBanner from "../../assets/images/macro-banner.jpg";
 import BeneficioMacroloteItem from "../../components/beneficio-macrolote-item";
 import { useInView } from "../../hooks/useInView";
-import { usePopupStore } from "../../store/usePopupStore";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
+import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
 
 const beneficios = [
   { id: "control-tiempos", key: "feature1" },
@@ -18,9 +18,15 @@ export default function Macrolotes() {
   const [ctaTextRef, isCtaTextVisible] = useInView();
   const [tableDesktopRef, isTableDesktopVisible] = useInView();
   const [tableMobileRef, isTableMobileVisible] = useInView();
-  const openPopup = usePopupStore((state) => state.openPopup);
 
   const { t } = useTranslation("macrolotes");
+
+  const handleConoceMacrolotes = () => {
+    track(TRACK.home.popup.clickAndXperience.open, {
+      source: "macrolotes",
+    });
+    window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
+  };
   return (
     <div
       id="macrolotes"
@@ -190,12 +196,7 @@ export default function Macrolotes() {
           {/* button */}
           <button
             ref={ctaTextRef}
-            onClick={() => {
-              track(TRACK.home.popup.clickAndXperience.open, {
-                source: "macrolotes",
-              });
-              openPopup("click-and-xperience");
-            }}
+            onClick={handleConoceMacrolotes}
             className={`relative z-20 flex w-fit self-center boton px-[20px] pt-[11px] pb-[12px] font-medium rounded-[30px] text-blue bg-cream reveal-fade ${isCtaTextVisible ? "is-visible" : ""}`}
           >
             {t("cta")}

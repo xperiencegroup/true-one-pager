@@ -18,6 +18,7 @@ import popupImage from "../../assets/images/popup-click.jpg";
 import trueLogoCream from "../../assets/logos/true-developments-cream.svg";
 import { supabase } from "../../lib/supabase";
 import { TABLE_ID } from "../../const/supabase";
+import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
 
 const socialButtons = [
   { id: "whatsapp", icon: whatsappIcon, href: whatsappInfo.href },
@@ -68,8 +69,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
       await showToast(t("toast.success"), false);
 
       track(TRACK.home.popup.clickAndXperience.redirect);
-      window.location.href =
-        "https://dev.truedevelopments.mx/?utm_source=cienegaindustrialpark&utm_medium=referral";
+      window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
     } catch (error) {
       console.error(error);
       track(TRACK.home.popup.clickAndXperience.submitError);

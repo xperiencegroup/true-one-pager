@@ -2,12 +2,12 @@ import rentaBTS from "../../assets/icons/renta-bts.svg";
 import rentaMacrolote from "../../assets/icons/renta-macrolote.svg";
 import backgroundImage from "../../assets/images/operar-certeza-background2.jpg";
 
-import { usePopupStore } from "../../store/usePopupStore";
 import { useInView } from "../../hooks/useInView";
 import ModeloCard from "../../components/modelo-card";
 import { Trans, useTranslation } from "react-i18next";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
+import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
 
 const modelos = [
   { id: "nave", key: "optionA", icon: rentaBTS },
@@ -15,12 +15,20 @@ const modelos = [
 ];
 
 export default function Modelos() {
-  const openPopup = usePopupStore((state) => state.openPopup);
   const [ref, isVisible] = useInView();
   const [leftColumnRef, isLeftColumnVisible] = useInView();
 
   const { t } = useTranslation("plataforma");
   const { t: tModel } = useTranslation("modelos");
+
+  const handleGoToPlatformClick = () => {
+    // no más popups, va directo al C&X
+    track(TRACK.home.popup.clickAndXperience.open, {
+      source: "designed-for-certainty",
+    });
+
+    window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
+  };
   return (
     <>
       {/* Diseñado para operar con certeza */}
@@ -65,12 +73,7 @@ export default function Modelos() {
           </p>
 
           <button
-            onClick={() => {
-              track(TRACK.home.popup.clickAndXperience.open, {
-                source: "designed-for-certainty",
-              });
-              openPopup("click-and-xperience");
-            }}
+            onClick={handleGoToPlatformClick}
             className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isVisible ? "is-visible" : ""}`}
           >
             {t("cta")}

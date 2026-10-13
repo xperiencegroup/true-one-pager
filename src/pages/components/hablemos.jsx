@@ -1,5 +1,4 @@
 import { useInView } from "../../hooks/useInView";
-import { usePopupStore } from "../../store/usePopupStore";
 import { useForm } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 import { InputTooltipError } from "../../components/tooltip/InputTooltipError";
@@ -14,6 +13,7 @@ import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
 import { supabase } from "../../lib/supabase";
 import { TABLE_ID } from "../../const/supabase";
+import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
 
 const contactInfo = [
   {
@@ -40,7 +40,6 @@ const contactInfo = [
 ];
 
 export default function HablemosDeTuProyecto() {
-  const openPopup = usePopupStore((state) => state.openPopup);
   const {
     register,
     handleSubmit,
@@ -88,6 +87,13 @@ export default function HablemosDeTuProyecto() {
   const [headerRef, isHeaderVisible] = useInView();
   const [cardRef, isCardVisible] = useInView();
   const [formRef, isFormVisible] = useInView();
+
+  const handleGoToPlatformClick = () => {
+    track(TRACK.home.popup.clickAndXperience.open, {
+      source: "designed-for-certainty-second-banner",
+    });
+    window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
+  };
   return (
     <div
       id="contacto"
@@ -136,12 +142,7 @@ export default function HablemosDeTuProyecto() {
           </p>
 
           <button
-            onClick={() => {
-              track(TRACK.home.popup.clickAndXperience.open, {
-                source: "designed-for-certainty-second-banner",
-              });
-              openPopup("click-and-xperience");
-            }}
+            onClick={handleGoToPlatformClick}
             style={{ transitionDelay: "200ms" }}
             className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isContentVisible ? "is-visible" : ""}`}
           >

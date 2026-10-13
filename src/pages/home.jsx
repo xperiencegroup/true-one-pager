@@ -1,7 +1,6 @@
 import { useParams } from "react-router";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import { usePopupStore } from "../store/usePopupStore";
 import { Toaster } from "react-hot-toast";
 import { track } from "../analytics/track";
 import { TRACK } from "../analytics/track.constants";
@@ -20,8 +19,6 @@ import Modelos from "./components/modelos";
 import Naves from "./components/naves";
 import Preguntas from "./components/preguntas";
 import whatsappIcon from "../assets/icons/social/whatsapp.svg";
-import PopupRegistro from "../components/popup-registro/pop-up-registro";
-import PopupClickAndXperience from "../components/popup-registro/pop-up-click-xperience";
 import Ubicacion from "./components/ubicacion";
 
 export default function Home() {
@@ -38,9 +35,6 @@ export default function Home() {
       i18n.changeLanguage(lang);
     }
   }, [lang, i18n]);
-
-  const activePopup = usePopupStore((state) => state.activePopup);
-  const closePopup = usePopupStore((state) => state.closePopup);
 
   return (
     <main className="relative flex flex-col w-full">
@@ -61,12 +55,6 @@ export default function Home() {
         </a>
       </div>
       <Toaster />
-
-      <PopupRegistro isOpen={activePopup === "registro"} onClose={closePopup} />
-      <PopupClickAndXperience
-        isOpen={activePopup === "click-and-xperience"}
-        onClose={closePopup}
-      />
 
       <Hero />
       <Especificaciones />
