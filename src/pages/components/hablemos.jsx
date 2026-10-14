@@ -215,7 +215,7 @@ export default function HablemosDeTuProyecto() {
                     rel="noopener noreferrer"
                     onClick={() =>
                       track(TRACK.home.contacto.contactMethodClick, {
-                        method: item.id,
+                        item_id: item.id,
                       })
                     }
                     className="self-center flex w-full max-w-[175px] items-center justify-center px-[16px] py-[11px] rounded-full boton font-semibold bg-cream text-blue"

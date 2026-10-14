@@ -62,7 +62,9 @@ export default function Footer() {
                 target={item.id === "web" ? "_blank" : undefined}
                 rel={item.id === "web" ? "noopener noreferrer" : undefined}
                 onClick={() =>
-                  track(TRACK.home.footer.contactInfoClick, { method: item.id })
+                  track(TRACK.home.footer.contactInfoClick, {
+                    item_id: item.id,
+                  })
                 }
                 className="flex items-center self-center gap-[10px] font-light data text-white"
               >

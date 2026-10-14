@@ -103,9 +103,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
               {/* Botón cerrar */}
               <button
                 onClick={() => {
-                  track(TRACK.home.popup.clickAndXperience.close, {
-                    method: "button",
-                  });
+                  track(TRACK.home.popup.clickAndXperience.close);
                   onClose();
                 }}
                 className="absolute z-10 top-[23px] right-[24px] flex items-center justify-center size-[36px] rounded-full bg-cream hover:opacity-90 hover:cursor-pointer"

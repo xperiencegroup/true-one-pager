@@ -209,7 +209,7 @@ export default function Navbar() {
           <button
             onClick={() => {
               track(TRACK.home.menu.toggle, {
-                state: isNavbarOpen ? "close" : "open",
+                item_id: isNavbarOpen ? "close" : "open",
               });
               setIsNavbarOpen(!isNavbarOpen);
             }}
