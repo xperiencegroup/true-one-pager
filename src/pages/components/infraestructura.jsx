@@ -1,6 +1,6 @@
 import infraBanner from "../../assets/images/infra-banner.jpg";
-import mapaInfra from "../../assets/images/mapa-infraestructura.jpg";
-import mapaInfraVertical from "../../assets/images/mapa-infraestructura-vertical.jpg";
+import mapaInfra from "../../assets/images/mapa-infraestructura-v2.jpg";
+import mapaInfraVertical from "../../assets/images/mapa-infraestructura-vertical-v2.jpg";
 import cuadroNaranjaIcon from "../../assets/icons/cuadro-naranja.svg";
 import almacenNaranjaIcon from "../../assets/icons/almacen-naranja.svg";
 
