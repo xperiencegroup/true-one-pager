@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import mapaUbicacion from "../../assets/images/ubicacion-mapa.jpg";
-import mapaTags from "../../assets/images/ubicacion-mapa-tags.svg";
+import mapaUbicacion from "../../assets/images/ubicacion-mapa-v2.jpg";
+import mapaTags from "../../assets/images/ubicacion-mapa-tags-v2.svg";
 
 // Reemplaza con tus iconos reales
 import accesoIcon from "../../assets/icons/ubicacion-icons/acceso.svg";
