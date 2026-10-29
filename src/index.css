@@ -84,6 +84,9 @@ html {
 .display {
   @apply text-[36px] md:text-[47px] lg:text-[55px] leading-[110%];
 }
+.headline {
+  @apply text-[26px] md:text-[34px] lg:text-[40px] leading-[115%];
+}
 .heading {
   @apply text-[20px] md:text-[26px] lg:text-[30px] leading-[120%];
 }

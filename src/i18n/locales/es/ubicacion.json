@@ -1,16 +1,21 @@
 {
   "title1": "Ubicación de alto valor",
+  "title2": "Sobre el corredor que conecta México con Norteamérica.",
   "subtitle1": "Sobre el corredor que conecta",
   "subtitle2": "México con Norteamérica.",
-  "description1": "True Ciénega Industrial Park está frente a la Autopista Monterrey–Nuevo Laredo (Carretera 85), la arteria logística más importante del norte del país.",
+  "description1": "<strong>True Ciénega Industrial Park</strong> está frente a la Autopista Monterrey - Nuevo Laredo (Carretera 85), la principal ruta de carga terrestre entre México y Estados Unidos, con conexión inmediata a la autopista y conexión rápida a la Carretera a Colombia y al Periférico de Monterrey.",
   "description2": "Desde aquí, tu operación conecta con el Aeropuerto Internacional de Monterrey, el Interpuerto, el Puente Colombia y la frontera de Laredo —la puerta comercial más activa entre México y Estados Unidos.",
   "description3": "Y hay una ventaja que pocas ubicaciones ofrecen: todas las rutas hacia el norte —Interpuerto, Colombia, Laredo— arrancan sobre la misma autopista que pasa frente al parque. Tus tráileres no cruzan la ciudad; salen directo al corredor.",
   "item1": {
-    "title": "Acceso a la autopista",
-    "text": "Frente a la Autopista Monterrey-Nuevo Laredo, con acceso secundario por Av. Raúl Hinojosa Martínez."
+    "title": "FRENTE CON ACCESO DIRECTO A LA AUTOPISTA",
+    "text": "Frente a la Autopista Monterrey - Nuevo Laredo."
   },
   "item2": {
-    "title": "Corredor logístico",
-    "text": "Monterrey-Nuevo Laredo, principal ruta de carga terrestre hacia Estados Unidos."
+    "title": "ACCESO SECUNDARIO",
+    "text": "Acceso secundario por Av. Raúl Hinojosa Martínez."
+  },
+  "item3": {
+    "title": "DIRECCIÓN",
+    "text": "KM 1009, Autopista México - Nuevo Laredo, Ciénega de Flores, N.L. · Ver en Google Maps"
   }
 }
