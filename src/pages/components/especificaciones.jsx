@@ -63,7 +63,7 @@ export default function Especificaciones() {
 
   return (
     <section id="propuesta-de-valor" className="flex flex-col h-fit">
-      <div className="relative flex min-h-[50svh] flex-col justify-center items-center w-full px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
+      <div className="relative flex min-h-svh flex-col justify-center items-center w-full px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
         {/* Imagen de fondo */}
         <div className="absolute -z-10 inset-0 w-full h-full">
           <div className="relative w-full h-full">
@@ -95,7 +95,7 @@ export default function Especificaciones() {
         </div>
       </div>
 
-      <div className="relative h-svh sm:h-[50svh] shrink-0 w-full justify-center items-center overflow-hidden">
+      <div className="relative h-svh shrink-0 w-full justify-center items-center overflow-hidden">
         <GalleryCarrousel images={images} />
       </div>
     </section>
