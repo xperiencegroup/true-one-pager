@@ -50,7 +50,7 @@ export default function Eligenos() {
               {t("headline2")}
             </h3>
 
-            <h4 className="subtitle text-orange font-abhaya uppercase">
+            <h4 className="subtitle text-orange font-akzidenz font-bold uppercase">
               {t("subhead1")} <br /> {t("subhead2")}
             </h4>
 
@@ -59,14 +59,18 @@ export default function Eligenos() {
               <div className="divider-orange" />
             </div>
 
-            <p className="paragraph">
+            <p className="paragraph whitespace-pre-line">
               {t("p1")}
               <br />
               <br />
               {t("p2")}
               <br />
               <br />
-              {t("p3")}
+              <Trans
+                t={t}
+                i18nKey="p3"
+                components={{ strong: <strong className="font-bold" /> }}
+              />
             </p>
           </div>
 
@@ -77,14 +81,8 @@ export default function Eligenos() {
           >
             {/* Title */}
             <div className="flex flex-col gap-[14px]">
-              <h3 className="w-full subtitle font-abhaya uppercase">
-                {t("flex.title")}
-              </h3>
-
-              <p className="font-abhaya subtitle uppercase text-white">
+              <p className="font-abhaya heading uppercase text-white">
                 {t("flex.description1")}
-                <br />
-                {t("flex.description2")}
               </p>
             </div>
 
@@ -95,12 +93,7 @@ export default function Eligenos() {
                     key={index}
                     className="flex flex-row sm:flex-col w-full max-w-[346px] h-fit sm:h-[152px] sm:justify-center items-center p-[20px] gap-[15px] border-2 rounded-[17px] border-orange bg-white/10 backdrop-blur-sm"
                   >
-                    <img
-                      src={razon.icon}
-                      alt="Ícono correspondiente"
-                      className="h-[25px] sm:h-[40px]"
-                    />
-                    <h4 className="max-w-[318px] paragraph-bold sm:text-center font-bold">
+                    <h4 className="w-full paragraph-bold font-bold whitespace-pre-line">
                       {t(`flex.${razon.key}`)}
                     </h4>
                   </div>
@@ -108,14 +101,14 @@ export default function Eligenos() {
               })}
             </div>
 
-            <div className="flex w-full flex-col lg:flex-row justify-between items-center pt-[5px] gap-[20px]">
+            <div className="flex w-full flex-col lg:flex-row justify-start items-center pt-[5px] gap-[44px]">
               {/* Botones */}
               <a
                 href="#naves"
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "naves" })
                 }
-                className="w-full max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange"
+                className="w-fit boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
               >
                 <Trans
                   i18nKey="cta.building"
@@ -131,9 +124,19 @@ export default function Eligenos() {
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "macrolotes" })
                 }
-                className="w-full max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
+                className="w-fit max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange"
               >
                 {tHero("cta.land")}
+              </a>
+
+              <a
+                href="#"
+                onClick={() =>
+                  track(TRACK.home.eligenos.cta, { target: "maqueta" })
+                }
+                className="w-fit max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
+              >
+                {tHero("cta.explore")}
               </a>
             </div>
           </div>

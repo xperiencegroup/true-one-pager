@@ -3,15 +3,13 @@
   "headline2": "ESTÁS ELIGIENDO CÓMO VAS A OPERAR.",
   "subhead1": "ELIGE UNA VEZ.",
   "subhead2": "OPERA TRANQUILO POR DÉCADAS.",
-  "p1": "Elegir espacio industrial no es comprar metros cuadrados; es decidir dónde va a operar tu empresa los próximos diez o veinte años.",
-  "p2": "Esa decisión merece certeza: energía disponible desde el primer día, agua garantizada, accesos que funcionan, vialidades pensadas para tráileres, y un administrador que responde cuando lo necesitas.",
-  "p3": "True Ciénega se diseña alrededor de tu operación: cómo entran tus camiones, cómo trabaja tu gente, cómo creces cuando llega el momento.",
+  "p1": "Elegir espacio industrial no es comprar metros cuadrados;\n es decidir dónde va a operar tu empresa los próximos diez o veinte años.",
+  "p2": "Esa decisión merece certeza: energía disponible desde el primer día,\n agua garantizada, accesos que funcionan, vialidades pensadas para tráileres,\n y un administrador que responde cuando lo necesitas.",
+  "p3": "<strong>True Ciénega Industrial Park</strong> se diseña alrededor de tu operación:\n cómo entran tus camiones, cómo trabaja tu gente, cómo creces cuando llega el momento.",
   "flex": {
-    "title": "FLEXIBILIDAD REAL",
-    "description1": "Aquí no vienes a adaptarte al parque industrial",
-    "description2": "el parque industrial se adapta a ti.",
-    "item1": "Tamaños flexibles de naves y macrolotes",
-    "item2": "A la medida de tus necesidades",
-    "item3": "Opción de comprar o rentar"
+    "description1": "Aquí no te adaptas al parque. El parque se adapta a ti.",
+    "item1": "8 configuraciones de\n Naves a la Medida.\n 8 configuraciones de Macrolotes.",
+    "item2": "Expansión dentro del parque",
+    "item3": "Compra o renta"
   }
 }
