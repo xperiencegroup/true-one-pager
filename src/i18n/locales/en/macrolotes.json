@@ -1,25 +1,24 @@
 {
-  "title1": "INDUSTRIAL LAND PARCELS",
+  "title1": "INDUSTRIAL SITES",
   "title2": "FOR SALE OR LEASE",
-  "intro": "For companies that want their own land and want to build at their own pace.",
-  "description": "Fully serviced land parcels from 30,000 m² (3 hectares / 7.4 acres) up to 150,000 m² (15 hectares / 37 acres), with power, water, gas, telecommunications, storm drainage and industrial roadways already in place.",
-  "description2": "Buying here turns an operating expense into equity. Your operation stays where you decide, and your property appreciates along with the most dynamic corridor in northeastern Mexico.",
-  "headline": "BUY YOUR LAND. BUILD YOUR FUTURE.",
+  "intro": "For companies that want their own land and to build at their own pace.",
+  "description": "Developed industrial sites from 31,365 m² (3 hectares) to 150,538 m² (15 hectares),\nwith electrical power, water and natural gas infrastructure, \nfiber-optic readiness (voice and data) and completed exterior access roads.",
+  "description2": "<strong>8</strong> Industrial Site configurations: the <strong>4</strong> small Industrial Sites are the minimum unit of sale\n and can be combined to create larger areas;\n the medium Industrial Sites and the large one can be subdivided.\n\nBuying here turns an operating expense into equity:\n your operation stays where you decide, and the property appreciates along with the corridor.",
   "feature1": {
     "title": "CONTROL OF YOUR TIMELINE",
-    "text": "You build at your own pace."
+    "text": "You build at your own pace; if you prefer, we build for you."
   },
   "feature2": {
     "title": "ASSET CERTAINTY",
-    "text": "Titled property inside a professionally managed park."
+    "text": "Titled property within a\n professionally managed park."
   },
   "feature3": {
     "title": "VALUE PROTECTION",
-    "text": "An industrial asset in a corridor with sustained demand and institutional supply."
+    "text": "An industrial asset on a corridor with sustained\n demand and institutional-grade developments."
   },
   "feature4": {
     "title": "REAL SCALABILITY",
-    "text": "From three hectares up to the entire park."
+    "text": "From 3 hectares up to the entire park (15 ha)."
   },
   "inventory": {
     "title": "INVENTORY PORTFOLIO",
@@ -44,6 +43,87 @@
       "sqft": "337,614 - 401,974 sq ft",
       "sqm": "31,365 - 37,344 m²"
     }
+  },
+  "sizes": {
+    "title": "AVAILABLE SIZES",
+    "headers": {
+      "config": "Configuration",
+      "m": "INDUSTRIAL SITE M²",
+      "ft": "INDUSTRIAL SITE FT²",
+      "buildable": "BUILDABLE AREA"
+    },
+    "rows": [
+      {
+        "name": "Small Industrial Site 1",
+        "m": "37,345 m²",
+        "ft": "401,975 ft²",
+        "buildable": "210,265 ft² / 19,534 m²"
+      },
+      {
+        "name": "Small Industrial Site 2",
+        "m": "31,365 m²",
+        "ft": "337,615 ft²",
+        "buildable": "196,068 ft² / 18,215 m²"
+      },
+      {
+        "name": "Small Industrial Site 3",
+        "m": "31,635 m²",
+        "ft": "340,517 ft²",
+        "buildable": "200,493 ft² / 18,626 m²"
+      },
+      {
+        "name": "Small Industrial Site 4",
+        "m": "35,257 m²",
+        "ft": "379,505 ft²",
+        "buildable": "213,657 ft² / 19,849 m²"
+      },
+      {
+        "name": "Medium Industrial Site 1",
+        "m": "63,000 m²",
+        "ft": "678,131 ft²",
+        "buildable": "329,770 ft² / 30,637 m²"
+      },
+      {
+        "name": "Medium Industrial Site 2",
+        "m": "66,892 m²",
+        "ft": "720,022 ft²",
+        "buildable": "329,770 ft² / 30,637 m²"
+      },
+      {
+        "name": "Large Industrial Site",
+        "m": "98,258 m²",
+        "ft": "1,057,637 ft²",
+        "buildable": "528,680 ft² / 49,116 m²"
+      },
+      {
+        "name": "Entire-Park Industrial Site",
+        "m": "150,538 m²",
+        "ft": "1,620,378 ft²",
+        "buildable": "779,163 ft² / 72,387 m²"
+      }
+    ],
+    "note": "Land area. Buildable area based on the prototype already designed for each industrial site\n(46% to 59% site coverage). Industrial land-use zoning."
+  },
+  "delivered": {
+    "title": "WHAT'S DELIVERED WITH YOUR INDUSTRIAL SITE",
+    "items": [
+      {
+        "label": "INFRASTRUCTURE",
+        "value": "Electrical power, water and natural gas."
+      },
+      {
+        "label": "ROADS",
+        "value": "Exterior access roads."
+      },
+      {
+        "label": "FIBER OPTICS",
+        "value": "Ready for voice and data."
+      },
+      {
+        "label": "STREET LIGHTING",
+        "value": "On roads and access points."
+      }
+    ]
   },
   "cta": "Explore the available Industrial Land Parcels"
 }

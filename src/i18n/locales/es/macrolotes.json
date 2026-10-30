@@ -2,24 +2,23 @@
   "title1": "MACROLOTES INDUSTRIALES",
   "title2": "EN VENTA O RENTA",
   "intro": "Para quien quiere su propio terreno y construir a su ritmo.",
-  "description": "Macrolotes urbanizados desde 30,000 m² (3 hectáreas) hasta 150,000 m² (15 hectáreas), con energía, agua, gas, telecomunicaciones, drenaje pluvial y vialidades industriales ya resueltas.",
-  "description2": "Comprar aquí es convertir un gasto operativo en patrimonio. Tu operación permanece donde tú decides y tu inmueble se aprecia con el corredor más dinámico del noreste.",
-  "headline": "COMPRA TU TERRENO. CONSTRUYE TU FUTURO.",
+  "description": "Macrolotes urbanizados desde 31,365 m² (3 hectáreas) hasta 150,538 m² (15 hectáreas),\n con infraestructura de energía eléctrica, agua, gas natural,\n preparación para fibra óptica (voz y datos) y vialidades exteriores de acceso resueltas.",
+  "description2": "<strong>8</strong> configuraciones de Macrolotes: los <strong>4</strong> Macrolotes chicos son la unidad mínima de venta y se pueden fusionar para formar superficies mayores; los Macrolotes medianos y el grande se pueden subdividir. \n\nComprar aquí convierte un gasto operativo en patrimonio:\n tu operación se queda donde tú decides y el inmueble se aprecia con el corredor.",
   "feature1": {
     "title": "CONTROL DE TUS TIEMPOS",
-    "text": "Construyes a tu ritmo."
+    "text": "Construyes a tu ritmo; si lo prefieres, nosotros construimos."
   },
   "feature2": {
     "title": "CERTIDUMBRE PATRIMONIAL",
-    "text": "Propiedad titulada dentro de un parque profesionalmente administrado."
+    "text": "Propiedad titulada dentro de un parque\n profesionalmente administrado."
   },
   "feature3": {
     "title": "PROTECCIÓN DE VALOR",
-    "text": "Activo industrial en un corredor con demanda sostenida y oferta institucional."
+    "text": "Activo industrial en un corredor con demanda\n sostenida y desarrollos de grado institucional."
   },
   "feature4": {
     "title": "ESCALABILIDAD REAL",
-    "text": "Desde tres hectáreas hasta el parque completo."
+    "text": "Desde 3 hectáreas hasta el parque completo (15 ha)."
   },
   "inventory": {
     "title": "TAMAÑOS DISPONIBLES",
@@ -44,6 +43,87 @@
       "sqft": "337,614 - 401,974 ft²",
       "sqm": "31,365 - 37,344 m²"
     }
+  },
+  "sizes": {
+    "title": "TAMAÑOS DISPONIBLES",
+    "headers": {
+      "config": "Configuración",
+      "m": "LOTE M²",
+      "ft": "LOTE FT²",
+      "buildable": "NAVE DESARROLLABLE"
+    },
+    "rows": [
+      {
+        "name": "Macrolote chico 1",
+        "m": "37,345 m²",
+        "ft": "401,975 ft²",
+        "buildable": "210,265 ft² / 19,534 m²"
+      },
+      {
+        "name": "Macrolote chico 2",
+        "m": "31,365 m²",
+        "ft": "337,615 ft²",
+        "buildable": "196,068 ft² / 18,215 m²"
+      },
+      {
+        "name": "Macrolote chico 3",
+        "m": "31,635 m²",
+        "ft": "340,517 ft²",
+        "buildable": "200,493 ft² / 18,626 m²"
+      },
+      {
+        "name": "Macrolote chico 4",
+        "m": "35,257 m²",
+        "ft": "379,505 ft²",
+        "buildable": "213,657 ft² / 19,849 m²"
+      },
+      {
+        "name": "Macrolote mediano 1",
+        "m": "63,000 m²",
+        "ft": "678,131 ft²",
+        "buildable": "329,770 ft² / 30,637 m²"
+      },
+      {
+        "name": "Macrolote mediano 2",
+        "m": "66,892 m²",
+        "ft": "720,022 ft²",
+        "buildable": "329,770 ft² / 30,637 m²"
+      },
+      {
+        "name": "Macrolote grande",
+        "m": "98,258 m²",
+        "ft": "1,057,637 ft²",
+        "buildable": "528,680 ft² / 49,116 m²"
+      },
+      {
+        "name": "Macrolote parque completo",
+        "m": "150,538 m²",
+        "ft": "1,620,378 ft²",
+        "buildable": "779,163 ft² / 72,387 m²"
+      }
+    ],
+    "note": "Superficie de terreno. Nave desarrollable según el prototipo ya diseñado sobre cada macrolote\n(cobertura de 46 % a 59 %). Uso de suelo industrial."
+  },
+  "delivered": {
+    "title": "LO QUE SE ENTREGA CON TU MACROLOTE",
+    "items": [
+      {
+        "label": "INFRAESTRUCTURA",
+        "value": "Energía eléctrica, agua y gas natural."
+      },
+      {
+        "label": "VIALIDADES",
+        "value": "Exteriores de acceso."
+      },
+      {
+        "label": "FIBRA ÓPTICA",
+        "value": "Preparación para voz y datos."
+      },
+      {
+        "label": "ALUMBRADO PÚBLICO",
+        "value": "En vialidades y accesos."
+      }
+    ]
   },
   "cta": "Conoce los Macrolotes Industriales disponibles"
 }

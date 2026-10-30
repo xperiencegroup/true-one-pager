@@ -11,7 +11,7 @@ export default function BeneficioMacroloteItem({ beneficio, delay }) {
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`flex flex-row gap-[15px] reveal-left ${isVisible ? "is-visible" : ""}`}
+      className={`flex flex-row items-center gap-[15px] reveal-left ${isVisible ? "is-visible" : ""}`}
     >
       <img
         src={decoration}
@@ -22,7 +22,7 @@ export default function BeneficioMacroloteItem({ beneficio, delay }) {
           {t(`${beneficio.key}.title`)}
         </h3>
 
-        <p className="lg:self-start max-w-[590px] lg:max-w-none paragraph text-left lg:text-left font-light text-white">
+        <p className="lg:self-start max-w-[590px] lg:max-w-none paragraph text-left lg:text-left font-light text-white whitespace-pre-line">
           {t(`${beneficio.key}.text`)}
         </p>
       </div>
