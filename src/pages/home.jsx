@@ -19,6 +19,7 @@ import Preguntas from "./components/preguntas";
 import Ubicacion from "./components/ubicacion";
 import Distancias from "./components/distancias";
 import WhatsappButton from "../components/floating-buttons/whatsapp-button";
+import ClickAndXperienceButton from "../components/floating-buttons/click-and-xperience-button";
 
 export default function Home() {
   const { lang } = useParams();
@@ -37,8 +38,9 @@ export default function Home() {
 
   return (
     <main className="relative flex flex-col w-full">
-      {/* botón whatsapp */}
+      {/* botones flotantes */}
       <WhatsappButton />
+      <ClickAndXperienceButton />
       <Toaster />
 
       <Hero />

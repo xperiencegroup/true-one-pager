@@ -23,6 +23,10 @@ export const TRACK = {
       float: `${PROJECT}:whatsapp:float:click`,
     },
 
+    clickAndXperience: {
+      float: `${PROJECT}:clickAndXperience:float:click`,
+    },
+
     popup: {
       registro: {
         open: `${PROJECT}:popup:registro:open`,

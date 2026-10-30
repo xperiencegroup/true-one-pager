@@ -11,7 +11,7 @@ export default function WhatsappButton() {
         target="_blank"
         rel="noopener noreferer"
         onClick={() => track(TRACK.home.whatsapp.float)}
-        className="flex size-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
+        className="flex w-[68px] h-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
       >
         <img
           src={whatsappIcon}
