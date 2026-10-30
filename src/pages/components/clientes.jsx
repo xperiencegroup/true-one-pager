@@ -56,8 +56,6 @@ export default function Clientes() {
         >
           <h3 className="font-abhaya title text-white uppercase text-center">
             {t("own1")}
-            <br />
-            {t("own2")}
           </h3>
         </div>
 
@@ -82,8 +80,6 @@ export default function Clientes() {
         >
           <h3 className="font-abhaya title text-white uppercase text-center">
             {t("thirdparty1")}
-            <br />
-            {t("thirdparty2")}
           </h3>
         </div>
 
