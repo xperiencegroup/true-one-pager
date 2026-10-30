@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useInView } from "../../hooks/useInView";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
 
@@ -11,6 +11,7 @@ const preguntasData = [
   { id: "rentar-comprar", n: 4 },
   { id: "administracion", n: 5 },
   { id: "moneda", n: 6 },
+  { id: "disponibilidad", n: 7 },
 ];
 
 export default function Preguntas() {
@@ -89,7 +90,13 @@ export default function Preguntas() {
                 >
                   <div className="overflow-hidden">
                     <p className="paragraph leading-[120%] font-extralight whitespace-pre-line text-white">
-                      {t(`a${item.n}`)}
+                      <Trans
+                        t={t}
+                        i18nKey={`a${item.n}`}
+                        components={{
+                          strong: <strong className="font-bold" />,
+                        }}
+                      />
                     </p>
                   </div>
                 </div>
