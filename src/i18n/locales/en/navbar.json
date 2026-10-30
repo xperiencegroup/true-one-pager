@@ -1,10 +1,9 @@
 {
-  "value": "Value Proposition",
-  "products": "Buildings & Land Parcels",
+  "park": "Industrial Park",
   "location": "Location",
-  "why": "Why True Ciénega?",
-  "developer": "True Developments",
-  "contact": "Contact",
-  "menu": "Menu",
-  "about": "About"
+  "buildings": "Buildings & Industrial Sites",
+  "infraestructure": "Infrastructure",
+  "true-developments": "True Developments",
+  "digital-model": "Digital Model",
+  "contact": "Contact"
 }

@@ -1,10 +1,9 @@
 {
-  "value": "Propuesta de Valor",
-  "products": "Naves y Macrolotes",
+  "park": "Parque Industrial",
   "location": "Ubicación",
-  "why": "¿Por qué True Ciénega?",
-  "developer": "True Developments",
-  "contact": "Contacto",
-  "menu": "Menú",
-  "about": "Nosotros"
+  "buildings": "Naves y Macrolotes",
+  "infraestructure": "Infraestructura",
+  "true-developments": "True Developments",
+  "digital-model": "Maqueta Digital",
+  "contact": "Contacto"
 }
