@@ -1,0 +1,45 @@
+{
+  "title": "Distances from the park",
+  "items": [
+    {
+      "distance": "6.7 km",
+      "place": "Del Norte Airport",
+      "route": "\nvia Highway 85D"
+    },
+    {
+      "distance": "19.5 km",
+      "place": "Interpuerto Monterrey",
+      "route": "\nvia 85D and NL 40"
+    },
+    {
+      "distance": "27.6 km",
+      "place": "Monterrey International Airport",
+      "route": "via NL 100"
+    },
+    {
+      "distance": "30.5 km",
+      "place": "Downtown Monterrey",
+      "route": "\nvia Highway 85"
+    },
+    {
+      "distance": "36.4 km",
+      "place": "San Pedro Garza García",
+      "route": "\nvia Highway 85"
+    },
+    {
+      "distance": "201 km",
+      "place": "Laredo, Texas",
+      "route": "\nvia Highway 85D"
+    },
+    {
+      "distance": "228 km",
+      "place": "Colombia Bridge",
+      "route": "\nvia 85D and La Gloria Rd."
+    },
+    {
+      "distance": "253 km",
+      "place": "McAllen, Texas",
+      "route": "\nvia Highway 40D"
+    }
+  ]
+}

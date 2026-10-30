@@ -22,6 +22,7 @@ import esFooter from "./locales/es/footer.json";
 import esModalRegistro from "./locales/es/modal-registro.json";
 import esModalPlataforma from "./locales/es/modal-plataforma.json";
 import esUbicacion from "./locales/es/ubicacion.json";
+import esDistancias from "./locales/es/distancias.json";
 
 // EN
 import enMeta from "./locales/en/meta.json";
@@ -43,6 +44,7 @@ import enFooter from "./locales/en/footer.json";
 import enModalRegistro from "./locales/en/modal-registro.json";
 import enModalPlataforma from "./locales/en/modal-plataforma.json";
 import enUbicacion from "./locales/en/ubicacion.json";
+import enDistancias from "./locales/en/distancias.json";
 
 i18n
   .use(LanguageDetector)
@@ -54,6 +56,7 @@ i18n
         hero: esHero,
         nav: esNav,
         especificaciones: esEspecificaciones,
+        distancias: esDistancias,
         eligenos: esEligenos,
         plataforma: esPlataforma,
         modelos: esModelos,
@@ -76,6 +79,7 @@ i18n
         nav: enNav,
         especificaciones: enEspecificaciones,
         eligenos: enEligenos,
+        distancias: enDistancias,
         plataforma: enPlataforma,
         modelos: enModelos,
         naves: enNaves,

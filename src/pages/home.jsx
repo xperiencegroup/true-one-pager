@@ -20,6 +20,7 @@ import Naves from "./components/naves";
 import Preguntas from "./components/preguntas";
 import whatsappIcon from "../assets/icons/social/whatsapp.svg";
 import Ubicacion from "./components/ubicacion";
+import Distancias from "./components/distancias";
 
 export default function Home() {
   const { lang } = useParams();
@@ -60,6 +61,7 @@ export default function Home() {
       <Especificaciones />
       <Eligenos />
       <Ubicacion />
+      <Distancias />
       <Modelos />
       <Naves />
       <Macrolotes />

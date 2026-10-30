@@ -1,0 +1,45 @@
+{
+  "title": "Distancias desde el parque",
+  "items": [
+    {
+      "distance": "6.7 km",
+      "place": "Aeropuerto del Norte",
+      "route": "\npor Autopista 85D"
+    },
+    {
+      "distance": "19.5 km",
+      "place": "Interpuerto Monterrey",
+      "route": "\npor 85D y NL 40"
+    },
+    {
+      "distance": "27.6 km",
+      "place": "Aeropuerto Internacional de Monterrey",
+      "route": "por NL 100"
+    },
+    {
+      "distance": "30.5 km",
+      "place": "Centro de Monterrey",
+      "route": "\npor Carretera 85"
+    },
+    {
+      "distance": "36.4 km",
+      "place": "San Pedro Garza García",
+      "route": "\npor Carretera 85"
+    },
+    {
+      "distance": "201 km",
+      "place": "Laredo, Texas",
+      "route": "\npor Autopista 85D"
+    },
+    {
+      "distance": "228 km",
+      "place": "Puente Colombia",
+      "route": "\npor 85D y Carr. La Gloria"
+    },
+    {
+      "distance": "253 km",
+      "place": "McAllen, Texas",
+      "route": "\npor Autopista 40D"
+    }
+  ]
+}
