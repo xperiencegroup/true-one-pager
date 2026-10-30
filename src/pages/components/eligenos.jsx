@@ -38,7 +38,7 @@ export default function Eligenos() {
         <div className="absolute z-0 w-full h-full bg-blue-overlay/89" />
 
         {/*  Content */}
-        <div className="relative flex flex-col w-full items-center justify-center max-w-[1240px] h-full py-[50px] sm:py-[60px] px-[44px] sm:px-[70px] gap-[8px] sm:gap-[20px] lg:gap-[20px] xl:gap-[20px]">
+        <div className="relative flex flex-col w-full items-center justify-center max-w-[1240px] h-full py-[50px] sm:py-[60px] px-[20px] sm:px-[44px] sm:px-[70px] gap-[8px] sm:gap-[20px] lg:gap-[20px] xl:gap-[20px]">
           {/* Left panel */}
           <div
             ref={leftPanel}

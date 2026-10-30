@@ -11,7 +11,7 @@ export default function EspecificacionCard({ especificacion, index }) {
       ref={ref}
       key={index}
       style={{ transitionDelay: isVisible ? `${index * 250}ms` : "0ms" }}
-      className={`flex flex-col w-full max-w-[315px] h-[270px] lg:w-[275px] lg:h-[541px] py-[20px] lg:py-[50px] px-[6px] sm:px-[24px] bg-dark-brown border-2 border-orange rounded-[20px] reveal-scale ${isVisible ? "is-visible" : ""}`}
+      className={`flex flex-col w-full max-w-[315px] h-[320px] lg:w-[275px] lg:h-[541px] py-[20px] lg:py-[50px] px-[6px] sm:px-[24px] bg-dark-brown border-2 border-orange rounded-[20px] reveal-scale ${isVisible ? "is-visible" : ""}`}
     >
       <div className="flex flex-col w-full h-full justify-center items-center gap-[8px] lg:gap-[30px]">
         {/* Icon */}

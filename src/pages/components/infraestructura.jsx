@@ -34,7 +34,7 @@ export default function Infraestructura() {
       {/* Content */}
       <div
         id="infraestructure"
-        className="flex flex-col w-full min-h-svh justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-blue-overlay"
+        className="flex flex-col w-full min-h-svh justify-center items-center px-[20px] sm:px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-blue-overlay"
       >
         <div className="flex flex-1 flex-col w-full max-w-[1100px] justify-start pt-[50px] pb-[30px] sm:pt-[60px] gap-[30px]">
           {/* texts */}
@@ -91,7 +91,7 @@ export default function Infraestructura() {
       {/* Flexibilidad y calidad */}
       <div className="relative flex flex-col items-center w-full bg-blue-overlay">
         {/* cuadros */}
-        <div className="flex flex-1 w-full max-w-[1280px] min-h-svh justify-center items-center py-[20px] px-[44px] sm:px-[60px]">
+        <div className="flex flex-1 w-full max-w-[1280px] min-h-svh justify-center items-center py-[20px] px-[20px] sm:px-[44px] md:px-[60px]">
           <div className="w-full flex flex-col lg:flex-row justify-center gap-[22px]">
             {/* cuadro izquierdo */}
             <div

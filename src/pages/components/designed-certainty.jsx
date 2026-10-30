@@ -15,7 +15,7 @@ export default function DesignedForCertainty() {
       id="true-developments"
       className="flex flex-col w-full justify-center items-center  bg-blue-overlay"
     >
-      <div className="flex flex-col w-full min-h-svh justify-center max-lg:items-center max-w-[1280px] px-[44px] sm:px-[90px] py-[60px] gap-[20px] md:gap-[50px]">
+      <div className="flex flex-col w-full min-h-svh justify-center max-lg:items-center max-w-[1280px] px-[20px] sm:px-[44px] sm:px-[90px] py-[60px] gap-[20px] md:gap-[50px]">
         {/* 2 columnas */}
         <div className="flex flex-col lg:flex-row justify-center items-center h-full lg:max-h-[400px] gap-[40px] lg:gap-[35px]">
           {/* Columna izquierda */}

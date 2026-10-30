@@ -22,7 +22,7 @@ export default function Documentamos() {
       {/* banner */}
       <div
         id="true-cienega"
-        className="flex flex-col w-full min-h-[100svh] justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-black"
+        className="flex flex-col w-full min-h-[100svh] justify-center items-center px-[20px] sm:px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-black"
       >
         {/* Header */}
         <div

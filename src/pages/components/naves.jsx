@@ -44,7 +44,7 @@ export default function Naves() {
         className="flex flex-col justify-center items-center w-full bg-blue-overlay"
       >
         {/* first text block */}
-        <div className="relative flex flex-col w-full max-w-[1280px] px-[44px] pt-[50px] pb-[30px] sm:px-[90px] sm:pt-[60px] gap-[20px] sm:gap-[51px]">
+        <div className="relative flex flex-col w-full max-w-[1280px] px-[20px] sm:px-[44px] pt-[50px] pb-[30px] sm:px-[90px] sm:pt-[60px] gap-[20px] sm:gap-[51px]">
           {/* Parte superior */}
           <div className="flex flex-col min-h-[50svh] justify-centergap-[50px]">
             {/* Texto Naves Built to suit */}
@@ -157,7 +157,7 @@ export default function Naves() {
         </div>
 
         {/* razones */}
-        <div className="flex flex-col w-full max-w-[1280px] min-h-[50svh] px-[44px] pt-[50px] pb-[30px] sm:px-[90px] sm:pt-[60px] gap-[40px]">
+        <div className="flex flex-col w-full max-w-[1280px] min-h-[50svh] px-[20px] sm:px-[44px] pt-[50px] pb-[30px] sm:px-[90px] sm:pt-[60px] gap-[40px]">
           <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center gap-[50px]">
             {/* Razones */}
             <div className="grid max-[440px]:grid-cols-1 grid-cols-2 gap-x-[60px] gap-y-[30px]">

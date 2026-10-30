@@ -49,7 +49,7 @@ export default function Clientes() {
   return (
     <div className="flex flex-col w-full">
       {/* Sección 1: Desarrollos propios */}
-      <div className="flex flex-col items-center justify-center w-full min-h-[50svh] px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-brown">
+      <div className="flex flex-col items-center justify-center w-full min-h-[50svh] px-[20px] sm:px-[44px] md:px-[90px] py-[60px] gap-[20px] bg-brown">
         <div
           ref={headerRef1}
           className={`flex flex-col items-center gap-[20px] w-full max-w-[1100px] reveal ${isHeaderVisible1 ? "is-visible" : ""}`}
@@ -73,7 +73,7 @@ export default function Clientes() {
       </div>
 
       {/* Sección 2: Construcción para terceros */}
-      <div className="flex flex-col items-center justify-center w-full min-h-[50svh] px-[44px] sm:px-[90px] py-[60px] gap-[20px] bg-orange">
+      <div className="flex flex-col items-center justify-center w-full min-h-[50svh] px-[20px] sm:px-[44px] md:px-[90px] py-[60px] gap-[20px] bg-orange">
         <div
           ref={headerRef2}
           className={`flex flex-col items-center gap-[20px] w-full max-w-[1100px] reveal ${isHeaderVisible2 ? "is-visible" : ""}`}

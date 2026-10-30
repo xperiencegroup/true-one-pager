@@ -63,7 +63,7 @@ export default function Especificaciones() {
 
   return (
     <section id="industrial-park" className="flex flex-col h-fit">
-      <div className="relative flex min-h-svh flex-col justify-center items-center w-full px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
+      <div className="relative flex min-h-svh flex-col justify-center items-center w-full px-[20px] sm:px-[44px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
         {/* Imagen de fondo */}
         <div className="absolute -z-10 inset-0 w-full h-full">
           <div className="relative w-full h-full">
@@ -82,7 +82,7 @@ export default function Especificaciones() {
           {t("title")}
         </h2>
 
-        <div className="grid grid-cols-2 min-[1170px]:grid-cols-4 gap-[15px] min-[680px]:gap-[20px] xl:gap-[23px]">
+        <div className="grid grid-cols-2 min-[1170px]:grid-cols-4 gap-[8px] min-[680px]:gap-[20px] xl:gap-[23px]">
           {ESPECIFICACIONES.map((especificacion, index) => {
             return (
               <EspecificacionCard

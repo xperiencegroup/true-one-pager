@@ -32,7 +32,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center w-full max-w-[1160px] h-svh min-[660px]:px-[50px] lg:px-[60px] xl:px-0">
         {/* Texto */}
-        <div className="flex flex-col w-full h-full gap-[15px] sm:gap-[90px] px-[44px] min-[660px]:px-[30px] pt-[16vh] pb-[20px] min-[660px]:pt-[25vh]">
+        <div className="flex flex-col w-full h-full gap-[15px] sm:gap-[90px] px-[20px] sm:px-[44px] min-[660px]:px-[30px] pt-[16vh] pb-[20px] min-[660px]:pt-[25vh]">
           <div className="flex flex-col gap-[30px] animate-hero-2">
             {/* Titulo */}
             <h1 className="display grid-cols-subgridtitle font-abhaya uppercase pb-[50px]">
@@ -93,7 +93,7 @@ export default function Hero() {
             <a
               href="#"
               onClick={() => track(TRACK.home.hero.cta, { target: "maqueta" })}
-              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-cream text-blue hover:cursor-pointer"
+              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-cream text-blue hover:cursor-pointer whitespace-nowrap"
             >
               {t("cta.explore")}
             </a>
