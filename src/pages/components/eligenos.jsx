@@ -86,7 +86,7 @@ export default function Eligenos() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-[10px] sm:gap-[30px]">
+            <div className="flex flex-col sm:flex-row w-full justify-between sm:items-center gap-[10px] sm:gap-[30px]">
               {RAZONES.map((razon, index) => {
                 return (
                   <div
@@ -101,14 +101,14 @@ export default function Eligenos() {
               })}
             </div>
 
-            <div className="flex w-full flex-col lg:flex-row justify-start items-center pt-[5px] gap-[44px]">
+            <div className="flex w-full flex-row flex-wrap justify-start md:items-center pt-[5px] gap-[14px] xl:gap-[44px]">
               {/* Botones */}
               <a
                 href="#naves"
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "naves" })
                 }
-                className="w-fit boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
+                className="w-fit boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream whitespace-nowrap"
               >
                 <Trans
                   i18nKey="cta.building"
@@ -124,7 +124,7 @@ export default function Eligenos() {
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "macrolotes" })
                 }
-                className="w-fit max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange"
+                className="w-fit max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange whitespace-nowrap"
               >
                 {tHero("cta.land")}
               </a>
@@ -134,7 +134,7 @@ export default function Eligenos() {
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "maqueta" })
                 }
-                className="w-fit max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
+                className="w-fit max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream whitespace-nowrap"
               >
                 {tHero("cta.explore")}
               </a>

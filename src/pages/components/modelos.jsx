@@ -163,7 +163,7 @@ export default function Modelos() {
         </div>
 
         {/* cta buttons */}
-        <div className="w-full max-w-[1100px] flex w-full flex-col lg:flex-row justify-start items-center pt-[5px] gap-[44px]">
+        <div className="w-full max-w-[1100px] flex w-full flex-wrap flex-row justify-start items-center pt-[5px] gap-[14px] xl:gap-[44px]">
           {/* Botones */}
           <a
             href="#naves"
