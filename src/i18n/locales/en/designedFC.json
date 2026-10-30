@@ -1,12 +1,31 @@
 {
   "trust": "BUILT ON TRUST.",
   "tagline": "DESIGNED FOR CERTAINTY.",
-  "cta": "Visit Website",
-  "p1": "True Developments is a Monterrey-based real estate developer with more than 18 years of experience developing distribution facilities, industrial buildings and industrial parks in Mexico.",
-  "p2": "We design, build and operate reliable industrial spaces, where companies operate with certainty and where people and communities thrive.",
-  "p3": "Our portfolio exceeds 100,000 m² of owned properties leased to companies such as PepsiCo, Vitro, Nemak and Mission Foods, plus more than 200,000 m² built for clients including HEINEKEN México, Caterpillar, Henkel, Polaris and other leading companies.",
+  "cta": "Discover True Developments",
+  "p1": "True Developments is a Monterrey-based real estate developer.",
+  "p2": "Its partners bring a combined <strong>18 years</strong> of experience developing warehouses, industrial buildings and industrial parks in Mexico. We build to hold, not just to sell.",
+  "p3": "We design, build and operate reliable industrial spaces where companies operate with certainty, and people and communities thrive.\n\n Over 200,000 m2 of industrial buildings built for Heineken México, Caterpillar, Henkel and Polaris, among others; 350,000 m2 of developed industrial sites; and a proprietary portfolio of over 100,000 m2 leased to PepsiCo, Vitro, Nemak and Mission Foods.",
   "clients": {
     "own": "CLIENTS IN OUR OWN INDUSTRIAL DEVELOPMENTS",
     "thirdparty": "THIRD-PARTY INDUSTRIAL CONSTRUCTION CLIENTS"
-  }
+  },
+  "stats": [
+    {
+      "value": "200,000 M2",
+      "label": "INDUSTRIAL\nBUILDINGS BUILT"
+    },
+    {
+      "value": "350,000 M2",
+      "label": "DEVELOPED\nINDUSTRIAL SITES"
+    },
+    {
+      "value": "+100,000 M2",
+      "label": "PROPRIETARY ASSET\nPORTFOLIO"
+    },
+    {
+      "value": "18 YEARS",
+      "label": "OF PARTNER\nEXPERIENCE"
+    }
+  ],
+  "team": "Project team: Ware Malcomb (master plan and building design) · MLO Estructural (structural engineering) ·\nOrcotec (landscape architecture)."
 }

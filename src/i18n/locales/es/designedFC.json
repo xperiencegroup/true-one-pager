@@ -1,12 +1,31 @@
-  {
-    "trust": "BUILT ON TRUST.",
-    "tagline": "DESIGNED FOR CERTAINTY.",
-    "cta": "Visitar Sitio Web",
-    "p1": "True Developments es una desarrolladora inmobiliaria de Monterrey con más de 18 años de experiencia desarrollando bodegas, naves y parques industriales en México.",
-    "p2": "Diseñamos, construimos y operamos espacios industriales confiables, donde las empresas operan con certeza y las personas y comunidades prosperan.",
-    "p3": "Nuestro portafolio supera los 100,000 m² de propiedades propias arrendadas a empresas como PepsiCo, Vitro, Nemak y Mission Foods, además de más de 200,000 m² construidos para clientes como HEINEKEN México, Caterpillar, Henkel, Polaris y otras compañías líderes.",
-    "clients": {
-      "own": "CLIENTES EN DESARROLLOS INDUSTRIALES PROPIOS",
-      "thirdparty": "CLIENTES DE CONSTRUCCIÓN INDUSTRIAL PARA TERCEROS"
+{
+  "trust": "BUILT ON TRUST.",
+  "tagline": "DESIGNED FOR CERTAINTY.",
+  "cta": "Conoce True Developments",
+  "p1": "True Developments es una desarrolladora inmobiliaria de Monterrey. ",
+  "p2": "Sus socios suman <strong>18 años</strong> de trayectoria desarrollando bodegas, naves y parques industriales en México. Construimos para conservar, no solo para vender.",
+  "p3": "Diseñamos, construimos y operamos espacios industriales confiables, donde las empresas operan con certeza y las personas y comunidades prosperan.\n\nMás de 200,000 m² de naves industriales construidas para Heineken México, Caterpillar, Henkel y Polaris, entre otros; 350,000 m² de macrolotes y lotes urbanizados; y un portafolio patrimonial propio de más de 100,000 m² arrendado a PepsiCo, Vitro, Nemak y Mission Foods.",
+  "clients": {
+    "own": "CLIENTES EN DESARROLLOS INDUSTRIALES PROPIOS",
+    "thirdparty": "CLIENTES DE CONSTRUCCIÓN INDUSTRIAL PARA TERCEROS"
+  },
+  "stats": [
+    {
+      "value": "200,000 M2",
+      "label": "NAVES INDUSTRIALES\nCONSTRUIDAS"
+    },
+    {
+      "value": "350,000 M2",
+      "label": "MACROLOTES Y\nLOTES URBANIZADOS"
+    },
+    {
+      "value": "+100,000 M2",
+      "label": "PORTAFOLIO\nPATRIMONIAL PROPIO"
+    },
+    {
+      "value": "18 AÑOS",
+      "label": "DE TRAYECTORIA\nDE LOS SOCIOS"
     }
-  }
+  ],
+  "team": "Equipo del proyecto: Ware Malcomb (master plan y diseño de nave) · MLO Estructural (ingeniería estructural) ·\nOrcotec (paisajismo)."
+}
