@@ -16,18 +16,18 @@ export default function Ubicacion() {
   const { t } = useTranslation("ubicacion");
   return (
     <div
-      id="ubicacion"
+      id="location"
       className="flex flex-col lg:flex-row w-full min-h-[150svh] bg-blue-overlay"
     >
       {/* Columna izquierda - contenido */}
       <div className="flex flex-col w-full lg:flex-[3] justify-center items-center px-[44px] sm:px-[70px] lg:pl-[90px] lg:pr-[50px] py-[50px] lg:py-[60px]">
         <div className="flex flex-col w-full max-w-[536px] justify-between h-full gap-[24px] lg:gap-[20px]">
           {/* title */}
-          <h2 className="max-lg:text-center headline font-abhaya uppercase leading-none">
+          <h2 className="headline font-abhaya uppercase leading-none">
             {t("title1")}
           </h2>
 
-          <h3 className="max-lg:text-center heading font-bold font-akzidenz text-orange uppercase leading-none">
+          <h3 className="heading font-bold font-akzidenz text-orange uppercase leading-none">
             {t("title2")}
           </h3>
 

@@ -62,7 +62,7 @@ export default function Especificaciones() {
   const images = isSmUp ? carouselHorizontalImages : carouselVerticalImages;
 
   return (
-    <section id="propuesta-de-valor" className="flex flex-col h-fit">
+    <section id="industrial-park" className="flex flex-col h-fit">
       <div className="relative flex min-h-svh flex-col justify-center items-center w-full px-[30px] lg:px-0 py-[44px] gap-[26px] sm:gap-[20px] bg-brown/80">
         {/* Imagen de fondo */}
         <div className="absolute -z-10 inset-0 w-full h-full">

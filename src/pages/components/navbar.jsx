@@ -3,7 +3,12 @@ import { AnimatePresence, motion } from "motion/react";
 import { useScrollDirection } from "../../hooks/useScrollDirection";
 import { useTranslation } from "react-i18next";
 import { useParams, useNavigate } from "react-router";
+import { useActiveSection } from "../../hooks/useActiveSection";
 
+const sectionIds = [
+  "hero",
+  ...navLinks.map((link) => link.href.replace("#", "")),
+];
 import { navLinks } from "../../const/navigation";
 import { socials, whatsappInfo } from "../../const/socials";
 
@@ -17,11 +22,7 @@ import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
 
-const mobilebuttons = [
-  ...navLinks.slice(0, 5),
-  { id: "nosotros", labelKey: "about", href: "#nosotros" },
-  ...navLinks.slice(5, 6),
-];
+const mobilebuttons = [...navLinks.slice(0, 5), ...navLinks.slice(5, 6)];
 
 const socialButtons = [
   ...socials.slice(0, 2),
@@ -106,6 +107,9 @@ export default function Navbar() {
     });
   }, []);
 
+  // detectar sección
+  const activeSection = useActiveSection(sectionIds);
+
   return (
     <>
       {/* Botón Logo True - fijo, fuera del navbar animado */}
@@ -175,7 +179,9 @@ export default function Navbar() {
                     onClick={() =>
                       track(TRACK.home.menu.item, { item_id: button.id })
                     }
-                    className="flex text-center justify-center items-center h-[43px] px-[10px] py-[11px] lg:px-[16px] lg:pt-[11px] lg:pb-[12px] boton font-medium text-cream"
+                    className={`flex text-center justify-center items-center h-[43px] px-[10px] py-[11px] lg:px-[10px] lg:pt-[11px] lg:pb-[12px] boton-navbar font-medium text-cream transition-colors duration-300 rounded-[30px] ${
+                      button.href === `#${activeSection}` ? "bg-brown" : ""
+                    }`}
                   >
                     {t(button.labelKey)}
                   </a>

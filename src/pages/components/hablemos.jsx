@@ -98,12 +98,12 @@ export default function HablemosDeTuProyecto() {
     window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
   };
   return (
-    <div
-      id="contacto"
-      className="flex flex-col w-full justify-center items-center bg-blue-overlay"
-    >
+    <div className="flex flex-col w-full justify-center items-center bg-blue-overlay">
       {/* medio banner */}
-      <div className="relative w-full h-svh md:h-[50svh] px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]">
+      <div
+        id="digital-model"
+        className="relative w-full h-svh md:h-[50svh] px-[44px] sm:px-[90px] py-[50px] sm:py-[60px]"
+      >
         {/* image y overlay */}
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="relative w-full h-full">
@@ -155,7 +155,10 @@ export default function HablemosDeTuProyecto() {
       </div>
 
       {/* contacto */}
-      <div className="relative flex justify-center w-full px-[44px] sm:px-[90px]">
+      <div
+        id="contact"
+        className="relative flex justify-center w-full px-[44px] sm:px-[90px]"
+      >
         <div className="flex flex-col w-full max-w-[1150px] gap-[15px] py-[60px]">
           {/* Header */}
           <div className="flex w-full max-w-[1100px] min-h-[250px]">

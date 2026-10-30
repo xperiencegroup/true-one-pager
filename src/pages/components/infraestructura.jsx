@@ -31,7 +31,7 @@ export default function Infraestructura() {
     <>
       {/* Content */}
       <div
-        id="ubicacion"
+        id="infraestructure"
         className="flex flex-col w-full min-h-svh justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-blue-overlay"
       >
         <div className="flex flex-1 flex-col w-full max-w-[1100px] justify-start pt-[50px] pb-[30px] sm:pt-[60px] gap-[30px]">
