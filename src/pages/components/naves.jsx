@@ -71,10 +71,10 @@ export default function Naves() {
         </div>
 
         {/* tables */}
-        <div className="flex w-full min-h-svh justify-center items-center px-[90px] py-[60px]">
-          <div className="flex flex-col w-full max-w-[1280px] h-full justify-center items-center gap-[24px] overflow-hidden">
+        <div className="flex w-full min-h-svh justify-center items-center px-[90px] py-[60px] max-md:min-h-0 max-md:px-[40px] max-sm:px-[16px] max-sm:py-[40px]">
+          <div className="flex flex-col w-full max-w-[1280px] h-full justify-center items-center gap-[24px] overflow-hidden max-sm:gap-[16px]">
             {/* primera tabla */}
-            <div className="flex flex-col w-full max-w-[952px] pb-[24px] gap-[24px] border-[1px] rounded-[30px] overflow-hidden border-cream bg-cream/10">
+            <div className="flex flex-col w-full max-w-[952px] pb-[24px] gap-[24px] border-[1px] rounded-[30px] overflow-hidden border-cream bg-cream/10 max-sm:rounded-[20px] max-sm:pb-[16px] max-sm:gap-[16px]">
               <table className="w-full">
                 <thead>
                   <tr className="text-blue bg-cream">
@@ -84,17 +84,17 @@ export default function Naves() {
                   </tr>
 
                   <tr className="text-left bg-cream text-blue">
-                    <th className="w-[40px] p-0" />
+                    <th className="w-[40px] p-0 max-sm:w-[12px]" />
                     <th className="paragraph py-[10px]">
                       {t("sizes.headers.config")}
                     </th>
-                    <th className="paragraph pl-[40px] py-[10px]">
+                    <th className="paragraph pl-[40px] py-[10px] whitespace-nowrap max-sm:pl-[12px]">
                       {t("sizes.headers.ft")}
                     </th>
-                    <th className="paragraph pl-[40px] py-[10px]">
+                    <th className="paragraph pl-[40px] py-[10px] whitespace-nowrap max-sm:pl-[12px]">
                       {t("sizes.headers.m")}
                     </th>
-                    <th className="w-[40px] p-0" />
+                    <th className="w-[40px] p-0 max-sm:w-[12px]" />
                   </tr>
                 </thead>
                 <tbody>
@@ -105,19 +105,23 @@ export default function Naves() {
                         : "";
                     return (
                       <tr key={row.name} className="text-cream">
-                        <td className="w-[40px] p-0" />
+                        <td className="w-[40px] p-0 max-sm:w-[12px]" />
                         <td
-                          className={`w-[60%] paragraph font-medium py-[8px] ${line}`}
+                          className={`w-[60%] paragraph font-medium py-[8px] max-sm:w-auto ${line}`}
                         >
                           {row.name}
                         </td>
-                        <td className={`paragraph pl-[40px] py-[8px] ${line}`}>
+                        <td
+                          className={`paragraph pl-[40px] py-[8px] whitespace-nowrap max-sm:pl-[12px] ${line}`}
+                        >
                           {row.ft}
                         </td>
-                        <td className={`paragraph pl-[40px] py-[8px] ${line}`}>
+                        <td
+                          className={`paragraph pl-[40px] py-[8px] whitespace-nowrap max-sm:pl-[12px] ${line}`}
+                        >
                           {row.m}
                         </td>
-                        <td className="w-[40px] p-0" />
+                        <td className="w-[40px] p-0 max-sm:w-[12px]" />
                       </tr>
                     );
                   })}
@@ -125,24 +129,26 @@ export default function Naves() {
               </table>
 
               {/* text */}
-              <p className="paragraph text-cream px-[40px] whitespace-pre-line">
+              <p className="paragraph text-cream px-[40px] whitespace-pre-line max-sm:px-[12px] max-sm:whitespace-normal">
                 {t("sizes.note")}
               </p>
             </div>
 
             {/* segunda tabla */}
-            <div className="w-full max-w-[952px] border-[1px] rounded-[30px] overflow-hidden border-cream bg-cream/10">
-              <h3 className="py-[20px] paragraph font-bold text-center text-blue bg-cream">
+            <div className="w-full max-w-[952px] border-[1px] rounded-[30px] overflow-hidden border-cream bg-cream/10 max-sm:rounded-[20px]">
+              <h3 className="py-[20px] paragraph font-bold text-center text-blue bg-cream max-sm:py-[14px] max-sm:px-[12px]">
                 {t("specs.title")}
               </h3>
 
-              <div className="grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto_1fr] gap-x-[20px] gap-y-[16px] px-[14px] py-[20px] text-cream">
+              <div className="grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto_1fr] gap-x-[20px] gap-y-[16px] px-[14px] py-[20px] text-cream max-sm:grid-cols-1 max-sm:gap-y-[4px] max-sm:px-[12px] max-sm:py-[16px]">
                 {orderedSpecs.map((spec) => (
                   <Fragment key={spec.label}>
-                    <p className="paragraph font-bold max-w-[194px] ">
+                    <p className="paragraph font-bold max-w-[194px] max-sm:max-w-none">
                       {spec.label}
                     </p>
-                    <p className="paragraph">{spec.value}</p>
+                    <p className="paragraph max-sm:pb-[12px] max-sm:last:pb-0">
+                      {spec.value}
+                    </p>
                   </Fragment>
                 ))}
               </div>
@@ -154,7 +160,7 @@ export default function Naves() {
         <div className="flex flex-col w-full max-w-[1280px] min-h-[50svh] px-[44px] pt-[50px] pb-[30px] sm:px-[90px] sm:pt-[60px] gap-[40px]">
           <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center gap-[50px]">
             {/* Razones */}
-            <div className="grid grid-cols-2 gap-x-[60px] gap-y-[30px]">
+            <div className="grid max-[440px]:grid-cols-1 grid-cols-2 gap-x-[60px] gap-y-[30px]">
               {beneficios.map((beneficio, index) => (
                 <BeneficioNaveItem
                   key={beneficio.id}
