@@ -1,4 +1,4 @@
-import banner from "../../assets/images/banner-certeza.jpg";
+import banner from "../../assets/images/cargayandenes.jpg";
 
 import infraIcon from "../../assets/icons/industria.svg";
 import pinIcon from "../../assets/icons/pin.svg";

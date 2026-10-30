@@ -11,6 +11,8 @@ import { useTranslation } from "react-i18next";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
 
+import bannerImage from "../../assets/images/infra-background.jpg";
+
 const infraestructuraData = [
   { id: "electrico", key: "spec1", icon: electricidad },
   { id: "gas-fibra", key: "spec3", icon: fibra },
@@ -79,7 +81,12 @@ export default function Infraestructura() {
       </div>
 
       {/* banner */}
-      <div className="w-full min-h-[50svh] border">banner</div>
+      <div className="relative w-full min-h-[50svh]">
+        <img
+          src={bannerImage}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
 
       {/* Flexibilidad y calidad */}
       <div className="relative flex flex-col items-center w-full bg-blue-overlay">
