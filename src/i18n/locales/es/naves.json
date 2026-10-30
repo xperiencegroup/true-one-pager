@@ -1,16 +1,15 @@
 {
-  "title1": "NAVES BUILD-TO-SUIT",
+  "title1": "Naves a la medida (build-to-suit)",
   "title2": "EN VENTA O RENTA",
-  "intro": "Para quien quiere una nave lista para operar, hecha a su medida — con la flexibilidad de comprarla o rentarla.",
-  "description": "Diseñamos y construimos tu nave a la medida — desde 200,000 hasta 750,000 pies cuadrados — con la infraestructura, los andenes y el layout definidos alrededor de tu proceso.",
-  "headline": "UNA NAVE HECHA PARA TU OPERACIÓN. CÓMPRALA O RÉNTALA.",
+  "intro": "Para quien quiere una nave lista para operar, diseñada alrededor de su proceso,\n con la opción de comprarla o rentarla.",
+  "description": "Diseñamos y construimos tu nave desde 196,068 hasta 779,163 ft² (18,215 a 72,387 m²),\n con la infraestructura, los andenes y el layout definidos por tu operación.\n <strong>8</strong> configuraciones aprobadas para construcción.",
   "buy": {
     "title": "SI LA COMPRAS",
-    "text": "Conviertes el edificio en patrimonio, con control total sobre un activo que se aprecia en el mejor corredor del noreste."
+    "text": "Conviertes el edificio en patrimonio: control total sobre un activo en el principal corredor logístico del noreste."
   },
   "lease": {
     "title": "SI LA RENTAS",
-    "text": "Ocupas el edificio sin inmovilizar capital y lo mantienes donde más rinde tu maquinaria, tu inventario, tu gente. Máxima flexibilidad y arranque rápido."
+    "text": "Ocupas el edificio sin inmovilizar capital: tu dinero se queda donde más rinde, en maquinaria, inventario y gente. Arranque rápido y margen para crecer."
   },
   "feature1": {
     "title": "A TU MEDIDA",
@@ -18,7 +17,7 @@
   },
   "feature2": {
     "title": "ENTREGA PROGRAMADA",
-    "text": "Fechas claras desde el contrato. Tu plan de arranque no depende de promesas."
+    "text": "Fechas claras desde el contrato.\n Tu plan de arranque no depende de promesas."
   },
   "feature3": {
     "title": "TÉRMINOS INSTITUCIONALES",
@@ -28,29 +27,76 @@
     "title": "CRECIMIENTO PREVISTO",
     "text": "Naves preparadas para expansión dentro del mismo parque."
   },
-  "inventory": {
+  "sizes": {
     "title": "TAMAÑOS DISPONIBLES",
-    "label": "Nave BTS",
-    "row1": {
-      "name": "Terreno Completo",
-      "sqft": "779,162 ft²",
-      "sqm": "72,386 m²"
+    "headers": {
+      "config": "Configuración",
+      "ft": "NAVE FT²",
+      "m": "NAVE M²"
     },
-    "row2": {
-      "name": "Nave BTS Grande",
-      "sqft": "528,678 ft²",
-      "sqm": "49,116 m²"
-    },
-    "row3": {
-      "name": "Nave BTS Mediana",
-      "sqft": "329,770 ft²",
-      "sqm": "30,636 m²"
-    },
-    "row4": {
-      "name": "Naves BTS Chicas",
-      "sqft": "196,068 - 213,657 ft²",
-      "sqm": "18,215 - 19,849 m²"
-    }
+    "rows": [
+      {
+        "name": "Nave Chica 1",
+        "ft": "210,265 ft²",
+        "m": "19,534 m²"
+      },
+      {
+        "name": "Nave Chica 2",
+        "ft": "196,068 ft²",
+        "m": "18,215 m²"
+      },
+      {
+        "name": "Nave Chica 3",
+        "ft": "200,493 ft²",
+        "m": "18,626 m²"
+      },
+      {
+        "name": "Nave Chica 4",
+        "ft": "213,657 ft²",
+        "m": "19,849 m²"
+      },
+      {
+        "name": "Nave Mediana 1",
+        "ft": "329,770 ft²",
+        "m": "30,637 m²"
+      },
+      {
+        "name": "Nave Mediana 2",
+        "ft": "329,770 ft²",
+        "m": "30,637 m²"
+      },
+      {
+        "name": "Nave Grande",
+        "ft": "528,680 ft²",
+        "m": "49,116 m²"
+      },
+      {
+        "name": "Nave parque completo",
+        "ft": "779,163 ft²",
+        "m": "72,387 m²"
+      }
+    ],
+    "note": "Superficie construida de nave. Configuraciones conforme a planos arquitectónicos, julio de 2026.\nLas naves chicas se pueden fusionar; la nave única puede ocupar el parque completo."
   },
-  "cta": "Cotiza tu Nave Industrial a la medida"
+  "specs": {
+    "title": "ESPECIFICACIONES CLASE A",
+    "items": [
+      {
+        "label": "ALTURA LIBRE",
+        "value": "32' (9.75 m)"
+      },
+      {
+        "label": "ESTRUCTURA",
+        "value": "Muros de concreto tipo tilt-up o precolados, estructura metálica con armaduras y cubierta KR-18"
+      },
+      {
+        "label": "PISO",
+        "value": "Concreto de 15 cm / 6 pulgadas, MR40"
+      },
+      {
+        "label": "PROTECCIÓN CONTRA INCENDIO",
+        "value": "Red de Hidrantes (Hoses)"
+      }
+    ]
+  }
 }

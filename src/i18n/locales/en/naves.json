@@ -1,56 +1,102 @@
 {
-  "title1": "BUILD-TO-SUIT BUILDINGS",
+  "title1": "BUILD-TO-SUIT INDUSTRIAL BUILDINGS",
   "title2": "FOR SALE OR LEASE",
-  "intro": "For companies that want a building ready to operate, built to their specifications — with the flexibility to buy it or lease it.",
-  "description": "We design and build your building to fit — from 200,000 to 750,000 square feet — with the infrastructure, dock doors and layout defined around your process.",
-  "headline": "A BUILDING MADE FOR YOUR OPERATION. BUY IT OR LEASE IT.",
+  "intro": "For companies that want an operations-ready building, designed around their process,\n with the option to buy or lease it.",
+  "description": "We design and build your facility from 196,068 to 779,163 ft² (18,215 to 72,387 m²),\n with the infrastructure, loading docks and layout defined by your operation.\n<strong>8</strong> configurations approved for construction.",
   "buy": {
     "title": "IF YOU BUY",
-    "text": "You turn the building into long-term equity, with full control over an asset that appreciates in the Northeast's premier industrial corridor."
+    "text": "You turn the building into equity: full control over\n an asset on Northeast Mexico's main logistics corridor."
   },
   "lease": {
     "title": "IF YOU LEASE",
-    "text": "You occupy the building without tying up capital, keeping it where it earns the most: your machinery, your inventory, your people. Maximum flexibility and a fast start-up."
+    "text": "You occupy the building without tying up capital: your money stays where it performs best —in machinery, inventory and people. Fast start-up and room to grow."
   },
   "feature1": {
-    "title": "BUILT TO FIT",
-    "text": "Clear height, dock doors, ramps, offices, power and layout defined around your process."
+    "title": "TAILORED TO YOU",
+    "text": "Clear height, docks, ramps, offices, power and layout defined around your process."
   },
   "feature2": {
     "title": "SCHEDULED DELIVERY",
-    "text": "Clear dates from contract signing. Your start-up plan doesn't depend on promises."
+    "text": "Clear dates from contract signing.\n Your start-up plan doesn't depend on promises."
   },
   "feature3": {
     "title": "INSTITUTIONAL TERMS",
-    "text": "USD contracts, structured for long-term operations."
+    "text": "USD-denominated contracts, designed for long-term operations"
   },
   "feature4": {
     "title": "PLANNED GROWTH",
     "text": "Buildings prepared for expansion within the same park."
   },
-  "inventory": {
-    "title": "INVENTORY PORTFOLIO",
-    "label": "BTS Building",
-    "row1": {
-      "name": "Full Site",
-      "sqft": "779,162 sq ft",
-      "sqm": "72,386 m²"
+  "sizes": {
+    "title": "AVAILABLE SIZES",
+    "headers": {
+      "config": "Configuration",
+      "ft": "BUILDING FT²",
+      "m": "BUILDING M²"
     },
-    "row2": {
-      "name": "Large BTS Building",
-      "sqft": "528,678 sq ft",
-      "sqm": "49,116 m²"
-    },
-    "row3": {
-      "name": "Medium BTS Building",
-      "sqft": "329,770 sq ft",
-      "sqm": "30,636 m²"
-    },
-    "row4": {
-      "name": "Small BTS Buildings",
-      "sqft": "196,068 - 213,657 sq ft",
-      "sqm": "18,215 - 19,849 m²"
-    }
+    "rows": [
+      {
+        "name": "Small Building 1",
+        "ft": "210,265 ft²",
+        "m": "19,534 m²"
+      },
+      {
+        "name": "Small Building 2",
+        "ft": "196,068 ft²",
+        "m": "18,215 m²"
+      },
+      {
+        "name": "Small Building 3",
+        "ft": "200,493 ft²",
+        "m": "18,626 m²"
+      },
+      {
+        "name": "Small Building 4",
+        "ft": "213,657 ft²",
+        "m": "19,849 m²"
+      },
+      {
+        "name": "Medium Building 1",
+        "ft": "329,770 ft²",
+        "m": "30,637 m²"
+      },
+      {
+        "name": "Medium Building 2",
+        "ft": "329,770 ft²",
+        "m": "30,637 m²"
+      },
+      {
+        "name": "Large Building",
+        "ft": "528,680 ft²",
+        "m": "49,116 m²"
+      },
+      {
+        "name": "Entire-Park Building",
+        "ft": "779,163 ft²",
+        "m": "72,387 m²"
+      }
+    ],
+    "note": "Building gross floor area. Configurations per architectural drawings, July 2026.\nSmall buildings can be combined; a single building can occupy the entire park."
   },
-  "cta": "Get a quote for your build-to-suit Industrial Building"
+  "specs": {
+    "title": "CLASS A SPECIFICATIONS",
+    "items": [
+      {
+        "label": "CLEAR HEIGHT",
+        "value": "32' (9.75 m)"
+      },
+      {
+        "label": "STRUCTURE",
+        "value": "Tilt-up or precast concrete walls, steel structure with trusses and KR-18 roof deck"
+      },
+      {
+        "label": "FLOOR",
+        "value": "15 cm / 6-inch concrete, MR40"
+      },
+      {
+        "label": "FIRE PROTECTION",
+        "value": "Hydrant and hose network"
+      }
+    ]
+  }
 }

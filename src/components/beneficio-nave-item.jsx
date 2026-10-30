@@ -11,7 +11,7 @@ export default function BeneficioNaveItem({ beneficio, delay }) {
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`flex flex-row gap-[15px] reveal-left ${isVisible ? "is-visible" : ""}`}
+      className={`flex flex-row items-center gap-[15px] reveal-left ${isVisible ? "is-visible" : ""}`}
     >
       <img src={decoration} className="w-fit h-[41px]" />
       <div className="relative flex flex-col gap-[9px]">
@@ -19,7 +19,7 @@ export default function BeneficioNaveItem({ beneficio, delay }) {
           {t(`${beneficio.key}.title`)}
         </h3>
 
-        <p className="sm:self-center lg:self-start max-w-[590px] lg:max-w-none paragraph text-left lg:text-left font-light text-cream">
+        <p className="sm:self-center lg:self-start max-w-[590px] lg:max-w-none paragraph text-left lg:text-left font-light text-cream whitespace-pre-line">
           {t(`${beneficio.key}.text`)}
         </p>
       </div>
