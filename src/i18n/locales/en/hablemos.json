@@ -1,6 +1,6 @@
 {
   "title": "LET'S TALK ABOUT YOUR PROJECT.",
-  "description": "<strong>Tell us what your operation needs:</strong> area, specifications and timing — and we'll come back with concrete options: availability, plans and numbers.",
+  "description": "<strong>Tell us how much space you need and how you operate;</strong> we'll tailor the configuration. We'll respond with concrete options: availability, drawings and numbers.",
   "cardTitle": "Contact",
   "person": {
     "name": "RICARDO VILLARREAL",
@@ -9,6 +9,8 @@
   "whatsapp": "Send WhatsApp",
   "call": "Call the Office",
   "email": "Send Email",
+  "cel": "Cell",
+  "office": "Office",
   "form": {
     "name": {
       "label": "Full name",
@@ -28,7 +30,7 @@
     },
     "interest": {
       "label": "What are you looking for?",
-      "placeholder": "Buy or lease a build-to-suit industrial building / Buy an industrial land parcel"
+      "placeholder": "Build-to-suit building (Purchase or lease) Industrial site (Purchase)"
     },
     "area": {
       "label": "Approximate area",
@@ -36,7 +38,7 @@
     },
     "message": {
       "label": "Message (optional)",
-      "placeholder": "Tell us about your project, your operation's requirements and when you need the space"
+      "placeholder": "Tell us about your project, your operation's needs and the date you need the space"
     },
     "submit": "Send message",
     "submitting": "Sending...",

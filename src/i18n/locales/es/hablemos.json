@@ -1,6 +1,6 @@
 {
   "title": "HABLEMOS DE TU PROYECTO.",
-  "description": "<strong>Cuéntanos qué necesita tu operación:</strong> superficie, especificaciones, tiempos y te respondemos con opciones concretas: disponibilidad, planos y números.",
+  "description": "<strong>Dinos cuánta superficie necesitas y cómo operas;</strong> nosotros ajustamos la configuración. Te respondemos con opciones concretas: disponibilidad, planos y números.",
   "cardTitle": "Contacto",
   "person": {
     "name": "RICARDO VILLARREAL",
@@ -9,6 +9,8 @@
   "whatsapp": "Enviar WhatsApp",
   "call": "Llamar a Oficina",
   "email": "Enviar Correo",
+  "cel": "Cel.",
+  "office": "Of.",
   "form": {
     "name": {
       "label": "Nombre completo",
@@ -28,11 +30,11 @@
     },
     "interest": {
       "label": "¿Qué estás buscando?",
-      "placeholder": "Comprar o rentar una nave industrial a la medida / Comprar un macrolote industrial"
+      "placeholder": "Nave a la medida (Compra o renta) ó Macrolote (Compra)"
     },
     "area": {
       "label": "Superficie aproximada",
-      "placeholder": "200,000 - 780,000 sq ft / 3 - 15 ha"
+      "placeholder": "200,000 - 780,000 sq ft / 3 - 15 ha\" "
     },
     "message": {
       "label": "Mensaje (opcional)",
