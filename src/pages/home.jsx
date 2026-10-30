@@ -2,8 +2,6 @@ import { useParams } from "react-router";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
-import { track } from "../analytics/track";
-import { TRACK } from "../analytics/track.constants";
 
 import Clientes from "./components/clientes";
 import DesignedForCertainty from "./components/designed-certainty";
@@ -18,9 +16,9 @@ import Macrolotes from "./components/macrolotes";
 import Modelos from "./components/modelos";
 import Naves from "./components/naves";
 import Preguntas from "./components/preguntas";
-import whatsappIcon from "../assets/icons/social/whatsapp.svg";
 import Ubicacion from "./components/ubicacion";
 import Distancias from "./components/distancias";
+import WhatsappButton from "../components/floating-buttons/whatsapp-button";
 
 export default function Home() {
   const { lang } = useParams();
@@ -40,21 +38,7 @@ export default function Home() {
   return (
     <main className="relative flex flex-col w-full">
       {/* botón whatsapp */}
-      <div className="fixed z-50 right-0 bottom-0">
-        <a
-          href="https://wa.me/528184640002"
-          target="_blank"
-          rel="noopener noreferer"
-          onClick={() => track(TRACK.home.whatsapp.float)}
-          className="flex size-[52px] justify-center items-center rounded-t-[32.5px] bg-orange"
-        >
-          <img
-            src={whatsappIcon}
-            alt={`Ícono de Whatsapp`}
-            className="size-[25.5px]"
-          />
-        </a>
-      </div>
+      <WhatsappButton />
       <Toaster />
 
       <Hero />
