@@ -23,7 +23,7 @@ export default function InfraestructuraItem({ item, delay }) {
         <h4 className="text-naranja font-bold uppercase paragraph leading-[120%] text-orange">
           {t(`${item.key}.title`)}
         </h4>
-        <p className="text-white paragraph text-center sm:text-left font-light leading-[120%]">
+        <p className="text-white paragraph text-center sm:text-left font-light leading-[120%] whitespace-pre-line">
           {t(`${item.key}.text`)}
         </p>
       </div>

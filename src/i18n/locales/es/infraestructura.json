@@ -1,42 +1,44 @@
   {
-    "title1": "CERTEZA OPERATIVA;",
-    "title2": "INFRAESTRUCTURA",
-    "title3": "PREPARADA PARA OPERAR",
-    "p1": "TRUE CIÉNEGA INDUSTRIAL PARK tiene su proyecto eléctrico tramitado directamente ante CFE —6,000 KVA para el parque, primera etapa en proceso—, agua garantizada con cisternas, fibra óptica con redundancia y drenaje pluvial diseñado con canales y pasos que protegen tu operación en cualquier temporada.",
-    "p2": "Los accesos, patios de maniobra y vialidades fueron trazados para tráfico pesado y circulación fluida de tráileres, con caseta de vigilancia, CCTV, accesos controlados y cerca perimetral.",
+    "title2": "INFRAESTRUCTURA PREPARADA",
+    "title3": "PARA OPERAR",
+    "p0": "El terreno está urbanizado y con servicios. La factibilidad eléctrica está autorizada.",
+    "p1": "La factibilidad eléctrica actual es de 6,000 kVA para el parque, con 800 kVA listos para contratación inmediata. Agua garantizada con cisternas, drenaje pluvial diseñado con canales y pasos que protegen tu operación en cualquier temporada. Gas natural e internet completan los servicios.",
+    "p2": "Los accesos, patios de maniobra y vialidades fueron trazados para tráfico pesado y circulación fluida de tráileres, con caseta de control por lote, CCTV, barda perimetral, caseta de vigilancia y Business Center en el acceso principal.",
     "p3": "Detrás de todo, una administración profesional que mantiene, monitorea y responde, porque un parque no se entrega una vez: se opera todos los días.",
     "spec1": {
-      "title": "6,000 KVA",
-      "text": "Proyecto eléctrico tramitado ante CFE para el parque."
+      "title": "Energía",
+      "text": "Factibilidad autorizada de 6,000 kVA; 800 kVA listos para contratación inmediata."
     },
     "spec2": {
-      "title": "AGUA GARANTIZADA",
-      "text": "Con drenaje sanitario resuelto."
+      "title": "Agua",
+      "text": "Suministro garantizado, con cisternas."
     },
     "spec3": {
-      "title": "GAS NATURAL Y FIBRA ÓPTICA",
-      "text": "Preparaciones para gas natural y fibra óptica según tu operación."
+      "title": "Seguridad",
+      "text": "Caseta de control por lote, CCTV y barda perimetral."
     },
     "spec4": {
       "title": "DRENAJE PLUVIAL",
-      "text": "Diseñado para proteger tu operación en cualquier temporada."
+      "text": "Canales y pasos que protegen tu operación en cualquier temporada."
     },
     "flex": {
       "kicker": "FLEXIBILIDAD REAL",
-      "title": "El rango más flexible del mercado.",
-      "p1": "Pocas veces un mismo parque puede recibir a una empresa que necesita 200,000 pies cuadrados en renta o a otra que quiere comprar 15 hectáreas para construir su campus. True Ciénega puede.",
-      "p2": "Esa flexibilidad no es un accidente: es la forma en que diseñamos el parque para acompañar a las empresas en distintos momentos de su crecimiento. Empiezas rentando y luego compras.",
-      "p3": "Compras tres hectáreas y luego te expandes.",
+      "title": "Dieciséis maneras de entrar al parque.",
+      "p1": "Pocas veces un mismo parque puede recibir a una empresa que necesita 18,000 m² (200,000 ft²) en renta o a otra que quiere comprar 15 hectáreas para construir su campus. True Ciénega puede.",
+      "p2": "Esa flexibilidad no es un accidente: es la forma en que diseñamos el parque para acompañar a las empresas en distintos momentos de su crecimiento. Empiezas rentando y luego compras.\nCompras tres hectáreas y luego te expandes.",
+      "p3": "La configuración final se define contigo antes de escriturar.",
       "p4": "El parque crece contigo."
     },
     "quality": {
       "kicker": "CALIDAD CLASE A",
       "title": "Construido para durar, diseñado para funcionar.",
       "lead": "Especificaciones Clase A en cada nave:",
-      "item1": "Alturas libres generosas",
-      "item2": "Andenes y rampas suficientes",
-      "item3": "Pisos de alta capacidad de carga",
-      "item4": "Iluminación eficiente y layouts que privilegian el flujo sobre el adorno",
+      "item1": "Altura libre de 32' (9.75 m)",
+      "item2": "Pisos de alta capacidad de carga, de concreto de 15 cm, MR40",
+      "item3": "Muros de concreto tipo tilt-up o precolados, estructura metálica con armaduras y cubierta KR-18.",
+      "item4": "Andenes y rampas suficientes por nave, según superficie",
+      "item5": "Iluminación eficiente y layout definido por el flujo de operación",
+      "item6": "Diseño LEED, certificación en proceso",
       "p": "La calidad no se nota en los renders, se nota a los diez años, cuando el edificio sigue funcionando como el primer día. Construimos con esa vara."
     }
   }

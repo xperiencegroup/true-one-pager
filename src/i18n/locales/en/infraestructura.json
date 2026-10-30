@@ -1,42 +1,44 @@
 {
-  "title1": "OPERATIONAL CERTAINTY;",
-  "title2": "INFRASTRUCTURE",
-  "title3": "READY TO OPERATE",
-  "p1": "TRUE CIENEGA INDUSTRIAL PARK has its electrical project filed directly with CFE — 6,000 KVA for the park, first phase in process — guaranteed water supply through cisterns, redundant fiber optics, and storm drainage designed with channels and crossings that protect your operation in any season.",
-  "p2": "Access points, truck courts and roadways were laid out for heavy traffic and smooth tractor-trailer circulation, with a guard house, CCTV, controlled access and perimeter fencing.",
-  "p3": "Behind all of it, professional management that maintains, monitors and responds — because a park isn't delivered once: it's operated every day.",
+  "title2": "INFRASTRUCTURE READY",
+  "title3": "TO OPERATE",
+  "p0": "The land is fully developed and serviced. Power feasibility is approved.",
+  "p1": "Current power feasibility is 6,000 kVA for the park, with 800 kVA available for immediate contracting. Guaranteed water supply with storage cisterns, and a storm drainage system designed with channels and crossings that protect your operation in any season. Natural gas and internet round out the utilities.",
+  "p2": "Access points, truck courts and internal roads were laid out for heavy traffic and smooth tractor-trailer circulation, with a control booth at each site, CCTV, perimeter wall, security gatehouse and a Business Center at the main entrance.",
+  "p3": "Behind it all, professional park management that maintains, monitors and responds —because a park isn't delivered once: it's operated every day.",
   "spec1": {
-    "title": "6,000 KVA",
-    "text": "Electrical project filed with CFE for the park."
+    "title": "POWER",
+    "text": "Approved feasibility of 6,000 kVA; 800 kVA\n available for immediate contracting."
   },
   "spec2": {
-    "title": "GUARANTEED WATER",
-    "text": "With sanitary drainage in place."
+    "title": "WATER",
+    "text": "Guaranteed supply, with storage cisterns."
   },
   "spec3": {
-    "title": "NATURAL GAS AND FIBER OPTICS",
-    "text": "Provisions for natural gas and fiber optics according to your operation."
+    "title": "SECURITY",
+    "text": "Control booth at each site, CCTV and perimeter wall."
   },
   "spec4": {
     "title": "STORM DRAINAGE",
-    "text": "Designed to protect your operation in any season."
+    "text": "Channels and crossings that protect your operation in any season."
   },
   "flex": {
     "kicker": "REAL FLEXIBILITY",
-    "title": "The most flexible range on the market.",
-    "p1": "It's rare for a single park to accommodate a company that needs 200,000 square feet on a lease and another that wants to buy 15 hectares to build its campus. True Cienega can.",
-    "p2": "That flexibility isn't an accident: it's how we designed the park to support companies at different stages of their growth. You start by leasing and then you buy.",
-    "p3": "You buy three hectares and then you expand.",
+    "title": "Sixteen ways to enter the park.",
+    "p1": "Rarely can a single park accommodate both a company that needs 18,000 m2 (200,000 ft2) for lease and another that wants to buy 15 hectares to build its campus. True Ciénega can.",
+    "p2": "That flexibility is no accident: it's how we designed the park to support companies at different stages of their growth. You start by leasing, then you buy.\n You buy three hectares, then you expand.",
+    "p3": "The final configuration is defined with you before closing.",
     "p4": "The park grows with you."
   },
   "quality": {
     "kicker": "CLASS A QUALITY",
-    "title": "Built to last, designed to work.",
+    "title": "Built to last,\n designed to perform.",
     "lead": "Class A specifications in every building:",
-    "item1": "Generous clear heights",
-    "item2": "Ample dock doors and ramps",
-    "item3": "High load-capacity floors",
-    "item4": "Efficient lighting and layouts that prioritize flow over ornament",
-    "p": "Quality doesn't show up in the renderings, it shows up ten years in, when the building still works the way it did on day one. That's the standard we build to."
+    "item1": "32' (9.75 m) clear height",
+    "item2": "High load-capacity 15 cm concrete floors, MR40",
+    "item3": "Tilt-up or precast concrete walls, steel structure with trusses and KR-18 roof deck.",
+    "item4": "Sufficient loading docks and ramps per building, based on area",
+    "item5": "Efficient lighting and layout defined by operational flow",
+    "item6": "LEED design, certification in progress",
+    "p": "Quality doesn't show in the renderings; it shows ten years later, when the building still performs like it did on day one. That's the standard we build to."
   }
 }
