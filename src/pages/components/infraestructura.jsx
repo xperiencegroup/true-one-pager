@@ -123,7 +123,7 @@ export default function Infraestructura() {
             <div
               ref={cuadroDerRef}
               style={{ transitionDelay: "150ms" }}
-              className={`flex flex-col lg:w-[539px] lg:min-h-[442px] xl:h-[410px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10 reveal-scale ${isCuadroDerVisible ? "is-visible" : ""}`}
+              className={`flex flex-col lg:w-[539px] lg:min-h-[500px] xl:h-[589px] px-[20px] py-[30px] sm:p-[30px] gap-[20px] rounded-[20px] border-solid border-[1px] border-cream bg-cream/10 reveal-scale ${isCuadroDerVisible ? "is-visible" : ""}`}
             >
               <div className="flex flex-col sm:flex-row items-center gap-[20px]">
                 <h3 className="heading font-abhaya text-orange uppercase">
