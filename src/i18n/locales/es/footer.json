@@ -6,5 +6,9 @@
     "value": "+52 (81) 1356 1142"
   },
   "email": "info@truedevelopments.mx",
-  "credit": "Desarrollado por Xperience Group"
+  "credit": "Desarrollado por Xperience Group",
+  "whatsapp": {
+    "label": "Cel. WA:"
+  },
+  "location": "Parque Industrial: Autopista Monterrey - Nuevo Laredo, Km 1009, Ciénega de Flores, N.L., México"
 }

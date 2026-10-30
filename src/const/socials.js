@@ -51,6 +51,8 @@ export const whatsappInfo = {
   id: "whatsapp",
   icon: whatsapp,
   label: "+52 (81) 8464 0002",
+  labelKey: "whatsapp.label",
+  value: "+52 (81) 8464 0002",
   buttonText: "Enviar WhatsApp",
   href: "https://wa.me/528184640002",
 };

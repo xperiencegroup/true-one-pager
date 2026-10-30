@@ -2,12 +2,13 @@ import { useTranslation } from "react-i18next";
 import xperienceDesarrollo from "../../assets/xperience/desarrollado-por-experience.svg";
 import trueLogo from "../../assets/logos/true-developments-cream-v2.svg";
 import trueLogoVertical from "../../assets/logos/true-developments-vertical.svg";
+import ubicacionIcon from "../../assets/icons/ubicacion-icons/direccion.svg";
 
 // navigation
 import { navLinks } from "../../const/navigation";
 
 // socials
-import { socials, contactInfo } from "../../const/socials";
+import { socials, contactInfo, whatsappInfo } from "../../const/socials";
 import returnIcon from "../../assets/icons/return.svg";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
@@ -55,26 +56,41 @@ export default function Footer() {
 
           {/* Datos de contacto */}
           <div className="flex max-sm:flex-col flex-wrap w-full max-w-[1124px] justify-around items-cente gap-[10px]">
-            {contactInfo.map((item) => (
-              <a
-                key={item.id}
-                href={item.href}
-                target={item.id === "web" ? "_blank" : undefined}
-                rel={item.id === "web" ? "noopener noreferrer" : undefined}
-                onClick={() =>
-                  track(TRACK.home.footer.contactInfoClick, {
-                    item_id: item.id,
-                  })
-                }
-                className="flex items-center self-center gap-[10px] font-light data text-white"
-              >
-                <img src={item.icon} alt="" className="h-[15px]" />
-                {item.labelKey
-                  ? `${t(item.labelKey)} ${item.value}`
-                  : item.label}
-              </a>
-            ))}
+            {contactInfo
+              .slice(0, 1)
+              .concat(whatsappInfo)
+              .concat(contactInfo.slice(1, 3))
+              .map((item) => (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  target={item.id === "web" ? undefined : "_blank"}
+                  rel={item.id === "web" ? "noopener noreferrer" : undefined}
+                  onClick={() =>
+                    track(TRACK.home.footer.contactInfoClick, {
+                      item_id: item.id,
+                    })
+                  }
+                  className="flex items-center self-center gap-[10px] font-light data text-white"
+                >
+                  <img src={item.icon} alt="" className="h-[15px]" />
+                  {item.labelKey
+                    ? `${t(item.labelKey)} ${item.value}`
+                    : item.label}
+                </a>
+              ))}
           </div>
+
+          {/* dirección */}
+          <a
+            href="https://maps.app.goo.gl/tFRmUiF8MARkdhNV6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-[10px]"
+          >
+            <img src={ubicacionIcon} className="w-[20px]" />
+            <p>{t("location")}</p>
+          </a>
 
           {/* Desarrollado por */}
           <img
