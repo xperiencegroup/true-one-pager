@@ -9,7 +9,7 @@ export default function EtapaCard({ etapa, delay }) {
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`flex flex-col w-full min-h-[280px] xl:min-h-[427px] justify-start gap-[20px] px-[10px] py-[20px] pt-[30px] rounded-[20px] border-[1.5px] border-cream bg-cream/10 reveal-scale ${isVisible ? "is-visible" : ""}`}
+      className={`flex flex-col w-full h-[280px] min-[450px]:min-h-[280px] xl:min-h-[427px] justify-start gap-[20px] px-[10px] py-[20px] pt-[30px] rounded-[20px] border-[1.5px] border-cream bg-cream/10 reveal-scale ${isVisible ? "is-visible" : ""}`}
     >
       <div className="flex shrink-0 self-center items-center justify-center size-[50px] rounded-full bg-black">
         <img src={etapa.icon} alt="Ícono de la etapa" className="size-[24px]" />

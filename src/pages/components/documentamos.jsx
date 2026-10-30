@@ -1,9 +1,9 @@
 import banner from "../../assets/images/cargayandenes.jpg";
 
-import infraIcon from "../../assets/icons/industria.svg";
-import pinIcon from "../../assets/icons/pin.svg";
-import camionIcon from "../../assets/icons/camion.svg";
-import verificadoIcon from "../../assets/icons/verificado.svg";
+import infraIcon from "../../assets/icons/documentamos/diseno.svg";
+import pinIcon from "../../assets/icons/documentamos/medida.svg";
+import camionIcon from "../../assets/icons/documentamos/naves.svg";
+import verificadoIcon from "../../assets/icons/documentamos/entrega.svg";
 import { useInView } from "../../hooks/useInView";
 import EtapaCard from "../../components/etapa-card";
 import { useTranslation } from "react-i18next";
@@ -19,7 +19,7 @@ export default function Documentamos() {
   const { t } = useTranslation("documentamos");
   return (
     <>
-      {/* Medio banner */}
+      {/* banner */}
       <div
         id="true-cienega"
         className="flex flex-col w-full min-h-[100svh] justify-center items-center px-[44px] sm:px-[90px] py-[60px] gap-[30px] bg-black"
@@ -41,7 +41,7 @@ export default function Documentamos() {
         </div>
 
         {/* Grid de etapas */}
-        <div className="grid grid-cols-[repeat(2,minmax(0,300px))] xl:grid-cols-4 justify-center gap-x-[15px] gap-y-[15px] lg:gap-y-[10px] xl:gap-[20px] w-full max-w-[1120px]">
+        <div className="grid grid-cols-1 min-[450px]:grid-cols-[repeat(2,minmax(0,300px))] xl:grid-cols-4 justify-center gap-x-[15px] gap-y-[15px] lg:gap-y-[10px] xl:gap-[20px] w-full max-w-[1120px]">
           {etapasData.map((etapa, index) => (
             <EtapaCard key={etapa.id} etapa={etapa} delay={index * 100} />
           ))}
