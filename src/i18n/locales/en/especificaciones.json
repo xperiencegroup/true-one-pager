@@ -1,23 +1,23 @@
 {
   "title": "EVERYTHING YOUR OPERATION NEEDS, IN ONE PLACE.",
   "card1": {
-    "title": "CLASS A INDUSTRIAL PARK",
-    "metric": "15 hectares (37 acres)",
-    "text": "Fully serviced land with approved power feasibility, kVA ready to contract, and completed architectural plans."
+    "title": "CLASS A \n INDUSTRIAL \n PARK",
+    "metric": "15 hectares",
+    "text": "Fully developed, serviced land, approved power feasibility, kVA ready for contracting and completed architectural designs."
   },
   "card2": {
-    "title": "Industrial Buildings\n(Build-to-Suit)",
-    "metric": "from 196,068 to 779,163 sq ft (18,215 to 72,387 m²)",
+    "title": "BUILD-TO-SUIT INDUSTRIAL BUILDINGS",
+    "metric": "196,068 to 779,163 ft² (18,215 to 72,387 m²)",
     "text": "<strong>8</strong> configurations.\n Designed and built to fit your operation, ready to grow with you."
   },
   "card3": {
-    "title": "LAND PARCELS",
-    "metric": "from 7.75 to 37.2 acres (31,365 to 150,538 m²)",
-    "text": "<strong>8</strong> configurations.\n Fully serviced land, ready to build at your own pace."
+    "title": "INDUSTRIAL SITES",
+    "metric": "3 to 15 hectares (31,365 to 150,538 m²)",
+    "text": "<strong>8</strong> configurations.\n Fully developed, serviced land to build at your own pace."
   },
   "card4": {
     "title": "Fronting Highway 85",
-    "metric": "Monterrey–Nuevo Laredo Highway",
-    "text": "Direct access to the Laredo corridor, without crossing the city."
+    "metric": "Monterrey-Nuevo Laredo Highway",
+    "text": "Direct exit to the corridor toward Laredo, without crossing the city."
   }
 }
