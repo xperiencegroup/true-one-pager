@@ -86,7 +86,7 @@ export default function Footer() {
             href="https://maps.app.goo.gl/tFRmUiF8MARkdhNV6"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-[10px]"
+            className="flex flex-col md:flex-row text-center items-center gap-[10px] px-[20px]"
           >
             <img src={ubicacionIcon} className="w-[20px]" />
             <p>{t("location")}</p>
