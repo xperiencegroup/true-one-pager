@@ -5,19 +5,23 @@
     "description": "We document the park's progress phase by phase. Review construction updates, site photography and development milestones, with the transparency a decision of this scale deserves."
   },
   "phase1": {
-    "title": "INDUSTRIAL PARK INFRASTRUCTURE",
-    "text": "Roadways, utilities, storm drainage, lighting and access points."
+    "title": "INDUSTRIAL\n PARK SITE DEVELOPMENT",
+    "text": "Roads, utilities, storm drainage, lighting and access points.",
+    "kicker": "Master site development"
   },
   "phase2": {
-    "title": "LAND PARCEL SITE WORK",
-    "text": "Preparation, grading and utility connection for each land parcel."
+    "title": "INDUSTRIAL SITE PREPARATION",
+    "text": "Preparation, grading and utility connection of each industrial site.",
+    "kicker": "By phase, according to each configuration"
   },
   "phase3": {
     "title": "BUILDING CONSTRUCTION",
-    "text": "From foundation to completion of each building."
+    "text": "From foundation to completion of each building.",
+    "kicker": "Approved drawings; starts with each contract"
   },
   "phase4": {
-    "title": "DELIVERY OF FINISHED SPACES",
-    "text": "Fit-outs and tenant improvements for each operation."
+    "title": "DELIVERY OF FINISHED\n SPACES",
+    "text": "Tenant improvements (TIs) for each operation.",
+    "kicker": "Upon construction completion"
   }
 }

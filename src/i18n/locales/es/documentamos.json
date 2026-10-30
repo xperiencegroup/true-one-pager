@@ -5,19 +5,23 @@
     "description": "Documentamos el avance del parque etapa por etapa. Consulta las actualizaciones de obra, fotografías del sitio y los hitos del desarrollo, con la transparencia que una decisión de esta escala merece."
   },
   "phase1": {
-    "title": "INFRAESTRUCTURA DEL PARQUE INDUSTRIAL",
-    "text": "Vialidades, servicios, drenaje pluvial, alumbrado y accesos."
+    "title": "URBANIZACIÓN MAESTRA DEl PARQUE",
+    "text": "Vialidades, servicios, drenaje pluvial, alumbrado y accesos.",
+    "kicker": "Urbanización maestra"
   },
   "phase2": {
     "title": "URBANIZACIÓN DE MACROLOTES",
-    "text": "Preparación, nivelación y conexión de cada macrolote."
+    "text": "Preparación, nivelación y conexión de cada macrolote.",
+    "kicker": "Por etapa, conforme cada configuración"
   },
   "phase3": {
     "title": "CONSTRUCCIÓN DE NAVES",
-    "text": "Del desplante a la terminación de cada edificio."
+    "text": "Del desplante a la terminación de cada edificio.",
+    "kicker": "Planos aprobados;\n inicia con cada contrato"
   },
   "phase4": {
     "title": "ENTREGA DE ESPACIOS TERMINADOS",
-    "text": "Adecuaciones y Tenant Improvements para cada operación."
+    "text": "Adecuaciones (tenant improvements) para cada operación.",
+    "kicker": "Al finalizar la obra"
   }
 }
