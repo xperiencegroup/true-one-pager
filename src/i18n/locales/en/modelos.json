@@ -1,18 +1,19 @@
 {
-  "title": "CHOOSE HOW <br /> YOU WANT TO GROW.",
-  "line1": "The same location,",
-  "line2": "the same infrastructure,",
-  "line3": "the same certainty.",
-  "line4": "Two models.",
+  "title": "CHOOSE HOW <br /> YOU WANT <br /> TO GROW.",
+  "line1": "The same <strong>location,</strong>",
+  "line2": "the same <strong>infrastructure,</strong>",
+  "line3": "the same <strong>certainty.</strong>",
+  "line4": "<strong>2</strong> models.",
   "subtitle": "THE DECISION DEPENDS ON YOUR OPERATION.",
   "optionA": {
-    "kicker": "BUY OR LEASE",
-    "title": "BUILD-TO-SUIT INDUSTRIAL BUILDING",
-    "text": "Buy or lease your BTS Building, built to your specifications"
+    "kicker": "BUILD-TO-SUIT BUILDING",
+    "title": "PURCHASE OR LEASE",
+    "text": "We design and build it\n around your process.\n You decide whether to buy or lease it."
   },
   "optionB": {
-    "kicker": "BUY A LAND PARCEL",
-    "title": "INDUSTRIAL LAND TO DEVELOP",
-    "text": "Buy your land and build at your own pace"
-  }
+    "kicker": "INDUSTRIAL SITE",
+    "title": "PURCHASE",
+    "text": "Developed land with utilities at the site frontage. You build at your own pace."
+  },
+  "description": "The options aren't mutually exclusive. Small industrial sites can be combined, medium ones can be subdivided, and a single building can occupy the entire park. The final configuration is defined with you before closing."
 }

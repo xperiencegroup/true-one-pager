@@ -20,6 +20,7 @@ export default function Modelos() {
 
   const { t } = useTranslation("plataforma");
   const { t: tModel } = useTranslation("modelos");
+  const { t: tHero } = useTranslation("hero");
 
   const handleGoToPlatformClick = () => {
     // no más popups, va directo al C&X
@@ -54,7 +55,7 @@ export default function Modelos() {
         {/* Content */}
         <div className="relative flex flex-col w-full h-full justify-center items-center gap-[20px]">
           <h2
-            className={`title text-center font-abhaya uppercase reveal ${isVisible ? "is-visible" : ""}`}
+            className={`headline text-center font-abhaya uppercase reveal ${isVisible ? "is-visible" : ""}`}
           >
             {t("title")}
           </h2>
@@ -84,16 +85,16 @@ export default function Modelos() {
       {/* Elige como quieres crecer */}
       <div
         id="naves-macrolotes"
-        className="flex flex-col justify-center items-center w-full min-h-[50svh] xl:h-[50svh] px-[44px] py-[50px] sm:py-[60px] sm:px-[70px] lg:px-[20px] xl:px-[78px] gap-[33px] bg-brown"
+        className="flex flex-col justify-center items-center w-full min-h-[100svh] xl:h-[50svh] px-[44px] py-[50px] sm:py-[60px] sm:px-[70px] lg:px-[20px] xl:px-[78px] gap-[33px] bg-brown"
       >
         <div className="flex flex-col lg:flex-row items-center w-full max-w-[1100px] h-fit gap-[20px] lg:gap-[40px] lg:gap-[16px]">
           {/* Primera columna */}
           <div
             ref={leftColumnRef}
-            className={`flex flex-col w-full lg:max-w-[265px] h-full gap-[10px] lg:gap-[20px] reveal-left ${isLeftColumnVisible ? "is-visible" : ""}`}
+            className={`flex flex-col w-full lg:max-w-[265px] h-full gap-[10px] lg:gap-[30px] reveal-left ${isLeftColumnVisible ? "is-visible" : ""}`}
           >
             {/* title */}
-            <h2 className="title lg:max-w-[265px] max-lg:text-center font-abhaya uppercase">
+            <h2 className="headline lg:max-w-[265px] max-lg:text-center font-abhaya uppercase">
               <Trans
                 t={tModel}
                 i18nKey="title"
@@ -101,29 +102,45 @@ export default function Modelos() {
               />
             </h2>
 
+            <p className="max-lg:self-center lg:max-w-[254px] max-lg:text-center heading font-akzidenz font-bold uppercase text-cream-second">
+              {tModel("subtitle")}
+            </p>
+
             <div className="max-lg:self-center w-full max-w-[265px] lg:w-full">
               <div className="divider-white"></div>
             </div>
 
             {/* Descripción */}
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-[4px]">
               <p className="paragraph max-lg:text-center font-light text-white">
-                {tModel("line1")}
+                <Trans
+                  t={tModel}
+                  i18nKey="line1"
+                  components={{ strong: <strong className="font-medium" /> }}
+                />
               </p>
               <p className="paragraph max-lg:text-center font-light text-white">
-                {tModel("line2")}
+                <Trans
+                  t={tModel}
+                  i18nKey="line2"
+                  components={{ strong: <strong className="font-medium" /> }}
+                />
               </p>
               <p className="paragraph max-lg:text-center font-light text-white">
-                {tModel("line3")}
+                <Trans
+                  t={tModel}
+                  i18nKey="line3"
+                  components={{ strong: <strong className="font-medium" /> }}
+                />
               </p>
               <p className="paragraph max-lg:text-center font-light text-white">
-                {tModel("line4")}
+                <Trans
+                  t={tModel}
+                  i18nKey="line4"
+                  components={{ strong: <strong className="font-medium" /> }}
+                />
               </p>
             </div>
-
-            <p className="max-lg:self-center lg:max-w-[254px] max-lg:text-center subtitle font-abhaya uppercase text-cream-second">
-              {tModel("subtitle")}
-            </p>
           </div>
 
           {/* Modelos */}
@@ -138,6 +155,49 @@ export default function Modelos() {
               );
             })}
           </div>
+        </div>
+
+        {/* description and buttons */}
+        <div className="w-full max-w-[1100px]">
+          <p className="paragraph text-cream">{tModel("description")}</p>
+        </div>
+
+        {/* cta buttons */}
+        <div className="w-full max-w-[1100px] flex w-full flex-col lg:flex-row justify-start items-center pt-[5px] gap-[44px]">
+          {/* Botones */}
+          <a
+            href="#naves"
+            onClick={() => track(TRACK.home.eligenos.cta, { target: "naves" })}
+            className="w-fit boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
+          >
+            <Trans
+              i18nKey="cta.building"
+              t={tHero}
+              components={{
+                br: <br className="sm:hidden" />,
+              }}
+            />
+          </a>
+
+          <a
+            href="#macrolotes"
+            onClick={() =>
+              track(TRACK.home.eligenos.cta, { target: "macrolotes" })
+            }
+            className="w-fit max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange"
+          >
+            {tHero("cta.land")}
+          </a>
+
+          <a
+            href="#"
+            onClick={() =>
+              track(TRACK.home.eligenos.cta, { target: "maqueta" })
+            }
+            className="w-fit max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
+          >
+            {tHero("cta.explore")}
+          </a>
         </div>
       </div>
     </>

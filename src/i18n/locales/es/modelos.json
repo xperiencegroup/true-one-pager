@@ -1,18 +1,19 @@
 {
-  "title": "ELIGE CÓMO <br /> QUIERES CRECER.",
-  "line1": "La misma ubicación,",
-  "line2": "la misma infraestructura,",
-  "line3": "la misma certeza.",
-  "line4": "Dos modelos.",
+  "title": "ELIGE CÓMO <br /> QUIERES <br /> CRECER.",
+  "line1": "La misma <strong>ubicación,</strong>",
+  "line2": "la misma <strong>infraestructura,</strong>",
+  "line3": "la misma <strong>certeza.</strong>",
+  "line4": "<strong>2</strong> modelos.",
   "subtitle": "LA DECISIÓN DEPENDE DE TU OPERACIÓN.",
   "optionA": {
-    "kicker": "COMPRA O RENTA",
-    "title": "NAVE INDUSTRIAL A LA MEDIDA",
-    "text": "Compra o Renta tu Nave BTS construida a la medida"
+    "kicker": "NAVE A LA MEDIDA",
+    "title": "COMPRA O RENTA",
+    "text": "La diseñamos y construimos alrededor de tu proceso.\n Tú decides si la compras o la rentas."
   },
   "optionB": {
-    "kicker": "COMPRA MACROLOTE",
-    "title": "TERRENO INDUSTRIAL PARA DESARROLLAR",
-    "text": "Compra tu terreno y construye a tu ritmo"
-  }
+    "kicker": "MACROLOTE",
+    "title": "COMPRA",
+    "text": "Terreno urbanizado y con servicios\n al frente. Construyes a tu ritmo"
+  },
+  "description": "Las opciones no son excluyentes. Los macrolotes chicos se pueden fusionar, los medianos se pueden subdividir y una sola nave puede ocupar el parque completo. La configuración final se define contigo antes de escriturar."
 }
