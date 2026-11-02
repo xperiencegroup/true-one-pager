@@ -49,7 +49,7 @@ export default function Documentamos() {
       </div>
 
       {/* Imagen medio banner */}
-      <div className="relative w-full h-[40svh] overflow-hidden">
+      <div className="relative w-full h-[50svh] overflow-hidden">
         <img
           src={banner}
           alt="Imagen de instalaciones de True"
