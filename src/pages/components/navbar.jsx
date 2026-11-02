@@ -113,11 +113,11 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`navbar-enter fixed top-0 z-50 flex w-full justify-center max-[660px]:pr-[10px] bg-blue-overlay transition-transform duration-300 ${
+        className={`navbar-enter fixed top-0 z-50 flex w-full justify-center bg-blue-overlay transition-transform duration-300 ${
           visible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="relative flex w-full h-[83px] justify-between min-[660px]:justify-center items-center min-[660px]:justify-center">
+        <div className="relative flex w-full h-[83px] justify-between min-[660px]:justify-center items-center max-[660px]:pr-[10px] min-[660px]:justify-center">
           {/* Botón Logo True */}
           <div className="shrink-0 grow hidden min-[660px]:flex justify-center items-center w-[70px] min-[700px]:w-[92px] min-[900px]:w-[142px] h-full pl-[10px] min-[900px]:pl-[20px] pr-[10px]">
             <a
