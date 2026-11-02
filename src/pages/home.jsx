@@ -46,7 +46,7 @@ export default function Home() {
       <Hero />
       <Especificaciones />
       {/* bug - se deborda de los lados */}
-      {/* <Eligenos />  */}
+      <Eligenos />
       <Ubicacion />
       <Distancias />
       <Modelos />
@@ -56,7 +56,7 @@ export default function Home() {
       <Documentamos />
       <Preguntas />
       {/* bug - se deborda de los lados */}
-      {/* <DesignedForCertainty /> */}
+      <DesignedForCertainty />
       <Clientes />
       <HablemosDeTuProyecto />
       <Footer />
