@@ -1,5 +1,5 @@
 import { Trans, useTranslation } from "react-i18next";
-import mapaUbicacion from "../../assets/images/ubicacion-mapa-v2.jpg";
+import mapaUbicacion from "../../assets/images/ubicacion-mapa-v3.jpg";
 import mapaTags from "../../assets/images/ubicacion-mapa-tags-v2.svg";
 
 // Reemplaza con tus iconos reales
@@ -37,7 +37,7 @@ export default function Ubicacion() {
           </div>
 
           {/* Descripción */}
-          <p className="paragraph font-light max-w-[445px]">
+          <p className="paragraph font-light max-w-[511px]">
             <Trans
               t={t}
               i18nKey="description1"
@@ -77,11 +77,11 @@ export default function Ubicacion() {
       </div>
 
       {/* Columna derecha - imagen mapa con degradado */}
-      <div className="relative w-full lg:flex-[4] min-h-[50svh] lg:min-h-svh overflow-hidden">
+      <div className="relative w-full lg:flex-[3] min-h-[50svh] lg:min-h-svh overflow-hidden">
         <img
           src={mapaTags}
           alt={t("alt.map")}
-          className="absolute z-20 inset-0 w-full h-full object-cover"
+          className="hidden absolute z-20 inset-0 w-full h-full object-cover"
         />
         <img
           src={mapaUbicacion}
