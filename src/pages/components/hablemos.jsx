@@ -115,7 +115,7 @@ export default function HablemosDeTuProyecto() {
             />
 
             {/* overlay */}
-            <div className="absolute w-full h-full bg-linear-30 from-blue-overlay via-blue-overlay via-50% via-blue-overlay/80 to-blue-overlay/20" />
+            <div className="absolute inset-0 w-full h-full bg-blue-overlay/65 object-cover" />
           </div>
         </div>
 
