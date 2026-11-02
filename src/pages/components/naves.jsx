@@ -44,9 +44,9 @@ export default function Naves() {
         className="flex flex-col justify-center items-center w-full bg-blue-overlay"
       >
         {/* first text block */}
-        <div className="relative flex flex-col w-full max-w-[1280px] px-[20px] sm:px-[44px] pt-[50px] pb-[30px] sm:px-[90px] sm:pt-[60px] gap-[20px] sm:gap-[51px]">
+        <div className="relative flex flex-col w-full max-w-[1280px] px-[20px] sm:px-[44px] py-[50px] sm:px-[90px] sm:py-[60px] gap-[20px] sm:gap-[51px]">
           {/* Parte superior */}
-          <div className="flex flex-col min-h-[50svh] justify-centergap-[50px]">
+          <div className="flex flex-col h-fit justify-centergap-[50px]">
             {/* Texto Naves Built to suit */}
             <div
               ref={introRef}
