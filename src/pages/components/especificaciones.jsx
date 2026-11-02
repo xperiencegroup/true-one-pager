@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { GalleryCarrousel } from "../../components/carousel/embla-carousel-autoplay";
+// import { GalleryCarrousel } from "../../components/carousel/embla-carousel-autoplay";
 
 import cuadroIcon from "../../assets/icons/cuadro.svg";
 import almacenIcon from "../../assets/icons/almacen.svg";
@@ -12,21 +12,23 @@ import { useInView } from "../../hooks/useInView";
 import EspecificacionCard from "../../components/especificacion-card";
 
 // Imagenes horizontales
-import fh1 from "../../assets/images/carousel/v2/still-1.png";
-import fh2 from "../../assets/images/carousel/v2/still-2.png";
-import fh3 from "../../assets/images/carousel/v2/still-3.png";
-import fh4 from "../../assets/images/carousel/v2/still-4.png";
-import fh5 from "../../assets/images/carousel/v2/still-5.png";
-import fh6 from "../../assets/images/carousel/v2/still-6.png";
+// import fh1 from "../../assets/images/carousel/v2/still-1.png";
+// import fh2 from "../../assets/images/carousel/v2/still-2.png";
+// import fh3 from "../../assets/images/carousel/v2/still-3.png";
+// import fh4 from "../../assets/images/carousel/v2/still-4.png";
+// import fh5 from "../../assets/images/carousel/v2/still-5.png";
+// import fh6 from "../../assets/images/carousel/v2/still-6.png";
 
 // Imagenes verticales
-import fv1 from "../../assets/images/carousel/v2/still-1-v.png";
-import fv2 from "../../assets/images/carousel/v2/still-2-v.png";
-import fv3 from "../../assets/images/carousel/v2/still-3-v.png";
-import fv4 from "../../assets/images/carousel/v2/still-4-v.png";
-import fv5 from "../../assets/images/carousel/v2/still-5-v.png";
-import fv6 from "../../assets/images/carousel/v2/still-6-v.png";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
+// import fv1 from "../../assets/images/carousel/v2/still-1-v.png";
+// import fv2 from "../../assets/images/carousel/v2/still-2-v.png";
+// import fv3 from "../../assets/images/carousel/v2/still-3-v.png";
+// import fv4 from "../../assets/images/carousel/v2/still-4-v.png";
+// import fv5 from "../../assets/images/carousel/v2/still-5-v.png";
+// import fv6 from "../../assets/images/carousel/v2/still-6-v.png";
+// import { useMediaQuery } from "../../hooks/useMediaQuery";
+
+import bannerImage from "../../assets/images/banner-especificaciones.jpg";
 
 const ESPECIFICACIONES = [
   {
@@ -51,15 +53,15 @@ const ESPECIFICACIONES = [
   },
 ];
 
-const carouselHorizontalImages = [fh1, fh2, fh3, fh4, fh5, fh6];
-const carouselVerticalImages = [fv1, fv2, fv3, fv4, fv5, fv6];
+// const carouselHorizontalImages = [fh1, fh2, fh3, fh4, fh5, fh6];
+// const carouselVerticalImages = [fv1, fv2, fv3, fv4, fv5, fv6];
 
 export default function Especificaciones() {
   const [titleRef, titleVisible] = useInView();
   const { t } = useTranslation("especificaciones");
 
-  const isSmUp = useMediaQuery("(min-width: 640px)");
-  const images = isSmUp ? carouselHorizontalImages : carouselVerticalImages;
+  // const isSmUp = useMediaQuery("(min-width: 640px)");
+  // const images = isSmUp ? carouselHorizontalImages : carouselVerticalImages;
 
   return (
     <section id="industrial-park" className="flex flex-col h-fit">
@@ -96,7 +98,11 @@ export default function Especificaciones() {
       </div>
 
       <div className="relative h-svh shrink-0 w-full justify-center items-center overflow-hidden">
-        <GalleryCarrousel images={images} />
+        <img
+          src={bannerImage}
+          alt="Vista de las Naves desde las Alturas"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
     </section>
   );
