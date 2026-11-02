@@ -12,7 +12,7 @@ const sectionIds = [
 import { navLinks } from "../../const/navigation";
 import { socials, whatsappInfo } from "../../const/socials";
 
-import trueCream from "../../assets/logos/true-cream.svg";
+import trueCream from "../../assets/logos/true-developments-cream.svg";
 import mobileLogoCream from "../../assets/logos/true-developments-cream.svg";
 
 import menuIcon from "../../assets/icons/menu.svg";
@@ -112,65 +112,32 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Botón Logo True - fijo, fuera del navbar animado */}
-      <div className="fixed z-60 top-0 left-0 w-full h-[83px] flex justify-center pointer-events-none">
-        <div className="relative flex flex-row w-full h-full">
-          {/* Botones laterales Logo True */}
-          <div className="grow flex justify-center items-center h-full">
+      <div
+        className={`navbar-enter fixed top-0 z-50 flex w-full justify-center max-[660px]:pr-[10px] bg-blue-overlay transition-transform duration-300 ${
+          visible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="relative flex w-full h-[83px] justify-between min-[660px]:justify-center items-center min-[660px]:justify-center">
+          {/* Botón Logo True */}
+          <div className="shrink-0 grow hidden min-[660px]:flex justify-center items-center w-[70px] min-[700px]:w-[92px] min-[900px]:w-[142px] h-full pl-[10px] min-[900px]:pl-[20px] pr-[10px]">
             <a
               href="#hero"
               onClick={() => {
                 track(TRACK.home.logo.home);
               }}
-              className="navbar-enter hidden min-[660px]:flex w-[50px] lg:w-[60px] h-full justify-center items-center px-[10px] pointer-events-auto"
+              className="min-[660px]:flex w-full justify-center"
             >
               <img
                 src={trueCream}
                 alt="Logo de True Developments"
-                className="w-[21px] h-[30px]"
-              />
-            </a>
-          </div>
-
-          {/* Fake navlinks */}
-          <div className="w-full max-w-[1160px] h-full" />
-          {/* Botón Toggle EN/ES */}
-          <div className="opacity-0 pointer-events-none grow flex justify-center items-center h-full">
-            <button
-              onClick={toggleLanguage}
-              className="navbar-enter hidden min-[660px]:flex w-[50px] lg:w-[60px] h-full justify-center items-center px-[10px] pointer-events-auto"
-            >
-              <p className="boton font-normal">
-                {i18n.language === "es" ? "EN" : "ES"}
-              </p>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className={`navbar-enter fixed top-0 z-50 flex w-full justify-center bg-blue-overlay transition-transform duration-300 ${
-          visible ? "translate-y-0" : "-translate-y-full"
-        }`}
-      >
-        <div className="relative flex w-full h-[83px] justify-between min-[660px]:justify-center items-center min-[660px]:justify-center">
-          {/* Fake Botón Logo True */}
-          <div className="grow hidden min-[660px]:flex justify-center items-center h-full">
-            <a
-              href="#hero"
-              className="hidden min-[660px]:flex w-[60px] justify-center px-[10px] pointer-events-none invisible"
-            >
-              <img
-                src={trueCream}
-                alt="Logo de True Developments"
-                className="w-[21px] h-[30px] "
+                className="w-full min-[900px]:w-[102px] h-fit"
               />
             </a>
           </div>
 
           {/* Navbar buttons */}
           <div className="hidden min-[660px]:flex w-full max-w-[1160px] h-full">
-            <div className="relative hidden min-[660px]:flex w-full h-full max-w-[1160px] justify-around items-center max-[660px]:p-[20px] border-x-[0.5px] border-cream/50">
+            <div className="relative hidden min-[660px]:flex w-full h-full max-w-[1160px] justify-around items-center max-[660px]:p-[20px] border-r-[0.5px] border-cream/50">
               {navLinks.map((button, index) => {
                 return (
                   <a
@@ -192,7 +159,10 @@ export default function Navbar() {
 
           <div className="grow hidden min-[660px]:flex justify-center items-center h-full">
             {/* Botón Toggle EN/ES */}
-            <button className="max-[660px]:hidden h-full px-[10px]">
+            <button
+              onClick={toggleLanguage}
+              className="max-[660px]:hidden h-full px-[10px]"
+            >
               <p className="boton font-normal">
                 {i18n.language === "es" ? "EN" : "ES"}
               </p>
