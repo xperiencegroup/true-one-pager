@@ -1,4 +1,4 @@
-import infraBanner from "../../assets/images/infra-banner.jpg";
+import infraBanner from "../../assets/images/operar-certeza-background2.jpg";
 
 // icons
 import electricidad from "../../assets/icons/electricidad.svg";
@@ -8,8 +8,8 @@ import drenaje from "../../assets/icons/drenaje.svg";
 import { useInView } from "../../hooks/useInView";
 import InfraestructuraItem from "../../components/infraestructura-item";
 import { useTranslation } from "react-i18next";
-import { track } from "../../analytics/track";
-import { TRACK } from "../../analytics/track.constants";
+// import { track } from "../../analytics/track";
+// import { TRACK } from "../../analytics/track.constants";
 
 import bannerImage from "../../assets/images/infra-background.jpg";
 
@@ -167,7 +167,7 @@ export default function Infraestructura() {
           <img
             src={infraBanner}
             alt="Banner"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-[50%_30%]"
           />
         </div>
       </div>
