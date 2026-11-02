@@ -41,7 +41,7 @@ export default function DesignedForCertainty() {
             <a
               href="#"
               onClick={() => track(TRACK.home.dfc.mainSiteClick)}
-              className="boton w-fit px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-bold text-blue bg-cream whitespace-nowrap"
+              className="boton w-fit px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-bold cta-colors whitespace-nowrap"
             >
               {t("cta")}
             </a>

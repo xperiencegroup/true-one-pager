@@ -4,9 +4,9 @@ import { useInView } from "../../hooks/useInView";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
 import { Fragment } from "react";
-import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
+// import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
 
-import backgroundImage from "../../assets/images/hero-background2.jpg";
+import backgroundImage from "../../assets/images/hero-background.jpg";
 
 const beneficios = [
   { id: "buy", key: "buy" },
@@ -156,7 +156,7 @@ export default function Naves() {
           </div>
         </div>
 
-        {/* razones */}
+        {/* razones y botones*/}
         <div className="flex flex-col w-full max-w-[1280px] min-h-[50svh] px-[20px] sm:px-[44px] pt-[50px] pb-[30px] sm:px-[90px] sm:pt-[60px] gap-[40px]">
           <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center gap-[50px]">
             {/* Razones */}
@@ -176,7 +176,7 @@ export default function Naves() {
             <a
               href="#naves"
               onClick={() => track(TRACK.home.hero.cta, { target: "naves" })}
-              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-cream text-blue hover:cursor-pointer"
+              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
             >
               <Trans
                 i18nKey="cta.building"
@@ -190,7 +190,7 @@ export default function Naves() {
             <a
               href="#"
               onClick={() => track(TRACK.home.hero.cta, { target: "maqueta" })}
-              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-cream text-blue hover:cursor-pointer"
+              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
             >
               {tHero("cta.explore")}
             </a>

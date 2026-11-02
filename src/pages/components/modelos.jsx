@@ -75,7 +75,7 @@ export default function Modelos() {
 
           <button
             onClick={handleGoToPlatformClick}
-            className={`whitespace-nowrap boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isVisible ? "is-visible" : ""}`}
+            className={`whitespace-nowrap boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium cta-colors reveal ${isVisible ? "is-visible" : ""}`}
           >
             {t("cta")}
           </button>
@@ -168,7 +168,7 @@ export default function Modelos() {
           <a
             href="#naves"
             onClick={() => track(TRACK.home.eligenos.cta, { target: "naves" })}
-            className="w-fit boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
+            className="w-fit boton font-medium cta-colors px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center"
           >
             <Trans
               i18nKey="cta.building"
@@ -184,7 +184,7 @@ export default function Modelos() {
             onClick={() =>
               track(TRACK.home.eligenos.cta, { target: "macrolotes" })
             }
-            className="w-fit max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange"
+            className="w-fit max-w-[400px] boton font-medium cta-colors px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center"
           >
             {tHero("cta.land")}
           </a>
@@ -194,7 +194,7 @@ export default function Modelos() {
             onClick={() =>
               track(TRACK.home.eligenos.cta, { target: "maqueta" })
             }
-            className="w-fit max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream"
+            className="w-fit max-w-[400px] boton font-medium cta-colors px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center"
           >
             {tHero("cta.explore")}
           </a>

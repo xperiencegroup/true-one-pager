@@ -15,7 +15,7 @@ const beneficios = [
 
 export default function Macrolotes() {
   const [introRef, isIntroVisible] = useInView();
-  const [tableDesktopRef, isTableDesktopVisible] = useInView();
+  // const [tableDesktopRef, isTableDesktopVisible] = useInView();
   const { t } = useTranslation("macrolotes");
   const { t: tHero } = useTranslation("hero");
 
@@ -217,7 +217,7 @@ export default function Macrolotes() {
           <a
             href="#macrolote"
             onClick={() => track(TRACK.home.hero.cta, { target: "macrolote" })}
-            className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-orange text-cream hover:cursor-pointer"
+            className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
           >
             <Trans
               i18nKey="cta.land"
@@ -231,7 +231,7 @@ export default function Macrolotes() {
           <a
             href="#"
             onClick={() => track(TRACK.home.hero.cta, { target: "maqueta" })}
-            className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-cream text-blue hover:cursor-pointer"
+            className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
           >
             {tHero("cta.explore")}
           </a>

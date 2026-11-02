@@ -108,7 +108,7 @@ export default function Eligenos() {
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "naves" })
                 }
-                className="w-fit boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream whitespace-nowrap"
+                className="w-fit boton cta-colors font-medium px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
               >
                 <Trans
                   i18nKey="cta.building"
@@ -124,7 +124,7 @@ export default function Eligenos() {
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "macrolotes" })
                 }
-                className="w-fit max-w-[400px] boton font-medium text-cream px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-orange whitespace-nowrap"
+                className="w-fit max-w-[400px] boton cta-colors font-medium px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
               >
                 {tHero("cta.land")}
               </a>
@@ -134,7 +134,7 @@ export default function Eligenos() {
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "maqueta" })
                 }
-                className="w-fit max-w-[400px] boton font-medium text-blue px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center bg-cream whitespace-nowrap"
+                className="w-fit max-w-[400px] boton font-medium cta-colors px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
               >
                 {tHero("cta.explore")}
               </a>

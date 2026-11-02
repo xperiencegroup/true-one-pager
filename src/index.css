@@ -33,6 +33,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.cta-colors {
+  @apply transition-all duration-150 ease-in-out bg-cream text-orange hover:bg-orange hover:text-cream;
+}
+
 .divider-white {
   width: 100%;
   height: 1.5px;

@@ -1,6 +1,6 @@
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
-import backgroundImage from "../../assets/images/hero-background2.jpg";
+import backgroundImage from "../../assets/images/hero-background.jpg";
 import Navbar from "./navbar";
 
 import { useTranslation, Trans } from "react-i18next";
@@ -16,12 +16,12 @@ export default function Hero() {
       <div className="absolute z-10 inset-0 w-full h-full bg-[#191F35]/80" />
 
       {/* Image */}
-      <div className="absolute z-5 inset-0 w-full h-full">
+      <div className="absolute z-5 inset-0 w-full h-full overflow-hidden">
         <div className="relative w-full h-full">
           <img
             src={backgroundImage}
             alt="Render de True Developments Ciénega de Flores"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-left-top scale-110 origin-top-left"
           />
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function Hero() {
             <a
               href="#naves"
               onClick={() => track(TRACK.home.hero.cta, { target: "naves" })}
-              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-cream text-blue hover:cursor-pointer"
+              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
             >
               <Trans
                 i18nKey="cta.building"
@@ -85,7 +85,7 @@ export default function Hero() {
               onClick={() =>
                 track(TRACK.home.hero.cta, { target: "macrolotes" })
               }
-              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-orange text-cream hover:cursor-pointer"
+              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
             >
               {t("cta.land")}
             </a>
@@ -93,7 +93,7 @@ export default function Hero() {
             <a
               href="#"
               onClick={() => track(TRACK.home.hero.cta, { target: "maqueta" })}
-              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center bg-cream text-blue hover:cursor-pointer whitespace-nowrap"
+              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer whitespace-nowrap"
             >
               {t("cta.explore")}
             </a>

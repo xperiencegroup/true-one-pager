@@ -147,7 +147,7 @@ export default function HablemosDeTuProyecto() {
           <button
             onClick={handleGoToPlatformClick}
             style={{ transitionDelay: "200ms" }}
-            className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium text-blue bg-cream reveal ${isContentVisible ? "is-visible" : ""}`}
+            className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium cta-colors reveal ${isContentVisible ? "is-visible" : ""}`}
           >
             {t("cta")}
           </button>
