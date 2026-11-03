@@ -22,7 +22,8 @@ import whatsappIcon from "../../assets/icons/social/whatsapp.svg";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
 
-const mobilebuttons = [...navLinks.slice(0, 5), ...navLinks.slice(5, 6)];
+const contactLink = navLinks.find((link) => link.href === "#contact");
+const mobilebuttons = navLinks.filter((link) => link.href !== "#contact");
 
 const socialButtons = [
   ...socials.slice(0, 2),
@@ -66,6 +67,11 @@ export default function Navbar() {
     const newLang = lang === "es" ? "en" : "es";
     track(TRACK.home.language.toggle, { language: newLang });
     navigate(`/${newLang}`);
+  };
+
+  const handleMobileLanguage = () => {
+    setIsNavbarOpen(false);
+    toggleLanguage();
   };
 
   // Bloquear/restaurar el scroll del body cuando el menú abre/cierra
@@ -207,25 +213,26 @@ export default function Navbar() {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="absolute min-[660px]:hidden top-0 left-0 z-0 flex flex-col w-full h-[100svh] bg-blue"
+                className="absolute min-[660px]:hidden top-0 left-0 z-0 flex flex-col w-full h-[100svh] bg-blue overflow-y-auto overscroll-contain"
               >
                 {/* Fake navbar */}
                 <div className="shrink-0 w-full h-[clamp(58px,9vh,83px)]" />
 
-                <div className="flex flex-col pt-[clamp(8px,3vh,30px)] pb-[clamp(12px,3.5vh,20px)] px-[clamp(14px,5vw,20px)] gap-[clamp(10px,3vh,15px)]">
+                <div className="flex flex-col pt-[clamp(8px,3vh,30px)] pb-[clamp(12px,3.5vh,20px)] px-[clamp(14px,5vw,20px)] gap-[11px]">
+                  {/* links */}
                   {mobilebuttons.map((button) => {
                     return (
                       <motion.div
                         key={button.id}
                         variants={itemVariants}
-                        className="flex flex-col w-full gap-[clamp(10px,3vh,15px)]"
+                        className="flex flex-col w-full gap-[11px]"
                       >
                         <button
                           key={button.id}
                           onClick={(e) =>
                             handleLinkClick(e, button.href, button.id)
                           }
-                          className={`text-[14px] min-[370px]:boton text-left font-medium px-[clamp(18px,6vw,30px)] py-[clamp(6px,1.4vh,14px)] ${button.id === "contacto" ? "rounded-full bg-orange" : ""}`}
+                          className={`text-[14px] min-[370px]:boton text-left font-medium px-[clamp(18px,6vw,30px)] py-[6px] ${button.id === "contacto" ? "rounded-full bg-orange" : ""}`}
                         >
                           {t(button.labelKey)}
                         </button>
@@ -235,6 +242,30 @@ export default function Navbar() {
                       </motion.div>
                     );
                   })}
+
+                  {/* contacto */}
+                  {contactLink && (
+                    <motion.div variants={itemVariants} className="w-full">
+                      <button
+                        onClick={(e) =>
+                          handleLinkClick(e, contactLink.href, contactLink.id)
+                        }
+                        className="w-full text-[14px] min-[370px]:boton text-left font-medium px-[clamp(18px,6vw,30px)] py-[6px] rounded-full bg-orange"
+                      >
+                        {t(contactLink.labelKey)}
+                      </button>
+                    </motion.div>
+                  )}
+
+                  {/* Idioma */}
+                  <motion.div variants={itemVariants} className="w-full">
+                    <button
+                      onClick={handleMobileLanguage}
+                      className="w-full text-[14px] min-[370px]:boton text-left font-medium px-[clamp(18px,6vw,30px)] py-[6px] rounded-full border border-cream"
+                    >
+                      {i18n.language === "es" ? "English" : "Español"}
+                    </button>
+                  </motion.div>
                 </div>
 
                 {/* Social media */}
