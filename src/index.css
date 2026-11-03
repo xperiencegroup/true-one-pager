@@ -33,6 +33,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 .cta-colors {
   @apply transition-all duration-150 ease-in-out bg-cream text-orange hover:bg-orange hover:text-cream;
 }
