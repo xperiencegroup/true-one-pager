@@ -8,7 +8,12 @@ import ubicacionIcon from "../../assets/icons/ubicacion-icons/direccion.svg";
 import { navLinks } from "../../const/navigation";
 
 // socials
-import { socials, contactInfo, whatsappInfo } from "../../const/socials";
+import {
+  socials,
+  contactInfo,
+  whatsappInfo,
+  googleMapsURL,
+} from "../../const/socials";
 import returnIcon from "../../assets/icons/return.svg";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
@@ -83,7 +88,7 @@ export default function Footer() {
 
           {/* dirección */}
           <a
-            href="https://maps.app.goo.gl/tFRmUiF8MARkdhNV6"
+            href={googleMapsURL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col md:flex-row text-center items-center gap-[10px] px-[20px]"
