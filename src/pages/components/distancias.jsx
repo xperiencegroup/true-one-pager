@@ -15,7 +15,7 @@ export default function Distancias() {
         <img
           src={map}
           alt="Mapa de Distancias"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[75%_50%]"
         />
       </div>
 

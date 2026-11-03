@@ -45,7 +45,6 @@ export default function Home() {
 
       <Hero />
       <Especificaciones />
-      {/* bug - se deborda de los lados */}
       <Eligenos />
       <Ubicacion />
       <Distancias />
@@ -55,7 +54,6 @@ export default function Home() {
       <Infraestructura />
       <Documentamos />
       <Preguntas />
-      {/* bug - se deborda de los lados */}
       <DesignedForCertainty />
       <Clientes />
       <HablemosDeTuProyecto />

@@ -77,7 +77,7 @@ export default function Ubicacion() {
       </div>
 
       {/* Columna derecha - imagen mapa con degradado */}
-      <div className="relative w-full lg:flex-[3] min-h-[50svh] lg:min-h-svh overflow-hidden">
+      <div className="relative w-full lg:flex-[3] min-h-svh lg:min-h-[50svh] overflow-hidden">
         <img
           src={mapaTags}
           alt={t("alt.map")}
@@ -89,7 +89,9 @@ export default function Ubicacion() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Degradado hacia el panel izquierdo */}
-        <div className="absolute w-[200px] inset-0 bg-[linear-gradient(to_right,rgba(25,31,53,1)_0%,rgba(25,31,53,0.95)_23%,rgba(25,31,53,0.83)_51%,rgba(25,31,53,0)_100%)]" />
+        <div className="hidden lg:flex absolute w-[200px] inset-0 bg-[linear-gradient(to_right,rgba(25,31,53,1)_0%,rgba(25,31,53,0.95)_23%,rgba(25,31,53,0.83)_51%,rgba(25,31,53,0)_100%)]" />
+        {/* degradado bottom */}
+        <div className="flex self-end lg:hidden absolute inset-0 w-full h-[40%] bg-linear-to-t from-blue-overlay via-10% via-blue-overlay/95 via-20% via-blue-overlay/83 to-100% to-transparent" />
       </div>
     </div>
   );

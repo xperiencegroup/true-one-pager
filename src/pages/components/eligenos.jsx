@@ -22,7 +22,7 @@ export default function Eligenos() {
 
   return (
     <>
-      <div className="relative flex justify-center w-full min-h-svh">
+      <div className="relative flex justify-center w-full min-h-svh overflow-x-clip">
         {/* Image */}
         <div className="absolute -z-10 w-full h-full">
           <div className="relative w-full h-full">
