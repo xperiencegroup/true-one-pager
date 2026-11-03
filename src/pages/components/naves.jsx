@@ -22,7 +22,6 @@ export default function Naves() {
   const { t } = useTranslation("naves");
   const { t: tHero } = useTranslation("hero");
 
-  const rows = t("sizes.rows", { returnObjects: true });
   const specs = t("specs.items", { returnObjects: true });
   const half = Math.ceil(specs.length / 2);
   const orderedSpecs = specs
@@ -71,69 +70,8 @@ export default function Naves() {
         </div>
 
         {/* tables */}
-        <div className="flex w-full min-h-svh justify-center items-center px-[90px] py-[60px] max-md:min-h-0 max-md:px-[40px] max-sm:px-[16px] max-sm:py-[40px]">
+        <div className="flex w-full min-h-fit justify-center items-center px-[90px] py-[20px] max-md:min-h-0 max-md:px-[40px] max-sm:px-[16px]">
           <div className="flex flex-col w-full max-w-[1280px] h-full justify-center items-center gap-[24px] overflow-hidden max-sm:gap-[16px]">
-            {/* primera tabla */}
-            <div className="flex flex-col w-full max-w-[952px] pb-[24px] gap-[24px] border-[1px] rounded-[30px] overflow-hidden border-cream bg-cream/10 max-sm:rounded-[20px] max-sm:pb-[16px] max-sm:gap-[16px]">
-              <table className="w-full">
-                <thead>
-                  <tr className="text-blue bg-cream">
-                    <th colSpan={5} className="pt-[10px] paragraph text-center">
-                      {t("sizes.title")}
-                    </th>
-                  </tr>
-
-                  <tr className="text-left bg-cream text-blue">
-                    <th className="w-[40px] p-0 max-sm:w-[12px]" />
-                    <th className="paragraph py-[10px]">
-                      {t("sizes.headers.config")}
-                    </th>
-                    <th className="paragraph pl-[40px] py-[10px] whitespace-nowrap max-sm:pl-[12px]">
-                      {t("sizes.headers.ft")}
-                    </th>
-                    <th className="paragraph pl-[40px] py-[10px] whitespace-nowrap max-sm:pl-[12px]">
-                      {t("sizes.headers.m")}
-                    </th>
-                    <th className="w-[40px] p-0 max-sm:w-[12px]" />
-                  </tr>
-                </thead>
-                <tbody>
-                  {rows.map((row, i) => {
-                    const line =
-                      i < rows.length - 1
-                        ? "border-b-[0.5px] border-cream"
-                        : "";
-                    return (
-                      <tr key={row.name} className="text-cream">
-                        <td className="w-[40px] p-0 max-sm:w-[12px]" />
-                        <td
-                          className={`w-[60%] paragraph font-medium py-[8px] max-sm:w-auto ${line}`}
-                        >
-                          {row.name}
-                        </td>
-                        <td
-                          className={`paragraph pl-[40px] py-[8px] whitespace-nowrap max-sm:pl-[12px] ${line}`}
-                        >
-                          {row.ft}
-                        </td>
-                        <td
-                          className={`paragraph pl-[40px] py-[8px] whitespace-nowrap max-sm:pl-[12px] ${line}`}
-                        >
-                          {row.m}
-                        </td>
-                        <td className="w-[40px] p-0 max-sm:w-[12px]" />
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-
-              {/* text */}
-              <p className="paragraph text-cream px-[40px] whitespace-pre-line max-sm:px-[12px] max-sm:whitespace-normal">
-                {t("sizes.note")}
-              </p>
-            </div>
-
             {/* segunda tabla */}
             <div className="w-full max-w-[952px] border-[1px] rounded-[30px] overflow-hidden border-cream bg-cream/10 max-sm:rounded-[20px]">
               <h3 className="py-[20px] paragraph font-bold text-center text-blue bg-cream max-sm:py-[14px] max-sm:px-[12px]">
