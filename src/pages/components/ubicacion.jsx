@@ -6,11 +6,17 @@ import mapaTags from "../../assets/images/ubicacion-mapa-tags-v2.svg";
 import accesoIcon from "../../assets/icons/ubicacion-icons/acceso.svg";
 import corredorIcon from "../../assets/icons/ubicacion-icons/corredor.svg";
 import direccionIcon from "../../assets/icons/ubicacion-icons/direccion.svg";
+import { googleMapsURL } from "../../const/socials";
 
 const conexiones = [
   { id: "acceso", key: "item1", icon: accesoIcon },
   { id: "corredor", key: "item2", icon: corredorIcon },
-  { id: "direccion", key: "item3", icon: direccionIcon },
+  {
+    id: "direccion",
+    key: "item3",
+    icon: direccionIcon,
+    href: googleMapsURL,
+  },
 ];
 export default function Ubicacion() {
   const { t } = useTranslation("ubicacion");
@@ -68,7 +74,20 @@ export default function Ubicacion() {
                   {t(`${item.key}.title`)}
                 </h3>
                 <p className="paragraph font-light leading-[125%]">
-                  {t(`${item.key}.text`)}
+                  <Trans
+                    t={t}
+                    i18nKey={`${item.key}.text`}
+                    components={{
+                      maps: (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline underline-offset-2 hover:text-orange transition-colors"
+                        />
+                      ),
+                    }}
+                  />
                 </p>
               </div>
             </div>
