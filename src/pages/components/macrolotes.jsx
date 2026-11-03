@@ -54,7 +54,11 @@ export default function Macrolotes() {
             <p className="paragraph font-light whitespace-pre-line">
               {t("intro")}
               <br /> <br />
-              {t("description")}
+              <Trans
+                t={t}
+                i18nKey="description"
+                components={{ strong: <strong className="font-bold" /> }}
+              />
               <br />
               <br />
               <Trans
