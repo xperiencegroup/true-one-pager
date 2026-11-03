@@ -161,7 +161,7 @@ export default function HablemosDeTuProyecto() {
       >
         <div className="flex flex-col w-full max-w-[1150px] gap-[15px] py-[60px]">
           {/* Header */}
-          <div className="flex w-full max-w-[1100px] min-h-[250px]">
+          <div className="flex w-full max-w-[1100px] min-h-[120px] sm:min-h-[250px]">
             <div
               ref={headerRef}
               className={`max-xl:self-center flex w-full max-w-[520px] flex-col flex-col-reverse lg:flex-row justify-between items-center gap-[15px] md:gap-[20px] lg:gap-[40px] reveal ${isHeaderVisible ? "is-visible" : ""}`}
