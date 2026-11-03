@@ -56,3 +56,5 @@ export const whatsappInfo = {
   buttonText: "Enviar WhatsApp",
   href: "https://wa.me/528184640002",
 };
+
+export const googleMapsURL = "https://maps.app.goo.gl/wbnNhrF3sF45Mjoh6";
