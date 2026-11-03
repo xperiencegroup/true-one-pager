@@ -65,7 +65,7 @@ export default function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row flex-wrap gap-[15px] min-[660px]:gap-[20px] min-[850px]:gap-[44px] animate-hero-3">
+          <div className="flex flex-col max-sm:items-stretch sm:flex-row flex-wrap gap-[15px] min-[660px]:gap-[20px] min-[850px]:gap-[44px] animate-hero-3 bg-red-500">
             <a
               href="#naves"
               onClick={() => track(TRACK.home.hero.cta, { target: "naves" })}
