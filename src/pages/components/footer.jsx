@@ -102,7 +102,7 @@ export default function Footer() {
       </div>
 
       {/* Redes sociales */}
-      <div className="absolute flex justify-between items-end w-[316px] h-[52px] bottom-0">
+      <div className="absolute flex justify-between items-end max-[470px]:gap-[15px] min-[470px]:w-[316px] h-[52px] bottom-0">
         {socials.map((social) => {
           return (
             <a
