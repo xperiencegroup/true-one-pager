@@ -65,11 +65,11 @@ export default function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col max-sm:items-stretch sm:flex-row flex-wrap gap-[15px] min-[660px]:gap-[20px] min-[850px]:gap-[44px] animate-hero-3 bg-red-500">
+          <div className="flex flex-col max-sm:items-stretch max-sm:w-fit max-sm:self-center sm:items-start sm:flex-row flex-wrap gap-[15px] min-[660px]:gap-[20px] min-[850px]:gap-[44px] animate-hero-3">
             <a
               href="#naves"
               onClick={() => track(TRACK.home.hero.cta, { target: "naves" })}
-              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
+              className="boton flex justify-center items-center w-fit max-sm:w-full h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
             >
               <Trans
                 i18nKey="cta.building"
@@ -79,21 +79,19 @@ export default function Hero() {
                 }}
               />
             </a>
-
             <a
               href="#macrolotes"
               onClick={() =>
                 track(TRACK.home.hero.cta, { target: "macrolotes" })
               }
-              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
+              className="boton flex justify-center items-center w-fit max-sm:w-full h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
             >
               {t("cta.land")}
             </a>
-
             <a
               href="#"
               onClick={() => track(TRACK.home.hero.cta, { target: "maqueta" })}
-              className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer whitespace-nowrap"
+              className="boton flex justify-center items-center w-fit max-sm:w-full h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer whitespace-nowrap"
             >
               {t("cta.explore")}
             </a>

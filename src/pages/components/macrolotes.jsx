@@ -106,11 +106,11 @@ export default function Macrolotes() {
         </div>
 
         {/* buttons */}
-        <div className="flex flex-col sm:flex-row gap-[15px] min-[660px]:gap-[40px] sm:gap-[44px] animate-hero-3">
+        <div className="flex flex-col sm:flex-row gap-[15px] min-[660px]:gap-[40px] sm:gap-[44px] animate-hero-3 max-sm:items-stretch max-sm:w-fit max-sm:self-center">
           <a
             href="#macrolote"
             onClick={() => track(TRACK.home.hero.cta, { target: "macrolote" })}
-            className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
+            className="boton flex justify-center items-center w-fit max-sm:w-full h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
           >
             <Trans
               i18nKey="cta.land"
@@ -124,7 +124,7 @@ export default function Macrolotes() {
           <a
             href="#"
             onClick={() => track(TRACK.home.hero.cta, { target: "maqueta" })}
-            className="boton flex justify-center items-center w-fit h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
+            className="boton flex justify-center items-center w-fit max-sm:w-full h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
           >
             {tHero("cta.explore")}
           </a>

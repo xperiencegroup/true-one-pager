@@ -101,14 +101,14 @@ export default function Eligenos() {
               })}
             </div>
 
-            <div className="flex w-full flex-row flex-wrap justify-start md:items-center pt-[5px] gap-[14px] xl:gap-[44px]">
-              {/* Botones */}
+            {/* Botones */}
+            <div className="flex w-full flex-row flex-wrap justify-start md:items-center pt-[5px] gap-[14px] xl:gap-[44px] max-sm:flex-col max-sm:items-stretch max-sm:w-fit max-sm:self-center">
               <a
                 href="#naves"
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "naves" })
                 }
-                className="w-fit boton cta-colors font-medium px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
+                className="w-fit max-sm:w-full boton cta-colors font-medium px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
               >
                 <Trans
                   i18nKey="cta.building"
@@ -124,7 +124,7 @@ export default function Eligenos() {
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "macrolotes" })
                 }
-                className="w-fit max-w-[400px] boton cta-colors font-medium px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
+                className="w-fit max-sm:w-full max-w-[400px] boton cta-colors font-medium px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
               >
                 {tHero("cta.land")}
               </a>
@@ -134,7 +134,7 @@ export default function Eligenos() {
                 onClick={() =>
                   track(TRACK.home.eligenos.cta, { target: "maqueta" })
                 }
-                className="w-fit max-w-[400px] boton font-medium cta-colors px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
+                className="w-fit max-sm:w-full max-w-[400px] boton font-medium cta-colors px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
               >
                 {tHero("cta.explore")}
               </a>
