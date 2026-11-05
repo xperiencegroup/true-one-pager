@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 
-import map from "../../assets/images/distances-map.jpg";
+// import map from "../../assets/images/distances-map.jpg";
+import map from "../../assets/images/distances-map-v2.jpg";
 
 export default function Distancias() {
   const { t } = useTranslation("distancias");
