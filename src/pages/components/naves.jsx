@@ -7,6 +7,7 @@ import { Fragment } from "react";
 // import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
 
 import backgroundImage from "../../assets/images/hero-background.jpg";
+import { useXperiencePopup } from "../../hooks/useXperiencePopup";
 
 const beneficios = [
   { id: "buy", key: "buy" },
@@ -21,6 +22,7 @@ export default function Naves() {
   const [introRef, isIntroVisible] = useInView();
   const { t } = useTranslation("naves");
   const { t: tHero } = useTranslation("hero");
+  const { openXperiencePopup } = useXperiencePopup();
 
   const specs = t("specs.items", { returnObjects: true });
   const half = Math.ceil(specs.length / 2);
@@ -28,14 +30,6 @@ export default function Naves() {
     .slice(0, half)
     .flatMap((spec, i) => [spec, specs[half + i]].filter(Boolean));
 
-  /*
-  const handleCotizaNave = () => {
-    track(TRACK.home.popup.clickAndXperience.open, {
-      source: "naves",
-    });
-    window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
-  };
-  */
   return (
     <>
       <div
@@ -125,13 +119,15 @@ export default function Naves() {
               />
             </a>
 
-            <a
-              href="#"
-              onClick={() => track(TRACK.home.hero.cta, { target: "maqueta" })}
+            <button
+              onClick={() => {
+                track(TRACK.home.hero.cta, { target: "maqueta" });
+                openXperiencePopup();
+              }}
               className="boton flex justify-center items-center w-fit max-sm:w-full  h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
             >
               {tHero("cta.explore")}
-            </a>
+            </button>
           </div>
         </div>
       </div>

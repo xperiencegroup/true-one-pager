@@ -4,6 +4,7 @@ import { useInView } from "../../hooks/useInView";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
 import { Fragment } from "react";
+import { useXperiencePopup } from "../../hooks/useXperiencePopup";
 // import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
 
 const beneficios = [
@@ -18,6 +19,7 @@ export default function Macrolotes() {
   // const [tableDesktopRef, isTableDesktopVisible] = useInView();
   const { t } = useTranslation("macrolotes");
   const { t: tHero } = useTranslation("hero");
+  const { openXperiencePopup } = useXperiencePopup();
 
   const delivered = t("delivered.items", { returnObjects: true });
   const half = Math.ceil(delivered.length / 2);
@@ -25,14 +27,6 @@ export default function Macrolotes() {
     .slice(0, half)
     .flatMap((item, i) => [item, delivered[half + i]].filter(Boolean));
 
-  /*
-  const handleConoceMacrolotes = () => {
-    track(TRACK.home.popup.clickAndXperience.open, {
-      source: "macrolotes",
-    });
-    window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
-  };
-  */
   return (
     <div
       id="macrolotes"
@@ -125,13 +119,15 @@ export default function Macrolotes() {
             />
           </a>
 
-          <a
-            href="#"
-            onClick={() => track(TRACK.home.hero.cta, { target: "maqueta" })}
+          <button
+            onClick={() => {
+              track(TRACK.home.hero.cta, { target: "maqueta" });
+              openXperiencePopup();
+            }}
             className="boton flex justify-center items-center w-fit max-sm:w-full h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
           >
             {tHero("cta.explore")}
-          </a>
+          </button>
         </div>
       </div>
     </div>

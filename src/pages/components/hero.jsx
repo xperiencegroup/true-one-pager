@@ -1,12 +1,15 @@
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
 import backgroundImage from "../../assets/images/hero-background.jpg";
+import { useXperiencePopup } from "../../hooks/useXperiencePopup";
 import Navbar from "./navbar";
 
 import { useTranslation, Trans } from "react-i18next";
 
 export default function Hero() {
   const { t } = useTranslation("hero");
+  const { openXperiencePopup } = useXperiencePopup();
+
   return (
     <div
       id="hero"
@@ -66,6 +69,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex flex-col max-sm:items-stretch max-sm:w-fit max-sm:self-center sm:items-start sm:flex-row flex-wrap gap-[15px] min-[660px]:gap-[20px] min-[850px]:gap-[44px] animate-hero-3">
+            {/* navez */}
             <a
               href="#naves"
               onClick={() => track(TRACK.home.hero.cta, { target: "naves" })}
@@ -79,6 +83,8 @@ export default function Hero() {
                 }}
               />
             </a>
+
+            {/* macrolotes */}
             <a
               href="#macrolotes"
               onClick={() =>
@@ -88,9 +94,14 @@ export default function Hero() {
             >
               {t("cta.land")}
             </a>
+
+            {/* maqueta digital */}
             <a
               href="#"
-              onClick={() => track(TRACK.home.hero.cta, { target: "maqueta" })}
+              onClick={() => {
+                track(TRACK.home.hero.cta, { target: "maqueta" });
+                openXperiencePopup();
+              }}
               className="boton flex justify-center items-center w-fit max-sm:w-full h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer whitespace-nowrap"
             >
               {t("cta.explore")}

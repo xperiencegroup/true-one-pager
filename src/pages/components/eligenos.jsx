@@ -7,6 +7,7 @@ import { useInView } from "../../hooks/useInView";
 import { Trans, useTranslation } from "react-i18next";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
+import { useXperiencePopup } from "../../hooks/useXperiencePopup";
 
 const RAZONES = [
   { key: "item1", icon: edificioIcon },
@@ -19,6 +20,7 @@ export default function Eligenos() {
   const [rightPanel, rightPanelIsVisible] = useInView();
   const { t } = useTranslation("eligenos");
   const { t: tHero } = useTranslation("hero");
+  const { openXperiencePopup } = useXperiencePopup();
 
   return (
     <>
@@ -129,15 +131,15 @@ export default function Eligenos() {
                 {tHero("cta.land")}
               </a>
 
-              <a
-                href="#"
-                onClick={() =>
-                  track(TRACK.home.eligenos.cta, { target: "maqueta" })
-                }
+              <button
+                onClick={() => {
+                  track(TRACK.home.eligenos.cta, { target: "maqueta" });
+                  openXperiencePopup();
+                }}
                 className="w-fit max-sm:w-full max-w-[400px] boton font-medium cta-colors px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center whitespace-nowrap"
               >
                 {tHero("cta.explore")}
-              </a>
+              </button>
             </div>
           </div>
         </div>

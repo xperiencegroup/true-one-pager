@@ -13,7 +13,7 @@ import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
 import { supabase } from "../../lib/supabase";
 import { TABLE_ID } from "../../const/supabase";
-import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
+import { useXperiencePopup } from "../../hooks/useXperiencePopup";
 
 const contactInfo = [
   {
@@ -49,6 +49,7 @@ export default function HablemosDeTuProyecto() {
 
   const { t } = useTranslation("plataforma");
   const { t: tContact } = useTranslation("hablemos");
+  const { openXperiencePopup } = useXperiencePopup();
 
   const onSubmit = async (data) => {
     try {
@@ -91,11 +92,11 @@ export default function HablemosDeTuProyecto() {
   const [cardRef, isCardVisible] = useInView();
   const [formRef, isFormVisible] = useInView();
 
-  const handleGoToPlatformClick = () => {
+  const handleOpenFormPlatform = () => {
+    openXperiencePopup();
     track(TRACK.home.popup.clickAndXperience.open, {
       source: "designed-for-certainty-second-banner",
     });
-    window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
   };
   return (
     <div className="flex flex-col w-full justify-center items-center bg-blue-overlay">
@@ -145,7 +146,7 @@ export default function HablemosDeTuProyecto() {
           </p>
 
           <button
-            onClick={handleGoToPlatformClick}
+            onClick={handleOpenFormPlatform}
             style={{ transitionDelay: "200ms" }}
             className={`boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium cta-colors reveal ${isContentVisible ? "is-visible" : ""}`}
           >

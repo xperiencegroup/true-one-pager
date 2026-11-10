@@ -7,7 +7,7 @@ import ModeloCard from "../../components/modelo-card";
 import { Trans, useTranslation } from "react-i18next";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
-import { useSearchParams } from "react-router";
+import { useXperiencePopup } from "../../hooks/useXperiencePopup";
 
 const modelos = [
   { id: "nave", key: "optionA", icon: rentaBTS },
@@ -17,14 +17,14 @@ const modelos = [
 export default function Modelos() {
   const [ref, isVisible] = useInView();
   const [leftColumnRef, isLeftColumnVisible] = useInView();
-  const [, setParams] = useSearchParams();
 
   const { t } = useTranslation("plataforma");
   const { t: tModel } = useTranslation("modelos");
   const { t: tHero } = useTranslation("hero");
+  const { openXperiencePopup } = useXperiencePopup();
 
   const handleOpenForm = () => {
-    setParams({ form: "maqueta" });
+    openXperiencePopup();
     track(TRACK.home.popup.clickAndXperience.open, {
       source: "designed-for-certainty",
     });
@@ -190,15 +190,15 @@ export default function Modelos() {
             {tHero("cta.land")}
           </a>
 
-          <a
-            href="#"
-            onClick={() =>
-              track(TRACK.home.eligenos.cta, { target: "maqueta" })
-            }
+          <button
+            onClick={() => {
+              track(TRACK.home.eligenos.cta, { target: "maqueta" });
+              openXperiencePopup();
+            }}
             className="w-fit max-sm:w-full max-w-[400px] boton font-medium cta-colors px-[20px] pt-[11px] pb-[12px] rounded-[30px] text-center"
           >
             {tHero("cta.explore")}
-          </a>
+          </button>
         </div>
       </div>
     </>
