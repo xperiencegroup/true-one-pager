@@ -7,7 +7,7 @@ import ModeloCard from "../../components/modelo-card";
 import { Trans, useTranslation } from "react-i18next";
 import { track } from "../../analytics/track";
 import { TRACK } from "../../analytics/track.constants";
-import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
+import { useSearchParams } from "react-router";
 
 const modelos = [
   { id: "nave", key: "optionA", icon: rentaBTS },
@@ -17,19 +17,19 @@ const modelos = [
 export default function Modelos() {
   const [ref, isVisible] = useInView();
   const [leftColumnRef, isLeftColumnVisible] = useInView();
+  const [, setParams] = useSearchParams();
 
   const { t } = useTranslation("plataforma");
   const { t: tModel } = useTranslation("modelos");
   const { t: tHero } = useTranslation("hero");
 
-  const handleGoToPlatformClick = () => {
-    // no más popups, va directo al C&X
+  const handleOpenForm = () => {
+    setParams({ form: "maqueta" });
     track(TRACK.home.popup.clickAndXperience.open, {
       source: "designed-for-certainty",
     });
-
-    window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
   };
+
   return (
     <>
       {/* Diseñado para operar con certeza */}
@@ -75,7 +75,7 @@ export default function Modelos() {
           </p>
 
           <button
-            onClick={handleGoToPlatformClick}
+            onClick={handleOpenForm}
             className={`whitespace-nowrap boton px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-medium cta-colors reveal ${isVisible ? "is-visible" : ""}`}
           >
             {t("cta")}

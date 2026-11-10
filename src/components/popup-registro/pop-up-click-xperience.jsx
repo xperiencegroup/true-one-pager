@@ -40,13 +40,18 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
 
   // Bloquear scroll del body mientras el popup está abierto
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    if (!isOpen) return;
+
+    const html = document.documentElement;
+    const body = document.body;
+    const prev = { html: html.style.overflow, body: body.style.overflow };
+
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+
     return () => {
-      document.body.style.overflow = "";
+      html.style.overflow = prev.html;
+      body.style.overflow = prev.body;
     };
   }, [isOpen]);
 
@@ -59,6 +64,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
         source: "True One Pager - Popup de Click & Xperience",
       };
 
+      // envío de formulario
       const { error } = await supabase.from(TABLE_ID).insert(payload);
       if (error) throw error;
 
@@ -68,6 +74,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
       await onClose();
       await showToast(t("toast.success"), false);
 
+      // redirección
       track(TRACK.home.popup.clickAndXperience.redirect);
       window.open(CLICK_AND_XPERIENCE_URL, "_blank", "noopener,noreferrer");
     } catch (error) {
@@ -86,7 +93,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[100] flex justify-center items-center bg-black/60 px-[20px]"
+            className="fixed inset-0 z-[100] flex justify-center items-center bg-black/60 px-[20px] overscroll-contain"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.92, y: 20 }}
@@ -281,6 +288,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
 
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full boton font-medium px-[20px] pt-[12px] pb-[11px] rounded-full text-blue bg-cream hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? t("form.submitting") : t("form.submit")}
