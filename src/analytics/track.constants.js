@@ -1,79 +1,77 @@
-const PROJECT = "trueonepager";
-
 export const TRACK = {
   home: {
     menu: {
-      toggle: `${PROJECT}:menu:toggle:click`,
-      item: `${PROJECT}:menu:item:click`,
+      toggle: "menu_toggle",
+      item: "menu_select",
     },
 
     language: {
-      toggle: `${PROJECT}:language:toggle:click`,
+      toggle: "language_change",
     },
 
     logo: {
-      home: `${PROJECT}:logo:hero:click`,
+      home: "logo_home",
     },
 
     social: {
-      click: `${PROJECT}:social:click`,
+      click: "social_open",
     },
 
     whatsapp: {
-      float: `${PROJECT}:whatsapp:float:click`,
+      float: "whatsapp_float_open",
     },
 
     clickAndXperience: {
-      float: `${PROJECT}:clickAndXperience:float:click`,
+      float: "xperience_float_open",
     },
 
     popup: {
       registro: {
-        open: `${PROJECT}:popup:registro:open`,
-        close: `${PROJECT}:popup:registro:close`,
-        submit: `${PROJECT}:popup:registro:submit`,
-        submitError: `${PROJECT}:popup:registro:submit-error`,
-        social: `${PROJECT}:popup:registro:social:click`,
+        open: "popup_registro_open",
+        close: "popup_registro_close",
+        submit: "popup_registro_submit",
+        submitError: "popup_registro_error",
+        social: "popup_registro_social",
       },
       clickAndXperience: {
-        open: `${PROJECT}:popup:click-xperience:open`,
-        close: `${PROJECT}:popup:click-xperience:close`,
-        submit: `${PROJECT}:popup:click-xperience:submit`,
-        submitError: `${PROJECT}:popup:click-xperience:submit-error`,
-        social: `${PROJECT}:popup:click-xperience:social:click`,
-        redirect: `${PROJECT}:popup:click-xperience:redirect`,
+        open: "popup_xperience_open",
+        close: "popup_xperience_close",
+        submit: "popup_xperience_submit",
+        submitError: "popup_xperience_error",
+        social: "popup_xperience_social",
+        redirect: "popup_xperience_redirect",
       },
     },
 
     hero: {
-      cta: `${PROJECT}:hero:cta:click`,
+      cta: "hero_cta",
     },
 
     eligenos: {
-      cta: `${PROJECT}:eligenos:cta:click`,
+      cta: "eligenos_cta",
     },
 
     infraestructura: {
-      mapClick: `${PROJECT}:infraestructura:map:click`,
+      mapClick: "infra_map_open",
     },
 
     faq: {
-      toggle: `${PROJECT}:faq:item:toggle`,
+      toggle: "faq_toggle",
     },
 
     dfc: {
-      mainSiteClick: `${PROJECT}:designed-for-certainity:main-site:click`,
+      mainSiteClick: "dfc_main_site_open",
     },
 
     contacto: {
-      contactMethodClick: `${PROJECT}:contacto:metodo:click`,
-      formSubmit: `${PROJECT}:contacto:form:submit`,
-      formSubmitError: `${PROJECT}:contacto:form:submit-error`,
+      contactMethodClick: "contacto_method",
+      formSubmit: "contacto_submit",
+      formSubmitError: "contacto_error",
     },
 
     footer: {
-      backToTop: `${PROJECT}:footer:back-to-top:click`,
-      contactInfoClick: `${PROJECT}:footer:contact-info:click`,
+      backToTop: "footer_back_to_top",
+      contactInfoClick: "footer_contact",
     },
   },
 };
