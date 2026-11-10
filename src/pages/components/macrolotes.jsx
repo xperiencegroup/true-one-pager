@@ -112,7 +112,7 @@ export default function Macrolotes() {
         {/* buttons */}
         <div className="flex flex-col sm:flex-row gap-[15px] min-[660px]:gap-[40px] sm:gap-[44px] animate-hero-3 max-sm:items-stretch max-sm:w-fit max-sm:self-center">
           <a
-            href="#macrolote"
+            href="#macrolotes"
             onClick={() => track(TRACK.home.hero.cta, { target: "macrolote" })}
             className="boton flex justify-center items-center w-fit max-sm:w-full h-fit px-[20px] pt-[11px] pb-[12px] rounded-full font-medium text-center cta-colors hover:cursor-pointer"
           >

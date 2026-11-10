@@ -38,13 +38,13 @@ export default function DesignedForCertainty() {
               {t("trust")} <br /> {t("tagline")}
             </h2>
 
-            <a
-              href="#"
+            <button
+              // href=""
               onClick={() => track(TRACK.home.dfc.mainSiteClick)}
               className="boton w-fit px-[20px] pt-[11px] pb-[12px] rounded-[30px] font-bold cta-colors whitespace-nowrap"
             >
               {t("cta")}
-            </a>
+            </button>
           </div>
 
           {/* Columna derecha */}
