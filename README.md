@@ -11,6 +11,7 @@ Este documento explica las librerías menos evidentes del proyecto: qué hacen, 
 - [Notificaciones: React Hot Toast](#notificaciones-react-hot-toast)
 - [Ruteo: React Router](#ruteo-react-router)
 - [Estado global: Zustand](#estado-global-zustand)
+- [Popup Click & Xperience: estado en URL y registro en localStorage](#popup-click--xperience-estado-en-url-y-registro-en-localstorage)
 
 ---
 
@@ -144,9 +145,9 @@ react-router   8.3.0
 
 **Qué es:** el router estándar para SPAs en React. Nota: desde la v7, el paquete se instala como `react-router` (ya no `react-router-dom` por separado).
 
-**Por qué se eligió:** aunque el sitio es mayormente un one-pager de scroll (secciones con anclas `#hero`, `#modelos`, etc.), sí necesita rutear por **idioma** (`/es`, `/en`) como parte de la URL, vía un parámetro dinámico (`useParams` con `lang`) y navegación programática (`useNavigate`) para el toggle de idioma.
+**Por qué se eligió:** aunque el sitio es mayormente un one-pager de scroll (secciones con anclas `#hero`, `#modelos`, etc.), sí necesita rutear por **idioma** (`/es`, `/en`) como parte de la URL, vía un parámetro dinámico (`useParams` con `lang`) y navegación programática (`useNavigate`) para el toggle de idioma. También se usa `useSearchParams` para controlar la apertura del popup de Click & Xperience desde la URL (ver [la sección correspondiente](#popup-click--xperience-estado-en-url-y-registro-en-localstorage)).
 
-**Dónde se usa:** `Navbar` (`useParams`, `useNavigate` para el toggle EN/ES), y la configuración de rutas base del proyecto (fuera del alcance de los componentes vistos hasta ahora).
+**Dónde se usa:** `Navbar` (`useParams`, `useNavigate` para el toggle EN/ES), `useXperiencePopup` (`useSearchParams`), y la configuración de rutas base del proyecto.
 
 ---
 
@@ -158,7 +159,7 @@ zustand   5.0.15
 
 **Qué es:** manejo de estado global minimalista, alternativa a Redux o Context API sin el boilerplate de ninguno de los dos. Un store se define con una función y se consume con un hook, sin providers que envuelvan el árbol de componentes.
 
-**Por qué se eligió:** hay estado que necesita compartirse entre componentes que no tienen relación padre-hijo directa — por ejemplo, qué popup está activo (`usePopupStore`), consumido tanto por el componente que lo abre (un botón en `Naves`, `Macrolotes`, `DesignedForCertainty`, etc.) como por el que lo renderiza (`Home`, donde viven `<PopupRegistro />` y `<PopupClickAndXperience />`). Zustand evita tener que pasar props o envolver la app en un Context solo para esto.
+**Por qué se eligió:** hay estado que necesita compartirse entre componentes que no tienen relación padre-hijo directa — por ejemplo, qué popup está activo (`usePopupStore`), consumido tanto por el componente que lo abre como por el que lo renderiza (`Home`). Zustand evita tener que pasar props o envolver la app en un Context solo para esto.
 
 ```jsx
 // definición (aprox.)
@@ -174,7 +175,125 @@ const openPopup = usePopupStore((state) => state.openPopup);
 
 También se usa para estado de UI compartido como qué amenidad está seleccionada en el carrusel (`useUIStore`).
 
-**Dónde se usa:** `usePopupStore` (control de popups, consumido por casi todas las secciones con CTA), `useUIStore` (estado de selección en Amenidades).
+> **Nota:** el popup de Click & Xperience ya no se controla con este store, sino con un parámetro en la URL. Ver [Popup Click & Xperience](#popup-click--xperience-estado-en-url-y-registro-en-localstorage).
+
+**Dónde se usa:** `usePopupStore` (control de popups), `useUIStore` (estado de selección en Amenidades).
+
+---
+
+## Popup Click & Xperience: estado en URL y registro en localStorage
+
+El popup que da acceso a la Maqueta Digital Interactiva funciona como un "muro de registro": la primera vez que el usuario quiere entrar, se le piden sus datos; si ya se registró recientemente, se le lleva directo a la maqueta sin volver a mostrarle el formulario.
+
+### Archivos
+
+```
+src/
+  hooks/
+    useXperiencePopup.js   # abre/cierra el popup y decide si mostrarlo o redirigir
+  lib/
+    leadStorage.js         # guarda y valida el registro en localStorage
+  components/
+    popup-registro/
+      pop-up-click-xperience.jsx   # formulario; llama a saveLead() al enviar
+```
+
+### Estado de apertura en la URL (`useXperiencePopup`)
+
+El popup está abierto cuando la URL tiene el parámetro `?form=maqueta`. En lugar de un `useState` o un store, el estado vive en la URL, lo que permite:
+
+- **Enlaces directos:** `https://.../es?form=maqueta` abre el popup al cargar, útil para campañas o correos.
+- **Botón "atrás" del navegador:** cierra el popup en lugar de salir del sitio, porque abrirlo agrega una entrada al historial.
+- **Sin prop drilling:** cualquier componente puede abrirlo importando el hook.
+
+```js
+const { isOpen, openXperiencePopup, closeXperiencePopup } = useXperiencePopup();
+```
+
+- `isOpen`: `true` si la URL tiene `?form=maqueta`.
+- `openXperiencePopup()`: si el usuario ya tiene un registro vigente, abre la maqueta directo en otra pestaña; si no, agrega el parámetro a la URL y se muestra el popup.
+- `closeXperiencePopup()`: quita el parámetro con `replace: true` (no deja entrada extra en el historial) y conserva cualquier otro parámetro de la URL, como los `utm_` de campañas.
+
+**Uso en un botón:**
+
+```jsx
+const { openXperiencePopup } = useXperiencePopup();
+
+<button
+  type="button"
+  onClick={() => {
+    track(TRACK.home.hero.cta, { target: "maqueta" });
+    openXperiencePopup();
+  }}
+>
+  {t("cta.explore")}
+</button>;
+```
+
+**Uso en `Home`** (donde se renderiza el popup):
+
+```jsx
+const { isOpen, closeXperiencePopup } = useXperiencePopup();
+
+<PopupClickAndXperience isOpen={isOpen} onClose={closeXperiencePopup} />;
+```
+
+Los botones que ejecutan esta acción son `<button>`, no `<a href="#">`: el enlace haría que el navegador intentara saltar al inicio de la página.
+
+### Registro del lead en localStorage (`leadStorage`)
+
+Cuando el formulario se envía correctamente a Supabase, se guarda en `localStorage` una marca con la fecha del registro:
+
+```json
+{ "at": 1793346223388 }
+```
+
+- **Clave:** `true_lead_registered`
+- **Duración:** `DAYS = 7` (configurable en `leadStorage.js`)
+
+Expone dos funciones:
+
+- `saveLead()`: guarda la marca con `Date.now()`. Se llama en el `onSubmit` del popup **después** de que Supabase confirma el guardado (`if (error) throw error`), para que un envío fallido no marque al usuario como registrado.
+- `hasValidLead()`: devuelve `true` si existe la marca y no ha vencido. Si ya venció, la borra y devuelve `false`.
+
+**Decisiones de diseño:**
+
+- **`localStorage` y no `sessionStorage`:** `sessionStorage` se borra al cerrar la pestaña, así que no sirve para recordar el registro durante varios días.
+- **Solo se guarda la fecha, nunca datos personales.** Nombre, correo y teléfono se envían únicamente a Supabase. Guardarlos en el navegador los dejaría expuestos a cualquier script de la página y no aporta nada a esta lógica (misma regla de PII que en el [sistema de tracking](#reglas-de-privacidad-pii)).
+- **Caducidad "perezosa":** `localStorage` no tiene expiración automática. La marca vencida se elimina la próxima vez que se llama a `hasValidLead()`, es decir, cuando el usuario da clic en un botón de la maqueta.
+- **Tolerante a fallos:** ambas funciones usan `try/catch`. En navegadores donde `localStorage` está bloqueado (algunos modos incógnito), simplemente se muestra el formulario cada vez.
+
+### Flujo completo
+
+1. El usuario da clic en cualquier botón de la maqueta → `openXperiencePopup()`.
+2. `hasValidLead()` revisa `localStorage`:
+   - **Registro vigente:** se dispara `popup:click-xperience:redirect` y se abre la maqueta en otra pestaña. Como el `window.open` ocurre directamente dentro del clic, el navegador no lo bloquea.
+   - **Sin registro o vencido:** se agrega `?form=maqueta` a la URL y se muestra el popup.
+3. El usuario envía el formulario → se guarda en Supabase → `saveLead()` → redirección a la maqueta.
+4. Durante los siguientes 7 días, ese navegador va directo a la maqueta.
+
+### Cómo probarlo en local
+
+Para ver el formulario de nuevo, abre DevTools → **Application → Local Storage**, selecciona el dominio y borra la clave `true_lead_registered`.
+
+Para probar la caducidad sin esperar 7 días, simula un registro antiguo desde la consola:
+
+```js
+localStorage.setItem(
+  "true_lead_registered",
+  JSON.stringify({ at: Date.now() - 8 * 24 * 60 * 60 * 1000 }),
+);
+```
+
+Al dar clic en un botón de la maqueta debe aparecer el formulario y la clave debe desaparecer de Local Storage.
+
+También se puede bajar el plazo temporalmente en `leadStorage.js` (por ejemplo `const DAYS = 1 / 1440;` para un minuto). **Regresar el valor a `7` antes de hacer deploy.**
+
+### Limitaciones
+
+- **Funciona por navegador:** si la misma persona entra desde otro dispositivo o navegador, verá el formulario de nuevo.
+- **No es una medida de seguridad:** cualquiera puede crear la clave manualmente desde DevTools. El objetivo es evitar pedir los datos repetidamente, no restringir el acceso a la maqueta.
+- **Primer registro:** el `window.open` del `onSubmit` ocurre después de varios `await` (Supabase y el toast), por lo que algunos navegadores, sobre todo Safari en iOS, pueden bloquear la nueva pestaña. Las visitas posteriores no tienen este problema porque abren la maqueta directo desde el clic.
 
 ---
 
@@ -187,7 +306,7 @@ También se usa para estado de UI compartido como qué amenidad está selecciona
 | `motion`                                          | Animación      | Animaciones de entrada/salida en popups y menú, reveals on-scroll |
 | `react-hook-form`                                 | Formularios    | Validación declarativa sin re-renders innecesarios                |
 | `react-hot-toast`                                 | Notificaciones | Feedback inmediato tras enviar formularios                        |
-| `react-router`                                    | Ruteo          | Rutas por idioma (`/es`, `/en`)                                   |
+| `react-router`                                    | Ruteo          | Rutas por idioma (`/es`, `/en`) y popup controlado por URL        |
 | `zustand`                                         | Estado global  | Compartir estado (popups, UI) sin prop drilling ni Context        |
 
 # Sistema de Tracking
@@ -206,7 +325,7 @@ Este documento explica cómo funciona el sistema de tracking de eventos (Google 
 src/
   analytics/
     track.js              # función helper que envía eventos a gtag
-    track.constants.js     # catálogo central de nombres de eventos
+    track.constants.js    # catálogo central de nombres de eventos
 ```
 
 ### `track.js`
@@ -228,17 +347,17 @@ Wrapper mínimo sobre `window.gtag`. Verifica que exista `window` (SSR-safe) y q
 Catálogo centralizado de todos los nombres de eventos, organizado por sección de la página. Evita strings mágicos repetidos en los componentes y sirve como documentación viva de qué se está trackeando.
 
 ```js
-const PROJECT = "trueonepager";
-
 export const TRACK = {
   home: {
-    menu: { ... },
+    menu: { toggle: "menu_toggle", item: "menu_select" },
     language: { ... },
     logo: { ... },
     social: { ... },
     whatsapp: { ... },
+    clickAndXperience: { ... },
     popup: { registro: { ... }, clickAndXperience: { ... } },
     hero: { ... },
+    eligenos: { ... },
     infraestructura: { ... },
     faq: { ... },
     dfc: { ... },
@@ -248,28 +367,58 @@ export const TRACK = {
 };
 ```
 
+Las **keys** del objeto (`menu.item`, `popup.registro.open`, etc.) son las que se usan en el código y no cambian. Los **strings** son los nombres que llegan a GA4.
+
 ## Patrón de nombrado de eventos
 
-Formato: `proyecto:categoría:acción:click` (o `:open`, `:submit`, `:toggle`, etc. según el tipo de interacción).
+Formato: `seccion_accion` en `snake_case`.
 
 ```js
-`${PROJECT}:menu:item:click``${PROJECT}:popup:registro:submit``${PROJECT}:faq:item:toggle`;
+"menu_select";
+"popup_registro_submit";
+"faq_toggle";
 ```
+
+### Reglas de GA4
+
+- Empezar con una letra.
+- Usar solo letras minúsculas, números y guiones bajos (`_`). Sin espacios, dos puntos ni guiones medios.
+- Máximo **40 caracteres**.
+- No empezar con los prefijos reservados `ga_`, `google_` ni `firebase_`.
+
+### Convenciones del proyecto
+
+- **Sección primero, acción después.** Así los eventos de una misma sección aparecen juntos al ordenarlos alfabéticamente en GA4 (`popup_registro_open`, `popup_registro_close`, `popup_registro_submit`...).
+- **Sin prefijo de proyecto.** El nombre solo describe qué pasó. Si la propiedad de GA4 se comparte con otros sitios, se distinguen por flujo de datos o por parámetro, no en el nombre del evento.
+- **Verbos que describen el resultado**, no el gesto:
+
+| Verbo      | Cuándo se usa                                                      | Ejemplo                    |
+| ---------- | ------------------------------------------------------------------ | -------------------------- |
+| `open`     | Se abre algo: un popup, un enlace externo, una red social, un mapa | `popup_xperience_open`     |
+| `close`    | Se cierra un popup                                                 | `popup_registro_close`     |
+| `submit`   | Un formulario se envió correctamente                               | `contacto_submit`          |
+| `error`    | Falló el envío de un formulario                                    | `popup_xperience_error`    |
+| `toggle`   | Algo se abre o cierra con el mismo control (menú, acordeón)        | `faq_toggle`               |
+| `select`   | Se elige una opción de un grupo (un link del menú)                 | `menu_select`              |
+| `change`   | Cambia una preferencia (idioma)                                    | `language_change`          |
+| `redirect` | Se envía al usuario a un sitio externo como resultado de un flujo  | `popup_xperience_redirect` |
+
+- **Sin `click` en el nombre.** En los botones que no tienen un resultado más específico, como los CTAs, el nombre de la sección basta (`hero_cta`, `footer_back_to_top`); el clic está implícito.
 
 ## Regla de oro: evento fijo + parámetro variable
 
 **Nunca** se genera un nombre de evento distinto por cada variante de un mismo tipo de interacción (por ejemplo, un evento por cada botón del menú, o uno por cada red social). En su lugar:
 
-- El **nombre del evento** describe la acción genérica (`menu:item:click`).
+- El **nombre del evento** describe la acción genérica (`menu_select`).
 - El **detalle específico** (qué botón, qué red social, qué idioma) va como **parámetro**.
 
 ### ❌ Evitar
 
 ```js
 menu: {
-  amenidades: `${PROJECT}:menu:amenidades:click`,
-  modelos: `${PROJECT}:menu:modelos:click`,
-  contacto: `${PROJECT}:menu:contacto:click`,
+  amenidades: "menu_amenidades",
+  modelos: "menu_modelos",
+  contacto: "menu_contacto",
 }
 ```
 
@@ -279,7 +428,7 @@ Problema: GA4 trata cada uno como un evento completamente distinto. No se pueden
 
 ```js
 menu: {
-  item: `${PROJECT}:menu:item:click`, // un solo nombre fijo
+  item: "menu_select", // un solo nombre fijo
 }
 ```
 
@@ -287,7 +436,7 @@ menu: {
 track(TRACK.home.menu.item, { item_id: button.id });
 ```
 
-En GA4, esto permite ver un solo evento `menu:item:click` con un desglose por el parámetro `item_id`, agrupable y comparable en un solo reporte (clic en el nombre del evento dentro de **Realtime** o **Events** para expandir sus parámetros).
+En GA4, esto permite ver un solo evento `menu_select` con un desglose por el parámetro `item_id`, agrupable y comparable en un solo reporte (clic en el nombre del evento dentro de **Realtime** o **Events** para expandir sus parámetros).
 
 ## Parámetro `source` para componentes reutilizados
 
@@ -305,7 +454,7 @@ Esto permite comparar qué sección de la página convierte más usuarios hacia 
 
 ## Reglas de privacidad (PII)
 
-**Nunca** se envían datos personales identificables (nombre, email, teléfono, empresa, mensaje) como parámetros de un evento. GA4 prohíbe explícitamente el envío de PII. Solo se trackea que la acción ocurrió (ej. `contacto:form:submit`), nunca el contenido de lo que el usuario escribió.
+**Nunca** se envían datos personales identificables (nombre, email, teléfono, empresa, mensaje) como parámetros de un evento. GA4 prohíbe explícitamente el envío de PII. Solo se trackea que la acción ocurrió (ej. `contacto_submit`), nunca el contenido de lo que el usuario escribió.
 
 ```js
 // ✅ Correcto
@@ -315,33 +464,45 @@ track(TRACK.home.contacto.formSubmit);
 track(TRACK.home.contacto.formSubmit, { email: data.email, name: data.name });
 ```
 
+La misma regla aplica al almacenamiento local: `localStorage` solo guarda la fecha del registro del lead, nunca sus datos (ver [Registro del lead en localStorage](#registro-del-lead-en-localstorage-leadstorage)).
+
 ## Catálogo de eventos actuales
 
-| Sección                 | Evento                                         | Parámetros                                 | Dónde vive                                               |
-| ----------------------- | ---------------------------------------------- | ------------------------------------------ | -------------------------------------------------------- |
-| Navbar                  | `menu:toggle:click`                            | —                                          | abrir/cerrar menú mobile                                 |
-| Navbar                  | `menu:item:click`                              | `item_id`, `source?`                       | clic a cualquier link del menú (desktop, mobile, footer) |
-| Navbar                  | `language:toggle:click`                        | `language` (nuevo idioma)                  | botón EN/ES                                              |
-| Navbar                  | `logo:hero:click`                              | —                                          | clic al logo, regresa al hero                            |
-| Navbar/Popups           | `social:click`                                 | `network`, `source?`                       | clic a ícono de red social                               |
-| Home                    | `whatsapp:float:click`                         | —                                          | botón flotante de WhatsApp                               |
-| Popup Registro          | `popup:registro:open`                          | `source`                                   | apertura del popup (trigger en cada sección)             |
-| Popup Registro          | `popup:registro:close`                         | `method` (`button`\|`backdrop`)            | cierre del popup                                         |
-| Popup Registro          | `popup:registro:submit`                        | —                                          | envío exitoso del form                                   |
-| Popup Registro          | `popup:registro:submit-error`                  | —                                          | error al enviar                                          |
-| Popup Registro          | `popup:registro:social:click`                  | `network`                                  | redes dentro del popup                                   |
-| Popup Click&Xperience   | `popup:click-xperience:open`                   | `source`                                   | apertura (Naves, Macrolotes, DFC, etc.)                  |
-| Popup Click&Xperience   | `popup:click-xperience:close`                  | `method`                                   | cierre del popup                                         |
-| Popup Click&Xperience   | `popup:click-xperience:submit`                 | —                                          | envío exitoso                                            |
-| Popup Click&Xperience   | `popup:click-xperience:submit-error`           | —                                          | error al enviar                                          |
-| Popup Click&Xperience   | `popup:click-xperience:redirect`               | —                                          | justo antes de redirigir al sitio externo                |
-| Popup Click&Xperience   | `popup:click-xperience:social:click`           | `network`                                  | redes dentro del popup                                   |
-| Hero / Eligenos         | `hero:cta:click` (o `cta:building-land:click`) | `target` (`naves`\|`macrolotes`), `source` | botones "Ver naves" / "Ver macrolotes"                   |
-| Infraestructura         | `infraestructura:map:click`                    | —                                          | clic al mapa (abre Google Maps)                          |
-| Preguntas (FAQ)         | `faq:item:toggle`                              | `question_id`                              | apertura de un acordeón                                  |
-| Designed for Certainty  | `dfc:main-site:click`                          | —                                          | link al sitio principal (aún no construido)              |
-| Hablemos de tu Proyecto | `contacto:metodo:click`                        | `method` (`whatsapp`\|`oficina`\|`correo`) | card de contacto directo                                 |
-| Hablemos de tu Proyecto | `contacto:form:submit`                         | —                                          | envío exitoso del form de contacto                       |
-| Hablemos de tu Proyecto | `contacto:form:submit-error`                   | —                                          | error al enviar                                          |
-| Footer                  | `footer:back-to-top:click`                     | —                                          | botón de regreso al hero                                 |
-| Footer                  | `footer:contact-info:click`                    | `method`                                   | datos de contacto en el footer                           |
+| Sección                 | Key en `TRACK.home`                   | Evento en GA4              | Parámetros                                      | Cuándo se dispara                                                                                                                 |
+| ----------------------- | ------------------------------------- | -------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Navbar                  | `menu.toggle`                         | `menu_toggle`              | `item_id` (`open`\|`close`)                     | abrir/cerrar menú mobile                                                                                                          |
+| Navbar                  | `menu.item`                           | `menu_select`              | `item_id`, `source?`                            | clic a cualquier link del menú (desktop, mobile, footer)                                                                          |
+| Navbar                  | `language.toggle`                     | `language_change`          | `language` (nuevo idioma)                       | botón EN/ES                                                                                                                       |
+| Navbar                  | `logo.home`                           | `logo_home`                | —                                               | clic al logo, regresa al hero                                                                                                     |
+| Navbar/Popups           | `social.click`                        | `social_open`              | `network`, `source?`                            | clic a ícono de red social                                                                                                        |
+| Home                    | `whatsapp.float`                      | `whatsapp_float_open`      | —                                               | botón flotante de WhatsApp                                                                                                        |
+| Home                    | `clickAndXperience.float`             | `xperience_float_open`     | —                                               | botón flotante de Click & Xperience                                                                                               |
+| Popup Registro          | `popup.registro.open`                 | `popup_registro_open`      | `source`                                        | apertura del popup (trigger en cada sección)                                                                                      |
+| Popup Registro          | `popup.registro.close`                | `popup_registro_close`     | `method` (`button`\|`backdrop`)                 | cierre del popup                                                                                                                  |
+| Popup Registro          | `popup.registro.submit`               | `popup_registro_submit`    | —                                               | envío exitoso del form                                                                                                            |
+| Popup Registro          | `popup.registro.submitError`          | `popup_registro_error`     | —                                               | error al enviar                                                                                                                   |
+| Popup Registro          | `popup.registro.social`               | `popup_registro_social`    | `network`                                       | redes dentro del popup                                                                                                            |
+| Popup Click&Xperience   | `popup.clickAndXperience.open`        | `popup_xperience_open`     | `source`                                        | apertura (Naves, Macrolotes, DFC, etc.)                                                                                           |
+| Popup Click&Xperience   | `popup.clickAndXperience.close`       | `popup_xperience_close`    | `method`                                        | cierre del popup                                                                                                                  |
+| Popup Click&Xperience   | `popup.clickAndXperience.submit`      | `popup_xperience_submit`   | —                                               | envío exitoso                                                                                                                     |
+| Popup Click&Xperience   | `popup.clickAndXperience.submitError` | `popup_xperience_error`    | —                                               | error al enviar                                                                                                                   |
+| Popup Click&Xperience   | `popup.clickAndXperience.redirect`    | `popup_xperience_redirect` | —                                               | antes de abrir la maqueta: tras el envío del form, o directo desde `useXperiencePopup` si el usuario ya tiene un registro vigente |
+| Popup Click&Xperience   | `popup.clickAndXperience.social`      | `popup_xperience_social`   | `network`                                       | redes dentro del popup                                                                                                            |
+| Hero                    | `hero.cta`                            | `hero_cta`                 | `target` (`naves`\|`macrolotes`\|`maqueta`)     | botones del hero                                                                                                                  |
+| Elígenos                | `eligenos.cta`                        | `eligenos_cta`             | `target` (`naves`\|`macrolotes`\|`maqueta`)     | botones de la sección Elígenos                                                                                                    |
+| Infraestructura         | `infraestructura.mapClick`            | `infra_map_open`           | —                                               | clic al mapa (abre Google Maps)                                                                                                   |
+| Preguntas (FAQ)         | `faq.toggle`                          | `faq_toggle`               | `question_id`                                   | apertura de un acordeón                                                                                                           |
+| Designed for Certainty  | `dfc.mainSiteClick`                   | `dfc_main_site_open`       | —                                               | link al sitio principal (aún no construido)                                                                                       |
+| Hablemos de tu Proyecto | `contacto.contactMethodClick`         | `contacto_method`          | `item_id` (`whatsapp`\|`tel-oficina`\|`correo`) | botones de contacto directo                                                                                                       |
+| Hablemos de tu Proyecto | `contacto.formSubmit`                 | `contacto_submit`          | —                                               | envío exitoso del form de contacto                                                                                                |
+| Hablemos de tu Proyecto | `contacto.formSubmitError`            | `contacto_error`           | —                                               | error al enviar                                                                                                                   |
+| Footer                  | `footer.backToTop`                    | `footer_back_to_top`       | —                                               | botón de regreso al hero                                                                                                          |
+| Footer                  | `footer.contactInfoClick`             | `footer_contact`           | `method`                                        | datos de contacto en el footer                                                                                                    |
+
+> **Nota sobre `redirect`:** como se dispara tanto desde el popup como desde el hook, el número de eventos `popup_xperience_redirect` es mayor que el de `popup_xperience_submit`. La diferencia entre ambos equivale aproximadamente a las visitas de usuarios que regresaron con un registro vigente.
+
+## Historial de nombres
+
+Versiones anteriores del proyecto usaban el formato `trueonepager:seccion:accion:click` (por ejemplo, `trueonepager:menu:item:click`). Se cambió a `snake_case` corto para cumplir las reglas de nombres de GA4 y el límite de 40 caracteres.
+
+GA4 trata los nombres nuevos como eventos distintos: el historial de los anteriores no se combina con ellos. Al comparar periodos que abarcan el cambio hay que sumar ambos nombres, y cualquier evento clave (conversión), audiencia o reporte personalizado que usara un nombre anterior debe volver a configurarse con el nuevo.
