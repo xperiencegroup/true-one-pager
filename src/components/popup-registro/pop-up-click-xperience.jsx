@@ -19,6 +19,7 @@ import trueLogoCream from "../../assets/logos/true-developments-cream.svg";
 import { supabase } from "../../lib/supabase";
 import { TABLE_ID } from "../../const/supabase";
 import { CLICK_AND_XPERIENCE_URL } from "../../const/clickAndXperience";
+import { saveLead } from "../../lib/leadStorage";
 
 const socialButtons = [
   { id: "whatsapp", icon: whatsappIcon, href: whatsappInfo.href },
@@ -68,6 +69,7 @@ export default function PopupClickAndXperience({ isOpen, onClose }) {
       const { error } = await supabase.from(TABLE_ID).insert(payload);
       if (error) throw error;
 
+      saveLead();
       track(TRACK.home.popup.clickAndXperience.submit);
 
       reset();
