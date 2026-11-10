@@ -8,9 +8,7 @@ export default function ClickAndXperienceButton() {
   return (
     <div className="fixed z-50 right-0 bottom-20">
       <a
-        href="#"
-        target="_blank"
-        rel="noopener noreferer"
+        href="#xperience"
         onClick={() => track(TRACK.home.clickAndXperience.float)}
         className="flex w-[68px] h-[52px] justify-center items-center rounded-t-[32.5px] gap-[10px] bg-orange drop-shadow-xl"
       >
